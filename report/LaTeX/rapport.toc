@@ -1,0 +1,12 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Analyse des besoins}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Pr\IeC {\'e}liminaires}{4}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Principe de l'eco-resolution}{4}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Le monde des cubes}{4}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Composition du syst\IeC {\`e}me}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Plateforme d'\IeC {\'e}co-resolution}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Les \IeC {\'e}co-agents}{5}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Les grandes fonctionnalit\IeC {\'e}s}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Les \IeC {\'e}tapes pour d\IeC {\'e}marrer la r\IeC {\'e}solution}{6}{subsection.2.4}
+\contentsline {section}{\numberline {3}Conclusion}{7}{section.3}
