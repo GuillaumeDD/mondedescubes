@@ -1978,38 +1978,54 @@
 <UML:Activity xmi.id="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" name="recherche fuite" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
 <UML:InitialNode xmi.id="DCE.06C367F1-2278-D148-6856-7EF7E0C53472" name="Etat interne = &quot;RF&quot;" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" outgoing="DCE.99C2E43B-0FD0-DBF9-4BCD-0491FBBF55A8" incoming="DCE.DE773282-0E3B-2625-12F2-4E4EA2F39DAA"><UML:Element.presentation>
 
+
+
 </UML:Element.presentation></UML:InitialNode>
 <UML:InvocationNode xmi.id="DCE.B424D83B-4286-E584-63D4-91B2B765868E" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.99C2E43B-0FD0-DBF9-4BCD-0491FBBF55A8" name="Perception des gêneurs" outgoing="DCE.0C59C2E4-4EE9-25BC-5E20-1310EA021703"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:InvocationNode>
 <UML:MultiFlow xmi.id="DCE.99C2E43B-0FD0-DBF9-4BCD-0491FBBF55A8" source="DCE.06C367F1-2278-D148-6856-7EF7E0C53472" target="DCE.B424D83B-4286-E584-63D4-91B2B765868E" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:MultiFlow>
 <UML:DecisionMergeNode xmi.id="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" name="Unnamed" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.0C59C2E4-4EE9-25BC-5E20-1310EA021703" outgoing="DCE.6702DD5B-6FA0-9D8E-2388-2BB74E70CA84 DCE.DB1EDF97-EA63-04ED-09E0-9E4109B0383B"><UML:Element.presentation>
 
+
 </UML:Element.presentation></UML:DecisionMergeNode>
 <UML:MultiFlow xmi.id="DCE.0C59C2E4-4EE9-25BC-5E20-1310EA021703" source="DCE.B424D83B-4286-E584-63D4-91B2B765868E" target="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:MultiFlow>
 <UML:InvocationNode xmi.id="DCE.1020E9D9-8865-C42D-D3D6-DB78D4B9168F" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.6702DD5B-6FA0-9D8E-2388-2BB74E70CA84" name="Agression du cube gêneur" outgoing="DCE.DE773282-0E3B-2625-12F2-4E4EA2F39DAA"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:InvocationNode>
 <UML:MultiFlow xmi.id="DCE.6702DD5B-6FA0-9D8E-2388-2BB74E70CA84" source="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" target="DCE.1020E9D9-8865-C42D-D3D6-DB78D4B9168F" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:MultiFlow>
 <UML:MultiFlow xmi.id="DCE.DE773282-0E3B-2625-12F2-4E4EA2F39DAA" source="DCE.1020E9D9-8865-C42D-D3D6-DB78D4B9168F" target="DCE.06C367F1-2278-D148-6856-7EF7E0C53472" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:MultiFlow>
 <UML:InvocationNode xmi.id="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.DB1EDF97-EA63-04ED-09E0-9E4109B0383B" name="Satisfaction du cube" outgoing="DCE.DA41E2BF-4A02-55B7-A1F6-285424269859 DCE.7EAA124D-5E59-F09F-8927-0E1DC007B6FB"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:InvocationNode>
 <UML:MultiFlow xmi.id="DCE.DB1EDF97-EA63-04ED-09E0-9E4109B0383B" source="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" target="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:MultiFlow>
 
 <UML:MultiFlow xmi.id="DCE.DA41E2BF-4A02-55B7-A1F6-285424269859" source="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" target="DCE.E4BF8614-9413-3D51-E0C7-27250C7FE083" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
 </UML:Element.presentation></UML:MultiFlow>
 <UML:ActivityFinalNode xmi.id="DCE.C69A7451-55CC-7574-A142-E959B9046976" name="Etat interne = &quot;S&quot;" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.7EAA124D-5E59-F09F-8927-0E1DC007B6FB"><UML:Element.presentation>
 
+
+
 </UML:Element.presentation></UML:ActivityFinalNode>
 <UML:MultiFlow xmi.id="DCE.7EAA124D-5E59-F09F-8927-0E1DC007B6FB" source="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" target="DCE.C69A7451-55CC-7574-A142-E959B9046976" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:MultiFlow>
 <UML:Comment xmi.id="DCE.8F436F7E-268A-03EE-A18C-CCD3871A0607" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation>
 <UML:Comment.body>Pas de gêneurs</UML:Comment.body></UML:Comment>
 <UML:Comment xmi.id="DCE.94AECE33-AA6D-EED9-F2D8-3E2AFAF9D73A" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+
 </UML:Element.presentation>
 <UML:Comment.body>Présence d'un gêneur</UML:Comment.body></UML:Comment></UML:Element.ownedElement></UML:Activity>
 <UML:Activity xmi.id="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0" name="resolution" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
@@ -2108,4 +2124,5 @@
 <UML:Comment.body>Nombre de cubes incorrect</UML:Comment.body></UML:Comment>
 <UML:Comment xmi.id="DCE.6A2462AD-F5B4-C774-9350-F47B962EEEE0" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
 </UML:Element.presentation>
-<UML:Comment.body>Incohérence dans les positions courantes et finales des cubes</UML:Comment.body></UML:Comment></UML:Element.ownedElement></UML:Activity></UML:Element.ownedElement></UML:Project></XMI.content> </XMI>
+<UML:Comment.body>Incohérence dans les positions courantes et finales des cubes</UML:Comment.body></UML:Comment></UML:Element.ownedElement></UML:Activity>
+<UML:Activity xmi.id="DCE.2D178E4B-9D73-D72F-EA92-376EAA7D95E0" name="recherche fuite" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"/></UML:Element.ownedElement></UML:Project></XMI.content> </XMI>
