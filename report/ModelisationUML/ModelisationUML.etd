@@ -1923,4 +1923,189 @@
 </UML:Element.presentation></UML:Message><UML:Message xmi.id="DCE.13DAF887-4C14-644B-AE27-44C419A5BFBC" sendEvent="DCE.9C569659-1FB6-ED19-8F56-BA86F1CC2866" receiveEvent="DCE.376F9029-1561-45E0-44EE-D1DB4FAF3855" initiatingAction="DCE.11F38056-CCE4-B255-676F-1B42D9D1B0A3" interaction="DCE.1C1CC493-9021-5CD4-283F-D9DE7FCDDF86" kind="result" sendingMessage="DCE.8D4B0D77-835F-1761-A430-8292C138C089"><UML:Element.presentation>
 </UML:Element.presentation></UML:Message><UML:Message xmi.id="DCE.C0939B3D-C84F-54F9-450D-47B940A69A79" sendEvent="DCE.DCC2DF9A-A896-C7B0-CAF1-20C74052DD19" receiveEvent="DCE.6A53F1FE-6263-2E4C-F292-A299B06F200E" initiatingAction="DCE.4E81972A-53BE-FBBC-A214-8C52B449D3EC" interaction="DCE.1C1CC493-9021-5CD4-283F-D9DE7FCDDF86" kind="result" sendingMessage="DCE.D15D60C7-9090-F89A-4E46-6E7F0AA28101"><UML:Element.presentation>
 </UML:Element.presentation></UML:Message><UML:Message xmi.id="DCE.210D0874-F57A-5BF0-E797-BDED249017E6" sendEvent="DCE.26A61CDE-8CE3-B887-EC70-A4EF455FAB9E" receiveEvent="DCE.CEF88852-45B4-C7CB-8C8F-2E3CC07B61C1" initiatingAction="DCE.BACD1DE0-AD0E-E7A4-FB38-DE19DF7B1DF3" interaction="DCE.1C1CC493-9021-5CD4-283F-D9DE7FCDDF86" kind="result" sendingMessage="DCE.725606B2-4D43-1051-35FF-FE22F93F59DC"><UML:Element.presentation>
-</UML:Element.presentation></UML:Message></UML:Interaction.message></UML:Interaction></UML:Element.ownedElement></UML:Project></XMI.content> </XMI>
+</UML:Element.presentation></UML:Message></UML:Interaction.message></UML:Interaction>
+<UML:Activity xmi.id="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7" name="satisfaction cube" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
+<UML:InitialNode xmi.id="DCE.6AFB9E2B-12FE-D79B-0346-C0490CE33E3D" name="Etat interne= &quot;RS&quot; ou &quot;RF&quot;" owner="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7" outgoing="DCE.E68E3F02-E8B7-5A91-20E9-4BBFCF516E58"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:InitialNode>
+<UML:InvocationNode xmi.id="DCE.CFBFEFC5-F7CE-BCF6-6D4D-66B1095B1BA6" owner="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7" incoming="DCE.E68E3F02-E8B7-5A91-20E9-4BBFCF516E58" outgoing="DCE.C178465A-FCB0-76BE-888B-9507551391D3" name="Mise à jour de la position courante avec la position finale"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.E68E3F02-E8B7-5A91-20E9-4BBFCF516E58" source="DCE.6AFB9E2B-12FE-D79B-0346-C0490CE33E3D" target="DCE.CFBFEFC5-F7CE-BCF6-6D4D-66B1095B1BA6" owner="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:InvocationNode xmi.id="DCE.9F1A2ADB-3D6E-04A0-CD4A-DDC36ABF0A48" owner="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7" incoming="DCE.C178465A-FCB0-76BE-888B-9507551391D3" name="Changement de l&apos;état interne du cube en &quot;S&quot;" outgoing="DCE.0E9FE319-0827-5F40-37FD-19DDB145D999"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.C178465A-FCB0-76BE-888B-9507551391D3" source="DCE.CFBFEFC5-F7CE-BCF6-6D4D-66B1095B1BA6" target="DCE.9F1A2ADB-3D6E-04A0-CD4A-DDC36ABF0A48" owner="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:ActivityFinalNode xmi.id="DCE.DBFBB08A-D154-A3F1-5430-9C0BE6346402" name="Etat interne = &quot;S&quot;" owner="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7" incoming="DCE.0E9FE319-0827-5F40-37FD-19DDB145D999"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:ActivityFinalNode>
+<UML:MultiFlow xmi.id="DCE.0E9FE319-0827-5F40-37FD-19DDB145D999" source="DCE.9F1A2ADB-3D6E-04A0-CD4A-DDC36ABF0A48" target="DCE.DBFBB08A-D154-A3F1-5430-9C0BE6346402" owner="DCE.13CD2B28-B1EF-1ACF-C16E-08425DFBCFE7"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow></UML:Element.ownedElement></UML:Activity>
+<UML:Activity xmi.id="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2" name="fuite cube" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
+<UML:InitialNode xmi.id="DCE.97E1ACE7-74E3-917D-FC4E-8AC96F0D14DB" name="Etat interne = &quot;RF&quot;" owner="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2" outgoing="DCE.63C2D0C8-598C-3722-C19D-669C3161F7E3"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:InitialNode>
+<UML:InvocationNode xmi.id="DCE.0A8FF56C-33E9-36EC-770D-159E2015A6CE" owner="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2" incoming="DCE.63C2D0C8-598C-3722-C19D-669C3161F7E3" outgoing="DCE.CEB245C7-D059-5AA9-48E8-57DEF3EB9605" name="Mise à jour de la position courante du cube avec la table"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.63C2D0C8-598C-3722-C19D-669C3161F7E3" source="DCE.97E1ACE7-74E3-917D-FC4E-8AC96F0D14DB" target="DCE.0A8FF56C-33E9-36EC-770D-159E2015A6CE" owner="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:InvocationNode xmi.id="DCE.E1FFAE9D-224E-FD51-0EE7-BB3352B5B411" owner="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2" incoming="DCE.CEB245C7-D059-5AA9-48E8-57DEF3EB9605" outgoing="DCE.F1B72655-4B9C-91FC-C07B-38EE33AAA44D" name="Changement de l&apos;état interne du cube en &quot;RS&quot;"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.CEB245C7-D059-5AA9-48E8-57DEF3EB9605" source="DCE.0A8FF56C-33E9-36EC-770D-159E2015A6CE" target="DCE.E1FFAE9D-224E-FD51-0EE7-BB3352B5B411" owner="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:ActivityFinalNode xmi.id="DCE.D0748C14-724C-FAAD-81B7-671A6A90294C" name="Etat interne =&quot;RS&quot;" owner="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2" incoming="DCE.F1B72655-4B9C-91FC-C07B-38EE33AAA44D"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:ActivityFinalNode>
+<UML:MultiFlow xmi.id="DCE.F1B72655-4B9C-91FC-C07B-38EE33AAA44D" source="DCE.E1FFAE9D-224E-FD51-0EE7-BB3352B5B411" target="DCE.D0748C14-724C-FAAD-81B7-671A6A90294C" owner="DCE.0CFA7BFD-65FB-2055-5DF6-38F3E13F21D2"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow></UML:Element.ownedElement></UML:Activity>
+<UML:Activity xmi.id="DCE.5102CE9D-869F-756B-CD50-10AE5219C215" name="agression cube" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
+<UML:InitialNode xmi.id="DCE.F2205814-CCEF-F6DE-222F-0345ED3EE15C" name="Début de l&apos;agression" owner="DCE.5102CE9D-869F-756B-CD50-10AE5219C215" outgoing="DCE.D7372186-B5F4-3A3B-9282-C559961C5C1A"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:InitialNode>
+<UML:ActivityFinalNode xmi.id="DCE.5131DF38-B6EF-E6E2-E304-55305A01D802" name="Fin de l&apos;agression" owner="DCE.5102CE9D-869F-756B-CD50-10AE5219C215" incoming="DCE.6262FB57-695F-8EA7-A269-8C3324598467"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:ActivityFinalNode>
+<UML:InvocationNode xmi.id="DCE.B8D3F3F9-5578-E723-C988-1D551FB7787D" owner="DCE.5102CE9D-869F-756B-CD50-10AE5219C215" incoming="DCE.D7372186-B5F4-3A3B-9282-C559961C5C1A" outgoing="DCE.386761BB-7BA3-771A-C4F4-5B2B6254963F" name="Agression du cube gêneur"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.D7372186-B5F4-3A3B-9282-C559961C5C1A" source="DCE.F2205814-CCEF-F6DE-222F-0345ED3EE15C" target="DCE.B8D3F3F9-5578-E723-C988-1D551FB7787D" owner="DCE.5102CE9D-869F-756B-CD50-10AE5219C215"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:InvocationNode xmi.id="DCE.E91A7DCE-7AEB-F376-E3B8-9DCD62A4B996" owner="DCE.5102CE9D-869F-756B-CD50-10AE5219C215" incoming="DCE.386761BB-7BA3-771A-C4F4-5B2B6254963F" outgoing="DCE.6262FB57-695F-8EA7-A269-8C3324598467" name="L&apos;état interne du cube gêneur passe à &quot;RF&quot;"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.386761BB-7BA3-771A-C4F4-5B2B6254963F" source="DCE.B8D3F3F9-5578-E723-C988-1D551FB7787D" target="DCE.E91A7DCE-7AEB-F376-E3B8-9DCD62A4B996" owner="DCE.5102CE9D-869F-756B-CD50-10AE5219C215"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.6262FB57-695F-8EA7-A269-8C3324598467" source="DCE.E91A7DCE-7AEB-F376-E3B8-9DCD62A4B996" target="DCE.5131DF38-B6EF-E6E2-E304-55305A01D802" owner="DCE.5102CE9D-869F-756B-CD50-10AE5219C215"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow></UML:Element.ownedElement></UML:Activity>
+<UML:Activity xmi.id="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" name="recherche fuite" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
+<UML:InitialNode xmi.id="DCE.06C367F1-2278-D148-6856-7EF7E0C53472" name="Etat interne = &quot;RF&quot;" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" outgoing="DCE.99C2E43B-0FD0-DBF9-4BCD-0491FBBF55A8" incoming="DCE.DE773282-0E3B-2625-12F2-4E4EA2F39DAA"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:InitialNode>
+<UML:InvocationNode xmi.id="DCE.B424D83B-4286-E584-63D4-91B2B765868E" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.99C2E43B-0FD0-DBF9-4BCD-0491FBBF55A8" name="Perception des gêneurs" outgoing="DCE.0C59C2E4-4EE9-25BC-5E20-1310EA021703"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.99C2E43B-0FD0-DBF9-4BCD-0491FBBF55A8" source="DCE.06C367F1-2278-D148-6856-7EF7E0C53472" target="DCE.B424D83B-4286-E584-63D4-91B2B765868E" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:DecisionMergeNode xmi.id="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" name="Unnamed" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.0C59C2E4-4EE9-25BC-5E20-1310EA021703" outgoing="DCE.6702DD5B-6FA0-9D8E-2388-2BB74E70CA84 DCE.DB1EDF97-EA63-04ED-09E0-9E4109B0383B"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:DecisionMergeNode>
+<UML:MultiFlow xmi.id="DCE.0C59C2E4-4EE9-25BC-5E20-1310EA021703" source="DCE.B424D83B-4286-E584-63D4-91B2B765868E" target="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:InvocationNode xmi.id="DCE.1020E9D9-8865-C42D-D3D6-DB78D4B9168F" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.6702DD5B-6FA0-9D8E-2388-2BB74E70CA84" name="Agression du cube gêneur" outgoing="DCE.DE773282-0E3B-2625-12F2-4E4EA2F39DAA"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.6702DD5B-6FA0-9D8E-2388-2BB74E70CA84" source="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" target="DCE.1020E9D9-8865-C42D-D3D6-DB78D4B9168F" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.DE773282-0E3B-2625-12F2-4E4EA2F39DAA" source="DCE.1020E9D9-8865-C42D-D3D6-DB78D4B9168F" target="DCE.06C367F1-2278-D148-6856-7EF7E0C53472" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:InvocationNode xmi.id="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.DB1EDF97-EA63-04ED-09E0-9E4109B0383B" name="Satisfaction du cube" outgoing="DCE.DA41E2BF-4A02-55B7-A1F6-285424269859 DCE.7EAA124D-5E59-F09F-8927-0E1DC007B6FB"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.DB1EDF97-EA63-04ED-09E0-9E4109B0383B" source="DCE.23928A3B-18A3-E950-9FB6-AB76DEED4265" target="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+
+<UML:MultiFlow xmi.id="DCE.DA41E2BF-4A02-55B7-A1F6-285424269859" source="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" target="DCE.E4BF8614-9413-3D51-E0C7-27250C7FE083" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:ActivityFinalNode xmi.id="DCE.C69A7451-55CC-7574-A142-E959B9046976" name="Etat interne = &quot;S&quot;" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558" incoming="DCE.7EAA124D-5E59-F09F-8927-0E1DC007B6FB"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:ActivityFinalNode>
+<UML:MultiFlow xmi.id="DCE.7EAA124D-5E59-F09F-8927-0E1DC007B6FB" source="DCE.B313DBC3-18BA-4747-123D-0B69DD13D497" target="DCE.C69A7451-55CC-7574-A142-E959B9046976" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:Comment xmi.id="DCE.8F436F7E-268A-03EE-A18C-CCD3871A0607" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Pas de gêneurs</UML:Comment.body></UML:Comment>
+<UML:Comment xmi.id="DCE.94AECE33-AA6D-EED9-F2D8-3E2AFAF9D73A" owner="DCE.36387568-C18D-B0B0-7AD5-0E881AE1F558"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Présence d'un gêneur</UML:Comment.body></UML:Comment></UML:Element.ownedElement></UML:Activity>
+<UML:Activity xmi.id="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0" name="resolution" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
+<UML:InitialNode xmi.id="DCE.6340419C-BB65-62E7-3E98-01988C43BD0E" name="Début de la résolution" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0" outgoing="DCE.6729E7B4-432D-E096-B8BA-E7B3FC6EA290"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:InitialNode>
+<UML:ActivityFinalNode xmi.id="DCE.5A864AD8-CA26-D308-919E-B2CCB5438B33" name="Fin de la résolution" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0" incoming="DCE.5AF854E7-0E57-19E9-EF23-8C066569EEE0"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:ActivityFinalNode>
+<UML:InvocationNode xmi.id="DCE.CF5C1384-9C15-E9C1-3C20-D1462C78DBB9" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0" name="Le système demande à l&apos;éco-agent d&apos;agir" incoming="DCE.C64A0E21-D3F1-B31F-75DA-91049A2CE7E0" outgoing="DCE.9FB40C2E-B1B6-DD1F-2FDA-719CF4733671"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:InvocationNode xmi.id="DCE.7CBA179F-040A-8E60-C08A-C0FBA4B4DF47" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0" name="Sélection de l&apos;éco-agent prioritaire" outgoing="DCE.C64A0E21-D3F1-B31F-75DA-91049A2CE7E0" incoming="DCE.65ED2922-C34D-6A0B-76C0-63256AFD1C4B"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.C64A0E21-D3F1-B31F-75DA-91049A2CE7E0" source="DCE.7CBA179F-040A-8E60-C08A-C0FBA4B4DF47" target="DCE.CF5C1384-9C15-E9C1-3C20-D1462C78DBB9" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:DecisionMergeNode xmi.id="DCE.B1A711BF-DC0A-E465-8FC9-F239397A8FCB" name="Unnamed" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0" incoming="DCE.6729E7B4-432D-E096-B8BA-E7B3FC6EA290 DCE.9FB40C2E-B1B6-DD1F-2FDA-719CF4733671" outgoing="DCE.65ED2922-C34D-6A0B-76C0-63256AFD1C4B DCE.5AF854E7-0E57-19E9-EF23-8C066569EEE0"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:DecisionMergeNode>
+<UML:MultiFlow xmi.id="DCE.6729E7B4-432D-E096-B8BA-E7B3FC6EA290" source="DCE.6340419C-BB65-62E7-3E98-01988C43BD0E" target="DCE.B1A711BF-DC0A-E465-8FC9-F239397A8FCB" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.65ED2922-C34D-6A0B-76C0-63256AFD1C4B" source="DCE.B1A711BF-DC0A-E465-8FC9-F239397A8FCB" target="DCE.7CBA179F-040A-8E60-C08A-C0FBA4B4DF47" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.5AF854E7-0E57-19E9-EF23-8C066569EEE0" source="DCE.B1A711BF-DC0A-E465-8FC9-F239397A8FCB" target="DCE.5A864AD8-CA26-D308-919E-B2CCB5438B33" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.9FB40C2E-B1B6-DD1F-2FDA-719CF4733671" source="DCE.CF5C1384-9C15-E9C1-3C20-D1462C78DBB9" target="DCE.B1A711BF-DC0A-E465-8FC9-F239397A8FCB" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:Comment xmi.id="DCE.9CEE41F5-519C-22DB-5A3E-A31B91158B0C" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Tous les éco-agents sont satisfaits</UML:Comment.body></UML:Comment>
+<UML:Comment xmi.id="DCE.54B72C41-6A37-1519-0A59-A6012FF96A66" owner="DCE.544E3F2F-617E-2F6D-E871-2C64B3B251B0"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Il reste des éco-agents non satisfaits</UML:Comment.body></UML:Comment></UML:Element.ownedElement></UML:Activity>
+<UML:Activity xmi.id="DCE.F8032F57-3348-4CCB-2408-06D58172120B" name="initialisation" owner="DCE.0AC8EFB1-00B3-028A-4DEC-4F1FEE9AAD85"><UML:Element.ownedElement>
+<UML:InitialNode xmi.id="DCE.E4FD213B-16B2-64FA-0CD8-61DF4CD2F58F" name="Début de l&apos;initialisation" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" outgoing="DCE.8E715BCB-F6DB-ED14-CC4E-CD05A6971292"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:InitialNode>
+<UML:ActivityFinalNode xmi.id="DCE.BB95E971-B8F4-F653-4317-5A0580853F1A" name="Fin de l&apos;initialisation" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" incoming="DCE.3711FAE0-D202-8B6A-52BD-90A453DC2225"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:ActivityFinalNode>
+<UML:InvocationNode xmi.id="DCE.DEF40155-D4DE-E617-DCEE-2ED23FBF4E34" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" name="Entrée du nombre de cubes" incoming="DCE.8E715BCB-F6DB-ED14-CC4E-CD05A6971292 DCE.202A0376-89A4-3774-286C-12DE5634344A" outgoing="DCE.1295129F-D936-DE98-A2D9-7D899FEAB2F0"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:DecisionMergeNode xmi.id="DCE.7CF7CBCA-577F-9F08-9AD6-3B42E4BD337F" name="Unnamed" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" incoming="DCE.1295129F-D936-DE98-A2D9-7D899FEAB2F0" outgoing="DCE.62770AAD-C1A9-79CD-CECC-34C8FF9CCE95 DCE.ED7D99C1-9177-B53F-66EF-AAF13293A8D6 DCE.202A0376-89A4-3774-286C-12DE5634344A"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:DecisionMergeNode>
+<UML:MultiFlow xmi.id="DCE.8E715BCB-F6DB-ED14-CC4E-CD05A6971292" source="DCE.E4FD213B-16B2-64FA-0CD8-61DF4CD2F58F" target="DCE.DEF40155-D4DE-E617-DCEE-2ED23FBF4E34" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.1295129F-D936-DE98-A2D9-7D899FEAB2F0" source="DCE.DEF40155-D4DE-E617-DCEE-2ED23FBF4E34" target="DCE.7CF7CBCA-577F-9F08-9AD6-3B42E4BD337F" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+
+<UML:InvocationNode xmi.id="DCE.08A5F765-97FA-0F2E-B407-4EF3F70E8758" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" name="Initialisation de la table avec son identifiant" incoming="DCE.62770AAD-C1A9-79CD-CECC-34C8FF9CCE95" outgoing="DCE.44E898FE-529A-D089-1C82-056B85CDE955"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:InvocationNode xmi.id="DCE.FDEF6946-E3F4-1241-7ACF-623240D4B24E" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" name="Initialisation de chaque cube avec son identifiant" incoming="DCE.44E898FE-529A-D089-1C82-056B85CDE955" outgoing="DCE.E3FC966E-E5CD-EFAF-9D44-03D6637D910F"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:InvocationNode xmi.id="DCE.2709175D-CD1B-38D4-E386-0DFDDEB46D92" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" name="Initialisation de la position courante de chaque cube cube" outgoing="DCE.5D8FACBE-AF3F-B31D-47EB-DECA15CC8475" incoming="DCE.E3FC966E-E5CD-EFAF-9D44-03D6637D910F DCE.7F0E0B3C-3861-A2D4-7960-BC01C58D682A"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:InvocationNode xmi.id="DCE.4678850A-7FC8-FDDD-9EAE-AC2FA331E6AC" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" name="Initialisation de la position finale de chaque cube" incoming="DCE.5D8FACBE-AF3F-B31D-47EB-DECA15CC8475" outgoing="DCE.59E0E4ED-DCA4-BF94-7247-FBD4267B3410 DCE.FAD6EA6A-6232-2E5D-A0DD-5E117964DB39"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:MultiFlow xmi.id="DCE.5D8FACBE-AF3F-B31D-47EB-DECA15CC8475" source="DCE.2709175D-CD1B-38D4-E386-0DFDDEB46D92" target="DCE.4678850A-7FC8-FDDD-9EAE-AC2FA331E6AC" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+
+<UML:MultiFlow xmi.id="DCE.59E0E4ED-DCA4-BF94-7247-FBD4267B3410" source="DCE.4678850A-7FC8-FDDD-9EAE-AC2FA331E6AC" target="DCE.EFEE45D6-73C7-0128-694C-0BB9199029A8" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:InvocationNode xmi.id="DCE.2732729A-8BF6-9382-C38C-92AE81E47A1A" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" name="Détermination de l&apos;état interne de chaque cube" outgoing="DCE.3711FAE0-D202-8B6A-52BD-90A453DC2225" incoming="DCE.E8F11438-79A0-44CB-FB21-EDFE21843DF3"><UML:Element.presentation>
+</UML:Element.presentation></UML:InvocationNode>
+<UML:DecisionMergeNode xmi.id="DCE.39968D14-2B71-582E-3449-D22E38AE7801" name="Unnamed" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B" incoming="DCE.FAD6EA6A-6232-2E5D-A0DD-5E117964DB39" outgoing="DCE.E8F11438-79A0-44CB-FB21-EDFE21843DF3 DCE.7F0E0B3C-3861-A2D4-7960-BC01C58D682A"><UML:Element.presentation>
+
+</UML:Element.presentation></UML:DecisionMergeNode>
+<UML:MultiFlow xmi.id="DCE.FAD6EA6A-6232-2E5D-A0DD-5E117964DB39" source="DCE.4678850A-7FC8-FDDD-9EAE-AC2FA331E6AC" target="DCE.39968D14-2B71-582E-3449-D22E38AE7801" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+
+<UML:MultiFlow xmi.id="DCE.62770AAD-C1A9-79CD-CECC-34C8FF9CCE95" source="DCE.7CF7CBCA-577F-9F08-9AD6-3B42E4BD337F" target="DCE.08A5F765-97FA-0F2E-B407-4EF3F70E8758" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.44E898FE-529A-D089-1C82-056B85CDE955" source="DCE.08A5F765-97FA-0F2E-B407-4EF3F70E8758" target="DCE.FDEF6946-E3F4-1241-7ACF-623240D4B24E" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.E3FC966E-E5CD-EFAF-9D44-03D6637D910F" source="DCE.FDEF6946-E3F4-1241-7ACF-623240D4B24E" target="DCE.2709175D-CD1B-38D4-E386-0DFDDEB46D92" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.3711FAE0-D202-8B6A-52BD-90A453DC2225" source="DCE.2732729A-8BF6-9382-C38C-92AE81E47A1A" target="DCE.BB95E971-B8F4-F653-4317-5A0580853F1A" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.E8F11438-79A0-44CB-FB21-EDFE21843DF3" source="DCE.39968D14-2B71-582E-3449-D22E38AE7801" target="DCE.2732729A-8BF6-9382-C38C-92AE81E47A1A" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:Comment xmi.id="DCE.E0DBC659-356B-6E81-162C-C998AA267847" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Positions courantes et finales cohérentes</UML:Comment.body></UML:Comment>
+<UML:MultiFlow xmi.id="DCE.7F0E0B3C-3861-A2D4-7960-BC01C58D682A" source="DCE.39968D14-2B71-582E-3449-D22E38AE7801" target="DCE.2709175D-CD1B-38D4-E386-0DFDDEB46D92" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+
+<UML:MultiFlow xmi.id="DCE.ED7D99C1-9177-B53F-66EF-AAF13293A8D6" source="DCE.7CF7CBCA-577F-9F08-9AD6-3B42E4BD337F" target="DCE.EFA519E0-0D9B-E9B9-A33E-0426D92B231E" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:MultiFlow xmi.id="DCE.202A0376-89A4-3774-286C-12DE5634344A" source="DCE.7CF7CBCA-577F-9F08-9AD6-3B42E4BD337F" target="DCE.DEF40155-D4DE-E617-DCEE-2ED23FBF4E34" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation></UML:MultiFlow>
+<UML:Comment xmi.id="DCE.1A074AC8-3273-863B-941D-26DEA6384B21" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Nombre de cubes cohérent</UML:Comment.body></UML:Comment>
+<UML:Comment xmi.id="DCE.C515299C-CB03-BBD2-8C00-84DE18000CEE" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Nombre de cubes incorrect</UML:Comment.body></UML:Comment>
+<UML:Comment xmi.id="DCE.6A2462AD-F5B4-C774-9350-F47B962EEEE0" owner="DCE.F8032F57-3348-4CCB-2408-06D58172120B"><UML:Element.presentation>
+</UML:Element.presentation>
+<UML:Comment.body>Incohérence dans les positions courantes et finales des cubes</UML:Comment.body></UML:Comment></UML:Element.ownedElement></UML:Activity></UML:Element.ownedElement></UML:Project></XMI.content> </XMI>
