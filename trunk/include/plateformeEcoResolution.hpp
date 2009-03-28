@@ -1,0 +1,3 @@
+#ifndef __PLATEFORMEECORESOLUTION__
+  #define __PLATEFORMEECORESOLUTION__
+#endif

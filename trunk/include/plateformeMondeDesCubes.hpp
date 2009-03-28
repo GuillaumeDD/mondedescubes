@@ -1,0 +1,3 @@
+#ifndef __PLATEFORMEMONDEDESCUBES__
+  #define __PLATEFORMEMONDEDESCUBES__
+#endif
