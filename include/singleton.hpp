@@ -1,7 +1,22 @@
 #ifndef __SINGLETON__
   #define __SINGLETON__
+  /*!
+  * \file singleton.cpp
+  * \brief Implementation du design pattern singleton
+  * \author GDD
+  * \version 0.1
+  */
+
   #include<iostream>
   using namespace std;
+  
+  /*!
+  * \class Singleton
+  * \brief Template de classe permettant de rendre une classe instanciable une seule fois 
+  *
+  * Une classe qui herite de ce template devient un singleton. Elle sera alors instanciable une unique fois.
+  *
+  */
   
   template<typename T> class Singleton{
     protected:
