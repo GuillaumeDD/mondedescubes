@@ -1,0 +1,25 @@
+\begin{theindex}
+
+  \item {$\sim $Singleton}
+    \subitem {Singleton}, \hyperpage{6}
+
+  \indexspace
+
+  \item {getInstance}
+    \subitem {Singleton}, \hyperpage{6}
+
+  \indexspace
+
+  \item {kill}
+    \subitem {Singleton}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Singleton}, \hyperpage{5}
+    \subitem {$\sim $Singleton}, \hyperpage{6}
+    \subitem {getInstance}, \hyperpage{6}
+    \subitem {kill}, \hyperpage{6}
+    \subitem {Singleton}, \hyperpage{6}
+  \item {src/singleton.cpp}, \hyperpage{7}
+
+\end{theindex}

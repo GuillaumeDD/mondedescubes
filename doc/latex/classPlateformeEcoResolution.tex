@@ -1,0 +1,143 @@
+\hypertarget{classPlateformeEcoResolution}{
+\section{PlateformeEcoResolution Class Reference}
+\label{classPlateformeEcoResolution}\index{PlateformeEcoResolution@{PlateformeEcoResolution}}
+}
+classe representant une plateforme d'eco-resolution abstraite  
+
+
+{\tt \#include $<$plateformeEcoResolution.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classPlateformeEcoResolution_6e03cc2c6a51bc4a47d2d226e41d13e9}{PlateformeEcoResolution} ()
+\begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
+\hyperlink{classPlateformeEcoResolution_356b4862f53c4be870304e5186601b5a}{$\sim$PlateformeEcoResolution} ()
+\begin{CompactList}\small\item\em Destructeur. \item\end{CompactList}\item 
+\hyperlink{classEcoAgent}{EcoAgent} $\ast$ \hyperlink{classPlateformeEcoResolution_266366888012385cb02dbff244ed320e}{getEcoAgent} (EcoAgentID id)
+\begin{CompactList}\small\item\em Obtention d'un eco-agent. \item\end{CompactList}\item 
+void \hyperlink{classPlateformeEcoResolution_6fdb4c8ecc62252da4326d9763d4f28d}{addEcoAgent} (\hyperlink{classEcoAgent}{EcoAgent} \&ea)
+\begin{CompactList}\small\item\em Ajout d'un eco-agent. \item\end{CompactList}\item 
+void \hyperlink{classPlateformeEcoResolution_8a36263f2e16fa04ace79d7eab917d01}{addRegle} (Regle r)
+\begin{CompactList}\small\item\em Ajout d'une nouvelle regle. \item\end{CompactList}\item 
+virtual void \hyperlink{classPlateformeEcoResolution_57d87139f09ca51cd6a4fa7cd2e83351}{initialiser} ()=0
+\begin{CompactList}\small\item\em Initialisation de la resolution. \item\end{CompactList}\item 
+virtual void \hyperlink{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}{resoudre} ()=0
+\begin{CompactList}\small\item\em Resolution du probleme par eco-resolution. \item\end{CompactList}\item 
+virtual bool \hyperlink{classPlateformeEcoResolution_4b7bc97302e1845f2b972499e1faf8b4}{verifierCoherence} ()
+\begin{CompactList}\small\item\em Verification du respect des regles apres l'initialisation de la plateforme. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+classe representant une plateforme d'eco-resolution abstraite 
+
+La classe gere les fonctionnalites basiques d'une plateforme d'eco-resolution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPlateformeEcoResolution_6e03cc2c6a51bc4a47d2d226e41d13e9}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{PlateformeEcoResolution}]{\setlength{\rightskip}{0pt plus 5cm}PlateformeEcoResolution::PlateformeEcoResolution ()}}
+\label{classPlateformeEcoResolution_6e03cc2c6a51bc4a47d2d226e41d13e9}
+
+
+Constructeur. 
+
+Constructeur de la classe abstraite \hyperlink{classPlateformeEcoResolution}{PlateformeEcoResolution} \hypertarget{classPlateformeEcoResolution_356b4862f53c4be870304e5186601b5a}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!$\sim$PlateformeEcoResolution@{$\sim$PlateformeEcoResolution}}
+\index{$\sim$PlateformeEcoResolution@{$\sim$PlateformeEcoResolution}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{$\sim$PlateformeEcoResolution}]{\setlength{\rightskip}{0pt plus 5cm}PlateformeEcoResolution::$\sim$PlateformeEcoResolution ()}}
+\label{classPlateformeEcoResolution_356b4862f53c4be870304e5186601b5a}
+
+
+Destructeur. 
+
+Destructeur de la classe abstraite \hyperlink{classPlateformeEcoResolution}{PlateformeEcoResolution} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPlateformeEcoResolution_6fdb4c8ecc62252da4326d9763d4f28d}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!addEcoAgent@{addEcoAgent}}
+\index{addEcoAgent@{addEcoAgent}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{addEcoAgent}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeEcoResolution::addEcoAgent ({\bf EcoAgent} \& {\em ea})}}
+\label{classPlateformeEcoResolution_6fdb4c8ecc62252da4326d9763d4f28d}
+
+
+Ajout d'un eco-agent. 
+
+Methode qui permet d'ajouter un eco-agent dans la plateforme
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ea}]: l'eco-agent a ajouter \end{description}
+\end{Desc}
+\hypertarget{classPlateformeEcoResolution_8a36263f2e16fa04ace79d7eab917d01}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!addRegle@{addRegle}}
+\index{addRegle@{addRegle}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{addRegle}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeEcoResolution::addRegle (Regle {\em r})}}
+\label{classPlateformeEcoResolution_8a36263f2e16fa04ace79d7eab917d01}
+
+
+Ajout d'une nouvelle regle. 
+
+Methode qui permet d'ajouter une nouvelle regle dans la plateforme
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em r}]: la regle a ajouter \end{description}
+\end{Desc}
+\hypertarget{classPlateformeEcoResolution_266366888012385cb02dbff244ed320e}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!getEcoAgent@{getEcoAgent}}
+\index{getEcoAgent@{getEcoAgent}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{getEcoAgent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgent}$\ast$ PlateformeEcoResolution::getEcoAgent (EcoAgentID {\em id})}}
+\label{classPlateformeEcoResolution_266366888012385cb02dbff244ed320e}
+
+
+Obtention d'un eco-agent. 
+
+Methode qui permet d'obtenir un eco-agent de la plateforme a partir de son identifiant
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em id}]: id de l'eco-agent voulu \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]un pointeur sur l'eco-agent recherche s'il existe, NULL sinon \end{Desc}
+\hypertarget{classPlateformeEcoResolution_57d87139f09ca51cd6a4fa7cd2e83351}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!initialiser@{initialiser}}
+\index{initialiser@{initialiser}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{initialiser}]{\setlength{\rightskip}{0pt plus 5cm}virtual void PlateformeEcoResolution::initialiser ()\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPlateformeEcoResolution_57d87139f09ca51cd6a4fa7cd2e83351}
+
+
+Initialisation de la resolution. 
+
+Methode qui permet d'initialiser le probleme avant d'attaquer la resolution \hypertarget{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!resoudre@{resoudre}}
+\index{resoudre@{resoudre}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{resoudre}]{\setlength{\rightskip}{0pt plus 5cm}virtual void PlateformeEcoResolution::resoudre ()\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}
+
+
+Resolution du probleme par eco-resolution. 
+
+Methode qui permet de lancer la resolution du probleme par eco-resolution \hypertarget{classPlateformeEcoResolution_4b7bc97302e1845f2b972499e1faf8b4}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!verifierCoherence@{verifierCoherence}}
+\index{verifierCoherence@{verifierCoherence}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{verifierCoherence}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool PlateformeEcoResolution::verifierCoherence ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classPlateformeEcoResolution_4b7bc97302e1845f2b972499e1faf8b4}
+
+
+Verification du respect des regles apres l'initialisation de la plateforme. 
+
+Methode qui permet de verifier l'ensemble des regles apres l'initialisation de la plateforme
+
+\begin{Desc}
+\item[Returns:]true si toutes les regles sont verifiees, false sinon \end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+include/\hyperlink{plateformeEcoResolution_8hpp}{plateformeEcoResolution.hpp}\end{CompactItemize}
