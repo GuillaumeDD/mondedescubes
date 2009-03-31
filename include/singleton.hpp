@@ -4,6 +4,8 @@
   * \file singleton.hpp
   * \brief Implementation du design pattern singleton
   * \author GDD
+  * \author Arnaud Faure
+  * \author Pauline Requena
   * \version 0.1
   * \date 29 mars 2009
   *
