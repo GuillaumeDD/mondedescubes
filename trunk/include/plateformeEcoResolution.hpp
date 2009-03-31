@@ -40,9 +40,9 @@
       * Methode qui permet d'obtenir un eco-agent de la plateforme a partir de son identifiant
       *
       * \param id : id de l'eco-agent voulu
-      * \return l'eco-agent recherche s'il existe, NULL sinon
+      * \return un pointeur sur l'eco-agent recherche s'il existe, NULL sinon
       */
-      EcoAgent getEcoAgent(EcoAgentID id);
+      EcoAgent* getEcoAgent(EcoAgentID id);
       
       /*!
       * \brief Ajout d'un eco-agent
@@ -52,8 +52,18 @@
       * \param ea : l'eco-agent a ajouter
       *
       */      
-      void addEcoAgent(EcoAgent ea);
+      void addEcoAgent(EcoAgent& ea);
       
+      /*!
+      * \brief Ajout d'une nouvelle regle
+      *
+      * Methode qui permet d'ajouter une nouvelle regle dans la plateforme
+      *
+      * \param r : la regle a ajouter
+      *
+      */      
+      void addRegle(Regle r);
+            
       /*!
       * \brief Initialisation de la resolution
       *
@@ -70,6 +80,19 @@
       */
       virtual void resoudre()=0;
       
+      /*!
+      *\brief Verification du respect des regles apres l'initialisation de la plateforme
+      *
+      * Methode qui permet de verifier l'ensemble des regles apres l'initialisation de la plateforme
+      *
+      *\return true si toutes les regles sont verifiees, false sinon
+      *
+      */
+      virtual bool verifierCoherence();
+      
+    private:
+      map<EcoAgentID,EcoAgent&> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
+      list<Regle> regles; /*!< Liste des regles a verifier avant de lancer la resolution */
   };
 
 #endif
