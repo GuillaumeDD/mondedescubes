@@ -11,14 +11,14 @@
  * \version 0.1
  * \date 1er avril 2009
  *
- * Implementation de la classe Table qui est une classe dérivée de la classe EcoAgent.
+ * Implementation de la classe Table qui est une classe derivee de la classe EcoAgent.
  *
  */
 
 using namespace std;
 
  /*! \class Table
- * \brief Classe dérivée de la classe EcoAgent désignant le Support sur lequel vont être posés les cubes
+ * \brief Classe dérivee de la classe EcoAgent designant le Support sur lequel vont être poses les cubes
  *
  */
 
@@ -71,7 +71,7 @@ public:
 	virtual void agresser(EcoAgent a);
 	
 	/*!
-	 * \brief Suite d'operations realisees par la table lorsqu'elle est agressée
+	 * \brief Suite d'operations realisees par la table lorsqu'elle est agressee
 	 *
 	 *
 	 */
