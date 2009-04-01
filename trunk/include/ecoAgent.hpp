@@ -24,18 +24,7 @@ using namespace std;
 
 class EcoAgent {
 	public:
-	 
-	 /*!
-	 * \brief Constructeur
-	 *
-	 * Constructeur de la classe EcoAgent
-	 *
-	 *\param id : identifiant unique que l'agent se verra attribuer
-	  */
-	EcoAgent(EcoAgentID id);	
-	
-		
-		
+			
 	/*!
 	 * \brief Obtention de l'Etat
 	 *
@@ -61,7 +50,7 @@ class EcoAgent {
 	 *
 	 *\param e : Etat que recevra l'EcoAgent
 	 */
-	void setEtat(const Etat e);
+	void setEtat(Etat e);
 	
 	/*!
 	 * \brief Changement de l'EcoAgentID
@@ -70,7 +59,7 @@ class EcoAgent {
 	 *
 	 *\param id : id que recevra l'EcoAgent
 	 */
-	void setId(const EcoAgentID id);
+	void setId(EcoAgentID id);
 	
 	/*!
 	 * \brief Suite d'operations realisees par l'agent lorsqu'il cherche a fuir
@@ -116,6 +105,19 @@ class EcoAgent {
 	 *
 	 */
 	virtual void faireSatisfaction();
-	
+
+        /*!
+	 * \brief Suite d'operations realisees par l'agent lorsqu'il agit
+	 *
+	 *
+	 */
+	virtual void agir();
+
+        private:
+
+            EcoAgentID id;
+            Etat etat;
+}
+
 #endif
 
