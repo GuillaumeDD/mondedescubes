@@ -4,7 +4,7 @@
 
 /*!
  * \file table.hpp
- * \brief Implementation du module table qui est un dérivé d'un EcoAgent
+ * \brief Implementation du module table qui est un derive d'un EcoAgent
  * \author GDD
  * \author Arnaud Faure
  * \author Pauline Requena
@@ -18,7 +18,7 @@
 using namespace std;
 
  /*! \class Table
- * \brief Classe dérivee de la classe EcoAgent designant le Support sur lequel vont être poses les cubes
+ * \brief Classe derivee de la classe EcoAgent designant le Support sur lequel vont etre poses les cubes
  *
  */
 
@@ -51,14 +51,14 @@ public:
 	 *
 	 *
 	 */
-	virtual void rechercherFuite();
+	void rechercherFuite();
 	
 	/*!
 	 * \brief Suite d'operations realisees par la table lorsqu'elle cherche a se satisfaire
 	 *
 	 *
 	 */
-	virtual void rechercherSatisfaction();
+	void rechercherSatisfaction();
 	
 	/*!
 	 * \brief Suite d'operations realisees lorsque la table agresse un autre eco-agent
@@ -68,21 +68,21 @@ public:
          *
 	 */
 	
-	virtual void agresser(EcoAgent a);
+	void agresser(EcoAgent a);
 	
 	/*!
 	 * \brief Suite d'operations realisees par la table lorsqu'elle est agressee
 	 *
 	 *
 	 */
-	virtual void estAgresse();
+	void estAgresse();
 	
 	/*!
 	 * \brief Suite d'operations realisees par la fuite lorsqu'elle fuit
 	 *
 	 *
 	 */
-	virtual void faireFuite();
+	void faireFuite();
 
 	/*!
 	 * \brief Suite d'operations realisees par la table lorsqu'elle se satisfait
