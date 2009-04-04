@@ -1,7 +1,5 @@
-
 #ifndef __TABLE__
 #define	__TABLE__
-
 /*!
  * \file table.hpp
  * \brief Implementation du module table qui est un derive d'un EcoAgent
@@ -14,7 +12,9 @@
  * Implementation de la classe Table qui est une classe derivee de la classe EcoAgent.
  *
  */
-
+#include<iostream>
+#include"ecoAgentID.hpp"
+#include"ecoAgent.hpp"
 using namespace std;
 
  /*! \class Table
@@ -22,10 +22,7 @@ using namespace std;
  *
  */
 
-class Table 
-{
-private:
-    
+class Table : public EcoAgent{
 public:
     /*!
      * \brief Constructeur
@@ -44,9 +41,8 @@ public:
      *
      */
      ~Table();
-        
-public:
-        /*!
+
+     /*!
 	 * \brief Suite d'operations realisees par la table lorsqu'elle cherche a fuir
 	 *
 	 *
@@ -68,7 +64,7 @@ public:
          *
 	 */
 	
-	void agresser(EcoAgent a);
+	void agresser(const EcoAgent& a);
 	
 	/*!
 	 * \brief Suite d'operations realisees par la table lorsqu'elle est agressee
@@ -90,11 +86,13 @@ public:
 	 *
 	 */
 	void faireSatisfaction();
-
-    
+	
+	/*!
+	 * \brief Suite d'operations realisees par la table lorsqu'il agit
+	 *
+	 */
+	void agir();
+	
 };
- 
-
-
 #endif	
 

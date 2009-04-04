@@ -9,7 +9,13 @@
   * \version 0.1
   * \date 29 mars 2009
   */
-  #include<stdio>
+  #include<iostream>
+  #include<map>
+  #include<list>
+  #include"plateformeEcoResolution.hpp"
+  #include"ecoAgentID.hpp"
+  #include"ecoAgent.hpp"
+  #include"regle.hpp"
   using namespace std;
   /*! \class PlateformeEcoResolution
   * \brief classe representant une plateforme d'eco-resolution abstraite
@@ -42,7 +48,7 @@
       * \param id : id de l'eco-agent voulu
       * \return un pointeur sur l'eco-agent recherche s'il existe, NULL sinon
       */
-      EcoAgent* getEcoAgent(EcoAgentID id);
+      EcoAgent* getEcoAgent(const EcoAgentID& id) const;
       
       /*!
       * \brief Ajout d'un eco-agent
@@ -52,7 +58,7 @@
       * \param ea : l'eco-agent a ajouter
       *
       */      
-      void addEcoAgent(EcoAgent& ea);
+      void addEcoAgent(const EcoAgent& ea);
       
       /*!
       * \brief Ajout d'une nouvelle regle
@@ -62,7 +68,7 @@
       * \param r : la regle a ajouter
       *
       */      
-      void addRegle(Regle r);
+      void addRegle(const Regle& r);
             
       /*!
       * \brief Initialisation de la resolution
@@ -88,11 +94,11 @@
       *\return true si toutes les regles sont verifiees, false sinon
       *
       */
-      virtual bool verifierCoherence();
+      virtual bool verifierCoherence()=0;
       
     private:
       map<EcoAgentID,EcoAgent&> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
-      list<Regle> regles; /*!< Liste des regles a verifier avant de lancer la resolution */
+      list<Regle*> regles; /*!< Liste des regles a verifier avant de lancer la resolution */
   };
 
 #endif
