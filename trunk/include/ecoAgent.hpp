@@ -9,22 +9,24 @@
  * \version 0.1
  * \date 31 mars 2009
  *
- * Implementation de la classe abstraite EcoAgent dont heritent les classes Cube et Table.
+ * Implementation de la classe abstraite EcoAgent qui regroupe les fonctionnalites communes a tout eco-agent
  *
   */
-
+#include<iostream>
+#include"ecoAgentID.hpp"
+#include"etat.hpp"
 using namespace std;
 
  /*!
  * \class EcoAgent
- * \brief Classe abstraite appelee par les classes Cube et Table
+ * \brief Classe abstraite qui permet de creer un eco-agent
  *
+ * Classe abstraite qui permet de creer un eco-agent. Tout eco-agent doit herite de cette classe.
  *
   */  
 
 class EcoAgent {
 	public:
-			
 	/*!
 	 * \brief Obtention de l'Etat
 	 *
@@ -50,7 +52,7 @@ class EcoAgent {
 	 *
 	 *\param e : Etat que recevra l'EcoAgent
 	 */
-	void setEtat(Etat e);
+	void setEtat(const Etat e);
 	
 	/*!
 	 * \brief Changement de l'EcoAgentID
@@ -59,65 +61,58 @@ class EcoAgent {
 	 *
 	 *\param id : id que recevra l'EcoAgent
 	 */
-	void setId(EcoAgentID id);
+	void setId(const EcoAgentID* id);
 	
 	/*!
 	 * \brief Suite d'operations realisees par l'agent lorsqu'il cherche a fuir
 	 *
-	 *
 	 */
-	virtual void rechercherFuite();
+	virtual void rechercherFuite()=0;
 	
 	/*!
 	 * \brief Suite d'operations realisees par l'agent lorsqu'il cherche a se satisfaire
 	 *
-	 *
 	 */
-	virtual void rechercherSatisfaction();
+	virtual void rechercherSatisfaction()=0;
 	
-		/*!
+	/*!
 	 * \brief Suite d'operations realisees lorsqu'un agent1 agresse un agent2
 	 *
-	 *
 	 *\param a : EcoAgent a agresser
-
-		 */
-	
-	virtual void agresser(EcoAgent a);
+	 *
+	 */
+	virtual void agresser(const EcoAgent& a)=0;
 	
 	/*!
 	 * \brief Suite d'operations realisees par un agent agresse
 	 *
-	 *
 	 */
-	virtual void estAgresse();
+	virtual void estAgresse()=0;
 	
 	/*!
-	 * \brief Suite d'operations realisees par l'agent lorsqu'il se met a fuir
-	 *
+	 * \brief Suite d'operations realisees par l'agent lorsqu'il est agresse
 	 *
 	 */
-	virtual void faireFuite();
+	virtual void faireFuite()=0;
 
 	/*!
 	 * \brief Suite d'operations realisees par l'agent lorsqu'il se satisfait
 	 *
-	 *
 	 */
-	virtual void faireSatisfaction();
+	virtual void faireSatisfaction()=0;
 
         /*!
 	 * \brief Suite d'operations realisees par l'agent lorsqu'il agit
 	 *
-	 *
 	 */
-	virtual void agir();
+	virtual void agir()=0;
 
         private:
-
-            EcoAgentID id;
-            Etat etat;
-}
+            EcoAgentID* id; /*!< Identifiant de l'eco-agent */
+            Etat etat; /*!< Etat dans lequel se situe l'agent */
+	    EcoAgentID* positionCourante; /*!< Eco-agent sur lequel est actuellement l'eco-agent */
+	    EcoAgentID& positionFinale; /*!< Eco-agent sur lequel il doit finir a la fin de la resolution */
+};
 
 #endif
 

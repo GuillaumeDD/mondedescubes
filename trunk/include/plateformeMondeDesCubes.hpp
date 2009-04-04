@@ -11,7 +11,15 @@
   * \date 02 avril 2009
   */
 
-  #include<stdio>
+  #include<iostream>
+  #include "plateformeEcoResolution.hpp"
+  #include "singleton.hpp"
+  #include "regle.hpp"
+  #include "ecoAgent.hpp"
+  #include "ecoAgentID.hpp"
+  #include "table.hpp"
+  #include "cube.hpp"
+  
   using namespace std;
 
   /*!
@@ -21,8 +29,8 @@
    *  La classe gere les fonctionnalites de la plateforme d'eco-resolution du monde des cubes.
    */
 
-  class PlateformeMondeDesCubes{
-
+  class PlateformeMondeDesCubes : public PlateformeEcoResolution, public Singleton<PlateformeMondeDesCubes>{
+  friend class Singleton<PlateformeMondeDesCubes>; //ligne necessaire pour que le template Singleton ait acces au constructeur de cette classe
     public:
 
       /*!
@@ -97,7 +105,7 @@
       *\param id : identifiant de la table
       *
       */
-      void setTableIdentifiant(EcoAgentID id);
+      void setTableIdentifiant(const EcoAgentID& id);
 
       /*!
       *\brief Verification de la coherence du nombre de cubes (s'il est bien positif)
@@ -118,7 +126,7 @@
       *\return un pointeur sur le cube geneur s'il existe, NULL sinon
       *
       */
-      Cube* obtenirGeneur(Cube currentCube);
+      Cube* obtenirGeneur(const Cube& currentCube);
 
       /*!
       *\brief Ajout d'un cube dans la plateforme
@@ -128,7 +136,7 @@
       *\param cube : le cube a ajouter
       *
       */
-      void addEcoAgent(Cube cube);
+      void addEcoAgent(const Cube& cube);
 
       /*!
       *\brief Determination de la position finale d'un cube de la plateforme
@@ -139,7 +147,7 @@
       *\param pos : position finale du cube, ie identifiant du cube destinataire
       *
       */
-      void setPositionFinale(EcoAgentID c,EcoAgent pos);
+      void setPositionFinale(const EcoAgentID& c,const EcoAgent& pos);
 
       /*!
       *\brief Determination de la position courante d'un cube de la plateforme
@@ -150,7 +158,7 @@
       *\param pos : position courante du cube, ie identifiant du cube destinataire
       *
       */
-      void setPositionCourante(EcoAgentID c,EcoAgent pos);
+      void setPositionCourante(const EcoAgentID& c,const EcoAgent& pos);
 
      /*!
       *\brief Determination de l'identifiant d'un cube
@@ -161,7 +169,7 @@
       *\param id : identifiant du cube
       *
       */
-      void setCubeID(Cube currentCube,EcoAgentID id);
+      void setCubeID(const Cube& currentCube,const EcoAgentID& id);
 
       /*!
       *\brief Obtention de l'identifiant de la table
@@ -174,9 +182,7 @@
       EcoAgentID getTableID();
 
     private:
-      map<EcoAgentID,EcoAgent&> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
-      list<Regle> regles; /*!< Liste des regles a verifier avant de lancer la resolution */
-      Table table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
+     Table table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
   };
 
 
