@@ -61,7 +61,48 @@ class EcoAgent {
 	 *
 	 *\param id : id que recevra l'EcoAgent
 	 */
-	void setId(const EcoAgentID* id);
+	void setId(const EcoAgentID& id);
+	
+	
+	/*!
+	* \brief Changement de la position courante de l'agent
+	*
+	* Methode qui permet de changer la position courante de l'eco-agent
+	*
+	* \param pos : EcoAgentID de la nouvelle position
+	*/
+	void setPositionCourante(const EcoAgentID& pos);
+	
+	
+	/*!
+	* \brief Permet d'obtenir la position courante de l'eco-agent
+	*
+	* Methode qui permet d'obtenir l'EcoAgentID de l'eco-agent sur lequel est placé l'eco-agent
+	*
+	* \return EcoAgentID de l'EcoAgent avec lequel cet EcoAgent est en relation
+	*
+	*/
+	EcoAgentID* getPositionCourante() const;
+	
+	/*!
+	* \brief Changement de la position finale de l'agent
+	*
+	* Methode qui permet de changer la position finale de l'eco-agent, c'est a dire, l'identifiant
+	* de l'eco-agent sur lequel l'eco-agent doit se trouver a la fin de la resolution
+	*
+	* \param pos : EcoAgentID de la nouvelle position
+	*/
+	void setPositionFinale(const EcoAgentID& pos);
+	
+	
+	/*!
+	* \brief Permet d'obtenir la position courante de l'eco-agent
+	*
+	* Methode qui permet d'obtenir l'EcoAgentID de l'eco-agent sur lequel est placé l'eco-agent
+	*
+	* \return EcoAgentID de l'EcoAgent avec lequel cet EcoAgent doit se trouver en relation a la fin de la resolution
+	*/
+	EcoAgentID* getPositionFinale() const;	
 	
 	/*!
 	 * \brief Suite d'operations realisees par l'agent lorsqu'il cherche a fuir

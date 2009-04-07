@@ -69,7 +69,17 @@
       *
       */      
       void addRegle(const Regle& r);
-            
+      
+      /*!
+      *\brief Verification du respect des regles apres l'initialisation de la plateforme
+      *
+      * Methode qui permet de verifier l'ensemble des regles apres l'initialisation de la plateforme
+      *
+      *\return true si toutes les regles sont verifiees, false sinon
+      *
+      */
+      bool verifierCoherence()=0;
+      
       /*!
       * \brief Initialisation de la resolution
       *
@@ -86,15 +96,6 @@
       */
       virtual void resoudre()=0;
       
-      /*!
-      *\brief Verification du respect des regles apres l'initialisation de la plateforme
-      *
-      * Methode qui permet de verifier l'ensemble des regles apres l'initialisation de la plateforme
-      *
-      *\return true si toutes les regles sont verifiees, false sinon
-      *
-      */
-      virtual bool verifierCoherence()=0;
       
     private:
       map<EcoAgentID,EcoAgent&> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/

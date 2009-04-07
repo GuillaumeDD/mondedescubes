@@ -32,25 +32,6 @@
   class PlateformeMondeDesCubes : public PlateformeEcoResolution, public Singleton<PlateformeMondeDesCubes>{
   friend class Singleton<PlateformeMondeDesCubes>; //ligne necessaire pour que le template Singleton ait acces au constructeur de cette classe
     public:
-
-      /*!
-       * \brief Constructeur
-       *
-       * Constructeur de la classe PlateformeMondeDesCubes derivee de la classe PlateformeEcoResolution
-       *
-       */
-      PlateformeMondeDesCubes();
-
-      /*!
-      * \brief Destructeur
-      *
-      * Destructeur de la classe PlateformeMondeDesCubes derivee de la classe PlateformeEcoResolution
-      *
-      */
-      ~PlateformeMondeDesCubes();
-
-           
-
       /*!
       * \brief Initialisation de la resolution du monde des cubes
       *
@@ -66,16 +47,6 @@
       *
       */
       void resoudre();
-
-      /*!
-      *\brief Verification du respect des regles apres l'initialisation de la plateforme
-      *
-      * Methode qui permet de verifier l'ensemble des regles apres l'initialisation de la plateforme
-      *
-      *\return true si toutes les regles sont verifiees, false sinon
-      *
-      */
-      bool verifierCoherence();
 
       /*!
       *\brief Obtention du cube qui a la priorite pour agir dans la plateforme d'eco-resolution
@@ -97,6 +68,16 @@
       */
       void setNombreDeCubes(int nb);
 
+     /*!
+      *\brief Obtention du nombre de cubes dans la plateforme d'eco-resolution
+      *
+      * Methode qui permet d'obtenir le nombre de cubes de la plateforme d'eco-resolution
+      *
+      *\return le nombre de cubes
+      *
+      */
+      int getNombreDeCubes() const;
+      
        /*!
       *\brief Determination de l'identifiant de la table dans la plateforme
       *
@@ -107,6 +88,17 @@
       */
       void setTableIdentifiant(const EcoAgentID& id);
 
+      
+      /*!
+      *\brief Obtention de l'identifiant de la table
+      *
+      * Methode qui permet d'obtenir l'identifiant de la table
+      *
+      *\return l'identifiant de la table (de type EcoAgentID)
+      *
+      */
+      EcoAgentID getTableID();
+      
       /*!
       *\brief Verification de la coherence du nombre de cubes (s'il est bien positif)
       *
@@ -147,7 +139,7 @@
       *\param pos : position finale du cube, ie identifiant du cube destinataire
       *
       */
-      void setPositionFinale(const EcoAgentID& c,const EcoAgent& pos);
+      void setPositionFinale(const EcoAgentID& c,const EcoAgentID& pos);
 
       /*!
       *\brief Determination de la position courante d'un cube de la plateforme
@@ -158,7 +150,7 @@
       *\param pos : position courante du cube, ie identifiant du cube destinataire
       *
       */
-      void setPositionCourante(const EcoAgentID& c,const EcoAgent& pos);
+      void setPositionCourante(const EcoAgentID& c,const EcoAgentID& pos);
 
      /*!
       *\brief Determination de l'identifiant d'un cube
@@ -171,18 +163,27 @@
       */
       void setCubeID(const Cube& currentCube,const EcoAgentID& id);
 
-      /*!
-      *\brief Obtention de l'identifiant de la table
-      *
-      * Methode qui permet d'obtenir l'identifiant de la table
-      *
-      *\return l'identifiant de la table (de type EcoAgentID)
-      *
-      */
-      EcoAgentID getTableID();
 
     private:
-     Table table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
+
+      /*!
+       * \brief Constructeur
+       *
+       * Constructeur de la classe PlateformeMondeDesCubes derivee de la classe PlateformeEcoResolution
+       *
+       */
+      PlateformeMondeDesCubes();
+
+      /*!
+      * \brief Destructeur
+      *
+      * Destructeur de la classe PlateformeMondeDesCubes derivee de la classe PlateformeEcoResolution
+      *
+      */
+      ~PlateformeMondeDesCubes();
+      
+      Table table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
+      int nombreDeCubes;
   };
 
 
