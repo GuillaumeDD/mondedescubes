@@ -111,7 +111,7 @@ class EcoAgent {
             EcoAgentID* id; /*!< Identifiant de l'eco-agent */
             Etat etat; /*!< Etat dans lequel se situe l'agent */
 	    EcoAgentID* positionCourante; /*!< Eco-agent sur lequel est actuellement l'eco-agent */
-	    EcoAgentID& positionFinale; /*!< Eco-agent sur lequel il doit finir a la fin de la resolution */
+	    EcoAgentID* positionFinale; /*!< Eco-agent sur lequel il doit finir a la fin de la resolution */
 };
 
 #endif
