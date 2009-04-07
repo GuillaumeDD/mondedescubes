@@ -58,8 +58,21 @@
       */
       bool operator ==(const EcoAgentID&) const;
       
+      /*!
+      *	\brief Obtention du nombre de generation
+      *	Methode statique qui permet d'obtenir le nombre de generations d'EcoAgentID
+      *
+      */
+      static int getNombreDeGeneration() const;
+      
     private:
-      int identifiant;
-      static int nombreDeGeneration;
+      /*!
+      * \brief Genere un identifiant unique
+      * Methode qui permet de generer un identifiant unique et comptabilise le nombre de generations
+      */
+      int genereID();
+      
+      int identifiant;/*!< Identifiant de l'eco-agent */
+      static int nombreDeGeneration;/*!< Nombre de generations d'eco-agent */
   };
 #endif
