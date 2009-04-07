@@ -44,58 +44,64 @@ public:
      ~Cube();
 
      /*!
-	 * \brief Suite d'operations realisees par la table lorsqu'elle cherche a fuir
+	 * \brief Suite d'operations realisees par le cube lorsqu'il cherche a fuir
 	 *
 	 *
 	 */
 	void rechercherFuite();
 	
 	/*!
-	 * \brief Suite d'operations realisees par la table lorsqu'elle cherche a se satisfaire
+	 * \brief Suite d'operations realisees par le cube lorsqu'il cherche a se satisfaire
 	 *
 	 *
 	 */
 	void rechercherSatisfaction();
 	
 	/*!
-	 * \brief Suite d'operations realisees lorsque la table agresse un autre eco-agent
+	 * \brief Suite d'operations realisees lorsque le cube agresse un autre eco-agent
 	 *
 	 *
 	 *\param a : EcoAgent a agresser
          *
 	 */
 	
-	void agresser(const EcoAgent& a);
+	void agresser(const Cube& a);
 	
 	/*!
-	 * \brief Suite d'operations realisees par la table lorsqu'elle est agressee
+	 * \brief Suite d'operations realisees par le cube lorsqu'il est agressee
 	 *
 	 *
 	 */
 	void estAgresse();
 	
 	/*!
-	 * \brief Suite d'operations realisees par la fuite lorsqu'elle fuit
+	 * \brief Suite d'operations realisees par le cube lorsqu'il fuit
 	 *
 	 *
 	 */
 	void faireFuite();
 
 	/*!
-	 * \brief Suite d'operations realisees par la table lorsqu'elle se satisfait
+	 * \brief Suite d'operations realisees par le cube lorsqu'il se satisfait
 	 *
 	 *
 	 */
 	void faireSatisfaction();
 	
 	/*!
-	* \brief Initialisation de l'etat de l'agent
+	* \brief Initialisation de l'etat du cube
 	*
-	* Cette methode permet d'initialiser l'etat d'un agent en prenant en compte sa position courante et sa position finale.
+	* Cette methode permet d'initialiser l'etat du cube en prenant en compte sa position courante et sa position finale.
 	* Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a "satisfait"
 	*
 	*/
 	void initialiserEtat();
+
+	/*!
+	 * \brief Suite d'operations realisees par le cube lorsqu'il agit
+	 *
+	 */
+	void agir();
 };
 
 #endif
