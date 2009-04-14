@@ -78,7 +78,7 @@
       *\return true si toutes les regles sont verifiees, false sinon
       *
       */
-      bool verifierCoherence()=0;
+      bool verifierCoherence();
       
       /*!
       * \brief Initialisation de la resolution
