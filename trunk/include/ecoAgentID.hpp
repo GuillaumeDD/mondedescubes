@@ -59,11 +59,19 @@
       bool operator ==(const EcoAgentID&) const;
       
       /*!
+      *  \brief Comparaison de EcoAgentID
+      *
+      * Methode qui permet de comparer deux EcoAgentID
+      *
+      */
+      bool operator <(const EcoAgentID&) const;
+      
+      /*!
       *	\brief Obtention du nombre de generation
       *	Methode statique qui permet d'obtenir le nombre de generations d'EcoAgentID
       *
       */
-      static int getNombreDeGeneration() const;
+      static int getNombreDeGeneration();
       
     private:
       /*!
