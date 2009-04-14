@@ -8,7 +8,7 @@
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
-      <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -16,6 +16,7 @@
   <div class="tabs">
     <ul>
       <li><a href="annotated.html"><span>Class&nbsp;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&nbsp;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
@@ -25,6 +26,8 @@
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;plateformeEcoResolution.hpp&gt;</code>
+<p>
+Inherited by <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMondeDesCubes</a>.
 <p>
 
 <p>
@@ -37,24 +40,24 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#356b4862f53c4be870304e5186601b5a">~PlateformeEcoResolution</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructeur.  <a href="#356b4862f53c4be870304e5186601b5a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgent.html">EcoAgent</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#266366888012385cb02dbff244ed320e">getEcoAgent</a> (EcoAgentID id)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgent.html">EcoAgent</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#ba320298b5b660cb2dff0558f8c5eb31">getEcoAgent</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention d'un eco-agent.  <a href="#266366888012385cb02dbff244ed320e"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#6fdb4c8ecc62252da4326d9763d4f28d">addEcoAgent</a> (<a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;ea)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention d'un eco-agent.  <a href="#ba320298b5b660cb2dff0558f8c5eb31"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#45d2074749341698f24086b77f3f3edd">addEcoAgent</a> (const <a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;ea)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'un eco-agent.  <a href="#6fdb4c8ecc62252da4326d9763d4f28d"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#8a36263f2e16fa04ace79d7eab917d01">addRegle</a> (Regle r)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'un eco-agent.  <a href="#45d2074749341698f24086b77f3f3edd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#4b6382c212be5a06de556de5aa8f9e6a">addRegle</a> (const <a class="el" href="classRegle.html">Regle</a> &amp;r)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'une nouvelle regle.  <a href="#8a36263f2e16fa04ace79d7eab917d01"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'une nouvelle regle.  <a href="#4b6382c212be5a06de556de5aa8f9e6a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#2433694ea90bac8394675aaa3c9829d3">verifierCoherence</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verification du respect des regles apres l'initialisation de la plateforme.  <a href="#2433694ea90bac8394675aaa3c9829d3"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#57d87139f09ca51cd6a4fa7cd2e83351">initialiser</a> ()=0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialisation de la resolution.  <a href="#57d87139f09ca51cd6a4fa7cd2e83351"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#17f587580cd8aee537551bc0ddd82bef">resoudre</a> ()=0</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resolution du probleme par eco-resolution.  <a href="#17f587580cd8aee537551bc0ddd82bef"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#4b7bc97302e1845f2b972499e1faf8b4">verifierCoherence</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verification du respect des regles apres l'initialisation de la plateforme.  <a href="#4b7bc97302e1845f2b972499e1faf8b4"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 classe representant une plateforme d'eco-resolution abstraite 
@@ -103,14 +106,14 @@ Destructeur de la classe abstraite <a class="el" href="classPlateformeEcoResolut
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="6fdb4c8ecc62252da4326d9763d4f28d"></a><!-- doxytag: member="PlateformeEcoResolution::addEcoAgent" ref="6fdb4c8ecc62252da4326d9763d4f28d" args="(EcoAgent &amp;ea)" -->
+<a class="anchor" name="45d2074749341698f24086b77f3f3edd"></a><!-- doxytag: member="PlateformeEcoResolution::addEcoAgent" ref="45d2074749341698f24086b77f3f3edd" args="(const EcoAgent &amp;ea)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void PlateformeEcoResolution::addEcoAgent           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>ea</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
@@ -131,14 +134,14 @@ Methode qui permet d'ajouter un eco-agent dans la plateforme<p>
 
 </div>
 </div><p>
-<a class="anchor" name="8a36263f2e16fa04ace79d7eab917d01"></a><!-- doxytag: member="PlateformeEcoResolution::addRegle" ref="8a36263f2e16fa04ace79d7eab917d01" args="(Regle r)" -->
+<a class="anchor" name="4b6382c212be5a06de556de5aa8f9e6a"></a><!-- doxytag: member="PlateformeEcoResolution::addRegle" ref="4b6382c212be5a06de556de5aa8f9e6a" args="(const Regle &amp;r)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void PlateformeEcoResolution::addRegle           </td>
           <td>(</td>
-          <td class="paramtype">Regle&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classRegle.html">Regle</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>r</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
@@ -159,17 +162,17 @@ Methode qui permet d'ajouter une nouvelle regle dans la plateforme<p>
 
 </div>
 </div><p>
-<a class="anchor" name="266366888012385cb02dbff244ed320e"></a><!-- doxytag: member="PlateformeEcoResolution::getEcoAgent" ref="266366888012385cb02dbff244ed320e" args="(EcoAgentID id)" -->
+<a class="anchor" name="ba320298b5b660cb2dff0558f8c5eb31"></a><!-- doxytag: member="PlateformeEcoResolution::getEcoAgent" ref="ba320298b5b660cb2dff0558f8c5eb31" args="(const EcoAgentID &amp;id) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classEcoAgent.html">EcoAgent</a>* PlateformeEcoResolution::getEcoAgent           </td>
           <td>(</td>
-          <td class="paramtype">EcoAgentID&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>id</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -207,6 +210,8 @@ Methode qui permet d'obtenir un eco-agent de la plateforme a partir de son ident
 Initialisation de la resolution. 
 <p>
 Methode qui permet d'initialiser le probleme avant d'attaquer la resolution 
+<p>Implemented in <a class="el" href="classPlateformeMondeDesCubes.html#67160be6f5ecd0b8f3fffeb1a7bd81ba">PlateformeMondeDesCubes</a>.</p>
+
 </div>
 </div><p>
 <a class="anchor" name="17f587580cd8aee537551bc0ddd82bef"></a><!-- doxytag: member="PlateformeEcoResolution::resoudre" ref="17f587580cd8aee537551bc0ddd82bef" args="()=0" -->
@@ -228,18 +233,20 @@ Methode qui permet d'initialiser le probleme avant d'attaquer la resolution
 Resolution du probleme par eco-resolution. 
 <p>
 Methode qui permet de lancer la resolution du probleme par eco-resolution 
+<p>Implemented in <a class="el" href="classPlateformeMondeDesCubes.html#c7be18c8d02e2743e884545828cfabed">PlateformeMondeDesCubes</a>.</p>
+
 </div>
 </div><p>
-<a class="anchor" name="4b7bc97302e1845f2b972499e1faf8b4"></a><!-- doxytag: member="PlateformeEcoResolution::verifierCoherence" ref="4b7bc97302e1845f2b972499e1faf8b4" args="()" -->
+<a class="anchor" name="2433694ea90bac8394675aaa3c9829d3"></a><!-- doxytag: member="PlateformeEcoResolution::verifierCoherence" ref="2433694ea90bac8394675aaa3c9829d3" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool PlateformeEcoResolution::verifierCoherence           </td>
+          <td class="memname">bool PlateformeEcoResolution::verifierCoherence           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -254,9 +261,9 @@ Methode qui permet de verifier l'ensemble des regles apres l'initialisation de l
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="plateformeEcoResolution_8hpp.html">plateformeEcoResolution.hpp</a></ul>
+<li>trunk/include/<a class="el" href="plateformeEcoResolution_8hpp.html">plateformeEcoResolution.hpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Tue Mar 31 13:22:30 2009 for Monde des cubes by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Tue Apr 14 11:30:44 2009 for Monde des cubes by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
 </body>

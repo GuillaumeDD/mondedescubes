@@ -1,0 +1,125 @@
+\hypertarget{classCube}{
+\section{Cube Class Reference}
+\label{classCube}\index{Cube@{Cube}}
+}
+Classe derivee de la classe \hyperlink{classEcoAgent}{EcoAgent} designant un \hyperlink{classCube}{Cube}.  
+
+
+{\tt \#include $<$cube.hpp$>$}
+
+Inherits \hyperlink{classEcoAgent}{EcoAgent}.
+
+Collaboration diagram for Cube:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classCube_06f3d86fb63e3aad08623610aa3c17b4}{Cube} ()
+\begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
+\hyperlink{classCube_4793068a114fd49b51233e8f81884189}{Cube} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&id)
+\begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
+\hyperlink{classCube_a814e979cecb8c451fdb332ded2cea1e}{$\sim$Cube} ()
+\begin{CompactList}\small\item\em Destructeur. \item\end{CompactList}\item 
+\hypertarget{classCube_c81ac3b8da58ba8463d72e3a0433bafa}{
+void \hyperlink{classCube_c81ac3b8da58ba8463d72e3a0433bafa}{rechercherFuite} ()}
+\label{classCube_c81ac3b8da58ba8463d72e3a0433bafa}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il cherche a fuir. \item\end{CompactList}\item 
+\hypertarget{classCube_10f69d54f313f48ac0c8468628ac6902}{
+void \hyperlink{classCube_10f69d54f313f48ac0c8468628ac6902}{rechercherSatisfaction} ()}
+\label{classCube_10f69d54f313f48ac0c8468628ac6902}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il cherche a se satisfaire. \item\end{CompactList}\item 
+void \hyperlink{classCube_2b9c63b545c13c95b9a7f44c3c5147ad}{agresser} (const \hyperlink{classCube}{Cube} \&a)
+\begin{CompactList}\small\item\em Suite d'operations realisees lorsque le cube agresse un autre eco-agent. \item\end{CompactList}\item 
+\hypertarget{classCube_a9af44bff02fb06ac5be83f4c041fe57}{
+void \hyperlink{classCube_a9af44bff02fb06ac5be83f4c041fe57}{estAgresse} ()}
+\label{classCube_a9af44bff02fb06ac5be83f4c041fe57}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il est agressee. \item\end{CompactList}\item 
+\hypertarget{classCube_ce1011f5a33ce211d5ca44e029f59224}{
+void \hyperlink{classCube_ce1011f5a33ce211d5ca44e029f59224}{faireFuite} ()}
+\label{classCube_ce1011f5a33ce211d5ca44e029f59224}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il fuit. \item\end{CompactList}\item 
+\hypertarget{classCube_1fec2199edab8e6cfdb3685256d2cdec}{
+void \hyperlink{classCube_1fec2199edab8e6cfdb3685256d2cdec}{faireSatisfaction} ()}
+\label{classCube_1fec2199edab8e6cfdb3685256d2cdec}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il se satisfait. \item\end{CompactList}\item 
+void \hyperlink{classCube_51dbc3cc9578d3cf5f9e56cab24aff1f}{initialiserEtat} ()
+\begin{CompactList}\small\item\em Initialisation de l'etat du cube. \item\end{CompactList}\item 
+\hypertarget{classCube_9289a4d72b849b7f868b189f531daa62}{
+void \hyperlink{classCube_9289a4d72b849b7f868b189f531daa62}{agir} ()}
+\label{classCube_9289a4d72b849b7f868b189f531daa62}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il agit. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Classe derivee de la classe \hyperlink{classEcoAgent}{EcoAgent} designant un \hyperlink{classCube}{Cube}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCube_06f3d86fb63e3aad08623610aa3c17b4}{
+\index{Cube@{Cube}!Cube@{Cube}}
+\index{Cube@{Cube}!Cube@{Cube}}
+\subsubsection[{Cube}]{\setlength{\rightskip}{0pt plus 5cm}Cube::Cube ()}}
+\label{classCube_06f3d86fb63e3aad08623610aa3c17b4}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{classCube}{Cube} par defaut. Le cube recevra un \hyperlink{classEcoAgentID}{EcoAgentID} automatiquement genere. \hypertarget{classCube_4793068a114fd49b51233e8f81884189}{
+\index{Cube@{Cube}!Cube@{Cube}}
+\index{Cube@{Cube}!Cube@{Cube}}
+\subsubsection[{Cube}]{\setlength{\rightskip}{0pt plus 5cm}Cube::Cube (const {\bf EcoAgentID} \& {\em id})}}
+\label{classCube_4793068a114fd49b51233e8f81884189}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{classCube}{Cube} avec un \hyperlink{classEcoAgentID}{EcoAgentID} specifique
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em id}]: identifiant unique que l'agent se verra attribuer \end{description}
+\end{Desc}
+\hypertarget{classCube_a814e979cecb8c451fdb332ded2cea1e}{
+\index{Cube@{Cube}!$\sim$Cube@{$\sim$Cube}}
+\index{$\sim$Cube@{$\sim$Cube}!Cube@{Cube}}
+\subsubsection[{$\sim$Cube}]{\setlength{\rightskip}{0pt plus 5cm}Cube::$\sim$Cube ()}}
+\label{classCube_a814e979cecb8c451fdb332ded2cea1e}
+
+
+Destructeur. 
+
+Destructeur de la classe \hyperlink{classCube}{Cube} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classCube_2b9c63b545c13c95b9a7f44c3c5147ad}{
+\index{Cube@{Cube}!agresser@{agresser}}
+\index{agresser@{agresser}!Cube@{Cube}}
+\subsubsection[{agresser}]{\setlength{\rightskip}{0pt plus 5cm}void Cube::agresser (const {\bf Cube} \& {\em a})}}
+\label{classCube_2b9c63b545c13c95b9a7f44c3c5147ad}
+
+
+Suite d'operations realisees lorsque le cube agresse un autre eco-agent. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em a}]: \hyperlink{classEcoAgent}{EcoAgent} a agresser \end{description}
+\end{Desc}
+\hypertarget{classCube_51dbc3cc9578d3cf5f9e56cab24aff1f}{
+\index{Cube@{Cube}!initialiserEtat@{initialiserEtat}}
+\index{initialiserEtat@{initialiserEtat}!Cube@{Cube}}
+\subsubsection[{initialiserEtat}]{\setlength{\rightskip}{0pt plus 5cm}void Cube::initialiserEtat ()}}
+\label{classCube_51dbc3cc9578d3cf5f9e56cab24aff1f}
+
+
+Initialisation de l'etat du cube. 
+
+Cette methode permet d'initialiser l'etat du cube en prenant en compte sa position courante et sa position finale. Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a \char`\"{}satisfait\char`\"{} 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+trunk/include/\hyperlink{cube_8hpp}{cube.hpp}\end{CompactItemize}

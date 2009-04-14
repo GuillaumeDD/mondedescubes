@@ -1,0 +1,16 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="PlateformeMondeDesCubes",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="PlateformeEcoResolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPlateformeEcoResolution.html",tooltip="classe representant une plateforme d&#39;eco-resolution abstraite"];
+  Node3 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Singleton\< PlateformeMondeDesCubes \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSingleton.html"];
+  Node4 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="table"];
+  Node4 [label="Table",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTable.html",tooltip="Classe derivee de la classe EcoAgent designant le Support sur lequel vont etre poses..."];
+  Node5 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="EcoAgent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEcoAgent.html",tooltip="Classe abstraite qui permet de creer un eco-agent."];
+  Node6 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="positionFinale\npositionCourante\nid"];
+  Node6 [label="EcoAgentID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classEcoAgentID.html",tooltip="Identifiant unique d&#39;un eco-agent."];
+}

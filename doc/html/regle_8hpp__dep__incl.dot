@@ -1,0 +1,12 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="trunk/include/regle.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="trunk/include/plateformeEcoResolution.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$plateformeEcoResolution_8hpp.html",tooltip="Plateforme abstraite d&#39;eco-resolution."];
+  Node2 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="trunk/include/plateformeMondeDesCubes.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$plateformeMondeDesCubes_8hpp.html",tooltip="Plateforme d&#39;eco-resolution appliquee au monde des cubes."];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

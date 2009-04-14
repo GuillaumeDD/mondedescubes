@@ -8,7 +8,7 @@
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
-      <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -16,24 +16,321 @@
   <div class="tabs">
     <ul>
       <li><a href="annotated.html"><span>Class&nbsp;List</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&nbsp;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
 </div>
 <div class="contents">
-<h1>EcoAgent Class Reference</h1><!-- doxytag: class="EcoAgent" -->Classe abstraite appelee par les classes Cube et Table.  
+<h1>EcoAgent Class Reference</h1><!-- doxytag: class="EcoAgent" -->Classe abstraite qui permet de creer un eco-agent.  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;ecoAgent.hpp&gt;</code>
 <p>
-<table border="0" cellpadding="0" cellspacing="0">
+Inherited by <a class="el" href="classCube.html">Cube</a>, and <a class="el" href="classTable.html">Table</a>.
+<p>
+<div class="dynheader">
+Collaboration diagram for EcoAgent:</div>
+<div class="dynsection">
+<center><font size="2">[<a href="graph_legend.html">legend</a>]</font></center></div>
+
+<p>
+<a href="classEcoAgent-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="etat_8hpp.html#767b7a63d7677f92d697621b4166af1b">Etat</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#91160732f8c4dd585ac5d8ad69bf3891">getEtat</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention de l'Etat.  <a href="#91160732f8c4dd585ac5d8ad69bf3891"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgentID.html">EcoAgentID</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#9584d21ca52b786efc1b988a65683274">getId</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention de l'EcoAgentID.  <a href="#9584d21ca52b786efc1b988a65683274"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#e06a7430bd88705a327cf498c8420a2b">setEtat</a> (const <a class="el" href="etat_8hpp.html#767b7a63d7677f92d697621b4166af1b">Etat</a> e)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Changement de l'Etat.  <a href="#e06a7430bd88705a327cf498c8420a2b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#ef2dde1272916b9f3a8f5a663bf96f69">setId</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Changement de l'EcoAgentID.  <a href="#ef2dde1272916b9f3a8f5a663bf96f69"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#0365707b7bc808dd45fb34d1c076f362">setPositionCourante</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Changement de la position courante de l'agent.  <a href="#0365707b7bc808dd45fb34d1c076f362"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgentID.html">EcoAgentID</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#69b3c371f154303f30f3f948a31417f4">getPositionCourante</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Permet d'obtenir la position courante de l'eco-agent.  <a href="#69b3c371f154303f30f3f948a31417f4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#a0ffbb1fdb23fb5d8ad188e8f16d8c50">setPositionFinale</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;pos)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Changement de la position finale de l'agent.  <a href="#a0ffbb1fdb23fb5d8ad188e8f16d8c50"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgentID.html">EcoAgentID</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#f1aeed91b39191c6e73271062e6a97f4">getPositionFinale</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Permet d'obtenir la position courante de l'eco-agent.  <a href="#f1aeed91b39191c6e73271062e6a97f4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="4b20031a336e8497412e3f5df4155e28"></a><!-- doxytag: member="EcoAgent::rechercherFuite" ref="4b20031a336e8497412e3f5df4155e28" args="()=0" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#4b20031a336e8497412e3f5df4155e28">rechercherFuite</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par l'agent lorsqu'il cherche a fuir. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="77119c5004b4c7555ad5eca0197eb805"></a><!-- doxytag: member="EcoAgent::rechercherSatisfaction" ref="77119c5004b4c7555ad5eca0197eb805" args="()=0" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#77119c5004b4c7555ad5eca0197eb805">rechercherSatisfaction</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par l'agent lorsqu'il cherche a se satisfaire. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#5d7e837b4a3a6b73fc1fb60c5fddefa5">agresser</a> (const <a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;a)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees lorsqu'un agent1 agresse un agent2.  <a href="#5d7e837b4a3a6b73fc1fb60c5fddefa5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a27bced909d9d84e8f23ec2d65bbed56"></a><!-- doxytag: member="EcoAgent::estAgresse" ref="a27bced909d9d84e8f23ec2d65bbed56" args="()=0" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#a27bced909d9d84e8f23ec2d65bbed56">estAgresse</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par un agent agresse. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="80b798ec4abc1585c42185ae88445695"></a><!-- doxytag: member="EcoAgent::faireFuite" ref="80b798ec4abc1585c42185ae88445695" args="()=0" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#80b798ec4abc1585c42185ae88445695">faireFuite</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par l'agent lorsqu'il est agresse. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ab76d1cc6f418192d90fc42c2fc4d8ac"></a><!-- doxytag: member="EcoAgent::faireSatisfaction" ref="ab76d1cc6f418192d90fc42c2fc4d8ac" args="()=0" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#ab76d1cc6f418192d90fc42c2fc4d8ac">faireSatisfaction</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par l'agent lorsqu'il se satisfait. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ec8ff50dddde6ad423ee13ee602adcaf"></a><!-- doxytag: member="EcoAgent::agir" ref="ec8ff50dddde6ad423ee13ee602adcaf" args="()=0" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEcoAgent.html#ec8ff50dddde6ad423ee13ee602adcaf">agir</a> ()=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par l'agent lorsqu'il agit. <br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-Classe abstraite appelee par les classes Cube et Table. <hr>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="ecoAgent_8hpp.html">ecoAgent.hpp</a></ul>
+Classe abstraite qui permet de creer un eco-agent. 
+<p>
+Classe abstraite qui permet de creer un eco-agent. Tout eco-agent doit herite de cette classe. <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="5d7e837b4a3a6b73fc1fb60c5fddefa5"></a><!-- doxytag: member="EcoAgent::agresser" ref="5d7e837b4a3a6b73fc1fb60c5fddefa5" args="(const EcoAgent &amp;a)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EcoAgent::agresser           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>a</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Tue Mar 31 13:22:30 2009 for Monde des cubes by&nbsp;
+<div class="memdoc">
+
+<p>
+Suite d'operations realisees lorsqu'un agent1 agresse un agent2. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>a</em>&nbsp;</td><td>: <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> a agresser </td></tr>
+  </table>
+</dl>
+
+<p>Implemented in <a class="el" href="classTable.html#1aac4abcbb55e193e23a2e547c232273">Table</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="91160732f8c4dd585ac5d8ad69bf3891"></a><!-- doxytag: member="EcoAgent::getEtat" ref="91160732f8c4dd585ac5d8ad69bf3891" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="etat_8hpp.html#767b7a63d7677f92d697621b4166af1b">Etat</a> EcoAgent::getEtat           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtention de l'Etat. 
+<p>
+Methode qui permet d'obtenir l'attribut prive Etat<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>l'Etat de l'objet <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="9584d21ca52b786efc1b988a65683274"></a><!-- doxytag: member="EcoAgent::getId" ref="9584d21ca52b786efc1b988a65683274" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classEcoAgentID.html">EcoAgentID</a> EcoAgent::getId           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Obtention de l'EcoAgentID. 
+<p>
+Methode qui permet d'obtenir l'attribut prive <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a><p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>l'EcoAgentID de l'objet <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="69b3c371f154303f30f3f948a31417f4"></a><!-- doxytag: member="EcoAgent::getPositionCourante" ref="69b3c371f154303f30f3f948a31417f4" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classEcoAgentID.html">EcoAgentID</a>* EcoAgent::getPositionCourante           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Permet d'obtenir la position courante de l'eco-agent. 
+<p>
+Methode qui permet d'obtenir l'EcoAgentID de l'eco-agent sur lequel est placé l'eco-agent<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> de l'EcoAgent avec lequel cet <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> est en relation </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f1aeed91b39191c6e73271062e6a97f4"></a><!-- doxytag: member="EcoAgent::getPositionFinale" ref="f1aeed91b39191c6e73271062e6a97f4" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classEcoAgentID.html">EcoAgentID</a>* EcoAgent::getPositionFinale           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Permet d'obtenir la position courante de l'eco-agent. 
+<p>
+Methode qui permet d'obtenir l'EcoAgentID de l'eco-agent sur lequel est placé l'eco-agent<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> de l'EcoAgent avec lequel cet <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> doit se trouver en relation a la fin de la resolution </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e06a7430bd88705a327cf498c8420a2b"></a><!-- doxytag: member="EcoAgent::setEtat" ref="e06a7430bd88705a327cf498c8420a2b" args="(const Etat e)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EcoAgent::setEtat           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="etat_8hpp.html#767b7a63d7677f92d697621b4166af1b">Etat</a>&nbsp;</td>
+          <td class="paramname"> <em>e</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Changement de l'Etat. 
+<p>
+Methode qui permet de modifier l'attribut prive Etat<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>e</em>&nbsp;</td><td>: Etat que recevra l'EcoAgent </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ef2dde1272916b9f3a8f5a663bf96f69"></a><!-- doxytag: member="EcoAgent::setId" ref="ef2dde1272916b9f3a8f5a663bf96f69" args="(const EcoAgentID &amp;id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EcoAgent::setId           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>id</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Changement de l'EcoAgentID. 
+<p>
+Methode qui permet de modifier l'attribut prive <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a><p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: id que recevra l'EcoAgent </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0365707b7bc808dd45fb34d1c076f362"></a><!-- doxytag: member="EcoAgent::setPositionCourante" ref="0365707b7bc808dd45fb34d1c076f362" args="(const EcoAgentID &amp;pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EcoAgent::setPositionCourante           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Changement de la position courante de l'agent. 
+<p>
+Methode qui permet de changer la position courante de l'eco-agent<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>: <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> de la nouvelle position </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a0ffbb1fdb23fb5d8ad188e8f16d8c50"></a><!-- doxytag: member="EcoAgent::setPositionFinale" ref="a0ffbb1fdb23fb5d8ad188e8f16d8c50" args="(const EcoAgentID &amp;pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EcoAgent::setPositionFinale           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>pos</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Changement de la position finale de l'agent. 
+<p>
+Methode qui permet de changer la position finale de l'eco-agent, c'est a dire, l'identifiant de l'eco-agent sur lequel l'eco-agent doit se trouver a la fin de la resolution<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pos</em>&nbsp;</td><td>: <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> de la nouvelle position </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr>The documentation for this class was generated from the following file:<ul>
+<li>trunk/include/<a class="el" href="ecoAgent_8hpp.html">ecoAgent.hpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Tue Apr 14 11:30:44 2009 for Monde des cubes by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
 </body>
