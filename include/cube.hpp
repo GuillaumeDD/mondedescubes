@@ -25,10 +25,19 @@ using namespace std;
 class Cube : public EcoAgent
 {
 public:
+
+      /*!
+     * \brief Constructeur
+     *
+     * Constructeur de la classe Cube par defaut. Le cube recevra un EcoAgentID automatiquement genere.
+     *
+     */
+    Cube();
+    
     /*!
      * \brief Constructeur
      *
-     * Constructeur de la classe Cube
+     * Constructeur de la classe Cube avec un EcoAgentID specifique
      *
      *\param id : identifiant unique que l'agent se verra attribuer
      *

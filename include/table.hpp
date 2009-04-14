@@ -27,12 +27,20 @@ public:
     /*!
      * \brief Constructeur
      *
+     * Constructeur de la classe Table par defaut. Un EcoAgentID sera automatiquement genere pour la table.
+     *
+     */
+    Table();
+    
+    /*!
+     * \brief Constructeur
+     *
      * Constructeur de la classe Table
      *
      *\param id : identifiant unique que l'agent se verra attribuer
      *
      */
-    Table(EcoAgentID id);
+    Table(const EcoAgentID& id);
 
     /*!
      * \brief Destructeur
