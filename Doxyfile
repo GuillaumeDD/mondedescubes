@@ -5,8 +5,8 @@
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Monde des cubes"
-PROJECT_NUMBER         = 
-OUTPUT_DIRECTORY       = /media/data/Programmation/C++/mondedescubes/trunk/doc/
+PROJECT_NUMBER         = 0.1
+OUTPUT_DIRECTORY       = /home/GDD/Programmation/C++/mondedescubes/trunk/doc/
 CREATE_SUBDIRS         = NO
 OUTPUT_LANGUAGE        = English
 BRIEF_MEMBER_DESC      = YES
@@ -25,7 +25,7 @@ ABBREVIATE_BRIEF       = "The $name class" \
 ALWAYS_DETAILED_SEC    = NO
 INLINE_INHERITED_MEMB  = NO
 FULL_PATH_NAMES        = YES
-STRIP_FROM_PATH        = /media/data/Programmation/C++/mondedescubes/trunk/
+STRIP_FROM_PATH        = /home/GDD/Programmation/C++/mondedescubes/
 STRIP_FROM_INC_PATH    = 
 SHORT_NAMES            = NO
 JAVADOC_AUTOBRIEF      = NO
@@ -94,7 +94,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 # configuration options related to the input files
 #---------------------------------------------------------------------------
-INPUT                  = /media/data/Programmation/C++/mondedescubes/trunk
+INPUT                  = /home/GDD/Programmation/C++/mondedescubes/trunk/
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.c \
                          *.cc \
@@ -202,7 +202,7 @@ QHP_VIRTUAL_FOLDER     = doc
 QHG_LOCATION           = 
 DISABLE_INDEX          = NO
 ENUM_VALUES_PER_LINE   = 4
-GENERATE_TREEVIEW      = ALL
+GENERATE_TREEVIEW      = NONE
 TREEVIEW_WIDTH         = 250
 FORMULA_FONTSIZE       = 10
 #---------------------------------------------------------------------------

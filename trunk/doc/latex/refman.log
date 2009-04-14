@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.3.9)  29 MAR 2009 10:44
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.11.11)  14 APR 2009 11:31
 entering extended mode
  %&-line parsing enabled.
 **refman.tex
@@ -596,7 +596,12 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 
 
 Writing index file refman.idx
-(./refman.aux)
+(./refman.aux (./classEcoAgent.aux) (./classEcoAgentID.aux)
+(./classPlateformeEcoResolution.aux) (./classPlateformeMondeDesCubes.aux)
+(./classRegle.aux) (./classSingleton.aux) (./classTable.aux)
+(./ecoAgent_8hpp.aux) (./ecoAgentID_8hpp.aux) (./etat_8hpp.aux)
+(./plateformeEcoResolution_8hpp.aux) (./plateformeMondeDesCubes_8hpp.aux)
+(./regle_8hpp.aux) (./singleton_8hpp.aux) (./table_8hpp.aux))
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -613,7 +618,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
- (/usr/share/texmf/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texmf/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 33.
@@ -667,19 +673,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 2.
-)
+ [1
+
+]
+Underfull \vbox (badness 1389) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 64.
+ [2]
+[3])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [1
-
-] [2
-
-]
+ [4]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
-(./annotated.tex
+(./hierarchy.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
@@ -687,25 +697,122 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 <to be read again> 
                    \relax 
 l.51 \chapter
-             {File Index} [1
+             {Class Index} [1
+
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.51 \chapter
-             {File Index}
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
- [2
+             {Class Index} [2
 
 ]
 Chapter 2.
-(./files.tex) [3] [4
+(./annotated.tex) [3] [4
 
 ]
 Chapter 3.
-(./classSingleton.tex
+(./files.tex) [5] [6
+
+]
+Chapter 4.
+(./classCube.tex
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 8.
+ (/usr/share/texmf/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 15.
+
+(/usr/share/texmf/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [7]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\sim' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 89.
+
+[8]) [9]
+\openout2 = `classEcoAgent.aux'.
+
+ (./classEcoAgent.tex [10
+
+] [11]) [12]
+\openout2 = `classEcoAgentID.aux'.
+
+ (./classEcoAgentID.tex
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 51.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\sim' on input line 51.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 51.
+
+[13
+
+
+]
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 72.
+
+) [14]
+\openout2 = `classPlateformeEcoResolution.aux'.
+
+ (./classPlateformeEcoResolution.tex
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 51.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\sim' on input line 51.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 51.
+
+[15
+
+
+] [16]) [17]
+\openout2 = `classPlateformeMondeDesCubes.aux'.
+
+ (./classPlateformeMondeDesCubes.tex [18
+
+
+] [19] [20]) [21]
+\openout2 = `classRegle.aux'.
+
+
+(./classRegle.tex) [22
+
+
+]
+\openout2 = `classSingleton.aux'.
+
+ (./classSingleton.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 4.
 
@@ -725,17 +832,6 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 4.
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 8.
-(/usr/share/texmf/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 10.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 13.
-
-(/usr/share/texmf/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [5]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 46.
@@ -748,35 +844,114 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 46.
 
-) [6]
-Chapter 4.
-(./singleton_8cpp.tex <singleton_8cpp__incl.pdf, id=154, 98.3675pt x 84.315pt>
-File: singleton_8cpp__incl.pdf Graphic file (type pdf)
-
-<use singleton_8cpp__incl.pdf>) (./refman.ind [7
-
- <./singleton_8cpp__incl.pdf>]
-[8
+[23
 
 
-]) (./refman.aux) ) 
+]) [24]
+\openout2 = `classTable.aux'.
+
+ (./classTable.tex [25
+
+
+]
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 87.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\sim' on input line 87.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 87.
+
+) [26]
+Chapter 5.
+(./cube_8hpp.tex) [27
+
+
+]
+\openout2 = `ecoAgent_8hpp.aux'.
+
+ (./ecoAgent_8hpp.tex) [28
+
+]
+\openout2 = `ecoAgentID_8hpp.aux'.
+
+ (./ecoAgentID_8hpp.tex)
+[29
+
+
+]
+\openout2 = `etat_8hpp.aux'.
+
+ (./etat_8hpp.tex) [30
+
+
+]
+\openout2 = `plateformeEcoResolution_8hpp.aux'.
+
+ (./plateformeEcoResolution_8hpp.tex) [31
+
+
+]
+\openout2 = `plateformeMondeDesCubes_8hpp.aux'.
+
+
+(./plateformeMondeDesCubes_8hpp.tex) [32
+
+
+]
+\openout2 = `regle_8hpp.aux'.
+
+ (./regle_8hpp.tex) [33
+
+
+]
+\openout2 = `singleton_8hpp.aux'.
+
+
+(./singleton_8hpp.tex) [34
+
+
+]
+\openout2 = `table_8hpp.aux'.
+
+ (./table_8hpp.tex) [35
+
+
+] (./refman.ind [36
+
+
+] [37])
+(./refman.aux (./classEcoAgent.aux) (./classEcoAgentID.aux)
+(./classPlateformeEcoResolution.aux) (./classPlateformeMondeDesCubes.aux)
+(./classRegle.aux) (./classSingleton.aux) (./classTable.aux)
+(./ecoAgent_8hpp.aux) (./ecoAgentID_8hpp.aux) (./etat_8hpp.aux)
+(./plateformeEcoResolution_8hpp.aux) (./plateformeMondeDesCubes_8hpp.aux)
+(./regle_8hpp.aux) (./singleton_8hpp.aux) (./table_8hpp.aux)) ) 
 Here is how much of TeX's memory you used:
- 4856 strings out of 256216
- 61900 string characters out of 1917073
- 113839 words of memory out of 1500000
- 8009 multiletter control sequences out of 10000+200000
- 40093 words of font info for 45 fonts, out of 1200000 for 2000
+ 5364 strings out of 256216
+ 75218 string characters out of 1917071
+ 126068 words of memory out of 1500000
+ 8190 multiletter control sequences out of 10000+200000
+ 42861 words of font info for 47 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 32i,12n,43p,308b,380s stack positions out of 5000i,500n,6000p,200000b,15000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/te
-xmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/
-cmmi12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texm
-f/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/times/ut
-mb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/f
-onts/type1/urw/times/utmri8a.pfb>
-Output written on refman.pdf (12 pages, 108795 bytes).
+ 38i,12n,43p,380b,523s stack positions out of 5000i,500n,6000p,200000b,15000s
+pdfTeX warning (
+dest): name{etat_8hpp_767b7a63d7677f92d697621b4166af1b} has been referenced but
+ does not exist, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/blu
+esky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/sh
+are/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/urw/c
+ourier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/shar
+e/texmf/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
+Output written on refman.pdf (43 pages, 286824 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 131072)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1257 PDF objects out of 1440 (max. 8388607)
+ 256 named destinations out of 1000 (max. 131072)
+ 849 words of extra memory for PDF output out of 10000 (max. 10000000)
 
