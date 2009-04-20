@@ -72,6 +72,8 @@
       *
       */
       static int getNombreDeGeneration();
+
+
       
     private:
       /*!

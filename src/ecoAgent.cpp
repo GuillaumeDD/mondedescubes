@@ -1,31 +1,53 @@
+#include "ecoAgent.hpp"
 #include "ecoAgentID.hpp"
 
-int EcoAgentID::nombreDeGeneration = 0;
 
-EcoAgentID::EcoAgentID(){
- identifiant = genereID();
+Etat EcoAgent::getEtat() const{
+ return etat; 
 }
 
-EcoAgentID::~EcoAgentID(){}
-
-int EcoAgentID::getId() const{
- return identifiant; 
+EcoAgentID* EcoAgent::getId() const{
+ return id;
 }
 
-bool EcoAgentID::operator ==(const EcoAgentID& eid) const{
- return eid.getId() == getId();
+void EcoAgent::setEtat(const Etat e){
+	etat=e;
 }
 
-bool EcoAgentID::operator <(const EcoAgentID& eid) const{
- return eid.getId() < getId();
+void EcoAgent::setId(const EcoAgentID& identifiant){
+	id = &((EcoAgentID&)identifiant);
 }
 
-int EcoAgentID::getNombreDeGeneration(){
-    return nombreDeGeneration;
+EcoAgentID* EcoAgent::getPositionCourante() const{
+	return positionCourante;
 }
 
-int EcoAgentID::genereID(){
- int result = nombreDeGeneration;
- nombreDeGeneration++;
-  return result;
+EcoAgentID* EcoAgent::getPositionFinale() const{
+	return positionFinale;
 }
+
+void EcoAgent::setPositionCourante(const EcoAgentID& pos){
+	positionCourante = &((EcoAgentID&)pos);
+}
+
+void EcoAgent::setPositionFinale(const EcoAgentID& pos){
+	positionFinale = &((EcoAgentID&)pos);
+}
+
+void EcoAgent::rechercherFuite(){}
+
+void EcoAgent::rechercherSatisfaction(){}
+
+void EcoAgent::agresser(const EcoAgent& a){}
+
+void EcoAgent::estAgresse(){}
+
+void EcoAgent::faireFuite(){}
+
+void EcoAgent::faireSatisfaction(){}
+
+void EcoAgent::agir(){}
+
+
+
+

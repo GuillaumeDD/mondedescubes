@@ -94,10 +94,10 @@
       *
       * Methode qui permet d'obtenir l'identifiant de la table
       *
-      *\return l'identifiant de la table (de type EcoAgentID)
+      *\return (l'identifiant de la table (de type EcoAgentID)) ==> un pointeur sur l'identifiant de la table de type EcoAgentID*
       *
       */
-      EcoAgentID getTableID();
+      EcoAgentID* getTableID();
       
       /*!
       *\brief Verification de la coherence du nombre de cubes (s'il est bien positif)

@@ -43,7 +43,7 @@ class EcoAgent {
 	 *
 	 * \return l'EcoAgentID de l'objet EcoAgent
 	  */
-	EcoAgentID getId() const;
+	EcoAgentID* getId() const;
 	
 	/*!
 	 * \brief Changement de l'Etat

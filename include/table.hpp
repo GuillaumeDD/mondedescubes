@@ -40,7 +40,7 @@ public:
      *\param id : identifiant unique que l'agent se verra attribuer
      *
      */
-    Table(const EcoAgentID& id);
+    Table(EcoAgentID& id); // j'ai enlevé le const
 
     /*!
      * \brief Destructeur
