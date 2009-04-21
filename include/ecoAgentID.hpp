@@ -73,6 +73,11 @@
       */
       static int getNombreDeGeneration();
 
+      /*!
+      * \brief Cette methode permet d'afficher des informations sur un EcoAgent
+      * 
+      */
+      friend ostream & operator<< (ostream&, const EcoAgentID&);
 
       
     private:
