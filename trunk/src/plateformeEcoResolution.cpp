@@ -22,14 +22,14 @@ PlateformeEcoResolution::~PlateformeEcoResolution(){
 	*/
 }
 
-EcoAgent* PlateformeEcoResolution::getEcoAgent(const EcoAgentID& id){
+EcoAgent* PlateformeEcoResolution::getEcoAgent(const EcoAgentID& id) const{
   EcoAgent* result = NULL;
-  map<EcoAgentID, EcoAgent&>::iterator it;
+  map<EcoAgentID, EcoAgent&>::const_iterator it;
   it = ecoagents.find(id);
   if(it == ecoagents.end()){
     cout << "EcoAgent inexistant " << endl ;
   }else{
-      result=&((*it).second);
+      result=&(it->second);
   }
   return result;
 }
@@ -65,10 +65,14 @@ bool PlateformeEcoResolution::sontSatisfaits(){
   map<EcoAgentID,EcoAgent&>::iterator it;
   it = ecoagents.begin();
   while(it != ecoagents.end() && result){
-    if( ((*it).second).getEtat() != SATISFAIT ){
+    if( (it->second).getEtat() != SATISFAIT ){
       result = false;
     }
     it++;
   }
   return result;
+}
+
+map<EcoAgentID,EcoAgent&,compareEcoAgentID> PlateformeEcoResolution::getEcoAgents() const {
+ return ecoagents; 
 }
