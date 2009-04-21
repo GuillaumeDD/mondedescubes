@@ -59,3 +59,16 @@ bool PlateformeEcoResolution::verifierCoherence(){
     }
     return result;
 }
+
+bool PlateformeEcoResolution::sontSatisfaits(){
+  bool result = true;
+  map<EcoAgentID,EcoAgent&>::iterator it;
+  it = ecoagents.begin();
+  while(it != ecoagents.end() && result){
+    if( ((*it).second).getEtat() != SATISFAIT ){
+      result = false;
+    }
+    it++;
+  }
+  return result;
+}

@@ -24,7 +24,7 @@ void Table::faireSatisfaction(){}
 void Table::faireFuite(){}
 
 
-void Table::agresser(const EcoAgent& a){}
+void Table::agresser(EcoAgent& a){}
 
 
 void Table::estAgresse(){}

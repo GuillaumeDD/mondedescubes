@@ -12,11 +12,11 @@ int main(int argc, char** argv){
 	id2 = new EcoAgentID();
 	id3 = new EcoAgentID();
 	Cube *c;
-   c = new Cube(*((EcoAgentID*)id));
-	c->EcoAgent::setPositionCourante(*((EcoAgentID*)id2));
-	c->EcoAgent::setPositionFinale(*((EcoAgentID*)id3));
+   c = new Cube(*id);
+	c->setPositionCourante(*id2);
+	c->setPositionFinale(*id3);
 	c->initialiserEtat();
-	cout << c;
+	cout << *c << endl;
   
   return EXIT_SUCCESS;
 }
