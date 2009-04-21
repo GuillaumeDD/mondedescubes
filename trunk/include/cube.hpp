@@ -122,6 +122,12 @@ public:
 	 *
 	 */
 	void agir();
+
+	/*!
+	 * \brief Suite d'operations permettant d'afficher des informations sur le cube
+	 *
+	 */
+	friend ostream & operator<< (ostream &f, const Cube& c);
 };
 
 #endif

@@ -153,6 +153,15 @@ class EcoAgent {
 	* 
 	*/
 	friend ostream & operator<< (ostream&, const EcoAgent&);
+
+	/*!
+	 * \brief Suite d'operations realisees lorsque l'on veut qu'un ecoagent prenne les caracteristiques d'un autre ecoagent
+	 *
+	 *
+	 *\param e : l'EcoAgent dont l'EcoAgent courant va prendre les caracteristiques
+    *
+	 */
+	void affecter(const EcoAgent* e);
 	
         private:
             EcoAgentID* id; /*!< Identifiant de l'eco-agent */
