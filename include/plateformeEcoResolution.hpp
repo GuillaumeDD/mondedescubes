@@ -49,7 +49,7 @@
       * \param id : id de l'eco-agent voulu
       * \return un pointeur sur l'eco-agent recherche s'il existe, NULL sinon
       */
-      EcoAgent* getEcoAgent(const EcoAgentID& id);
+      EcoAgent* getEcoAgent(const EcoAgentID& id) const;
       
       /*!
       * \brief Ajout d'un eco-agent
@@ -81,7 +81,6 @@
       */
       bool verifierCoherence();
       
-            
       /*!
       *\brief Methode qui verifie si tous les eco-agents sont satisfaits
       *
@@ -91,7 +90,17 @@
       *
       */
       bool sontSatisfaits();
-      
+
+     /*!
+      *\brief Methode qui retourne tous les eco-agents
+      *
+      * Methode qui retourne tous les eco-agents. Cette methode est surtout utilisee pour les regles.
+      *
+      *\return un conteneur associatif map<EcoAgentID,EcoAgent&>
+      *
+      */
+      map<EcoAgentID,EcoAgent&,compareEcoAgentID> getEcoAgents() const;
+
       /*!
       * \brief Initialisation de la resolution
       *
