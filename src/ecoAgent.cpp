@@ -34,19 +34,11 @@ void EcoAgent::setPositionFinale(const EcoAgentID& pos){
 	positionFinale = &((EcoAgentID&)pos);
 }
 
-void EcoAgent::rechercherFuite(){}
+// A FAIRE
+ostream & operator<< (ostream &f, const EcoAgent& ea){
+  return f;
+}
 
-void EcoAgent::rechercherSatisfaction(){}
-
-void EcoAgent::agresser(const EcoAgent& a){}
-
-void EcoAgent::estAgresse(){}
-
-void EcoAgent::faireFuite(){}
-
-void EcoAgent::faireSatisfaction(){}
-
-void EcoAgent::agir(){}
 
 
 

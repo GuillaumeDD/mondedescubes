@@ -148,12 +148,19 @@ class EcoAgent {
 	 */
 	virtual void agir()=0;
 
+	/*!
+	* \brief Cette methode permet d'afficher des informations sur un EcoAgent
+	* 
+	*/
+	friend ostream & operator<< (ostream&, const EcoAgent&);
+	
         private:
             EcoAgentID* id; /*!< Identifiant de l'eco-agent */
             Etat etat; /*!< Etat dans lequel se situe l'agent */
 	    EcoAgentID* positionCourante; /*!< Eco-agent sur lequel est actuellement l'eco-agent */
 	    EcoAgentID* positionFinale; /*!< Eco-agent sur lequel il doit finir a la fin de la resolution */
 };
+
 
 #endif
 
