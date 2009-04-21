@@ -27,6 +27,5 @@ int EcoAgentID::getNombreDeGeneration(){
 int EcoAgentID::genereID(){
  int result = nombreDeGeneration;
  nombreDeGeneration++;
-  return result;
+ return result;
 }
-

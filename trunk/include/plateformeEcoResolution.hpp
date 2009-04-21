@@ -16,6 +16,7 @@
   #include"ecoAgentID.hpp"
   #include"ecoAgent.hpp"
   #include"regle.hpp"
+  #include"compareEcoAgentID.hpp"
   using namespace std;
   /*! \class PlateformeEcoResolution
   * \brief classe representant une plateforme d'eco-resolution abstraite
@@ -48,7 +49,7 @@
       * \param id : id de l'eco-agent voulu
       * \return un pointeur sur l'eco-agent recherche s'il existe, NULL sinon
       */
-      EcoAgent* getEcoAgent(const EcoAgentID& id) const;
+      EcoAgent* getEcoAgent(const EcoAgentID& id);
       
       /*!
       * \brief Ajout d'un eco-agent
@@ -58,7 +59,7 @@
       * \param ea : l'eco-agent a ajouter
       *
       */      
-      void addEcoAgent(const EcoAgent& ea);
+      void addEcoAgent(EcoAgent& ea);
       
       /*!
       * \brief Ajout d'une nouvelle regle
@@ -68,7 +69,7 @@
       * \param r : la regle a ajouter
       *
       */      
-      void addRegle(const Regle& r);
+      void addRegle(Regle& r);
       
       /*!
       *\brief Verification du respect des regles apres l'initialisation de la plateforme
@@ -98,8 +99,8 @@
       
       
     private:
-      map<EcoAgentID,EcoAgent&> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
+      map<EcoAgentID,EcoAgent&,compareEcoAgentID> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
       list<Regle*> regles; /*!< Liste des regles a verifier avant de lancer la resolution */
   };
-
+  
 #endif

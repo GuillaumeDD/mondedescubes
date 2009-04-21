@@ -100,16 +100,6 @@
       EcoAgentID* getTableID();
       
       /*!
-      *\brief Verification de la coherence du nombre de cubes (s'il est bien positif)
-      *
-      * Methode qui permet de verifier si le nombre des cubes est bien strictement positif
-      *
-      *\return true si le nombre des cubes est strictement positif, false sinon
-      *
-      */
-      bool verifierNombreDeCubes();
-
-      /*!
       *\brief Obtention du geneur du cube courant
       *
       * Methode qui permet d'obtenir le geneur du cube courant
@@ -128,7 +118,7 @@
       *\param cube : le cube a ajouter
       *
       */
-      void addEcoAgent(const Cube& cube);
+      void addEcoAgent(Cube& cube);
 
       /*!
       *\brief Determination de la position finale d'un cube de la plateforme
@@ -161,7 +151,7 @@
       *\param id : identifiant du cube
       *
       */
-      void setCubeID(const Cube& currentCube,const EcoAgentID& id);
+      void setCubeID(Cube& currentCube,const EcoAgentID& id);
 
 
     private:
@@ -181,6 +171,17 @@
       *
       */
       ~PlateformeMondeDesCubes();
+      
+      /*!
+      *\brief Verification de la coherence du nombre de cubes (s'il est bien positif)
+      *
+      * Methode qui permet de verifier si le nombre des cubes est bien strictement positif
+      *
+      * \param nb : le nombre de cubes a verifier
+      *\return true si le nombre des cubes est strictement positif, false sinon
+      *
+      */
+      bool verifierNombreDeCubes(int nb);
       
       Table table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
       int nombreDeCubes;
