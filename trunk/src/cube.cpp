@@ -6,11 +6,11 @@ using namespace std;
 Cube::Cube(){
 	EcoAgentID *eaid;
 	eaid = new EcoAgentID();
-	EcoAgent::setId(*eaid);
+	setId(*eaid);
 }
 
 Cube::Cube(const EcoAgentID& id){
-	EcoAgent::setId((EcoAgentID&)id);
+	setId((EcoAgentID&)id);
 }
 
 Cube::~Cube(){}
@@ -21,9 +21,9 @@ void Cube::rechercherFuite(){
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
-		this->faireFuite();
+		faireFuite();
 	else
-		this->agresser(*c);		
+		agresser(*c);		
 }
 
 
@@ -32,9 +32,9 @@ void Cube::rechercherSatisfaction(){
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
-		this->faireSatisfaction();
+		faireSatisfaction();
 	else
-		this->agresser(*c);	
+		agresser(*c);	
 }
 
 void Cube::agresser(EcoAgent& a){
@@ -77,7 +77,7 @@ void Cube::agir(){
 }
 
 ostream & operator<< (ostream &f, const Cube& c){
-  return f << "EcoAgentID :" << c.EcoAgent::getId()->getId() << "\n" << "Etat :" << c.EcoAgent::getEtat() << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << c.EcoAgent::getPositionCourante()->getId() << "\n" << "Position finale : sur l'EcoAgent d'identifiant" << c.EcoAgent::getPositionFinale()->getId()<<"\n";
+  return f << "EcoAgentID :" << c.getId()->getId() << "\n" << "Etat :" << c.getEtat() << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << c.getPositionCourante()->getId() << "\n" << "Position finale : sur l'EcoAgent d'identifiant" << c.getPositionFinale()->getId()<<"\n";
 }
 
 
