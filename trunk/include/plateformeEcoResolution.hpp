@@ -81,6 +81,17 @@
       */
       bool verifierCoherence();
       
+            
+      /*!
+      *\brief Methode qui verifie si tous les eco-agents sont satisfaits
+      *
+      * Methode qui verifie si tous les eco-agents sont satisfaits. Elle permet d'arreter la resolution.
+      *
+      *\return true si tous les eco-agents sont satisfaits, false sinon
+      *
+      */
+      bool sontSatisfaits();
+      
       /*!
       * \brief Initialisation de la resolution
       *
@@ -98,7 +109,7 @@
       virtual void resoudre()=0;
       
       
-    private:
+    protected:
       map<EcoAgentID,EcoAgent&,compareEcoAgentID> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
       list<Regle*> regles; /*!< Liste des regles a verifier avant de lancer la resolution */
   };

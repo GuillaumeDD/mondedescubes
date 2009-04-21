@@ -1,6 +1,4 @@
 #include "cube.hpp"
-#include "ecoAgent.hpp"
-#include "ecoAgentID.hpp"
 #include "plateformeMondeDesCubes.hpp"
 
 using namespace std;
@@ -8,11 +6,11 @@ using namespace std;
 Cube::Cube(){
 	EcoAgentID *eaid;
 	eaid = new EcoAgentID();
-	this->EcoAgent::setId(*eaid);
+	EcoAgent::setId(*eaid);
 }
 
 Cube::Cube(const EcoAgentID& id){
-	this->EcoAgent::setId((EcoAgentID&)id);
+	EcoAgent::setId((EcoAgentID&)id);
 }
 
 Cube::~Cube(){}
@@ -20,9 +18,8 @@ Cube::~Cube(){}
 
 void Cube::rechercherFuite(){
 	Cube *c;
-	c=new Cube();
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
-	c->EcoAgent::affecter(p->obtenirGeneur(*((Cube*)this)));
+	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
 		this->faireFuite();
 	else
@@ -32,53 +29,52 @@ void Cube::rechercherFuite(){
 
 void Cube::rechercherSatisfaction(){
 	Cube *c;
-	c=new Cube();
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
-	c->EcoAgent::affecter(p->obtenirGeneur(*((Cube*)this)));
+	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
 		this->faireSatisfaction();
 	else
 		this->agresser(*c);	
 }
 
-void Cube::agresser(const Cube& a){
-	((Cube)a).estAgresse();}
-
-void Cube::agresser(const EcoAgent& a){}
-
+void Cube::agresser(EcoAgent& a){
+  a.estAgresse();
+}
 
 void Cube::estAgresse(){
-	this->EcoAgent::setEtat(RECHERCHEFUITE);}
-
+	setEtat(RECHERCHEFUITE);
+}
 
 void Cube::faireFuite(){
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	EcoAgentID *tableID;
 	tableID = p->getTableID();
-	this->EcoAgent::setPositionCourante(*tableID);
-	this->EcoAgent::setEtat(RECHERCHESATISFACTION);}
+	setPositionCourante(*tableID);
+	setEtat(RECHERCHESATISFACTION);
+}
 
 
 void Cube::faireSatisfaction(){
-	this->EcoAgent::setPositionCourante(*(this->getPositionFinale()));
-	this->EcoAgent::setEtat(SATISFAIT);}
-
+	setPositionCourante(*(getPositionFinale()));
+	setEtat(SATISFAIT);
+}
 
 void Cube::initialiserEtat(){
-	if(this->EcoAgent::getPositionFinale() != NULL && this->EcoAgent::getPositionCourante() != NULL)
+	if(getPositionFinale() != NULL && getPositionCourante() != NULL)
 		{
-		if(this->EcoAgent::getPositionFinale() == this->EcoAgent::getPositionCourante())
-			this->EcoAgent::setEtat(SATISFAIT);
+		if(getPositionFinale() == getPositionCourante())
+			setEtat(SATISFAIT);
 		else
-			this->EcoAgent::setEtat(RECHERCHESATISFACTION);
+			setEtat(RECHERCHESATISFACTION);
 		}
 }
 
 void Cube::agir(){
-	if(this->EcoAgent::getEtat() == RECHERCHESATISFACTION)
-		this->rechercherSatisfaction();
-	else if(this->EcoAgent::getEtat() == RECHERCHEFUITE)
-		this->rechercherFuite();}
+	if(getEtat() == RECHERCHESATISFACTION)
+		rechercherSatisfaction();
+	else if(getEtat() == RECHERCHEFUITE)
+		rechercherFuite();
+}
 
 ostream & operator<< (ostream &f, const Cube& c){
   return f << "EcoAgentID :" << c.EcoAgent::getId()->getId() << "\n" << "Etat :" << c.EcoAgent::getEtat() << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << c.EcoAgent::getPositionCourante()->getId() << "\n" << "Position finale : sur l'EcoAgent d'identifiant" << c.EcoAgent::getPositionFinale()->getId()<<"\n";

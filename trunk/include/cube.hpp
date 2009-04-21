@@ -68,24 +68,13 @@ public:
 	void rechercherSatisfaction();
 	
 	/*!
-	 * \brief Suite d'operations realisees lorsque le cube agresse un autre cube
-	 *
-	 *
-	 *\param a : Cube a agresser
-    *
-	 */
-	
-	void agresser(const Cube& a);
-
-	/*!
 	 * \brief Suite d'operations realisees lorsque le cube agresse un autre eco-agent
 	 *
 	 *
 	 *\param a : EcoAgent a agresser
-    *
+	 *
 	 */
-	
-	void agresser(const EcoAgent& a);
+	void agresser(EcoAgent& a);
 	
 	/*!
 	 * \brief Suite d'operations realisees par le cube lorsqu'il est agressee

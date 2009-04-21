@@ -1,13 +1,17 @@
 #include "plateformeMondeDesCubes.hpp"
 
-void PlateformeMondeDesCubes::initialiser(){
-
-}
+void PlateformeMondeDesCubes::initialiser(){}
 
 void PlateformeMondeDesCubes::resoudre(){
- 
+  Cube* c;
+ initialiser();
+ while(!sontSatisfaits()){
+   c = obtenirCubePrioritaire();
+   c->agir();
+ }
 }
 
+//A FAIRE
 Cube* PlateformeMondeDesCubes::obtenirCubePrioritaire(){
   return NULL;
 }
@@ -45,11 +49,6 @@ Cube* PlateformeMondeDesCubes::obtenirGeneur(const Cube& currentCube){
   return result;
 }
 
-//methode inutile
-void PlateformeMondeDesCubes::addEcoAgent(Cube& cube){
-  PlateformeEcoResolution::addEcoAgent(cube);
-}
-
 void PlateformeMondeDesCubes::setPositionFinale(const EcoAgentID& c, const EcoAgentID& pos){
   EcoAgent* agent;
   agent = getEcoAgent(c);
@@ -79,7 +78,7 @@ PlateformeMondeDesCubes::PlateformeMondeDesCubes(){
   nombreDeCubes = 0;
 }
 
+//A FAIRE
 PlateformeMondeDesCubes::~PlateformeMondeDesCubes(){
-  
 }
 

@@ -122,7 +122,7 @@ class EcoAgent {
 	 *\param a : EcoAgent a agresser
 	 *
 	 */
-	virtual void agresser(const EcoAgent& a)=0;
+	virtual void agresser(EcoAgent& a)=0;
 	
 	/*!
 	 * \brief Suite d'operations realisees par un agent agresse
@@ -154,15 +154,6 @@ class EcoAgent {
 	*/
 	friend ostream & operator<< (ostream&, const EcoAgent&);
 
-	/*!
-	 * \brief Suite d'operations realisees lorsque l'on veut qu'un ecoagent prenne les caracteristiques d'un autre ecoagent
-	 *
-	 *
-	 *\param e : l'EcoAgent dont l'EcoAgent courant va prendre les caracteristiques
-    *
-	 */
-	void affecter(const EcoAgent* e);
-	
         private:
             EcoAgentID* id; /*!< Identifiant de l'eco-agent */
             Etat etat; /*!< Etat dans lequel se situe l'agent */

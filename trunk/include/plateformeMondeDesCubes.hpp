@@ -111,16 +111,6 @@
       Cube* obtenirGeneur(const Cube& currentCube);
 
       /*!
-      *\brief Ajout d'un cube dans la plateforme
-      *
-      * Methode qui permet d'ajouter un cube dans la plateforme d'eco-resolution
-      *
-      *\param cube : le cube a ajouter
-      *
-      */
-      void addEcoAgent(Cube& cube);
-
-      /*!
       *\brief Determination de la position finale d'un cube de la plateforme
       *
       * Methode qui permet de fixer la position finale d'un cube de la plateforme

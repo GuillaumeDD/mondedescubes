@@ -72,7 +72,7 @@ public:
          *
 	 */
 	
-	void agresser(const EcoAgent& a);
+	void agresser(EcoAgent& a);
 	
 	/*!
 	 * \brief Suite d'operations realisees par la table lorsqu'elle est agressee
