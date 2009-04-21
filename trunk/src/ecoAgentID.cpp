@@ -29,3 +29,7 @@ int EcoAgentID::genereID(){
  nombreDeGeneration++;
  return result;
 }
+
+ostream & operator<< (ostream &f, const EcoAgentID& aid){
+    return f << "(EcoAgentID) " <<  aid.identifiant << " ";
+}

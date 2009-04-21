@@ -21,9 +21,9 @@ void Cube::rechercherFuite(){
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
-		faireFuite();
+		this->faireFuite();
 	else
-		agresser(*c);		
+		this->agresser(*c);		
 }
 
 
@@ -32,9 +32,9 @@ void Cube::rechercherSatisfaction(){
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
-		faireSatisfaction();
+		this->faireSatisfaction();
 	else
-		agresser(*c);	
+		this->agresser(*c);	
 }
 
 void Cube::agresser(EcoAgent& a){
@@ -76,9 +76,8 @@ void Cube::agir(){
 		rechercherFuite();
 }
 
-ostream & operator<< (ostream &f, const Cube& c){
-  return f << "EcoAgentID :" << c.getId()->getId() << "\n" << "Etat :" << c.getEtat() << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << c.getPositionCourante()->getId() << "\n" << "Position finale : sur l'EcoAgent d'identifiant" << c.getPositionFinale()->getId()<<"\n";
+ostream & operator<< (ostream &f, const Cube& ea){
+  return f << "EcoAgentID :" << *(ea.getId()) << "\n" << "Etat :" << ea.getEtat() << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << *(ea.getPositionCourante()) << endl << "Position finale : sur l'EcoAgent d'identifiant" << *(ea.getPositionFinale())<< endl;
 }
-
 
 
