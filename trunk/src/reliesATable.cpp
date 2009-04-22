@@ -12,14 +12,14 @@ bool ReliesATable::verifier(){
 	bool b = true;
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	/* creation de 2 iterateurs de la map de cubes : 1 pour les parcourir et 2 pour initialiser leur "visite" a faux*/ 
-	map<EcoAgentID, EcoAgent&>::iterator it1=p->getCubes().begin();
-	map<EcoAgentID, EcoAgent&>::iterator it2=p->getCubes().begin();
+	map<EcoAgentID, EcoAgent&>::iterator it1=p->getEcoAgents().begin();
+	map<EcoAgentID, EcoAgent&>::iterator it2=p->getEcoAgents().begin();
 
 	/*On parcourt toute la map de cube avec it1*/
-	for(it1 = p->getCubes().begin(); it1 != p->getCubes().end(); ++it1) {
+	for(it1 = p->getEcoAgents().begin(); it1 != p->getEcoAgents().end(); ++it1) {
 
 		/*on initialise toutes les visites a false avant de tester si le cube "courant" est bien relie a la table*/
-		for(it2 = p->getCubes().begin(); it2 != p->getCubes().end(); ++it2) {
+		for(it2 = p->getEcoAgents().begin(); it2 != p->getEcoAgents().end(); ++it2) {
 			it2->second.setVisite(false);
 		}
 		
@@ -30,7 +30,7 @@ bool ReliesATable::verifier(){
 		}
 
 		/*on initialise toutes les visites a false avant de tester si le cube "courant" est bien relie a la table*/
-		for(it2 = p->getCubes().begin(); it2 != p->getCubes().end(); ++it2) {
+		for(it2 = p->getEcoAgents().begin(); it2 != p->getEcoAgents().end(); ++it2) {
 			it2->second.setVisite(false);
 		}
 

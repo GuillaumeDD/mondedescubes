@@ -5,16 +5,24 @@ Etat EcoAgent::getEtat() const{
  return etat; 
 }
 
-EcoAgentID* EcoAgent::getId() const{
- return id;
-}
-
 void EcoAgent::setEtat(const Etat e){
 	etat=e;
 }
 
+EcoAgentID* EcoAgent::getId() const{
+ return id;
+}
+
 void EcoAgent::setId(const EcoAgentID& identifiant){
 	id = &((EcoAgentID&)identifiant);
+}
+
+bool EcoAgent::getVisite() const{
+ return visite;
+}
+
+void EcoAgent::setVisite(const bool b){
+	visite = b;
 }
 
 EcoAgentID* EcoAgent::getPositionCourante() const{
