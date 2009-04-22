@@ -36,6 +36,15 @@ class EcoAgent {
 	  */
 	Etat getEtat() const;
 	
+	/*!
+	 * \brief Changement de l'Etat
+	 *
+	 * Methode qui permet de modifier l'attribut prive Etat
+	 *
+	 *\param e : Etat que recevra l'EcoAgent
+	 */
+	void setEtat(const Etat e);
+
 	 /*!
 	 * \brief Obtention de l'EcoAgentID
 	 *
@@ -46,15 +55,6 @@ class EcoAgent {
 	EcoAgentID* getId() const;
 	
 	/*!
-	 * \brief Changement de l'Etat
-	 *
-	 * Methode qui permet de modifier l'attribut prive Etat
-	 *
-	 *\param e : Etat que recevra l'EcoAgent
-	 */
-	void setEtat(const Etat e);
-	
-	/*!
 	 * \brief Changement de l'EcoAgentID
 	 *
 	 * Methode qui permet de modifier l'attribut prive EcoAgentID
@@ -63,6 +63,23 @@ class EcoAgent {
 	 */
 	void setId(const EcoAgentID& id);
 	
+	 /*!
+	 * \brief Obtention du flag visite
+	 *
+	 * Methode qui permet d'obtenir l'attribut prive visite
+	 *
+	 * \return l'EcoAgentID de l'objet EcoAgent
+	  */
+	bool getVisite() const;
+	
+	/*!
+	 * \brief Changement du flag visite
+	 *
+	 * Methode qui permet de modifier l'attribut prive visite
+	 *
+	 *\param b : valeur du flag
+	 */
+	void setVisite(const bool b);
 	
 	/*!
 	* \brief Changement de la position courante de l'agent
@@ -159,6 +176,7 @@ class EcoAgent {
             Etat etat; /*!< Etat dans lequel se situe l'agent */
 	    EcoAgentID* positionCourante; /*!< Eco-agent sur lequel est actuellement l'eco-agent */
 	    EcoAgentID* positionFinale; /*!< Eco-agent sur lequel il doit finir a la fin de la resolution */
+	    bool visite; /*!< Flag permettant de savoir si un EcoAgent a deja ete visite ou pas lors du parcours d'une liste d'EcoAgent */
 };
 
 

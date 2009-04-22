@@ -22,16 +22,16 @@ bool AucuneSurcharge::verifier() {
 bool AucuneSurcharge::pasSurcharges() {
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	/* Mise en place d'un iterateur sur la map des cubes de la plate forme */
-	map<EcoAgentID, EcoAgent&>::const_iterator it=p->getCubes().begin();
+	map<EcoAgentID, EcoAgent&>::const_iterator it=p->getEcoAgents().begin();
 	
 	/* Creation d'un compteur des successeurs de chaque cube et d'un iterateur*/
 	map<EcoAgentID, int> compteur;
 	map<EcoAgentID, int>::iterator itcompteur;
 
-	for(it = p->getCubes().begin(); it != p->getCubes().end(); ++it) {
+	for(it = p->getEcoAgents().begin(); it != p->getEcoAgents().end(); ++it) {
 
 		/* si la position est bien un cube on applique l'algorithme*/ 
-		if(p->getCubes().find(it->second.getPositionCourante()) != p->getCubes().end()) {
+		if(p->getEcoAgents().find(*(it->second.getPositionCourante())) != p->getEcoAgents().end()) {
 			/*si ce cube n'est pas encore dans la map compteur on le cree*/
 			if(compteur.find(*(it->second.getPositionCourante())) == compteur.end()) {
 				compteur.insert(pair<EcoAgentID, int>(*(it->second.getPositionCourante()),0));
@@ -56,10 +56,10 @@ bool AucuneSurcharge::serontPasSurcharges() {
 	map<EcoAgentID, int> compteur;
 	map<EcoAgentID, int>::iterator itcompteur;
 
-	for(it = p->getCubes().begin(); it != p->getCubes().end(); ++it) {
+	for(it = p->getEcoAgents().begin(); it != p->getEcoAgents().end(); ++it) {
 
 		/* si la position est bien un cube on applique l'algorithme*/ 
-		if(p->getCubes().find(*(it->second.getPositionFinale())) != p->getCubes().end()) {
+		if(p->getEcoAgents().find(*(it->second.getPositionFinale())) != p->getEcoAgents().end()) {
 			/*si ce cube n'est pas encore dans le compteur on le cree*/
 			if(compteur.find(*(it->second.getPositionFinale())) == compteur.end()) {
 				compteur.insert(pair<EcoAgentID, int>(*(it->second.getPositionFinale()),0));
