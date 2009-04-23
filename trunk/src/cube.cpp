@@ -80,4 +80,3 @@ ostream & operator<< (ostream &f, const Cube& ea){
   return f << "EcoAgentID :" << *(ea.getId()) << "\n" << "Etat :" << ea.getEtat() << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << *(ea.getPositionCourante()) << endl << "Position finale : sur l'EcoAgent d'identifiant" << *(ea.getPositionFinale())<< endl;
 }
 
-

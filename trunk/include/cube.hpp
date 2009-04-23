@@ -15,6 +15,8 @@
   #include<iostream>  
   #include "ecoAgent.hpp"
   #include "ecoAgentID.hpp"
+  #include "plateformeEcoResolution.hpp"
+  
 using namespace std;
 
  /*! \class Cube
