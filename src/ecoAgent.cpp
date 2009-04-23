@@ -29,16 +29,28 @@ EcoAgentID* EcoAgent::getPositionCourante() const{
 	return positionCourante;
 }
 
-EcoAgentID* EcoAgent::getPositionFinale() const{
-	return positionFinale;
-}
-
 void EcoAgent::setPositionCourante(const EcoAgentID& pos){
 	positionCourante = &((EcoAgentID&)pos);
 }
 
+EcoAgentID* EcoAgent::getPositionFinale() const{
+	return positionFinale;
+}
+
 void EcoAgent::setPositionFinale(const EcoAgentID& pos){
 	positionFinale = &((EcoAgentID&)pos);
+}
+
+EcoAgentID* EcoAgent::getAuDessus() const{
+	return auDessus;
+}
+
+void EcoAgent::setAuDessus(const EcoAgentID& pos){
+  if(&pos != NULL){
+	auDessus = &((EcoAgentID&)pos);
+  }else{
+   auDessus = NULL; 
+  }
 }
 
 ostream & operator<< (ostream &f, const EcoAgent& ea){
