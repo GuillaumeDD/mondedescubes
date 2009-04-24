@@ -55,22 +55,65 @@ bool PlateformeEcoResolution::verifierCoherence(){
       if(!(*(*it)).verifier()){
 	result = false;
       }
-      it++; 
+      ++it; 
     }
     return result;
 }
 
-bool PlateformeEcoResolution::sontSatisfaits(){
+bool PlateformeEcoResolution::sontSatisfaits() const{
   bool result = true;
-  map<EcoAgentID,EcoAgent&>::iterator it;
+  map<EcoAgentID,EcoAgent&>::const_iterator it;
   it = ecoagents.begin();
   while(it != ecoagents.end() && result){
     if( (it->second).getEtat() != SATISFAIT ){
       result = false;
     }
-    it++;
+    ++it;
   }
   return result;
+}
+
+EcoAgentID* PlateformeEcoResolution::getEcoAgentAuDessus(const EcoAgentID& id) const{
+  EcoAgentID* result = NULL, *posCourante = NULL;
+  EcoAgent *ecoA;
+  bool trouve = false;
+  map<EcoAgentID,EcoAgent&>::const_iterator it;
+  it = ecoagents.begin();
+  while(it != ecoagents.end() && !trouve){
+      ecoA = &(it->second); 
+      posCourante = ecoA->getPositionCourante();
+      if(*posCourante == id){
+	result = ecoA->getId();
+      }
+    ++it;
+  }
+  
+  return result;
+}
+
+
+int PlateformeEcoResolution::nombreEcoAgentAuDessus(const EcoAgentID& id) const{
+ EcoAgentID* result = NULL;
+ result = getEcoAgentAuDessus(id);
+ if(result != NULL){
+   return 1 + nombreEcoAgentAuDessus(*result);
+ }else{
+  return 0; 
+ }
+}
+
+list<EcoAgentID*> PlateformeEcoResolution::getEcoAgents(const Etat e) const{
+  list<EcoAgentID*>* listResult = new list<EcoAgentID*>();
+  EcoAgent* ea = NULL;
+  map<EcoAgentID,EcoAgent&>::const_iterator it = ecoagents.begin();
+  while(it != ecoagents.end()){
+    ea = &(it->second);
+    if(ea->getEtat() == e){
+      listResult->push_back(ea->getId());
+    }
+    ++it;
+  }
+  return *listResult;
 }
 
 map<EcoAgentID,EcoAgent&,compareEcoAgentID> PlateformeEcoResolution::getEcoAgents() const {

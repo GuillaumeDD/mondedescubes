@@ -24,7 +24,6 @@ using namespace std;
  * Classe abstraite qui permet de creer un eco-agent. Tout eco-agent doit herite de cette classe.
  *
   */  
-
 class EcoAgent {
 	public:
 	/*!
@@ -120,24 +119,6 @@ class EcoAgent {
 	* \return EcoAgentID de l'EcoAgent avec lequel cet EcoAgent doit se trouver en relation a la fin de la resolution
 	*/
 	EcoAgentID* getPositionFinale() const;	
-	
-	/*!
-	* \brief Changement de l'eco-agent au dessus
-	*
-	* Methode qui permet de fixer l'EcoAgent dont la position courante est cet EcoAgent
-	*
-	* \param pos : EcoAgentID de l'EcoAgent dont la position courante est cet agent, NULL s'il n'y en a pas
-	*/
-	void setAuDessus(const EcoAgentID& pos);
-
-	/*!
-	* \brief Permet d'obtenir l'eco-agent du dessus
-	*
-	* Methode qui permet d'obtenir l'EcoAgentID de l'EcoAgent dont la position courante est cet EcoAgent
-	*
-	* \return EcoAgentID de l'EcoAgent dont la position courante est cet agent, NULL s'il n'y en a pas
-	*/
-	EcoAgentID* getAuDessus() const;	
 
 	/*!
 	 * \brief Suite d'operations realisees par l'agent lorsqu'il cherche a fuir
@@ -188,16 +169,14 @@ class EcoAgent {
 	* 
 	*/
 	friend ostream & operator<< (ostream&, const EcoAgent&);
-
+	
         private:
             EcoAgentID* id; /*!< Identifiant de l'eco-agent */
             Etat etat; /*!< Etat dans lequel se situe l'agent */
 	    EcoAgentID* positionCourante; /*!< Eco-agent sur lequel est actuellement l'eco-agent */
 	    EcoAgentID* positionFinale; /*!< Eco-agent sur lequel il doit finir a la fin de la resolution */
-	    EcoAgentID* auDessus; /*!< Eco-agent dont la position courante est cet eco-agent, NULL s'il n'y en a pas */
 	    bool visite; /*!< Flag permettant de savoir si un EcoAgent a deja ete visite ou pas lors du parcours d'une liste d'EcoAgent */
 };
-
 
 #endif
 

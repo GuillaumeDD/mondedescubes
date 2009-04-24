@@ -119,6 +119,13 @@ public:
 	 *
 	 */
 	friend ostream & operator<< (ostream &f, const Cube& c);
+	
+  protected:
+	/*!
+	 * \brief Methode permettant d'obtenir une instance de la plateforme d'eco-resolution
+	 * \return L'instance de la plateforme d'eco-resolution
+	 */
+    PlateformeEcoResolution* getPlateforme();
 };
 
 #endif

@@ -16,6 +16,10 @@ bool EcoAgentID::operator ==(const EcoAgentID& eid) const{
  return eid.getId() == getId();
 }
 
+bool EcoAgentID::operator !=(const EcoAgentID& eid) const{
+ return eid.getId() != getId();
+}
+
 bool EcoAgentID::operator <(const EcoAgentID& eid) const{
  return eid.getId() < getId();
 }

@@ -1,9 +1,6 @@
 #include<iostream>
 #include<cstdlib>
 #include"plateformeMondeDesCubes.hpp"
-#include"ecoAgentID.hpp"
-#include"cube.hpp"
-#include"ecoAgent.hpp"
 
 using namespace std;
 int main(int argc, char** argv){

@@ -1,6 +1,5 @@
 #include "cube.hpp"
 #include "plateformeMondeDesCubes.hpp"
-
 using namespace std;
 
 Cube::Cube(){
@@ -17,7 +16,7 @@ Cube::~Cube(){}
 
 
 void Cube::rechercherFuite(){
-	Cube *c;
+	EcoAgent *c;
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
@@ -28,7 +27,7 @@ void Cube::rechercherFuite(){
 
 
 void Cube::rechercherSatisfaction(){
-	Cube *c;
+	EcoAgent *c;
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	c = p->obtenirGeneur(*this);
 	if(c == NULL) 
@@ -79,4 +78,3 @@ void Cube::agir(){
 ostream & operator<< (ostream &f, const Cube& ea){
   return f << "EcoAgentID :" << *(ea.getId()) << "\n" << "Etat :" << ea.getEtat() << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << *(ea.getPositionCourante()) << endl << "Position finale : sur l'EcoAgent d'identifiant" << *(ea.getPositionFinale())<< endl;
 }
-

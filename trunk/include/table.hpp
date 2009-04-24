@@ -21,7 +21,6 @@ using namespace std;
  * \brief Classe derivee de la classe EcoAgent designant le Support sur lequel vont etre poses les cubes
  *
  */
-
 class Table : public EcoAgent{
 public:
     /*!
@@ -100,7 +99,6 @@ public:
 	 *
 	 */
 	void agir();
-	
 };
 #endif	
 

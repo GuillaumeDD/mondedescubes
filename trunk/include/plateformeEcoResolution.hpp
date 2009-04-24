@@ -12,7 +12,6 @@
   #include<iostream>
   #include<map>
   #include<list>
-  #include"plateformeEcoResolution.hpp"
   #include"ecoAgentID.hpp"
   #include"ecoAgent.hpp"
   #include"regle.hpp"
@@ -89,8 +88,40 @@
       *\return true si tous les eco-agents sont satisfaits, false sinon
       *
       */
-      bool sontSatisfaits();
+      bool sontSatisfaits() const;
 
+     /*!
+      *\brief Methode qui retourne l'EcoAgentID de l'EcoAgent au dessus
+      *
+      * Methode qui retourne l'EcoAgentID de l'EcoAgent dont la position courante est l'EcoAgentID passe en parametre 
+      *
+      * \param id : EcoAgentID dont on cherche l'EcoAgent qui l'a en position courante
+      *\return EcoAgentID de l'EcoAgent correspondant, NULL s'il n'y en a pas
+      *
+      */
+      EcoAgentID* getEcoAgentAuDessus(const EcoAgentID& id) const;
+
+     /*!
+      * \brief Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id specifie
+      *
+      * Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id specifie 
+      *
+      * \param id : EcoAgentID dont on cherche le nombre d'EcoAgent superieur
+      *\return un entier superieur ou egal a 0
+      *
+      */
+      int nombreEcoAgentAuDessus(const EcoAgentID& id) const;
+      
+      /*!
+      * \brief Methode qui retourne les EcoAgentID des EcoAgent possedant l'etat specifie
+      *
+      * Methode qui retourne les EcoAgentID des EcoAgent possedant un etat specifie dans le parametre de la fonction
+      *
+      * \param e : l'etat dans lequel tous les EcoAgent listes doivent etre
+      * \return la liste des EcoAgentID des EcoAgent dans cet Etat
+      */
+      list<EcoAgentID*> getEcoAgents(const Etat e) const;
+      
      /*!
       *\brief Methode qui retourne tous les eco-agents
       *
