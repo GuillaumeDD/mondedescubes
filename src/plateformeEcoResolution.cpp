@@ -26,9 +26,7 @@ EcoAgent* PlateformeEcoResolution::getEcoAgent(const EcoAgentID& id) const{
   EcoAgent* result = NULL;
   map<EcoAgentID, EcoAgent&>::const_iterator it;
   it = ecoagents.find(id);
-  if(it == ecoagents.end()){
-    cout << "EcoAgent inexistant " << endl ;
-  }else{
+  if(it != ecoagents.end()){
       result=&(it->second);
   }
   return result;
@@ -38,7 +36,9 @@ void PlateformeEcoResolution::addEcoAgent(EcoAgent& ea){
  pair<map<EcoAgentID,EcoAgent&>::iterator, bool> ret;
  ret = ecoagents.insert(pair<EcoAgentID,EcoAgent&>(*(ea.getId()), ea));
  if(ret.second == false){
-    cout << "Attention : cet ecoAgent a deja ete enregistre" << ea << endl;
+   // cout << "Attention : cet ecoAgent a deja ete enregistre" << ea << endl;
+ 	ExceptionEcoAgentDejaEnregistre e;
+	throw(e);
  }
 }
 
@@ -46,14 +46,18 @@ void PlateformeEcoResolution::addRegle(Regle& r){
  regles.push_back(&r); 
 }
 
-bool PlateformeEcoResolution::verifierCoherence(){
+list<Regle*> PlateformeEcoResolution::getRegles(){
+	return regles;
+}
+
+bool PlateformeEcoResolution::verifierCoherence() const{
     bool result = true;
-    list<Regle*>::iterator it;
+    list<Regle*>::const_iterator it;
     it = regles.begin();
     while(it != regles.end() && result){
       // verification des regles une par une
-      if(!(*(*it)).verifier()){
-	result = false;
+      if(!((*it)->verifier())){
+			result = false;
       }
       ++it; 
     }
