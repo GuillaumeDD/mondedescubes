@@ -4,7 +4,8 @@
 
 using namespace std;
 int main(int argc, char** argv){
-   EcoAgentID *id,*id2,*id3;
+   cout << SATISFAIT << endl;
+	EcoAgentID *id,*id2,*id3;
 	id = new EcoAgentID();
 	id2 = new EcoAgentID();
 	id3 = new EcoAgentID();
@@ -17,6 +18,14 @@ int main(int argc, char** argv){
 	c->setPositionFinale(*id3);
 	c->initialiserEtat();
 	cout << *c << endl;
-  
+ 	
+	PlateformeMondeDesCubes* p = PlateformeMondeDesCubes::getInstance();
+	cout << *p << endl;
+	
+	p->addEcoAgent(*c);
+	p->addEcoAgent(*c);
+	p->addEcoAgent(*c);
+
+	cout << *p << endl;
   return EXIT_SUCCESS;
 }

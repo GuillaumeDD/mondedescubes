@@ -154,6 +154,15 @@
 		 */
 		int distanceFinaleATable(const EcoAgentID& c) const;
 
+
+		/*!
+		 * \brief Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme
+		 * Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme
+		 * monde des cubes
+		 *
+		 */
+		friend ostream& operator<<(ostream &,const PlateformeMondeDesCubes&);
+
     private:
 
       /*!

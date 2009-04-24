@@ -23,5 +23,15 @@
    enum Etat{
     SATISFAIT, RECHERCHEFUITE, RECHERCHESATISFACTION
    };
-   
+
+inline ostream& operator<<(ostream &f, const Etat& e){
+   switch(e){
+	   case SATISFAIT: f << "SATISFAIT"; break;
+	   case RECHERCHEFUITE: f << "RECHERCHEFUITE"; break;
+	   case RECHERCHESATISFACTION: f << "RECHERCHESATISFACTION"; break;
+	}
+	return f;
+}
+
+
 #endif

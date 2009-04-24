@@ -42,5 +42,13 @@ void EcoAgent::setPositionFinale(const EcoAgentID& pos){
 }
 
 ostream & operator<< (ostream &f, const EcoAgent& ea){
-  return f << "EcoAgentID :" << *(ea.getId()) << "\n" << "Etat :" << ea.etat << "\n" << "Position courante : sur l'EcoAgent d'identifiant" << *(ea.getPositionCourante()) << endl << "Position finale : sur l'EcoAgent d'identifiant" << *(ea.getPositionFinale())<< endl;
+  f << "EcoAgentID :" << *(ea.getId()) << endl; 
+  f << "Etat : " << ea.etat << endl;
+  if(ea.getPositionCourante() != NULL){
+  	f << "Position courante : " << *(ea.getPositionCourante()) << endl;
+  }
+  if(ea.getPositionFinale() != NULL){
+  	f << "Position finale : " << *(ea.getPositionFinale()) << endl;
+  }
+  return f;
 }
