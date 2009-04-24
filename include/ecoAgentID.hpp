@@ -64,6 +64,14 @@
       * Methode qui permet de comparer deux EcoAgentID
       *
       */
+      bool operator !=(const EcoAgentID&) const;
+      
+		/*!
+      *  \brief Comparaison de EcoAgentID
+      *
+      * Methode qui permet de comparer deux EcoAgentID
+      *
+      */
       bool operator <(const EcoAgentID&) const;
       
       /*!

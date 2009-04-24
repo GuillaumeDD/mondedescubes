@@ -49,14 +49,14 @@
       void resoudre();
 
       /*!
-      *\brief Obtention du cube qui a la priorite pour agir dans la plateforme d'eco-resolution
+      *\brief Obtention de l'EcoAgent qui a la priorite pour agir dans la plateforme d'eco-resolution du monde des cubes
       *
-      * Methode qui permet d'obtenir le cube qui doit agir en priorite dans la plateforme d'eco-resolution
+      * Methode qui permet d'obtenir l'EcoAgent qui doit agir en priorite dans la plateforme d'eco-resolution du monde des cubes
       *
-      *\return un pointeur sur le Cube prioritaire s'il existe, NULL sinon
+      *\return un pointeur sur l'EcoAgent prioritaire s'il existe, NULL sinon
       *
       */
-      Cube* obtenirCubePrioritaire();
+      EcoAgent* obtenirCubePrioritaire();
 
       /*!
       *\brief Determination du nombre de cubes dans la plateforme d'eco-resolution
@@ -97,7 +97,7 @@
       *\return (l'identifiant de la table (de type EcoAgentID)) ==> un pointeur sur l'identifiant de la table de type EcoAgentID*
       *
       */
-      EcoAgentID* getTableID();
+      EcoAgentID* getTableID() const;
       
       /*!
       *\brief Obtention du geneur du cube courant
@@ -108,7 +108,7 @@
       *\return un pointeur sur le cube geneur s'il existe, NULL sinon
       *
       */
-      Cube* obtenirGeneur(const Cube& currentCube);
+      EcoAgent* obtenirGeneur(const EcoAgent& currentCube);
 
       /*!
       *\brief Determination de la position finale d'un cube de la plateforme
@@ -141,8 +141,18 @@
       *\param id : identifiant du cube
       *
       */
-      void setCubeID(Cube& currentCube,const EcoAgentID& id);
+      void setCubeID(EcoAgent& currentCube,const EcoAgentID& id);
 
+		/*!
+		 * \brief Determination du nombre d'EcoAgent separant de la table
+		 *
+		 * Cette methode permet de determiner le nombre d'EcoAgent separant un EcoAgent de la table
+		 * en position finale.
+		 *
+		 * \param c : identifiant de l'EcoAgent
+		 * \return La distance a la table
+		 */
+		int distanceFinaleATable(const EcoAgentID& c) const;
 
     private:
 
