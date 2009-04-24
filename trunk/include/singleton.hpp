@@ -69,11 +69,11 @@
   template<typename T> T* Singleton<T>::_instance = NULL;
   
   template<typename T> Singleton<T>::Singleton(){
-    cout << "Création du singleton" << endl;
+    //cout << "Création du singleton" << endl;
   }
   
   template<typename T> Singleton<T>::~Singleton(){
-    cout << "Destuction du singleton" << endl;
+    //cout << "Destuction du singleton" << endl;
   }
   
   template<typename T> T* Singleton<T>::getInstance(){
@@ -86,6 +86,7 @@
   template<typename T> void Singleton<T>::kill(){
     if(_instance != NULL){
       delete _instance;
+		_instance = NULL;
     }
   }
 #endif

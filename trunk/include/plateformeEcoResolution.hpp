@@ -16,6 +16,7 @@
   #include"ecoAgent.hpp"
   #include"regle.hpp"
   #include"compareEcoAgentID.hpp"
+  #include "ExceptionEcoAgentDejaEnregistre.hpp"
   using namespace std;
   /*! \class PlateformeEcoResolution
   * \brief classe representant une plateforme d'eco-resolution abstraite
@@ -69,7 +70,17 @@
       *
       */      
       void addRegle(Regle& r);
-      
+     
+		/*!
+		 * \brief Obtention de la liste des regles
+		 *
+		 * Methode qui permet d'obtenir la liste des regles
+		 *
+		 *\return La liste des regles list<Regle*>
+		 *
+		 */
+		list<Regle*> getRegles();
+
       /*!
       *\brief Verification du respect des regles apres l'initialisation de la plateforme
       *
@@ -78,7 +89,7 @@
       *\return true si toutes les regles sont verifiees, false sinon
       *
       */
-      bool verifierCoherence();
+      bool verifierCoherence() const;
       
       /*!
       *\brief Methode qui verifie si tous les eco-agents sont satisfaits
