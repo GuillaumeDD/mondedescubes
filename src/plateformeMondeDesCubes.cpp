@@ -143,3 +143,21 @@ int PlateformeMondeDesCubes::distanceFinaleATable(const EcoAgentID& c) const{
 	}
 	return result;
 }
+
+ostream& operator<<(ostream& f, const PlateformeMondeDesCubes& p){
+	f << "---------------------------" << endl;
+	f << "Plateforme monde des cubes :" << endl;
+	f << "Table : " << p.table << endl;
+	f << "Cube ou assimilé : " << endl;
+	if(p.ecoagents.size() > 0){
+		map<EcoAgentID,EcoAgent&>::const_iterator it = p.ecoagents.begin();
+		while(it != p.ecoagents.end()){
+			f << it->second << endl;
+			++it;
+		}
+	}else{
+		f << "Aucun cube ou assimilé dans la plateforme" << endl;
+	}
+	f << "---------------------------" << endl;
+	return f;
+}
