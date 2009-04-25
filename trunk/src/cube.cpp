@@ -3,9 +3,6 @@
 using namespace std;
 
 Cube::Cube(){
-	EcoAgentID *eaid;
-	eaid = new EcoAgentID();
-	setId(*eaid);
 }
 
 Cube::Cube(const EcoAgentID& id){

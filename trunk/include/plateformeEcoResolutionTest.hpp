@@ -29,7 +29,7 @@
     CPPUNIT_TEST_SUITE (plateformeEcoResolutionTest);
     CPPUNIT_TEST (addTest);
     CPPUNIT_TEST (getTest);
-    CPPUNIT_TEST (exceptionTest);
+    CPPUNIT_TEST (informationTest);
     CPPUNIT_TEST (regleTest);
     CPPUNIT_TEST_SUITE_END ();
 
@@ -40,7 +40,7 @@
     protected:
         void addTest (void);
         void getTest (void);
-        void exceptionTest (void);
+        void informationTest (void);
         void regleTest (void);
 
     private:

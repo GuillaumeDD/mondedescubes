@@ -26,6 +26,15 @@ using namespace std;
   */  
 class EcoAgent {
 	public:
+
+	/*!
+	 * \brief Constructeur de la classe EcoAgent
+	 *
+	 * Ce constructeur initialise la valeur des champs par defaut : initialisation d'un identifiant, positionCourante a NULL, positionFinale a NULL
+	 *
+	 */
+	EcoAgent();
+	
 	/*!
 	 * \brief Obtention de l'Etat
 	 *
