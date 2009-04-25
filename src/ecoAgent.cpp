@@ -1,6 +1,12 @@
 #include "ecoAgent.hpp"
 #include "plateformeEcoResolution.hpp"
 
+EcoAgent::EcoAgent(){
+	id = new EcoAgentID();
+	positionCourante = NULL;
+	positionFinale = NULL;
+}
+
 Etat EcoAgent::getEtat() const{
  return etat; 
 }

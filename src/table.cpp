@@ -1,9 +1,6 @@
 #include "table.hpp"
 
 Table::Table(){
-	EcoAgentID *id;
-	id = new EcoAgentID();
-	this->EcoAgent::setId(*id);
 }
 
 Table::Table(EcoAgentID& id){
