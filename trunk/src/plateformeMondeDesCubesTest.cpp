@@ -113,6 +113,12 @@ void plateformeMondeDesCubesTest::getTest(void)
   ea4->setPositionCourante(*(ea3->getId()));
   ea4->setPositionFinale(*(ea3->getId()));
 
+  ea5->setPositionCourante(*(p->getTableID()));
+  ea5->setPositionFinale(*(p->getTableID()));
+  
+  ea6->setPositionCourante(*(ea5->getId()));
+  ea6->setPositionFinale(*(p->getTableID()));
+
   CPPUNIT_ASSERT(ea1->getEtat() == UNDEFINED && ea2->getEtat() == UNDEFINED && ea3->getEtat() == UNDEFINED && ea4->getEtat() == UNDEFINED);
   p->initialiser();
   CPPUNIT_ASSERT(ea1->getEtat() == SATISFAIT && ea2->getEtat() == RECHERCHESATISFACTION && ea3->getEtat() == RECHERCHESATISFACTION && ea4->getEtat() == SATISFAIT);
@@ -128,6 +134,8 @@ void plateformeMondeDesCubesTest::getTest(void)
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea2) == ea3);
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea3) == ea4);
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea4) == NULL);
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea5) == NULL);
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea6) == NULL);
 
   //test obtenirCubePrioritaire
   CPPUNIT_ASSERT(p->obtenirCubePrioritaire() == ea2);
