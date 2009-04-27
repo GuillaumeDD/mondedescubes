@@ -55,7 +55,7 @@ void Cube::faireSatisfaction(){
 	setEtat(SATISFAIT);
 }
 
-void Cube::initialiserEtat(){
+void Cube::initialiser(){
 	if(getPositionFinale() != NULL && getPositionCourante() != NULL)
 		{
 		if(getPositionFinale() == getPositionCourante())
