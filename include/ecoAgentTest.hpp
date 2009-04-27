@@ -2,8 +2,8 @@
 #define __AUCUNESURCHARGETEST__
 	#include<cppunit/TestFixture.h>
 	#include<cppunit/extensions/HelperMacros.h>
-	#include "plateformeMondeDesCubes.hpp"
 	#include "ecoAgent.hpp"
+	#include "cube.hpp"
 	
 	using namespace std;
 
@@ -21,8 +21,12 @@
         void doTest (void);
 
     private:
-		PlateformeMondeDesCubes *p;
-		// Mettre ici les variables dont vous avez besoin pendant les tests
+		EcoAgent *ea1,
+			  		*ea2,
+		     		*ea3,
+		     		*ea4,
+		     		*ea5;
+
 	};
 
 #endif

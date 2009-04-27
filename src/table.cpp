@@ -1,10 +1,12 @@
 #include "table.hpp"
 
 Table::Table(){
+this->setEtat(SATISFAIT);
 }
 
 Table::Table(EcoAgentID& id){
-	this->EcoAgent::setId(id);}
+	this->setId(id);
+	this->setEtat(SATISFAIT);}
 
 
 Table::~Table(){}
