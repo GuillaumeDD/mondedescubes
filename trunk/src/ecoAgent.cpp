@@ -5,6 +5,7 @@ EcoAgent::EcoAgent(){
 	id = new EcoAgentID();
 	positionCourante = NULL;
 	positionFinale = NULL;
+	etat = UNDEFINED;
 }
 
 Etat EcoAgent::getEtat() const{

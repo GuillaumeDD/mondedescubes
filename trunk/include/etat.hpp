@@ -1,6 +1,6 @@
 #ifndef __ETAT__
-  #define __ETAT__
-   /*!
+#define __ETAT__
+/*!
  * \file etat.hpp
  * \brief Enumeration des etats possibles des eco-agents
  * \author GDD
@@ -11,26 +11,27 @@
  *
  * Implementation de l'enumeration des etats que peuvent prendre les eco-agents
  *
-  */
-   #include<iostream>
-   using namespace std;
+ */
+#include<iostream>
+using namespace std;
    
-   /*!
-   * \enum Etat
-   * \brief Enumeration repertoriant les etats possibles d'un eco-agent
-   *
-   */
-   enum Etat{
-    SATISFAIT, RECHERCHEFUITE, RECHERCHESATISFACTION
-   };
+/*!
+ * \enum Etat
+ * \brief Enumeration repertoriant les etats possibles d'un eco-agent
+ *
+ */
+enum Etat{
+  SATISFAIT, RECHERCHEFUITE, RECHERCHESATISFACTION, UNDEFINED
+};
 
 inline ostream& operator<<(ostream &f, const Etat& e){
-   switch(e){
-	   case SATISFAIT: f << "SATISFAIT"; break;
-	   case RECHERCHEFUITE: f << "RECHERCHEFUITE"; break;
-	   case RECHERCHESATISFACTION: f << "RECHERCHESATISFACTION"; break;
-	}
-	return f;
+  switch(e){
+  case SATISFAIT: f << "SATISFAIT"; break;
+  case RECHERCHEFUITE: f << "RECHERCHEFUITE"; break;
+  case RECHERCHESATISFACTION: f << "RECHERCHESATISFACTION"; break;
+  case UNDEFINED: f<< "UNDEFINED"; break;
+  }
+  return f;
 }
 
 

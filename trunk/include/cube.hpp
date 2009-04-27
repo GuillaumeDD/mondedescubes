@@ -106,7 +106,7 @@ public:
 	* Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a "satisfait"
 	*
 	*/
-	void initialiserEtat();
+	void initialiser();
 
 	/*!
 	 * \brief Suite d'operations realisees par le cube lorsqu'il agit

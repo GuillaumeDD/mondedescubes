@@ -29,3 +29,5 @@ void Table::estAgresse(){}
 
 
 void Table::agir(){}
+
+void Table::initialiser(){}

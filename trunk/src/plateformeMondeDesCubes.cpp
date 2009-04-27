@@ -1,14 +1,21 @@
 #include "plateformeMondeDesCubes.hpp"
 
-void PlateformeMondeDesCubes::initialiser(){}
+void PlateformeMondeDesCubes::initialiser(){
+  map<EcoAgentID,EcoAgent&>::const_iterator it = ecoagents.begin();
+  //initialisation de chaque EcoAgent
+  while(it != ecoagents.end()){
+    (it->second).initialiser();
+    ++it;
+  }
+}
 
 void PlateformeMondeDesCubes::resoudre(){
   EcoAgent* c;
- initialiser();
- while(!sontSatisfaits()){
-   c = obtenirCubePrioritaire();
-   c->agir();
- }
+  initialiser();
+  while(!sontSatisfaits()){
+    c = obtenirCubePrioritaire();
+    c->agir();
+  }
 }
 
 EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire(){
@@ -30,22 +37,22 @@ EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire(){
       }
     }
   }else{
-   //il n'y a pas de cube en recherche de fuite, on cherche les cubes en 
-   // recherche de satisfaction
+    //il n'y a pas de cube en recherche de fuite, on cherche les cubes en 
+    // recherche de satisfaction
     candidats = getEcoAgents(RECHERCHESATISFACTION);
-	 // on selectionne le cube en recherche de satisfaction qui doit etre
-	 // place le plus bas
-	 // i.e. le cube dont la distance de la position finale a la table est
-	 // la plus petite
+    // on selectionne le cube en recherche de satisfaction qui doit etre
+    // place le plus bas
+    // i.e. le cube dont la distance de la position finale a la table est
+    // la plus petite
 	 
-	 it = candidats.begin();
-	 while(it != candidats.end()){
-		temp = distanceFinaleATable(**it);
-		if(temp < nbCubeInfFinal){
-			nbCubeInfFinal = temp;
-			result = getEcoAgent(**it);
-		}
-	 }
+    it = candidats.begin();
+    while(it != candidats.end()){
+      temp = distanceFinaleATable(**it);
+      if(temp < nbCubeInfFinal){
+	nbCubeInfFinal = temp;
+	result = getEcoAgent(**it);
+      }
+    }
   }
   return result;
 }
@@ -54,7 +61,7 @@ void PlateformeMondeDesCubes::setNombreDeCubes(int nb){
   if(verifierNombreDeCubes(nb)){
     nombreDeCubes = nb;
   }else{
-   nombreDeCubes = 0; 
+    nombreDeCubes = 0; 
   }
 }
 
@@ -81,22 +88,25 @@ bool PlateformeMondeDesCubes::verifierNombreDeCubes(int nb){
 EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
   EcoAgent* result = NULL;
   EcoAgentID* id = NULL;
-  id = getEcoAgentAuDessus(*(currentCube.getId()));
-  if(id == NULL){
-		//il n'y a aucun EcoAgent dont la position courante est currentCube
-		// on regarde s'il y a un EcoAgent dont la position courante est la
-		// position finale de currentCube
-		id = getEcoAgentAuDessus(*(currentCube.getPositionFinale()));
-		if(id != NULL){
-			// il y a un EcoAgent dont la position courante est la position finale
-			result = getEcoAgent(*id);
+  if(currentCube.getPositionFinale() != currentCube.getPositionCourante()){
+    id = getEcoAgentAuDessus(*(currentCube.getId()));
+    result = getEcoAgent(*id);
+    if(id == NULL){
+      //il n'y a aucun EcoAgent dont la position courante est currentCube
+      // on regarde s'il y a un EcoAgent dont la position courante est la
+      // position finale de currentCube
+      id = getEcoAgentAuDessus(*(currentCube.getPositionFinale()));
+      if(id != NULL){
+	// il y a un EcoAgent dont la position courante est la position finale
+	result = getEcoAgent(*id);
 
-			// on cherche l'EcoAgent en haut de la "pile"
-			while(getEcoAgentAuDessus(*id) != NULL){
-				id = getEcoAgentAuDessus(*id);
-				result = getEcoAgent(*id);
-			}
-		}
+	// on cherche l'EcoAgent en haut de la "pile"
+	while(getEcoAgentAuDessus(*id) != NULL){
+	  id = getEcoAgentAuDessus(*id);
+	  result = getEcoAgent(*id);
+	}
+      }
+    }
   }
   return result;
 }
@@ -105,7 +115,7 @@ void PlateformeMondeDesCubes::setPositionFinale(const EcoAgentID& c, const EcoAg
   EcoAgent* agent;
   agent = getEcoAgent(c);
   if(agent == NULL){
-   cout << "Agent inexistant" << endl;  
+    cout << "Agent inexistant" << endl;  
   }else{
     agent->setPositionFinale(pos);
   }
@@ -115,7 +125,7 @@ void PlateformeMondeDesCubes::setPositionCourante(const EcoAgentID& c, const Eco
   EcoAgent* agent;
   agent = getEcoAgent(c);
   if(agent == NULL){
-   cout << "Agent inexistant" << endl;  
+    cout << "Agent inexistant" << endl;  
   }else{
     agent->setPositionCourante(pos);
   }  
@@ -123,7 +133,7 @@ void PlateformeMondeDesCubes::setPositionCourante(const EcoAgentID& c, const Eco
 
 //verifier la pertinence de cette methode
 void PlateformeMondeDesCubes::setCubeID(EcoAgent& currentCube, const EcoAgentID& id){
- currentCube.setId(id); 
+  currentCube.setId(id); 
 }
 
 PlateformeMondeDesCubes::PlateformeMondeDesCubes(){
@@ -135,29 +145,31 @@ PlateformeMondeDesCubes::~PlateformeMondeDesCubes(){
 }
 
 int PlateformeMondeDesCubes::distanceFinaleATable(const EcoAgentID& c) const{
-	int result = 0;
-	EcoAgent* ecoA = NULL;
-	if(c != *getTableID()){
-		ecoA = getEcoAgent(c);
-		result = 1 + distanceFinaleATable(*(ecoA->getPositionFinale()));
-	}
-	return result;
+  int result = 0;
+  EcoAgent* ecoA = NULL;
+  if(c != *getTableID()){
+    ecoA = getEcoAgent(c);
+    if(ecoA != NULL && ecoA->getPositionFinale() != getTableID()){
+      result = 1 + distanceFinaleATable(*(ecoA->getPositionFinale()));
+    }
+  }
+  return result;
 }
 
 ostream& operator<<(ostream& f, const PlateformeMondeDesCubes& p){
-	f << "---------------------------" << endl;
-	f << "Plateforme monde des cubes :" << endl;
-	f << "Table : " << p.table << endl;
-	f << "Cube ou assimilé : " << endl;
-	if(p.ecoagents.size() > 0){
-		map<EcoAgentID,EcoAgent&>::const_iterator it = p.ecoagents.begin();
-		while(it != p.ecoagents.end()){
-			f << it->second << endl;
-			++it;
-		}
-	}else{
-		f << "Aucun cube ou assimilé dans la plateforme" << endl;
-	}
-	f << "---------------------------" << endl;
-	return f;
+  f << "---------------------------" << endl;
+  f << "Plateforme monde des cubes :" << endl;
+  f << "Table : " << p.table << endl;
+  f << "Cube ou assimilé : " << endl;
+  if(p.ecoagents.size() > 0){
+    map<EcoAgentID,EcoAgent&>::const_iterator it = p.ecoagents.begin();
+    while(it != p.ecoagents.end()){
+      f << it->second << endl;
+      ++it;
+    }
+  }else{
+    f << "Aucun cube ou assimilé dans la plateforme" << endl;
+  }
+  f << "---------------------------" << endl;
+  return f;
 }
