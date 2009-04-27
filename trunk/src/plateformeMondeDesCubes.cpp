@@ -23,7 +23,7 @@ EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire() const{
   list<EcoAgentID*> candidats;
   list<EcoAgentID*>::const_iterator it;
   unsigned int nbCubeSup, nbCubeInfFinal, temp;
-    nbCubeInfFinal = nbCubeSup = ecoagents.size()+1;
+  nbCubeInfFinal = nbCubeSup = ecoagents.size()+1;
   // on cherche les cubes en recherche de fuite
   candidats = getEcoAgents(RECHERCHEFUITE);
   if(candidats.size() > 0){
@@ -92,22 +92,25 @@ EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
   EcoAgentID* id = NULL;
   if(currentCube.getPositionFinale() != currentCube.getPositionCourante()){
     id = getEcoAgentAuDessus(*(currentCube.getId()));
-    result = getEcoAgent(*id);
     if(id == NULL){
       //il n'y a aucun EcoAgent dont la position courante est currentCube
       // on regarde s'il y a un EcoAgent dont la position courante est la
-      // position finale de currentCube
-      id = getEcoAgentAuDessus(*(currentCube.getPositionFinale()));
-      if(id != NULL){
-	// il y a un EcoAgent dont la position courante est la position finale
-	result = getEcoAgent(*id);
-
-	// on cherche l'EcoAgent en haut de la "pile"
-	while(getEcoAgentAuDessus(*id) != NULL){
-	  id = getEcoAgentAuDessus(*id);
+      // position finale de currentCube sauf si la position finale est la table
+      if(currentCube.getPositionFinale() != getTableID()){
+	id = getEcoAgentAuDessus(*(currentCube.getPositionFinale()));
+	if(id != NULL){
+	  // il y a un EcoAgent dont la position courante est la position finale
 	  result = getEcoAgent(*id);
+
+	  // on cherche l'EcoAgent en haut de la "pile"
+	  while(getEcoAgentAuDessus(*id) != NULL){
+	    id = getEcoAgentAuDessus(*id);
+	    result = getEcoAgent(*id);
+	  }
 	}
       }
+    }else{
+      result = getEcoAgent(*id);
     }
   }
   return result;

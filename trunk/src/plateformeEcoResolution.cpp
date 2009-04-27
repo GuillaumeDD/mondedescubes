@@ -86,7 +86,7 @@ EcoAgentID* PlateformeEcoResolution::getEcoAgentAuDessus(const EcoAgentID& id) c
   while(it != ecoagents.end() && !trouve){
       ecoA = &(it->second); 
       posCourante = ecoA->getPositionCourante();
-      if(*posCourante == id){
+      if(posCourante != NULL && *posCourante == id){
 	result = ecoA->getId();
 	trouve = true;
       }
