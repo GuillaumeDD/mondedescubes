@@ -16,28 +16,26 @@ void \hyperlink{classPlateformeMondeDesCubes_67160be6f5ecd0b8f3fffeb1a7bd81ba}{i
 \begin{CompactList}\small\item\em Initialisation de la resolution du monde des cubes. \item\end{CompactList}\item 
 void \hyperlink{classPlateformeMondeDesCubes_c7be18c8d02e2743e884545828cfabed}{resoudre} ()
 \begin{CompactList}\small\item\em Resolution du probleme du monde des cubes par eco-resolution. \item\end{CompactList}\item 
-\hyperlink{classCube}{Cube} $\ast$ \hyperlink{classPlateformeMondeDesCubes_605987b8e7760eacc2db63d56a58daa1}{obtenirCubePrioritaire} ()
-\begin{CompactList}\small\item\em Obtention du cube qui a la priorite pour agir dans la plateforme d'eco-resolution. \item\end{CompactList}\item 
+\hyperlink{classEcoAgent}{EcoAgent} $\ast$ \hyperlink{classPlateformeMondeDesCubes_5f3ebe8acdfdbb447c13de8d3cbac438}{obtenirCubePrioritaire} () const 
+\begin{CompactList}\small\item\em Obtention de l'EcoAgent qui a la priorite pour agir dans la plateforme d'eco-resolution du monde des cubes. \item\end{CompactList}\item 
 void \hyperlink{classPlateformeMondeDesCubes_e519331088db520a76d1ead67a382c48}{setNombreDeCubes} (int nb)
 \begin{CompactList}\small\item\em Determination du nombre de cubes dans la plateforme d'eco-resolution. \item\end{CompactList}\item 
 int \hyperlink{classPlateformeMondeDesCubes_a341731830c30c695d5ef80c90377165}{getNombreDeCubes} () const 
 \begin{CompactList}\small\item\em Obtention du nombre de cubes dans la plateforme d'eco-resolution. \item\end{CompactList}\item 
 void \hyperlink{classPlateformeMondeDesCubes_cf6eccc70251d89c4d12c921f44934af}{setTableIdentifiant} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&id)
 \begin{CompactList}\small\item\em Determination de l'identifiant de la table dans la plateforme. \item\end{CompactList}\item 
-\hyperlink{classEcoAgentID}{EcoAgentID} \hyperlink{classPlateformeMondeDesCubes_8919ce255ec5689a9dfce09667f0b461}{getTableID} ()
+\hyperlink{classEcoAgentID}{EcoAgentID} $\ast$ \hyperlink{classPlateformeMondeDesCubes_232d0a6c6cbd1bc2d8622fa92dd64ce1}{getTableID} () const 
 \begin{CompactList}\small\item\em Obtention de l'identifiant de la table. \item\end{CompactList}\item 
-bool \hyperlink{classPlateformeMondeDesCubes_975dd26c6b3703a49498549392976d07}{verifierNombreDeCubes} ()
-\begin{CompactList}\small\item\em Verification de la coherence du nombre de cubes (s'il est bien positif). \item\end{CompactList}\item 
-\hyperlink{classCube}{Cube} $\ast$ \hyperlink{classPlateformeMondeDesCubes_23a34346419b046b04f771807a965765}{obtenirGeneur} (const \hyperlink{classCube}{Cube} \&currentCube)
-\begin{CompactList}\small\item\em Obtention du geneur du cube courant. \item\end{CompactList}\item 
-void \hyperlink{classPlateformeMondeDesCubes_0d16ae1a6181037c271456f0841cf63b}{addEcoAgent} (const \hyperlink{classCube}{Cube} \&cube)
-\begin{CompactList}\small\item\em Ajout d'un cube dans la plateforme. \item\end{CompactList}\item 
+\hyperlink{classEcoAgent}{EcoAgent} $\ast$ \hyperlink{classPlateformeMondeDesCubes_fd0d16680115dc57d5a43f433dde3592}{obtenirGeneur} (const \hyperlink{classEcoAgent}{EcoAgent} \&currentCube)
+\begin{CompactList}\small\item\em Obtention du geneur de l'EcoAgent courant. \item\end{CompactList}\item 
 void \hyperlink{classPlateformeMondeDesCubes_315f30b3c7c1e8bc9ec828a66a5813e5}{setPositionFinale} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&c, const \hyperlink{classEcoAgentID}{EcoAgentID} \&pos)
-\begin{CompactList}\small\item\em Determination de la position finale d'un cube de la plateforme. \item\end{CompactList}\item 
+\begin{CompactList}\small\item\em Determination de la position finale d'un \hyperlink{classEcoAgent}{EcoAgent} de la plateforme. \item\end{CompactList}\item 
 void \hyperlink{classPlateformeMondeDesCubes_ecc518787fb8231be37e7b8eb3c5390e}{setPositionCourante} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&c, const \hyperlink{classEcoAgentID}{EcoAgentID} \&pos)
-\begin{CompactList}\small\item\em Determination de la position courante d'un cube de la plateforme. \item\end{CompactList}\item 
-void \hyperlink{classPlateformeMondeDesCubes_51b3dbb4c3e764231468f1ff19e35a06}{setCubeID} (const \hyperlink{classCube}{Cube} \&currentCube, const \hyperlink{classEcoAgentID}{EcoAgentID} \&id)
-\begin{CompactList}\small\item\em Determination de l'identifiant d'un cube. \item\end{CompactList}\end{CompactItemize}
+\begin{CompactList}\small\item\em Determination de la position courante d'un \hyperlink{classEcoAgent}{EcoAgent} de la plateforme. \item\end{CompactList}\item 
+void \hyperlink{classPlateformeMondeDesCubes_c99c6db4dfc2b193d8697103bec3d4d4}{setCubeID} (\hyperlink{classEcoAgent}{EcoAgent} \&currentCube, const \hyperlink{classEcoAgentID}{EcoAgentID} \&id)
+\begin{CompactList}\small\item\em Determination de l'identifiant d'un cube. \item\end{CompactList}\item 
+int \hyperlink{classPlateformeMondeDesCubes_7f694f86cf4a9502cf6bba2d6eb5a371}{distanceFinaleATable} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&c) const 
+\begin{CompactList}\small\item\em Determination du nombre d'EcoAgent separant de la table. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Friends}
 \begin{CompactItemize}
 \item 
@@ -45,7 +43,12 @@ void \hyperlink{classPlateformeMondeDesCubes_51b3dbb4c3e764231468f1ff19e35a06}{s
 class \hyperlink{classPlateformeMondeDesCubes_95609583990e9782a41cc432bdd2578d}{Singleton$<$ PlateformeMondeDesCubes $>$}}
 \label{classPlateformeMondeDesCubes_95609583990e9782a41cc432bdd2578d}
 
-\end{CompactItemize}
+\item 
+\hypertarget{classPlateformeMondeDesCubes_98d6997efa9a51e23997364f1f09c7bd}{
+ostream \& \hyperlink{classPlateformeMondeDesCubes_98d6997efa9a51e23997364f1f09c7bd}{operator$<$$<$} (ostream \&, const \hyperlink{classPlateformeMondeDesCubes}{PlateformeMondeDesCubes} \&)}
+\label{classPlateformeMondeDesCubes_98d6997efa9a51e23997364f1f09c7bd}
+
+\begin{CompactList}\small\item\em Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme monde des cubes. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Detailed Description}
@@ -54,22 +57,24 @@ Classe representant une plateforme d'eco-resolution appliquee au monde des cubes
 La classe gere les fonctionnalites de la plateforme d'eco-resolution du monde des cubes. 
 
 \subsection{Member Function Documentation}
-\hypertarget{classPlateformeMondeDesCubes_0d16ae1a6181037c271456f0841cf63b}{
-\index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!addEcoAgent@{addEcoAgent}}
-\index{addEcoAgent@{addEcoAgent}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
-\subsubsection[{addEcoAgent}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeMondeDesCubes::addEcoAgent (const {\bf Cube} \& {\em cube})}}
-\label{classPlateformeMondeDesCubes_0d16ae1a6181037c271456f0841cf63b}
+\hypertarget{classPlateformeMondeDesCubes_7f694f86cf4a9502cf6bba2d6eb5a371}{
+\index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!distanceFinaleATable@{distanceFinaleATable}}
+\index{distanceFinaleATable@{distanceFinaleATable}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
+\subsubsection[{distanceFinaleATable}]{\setlength{\rightskip}{0pt plus 5cm}int PlateformeMondeDesCubes::distanceFinaleATable (const {\bf EcoAgentID} \& {\em c}) const}}
+\label{classPlateformeMondeDesCubes_7f694f86cf4a9502cf6bba2d6eb5a371}
 
 
-Ajout d'un cube dans la plateforme. 
+Determination du nombre d'EcoAgent separant de la table. 
 
-Methode qui permet d'ajouter un cube dans la plateforme d'eco-resolution
+Cette methode permet de determiner le nombre d'EcoAgent separant un \hyperlink{classEcoAgent}{EcoAgent} de la table en position finale.
 
 \begin{Desc}
 \item[Parameters:]
 \begin{description}
-\item[{\em cube}]: le cube a ajouter \end{description}
+\item[{\em c}]: identifiant de l'EcoAgent \end{description}
 \end{Desc}
+\begin{Desc}
+\item[Returns:]La distance a la table \end{Desc}
 \hypertarget{classPlateformeMondeDesCubes_a341731830c30c695d5ef80c90377165}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!getNombreDeCubes@{getNombreDeCubes}}
 \index{getNombreDeCubes@{getNombreDeCubes}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
@@ -83,11 +88,11 @@ Methode qui permet d'obtenir le nombre de cubes de la plateforme d'eco-resolutio
 
 \begin{Desc}
 \item[Returns:]le nombre de cubes \end{Desc}
-\hypertarget{classPlateformeMondeDesCubes_8919ce255ec5689a9dfce09667f0b461}{
+\hypertarget{classPlateformeMondeDesCubes_232d0a6c6cbd1bc2d8622fa92dd64ce1}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!getTableID@{getTableID}}
 \index{getTableID@{getTableID}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
-\subsubsection[{getTableID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgentID} PlateformeMondeDesCubes::getTableID ()}}
-\label{classPlateformeMondeDesCubes_8919ce255ec5689a9dfce09667f0b461}
+\subsubsection[{getTableID}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgentID} $\ast$ PlateformeMondeDesCubes::getTableID () const}}
+\label{classPlateformeMondeDesCubes_232d0a6c6cbd1bc2d8622fa92dd64ce1}
 
 
 Obtention de l'identifiant de la table. 
@@ -95,7 +100,7 @@ Obtention de l'identifiant de la table.
 Methode qui permet d'obtenir l'identifiant de la table
 
 \begin{Desc}
-\item[Returns:]l'identifiant de la table (de type \hyperlink{classEcoAgentID}{EcoAgentID}) \end{Desc}
+\item[Returns:](l'identifiant de la table (de type \hyperlink{classEcoAgentID}{EcoAgentID})) ==$>$ un pointeur sur l'identifiant de la table de type EcoAgentID$\ast$ \end{Desc}
 \hypertarget{classPlateformeMondeDesCubes_67160be6f5ecd0b8f3fffeb1a7bd81ba}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!initialiser@{initialiser}}
 \index{initialiser@{initialiser}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
@@ -107,37 +112,37 @@ Initialisation de la resolution du monde des cubes.
 
 Methode qui permet d'initialiser le probleme avant d'attaquer la resolution Les cubes sont disposes sur la table selon une position initiale et une position finale est determinee 
 
-Implements \hyperlink{classPlateformeEcoResolution_57d87139f09ca51cd6a4fa7cd2e83351}{PlateformeEcoResolution}.\hypertarget{classPlateformeMondeDesCubes_605987b8e7760eacc2db63d56a58daa1}{
+Implements \hyperlink{classPlateformeEcoResolution_57d87139f09ca51cd6a4fa7cd2e83351}{PlateformeEcoResolution}.\hypertarget{classPlateformeMondeDesCubes_5f3ebe8acdfdbb447c13de8d3cbac438}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!obtenirCubePrioritaire@{obtenirCubePrioritaire}}
 \index{obtenirCubePrioritaire@{obtenirCubePrioritaire}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
-\subsubsection[{obtenirCubePrioritaire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cube}$\ast$ PlateformeMondeDesCubes::obtenirCubePrioritaire ()}}
-\label{classPlateformeMondeDesCubes_605987b8e7760eacc2db63d56a58daa1}
+\subsubsection[{obtenirCubePrioritaire}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgent} $\ast$ PlateformeMondeDesCubes::obtenirCubePrioritaire () const}}
+\label{classPlateformeMondeDesCubes_5f3ebe8acdfdbb447c13de8d3cbac438}
 
 
-Obtention du cube qui a la priorite pour agir dans la plateforme d'eco-resolution. 
+Obtention de l'EcoAgent qui a la priorite pour agir dans la plateforme d'eco-resolution du monde des cubes. 
 
-Methode qui permet d'obtenir le cube qui doit agir en priorite dans la plateforme d'eco-resolution
+Methode qui permet d'obtenir l'EcoAgent qui doit agir en priorite dans la plateforme d'eco-resolution du monde des cubes
 
 \begin{Desc}
-\item[Returns:]un pointeur sur le \hyperlink{classCube}{Cube} prioritaire s'il existe, NULL sinon \end{Desc}
-\hypertarget{classPlateformeMondeDesCubes_23a34346419b046b04f771807a965765}{
+\item[Returns:]un pointeur sur l'EcoAgent prioritaire s'il existe, NULL sinon \end{Desc}
+\hypertarget{classPlateformeMondeDesCubes_fd0d16680115dc57d5a43f433dde3592}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!obtenirGeneur@{obtenirGeneur}}
 \index{obtenirGeneur@{obtenirGeneur}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
-\subsubsection[{obtenirGeneur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cube}$\ast$ PlateformeMondeDesCubes::obtenirGeneur (const {\bf Cube} \& {\em currentCube})}}
-\label{classPlateformeMondeDesCubes_23a34346419b046b04f771807a965765}
+\subsubsection[{obtenirGeneur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgent} $\ast$ PlateformeMondeDesCubes::obtenirGeneur (const {\bf EcoAgent} \& {\em currentCube})}}
+\label{classPlateformeMondeDesCubes_fd0d16680115dc57d5a43f433dde3592}
 
 
-Obtention du geneur du cube courant. 
+Obtention du geneur de l'EcoAgent courant. 
 
-Methode qui permet d'obtenir le geneur du cube courant
+Methode qui permet d'obtenir le geneur de l'EcoAgent courant Cette methode retourne NULL quand la position courante de l'EcoAgent est sa position finale (ou s'il n'y a aucun geneur)
 
 \begin{Desc}
 \item[Parameters:]
 \begin{description}
-\item[{\em currentCube}]: le cube courant \end{description}
+\item[{\em currentCube}]: l'EcoAgent courant \end{description}
 \end{Desc}
 \begin{Desc}
-\item[Returns:]un pointeur sur le cube geneur s'il existe, NULL sinon \end{Desc}
+\item[Returns:]un pointeur sur l'EcoAgent geneur s'il existe, NULL sinon \end{Desc}
 \hypertarget{classPlateformeMondeDesCubes_c7be18c8d02e2743e884545828cfabed}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!resoudre@{resoudre}}
 \index{resoudre@{resoudre}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
@@ -149,11 +154,11 @@ Resolution du probleme du monde des cubes par eco-resolution.
 
 Methode qui permet de lancer la resolution du probleme du monde des cubes par eco-resolution 
 
-Implements \hyperlink{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}{PlateformeEcoResolution}.\hypertarget{classPlateformeMondeDesCubes_51b3dbb4c3e764231468f1ff19e35a06}{
+Implements \hyperlink{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}{PlateformeEcoResolution}.\hypertarget{classPlateformeMondeDesCubes_c99c6db4dfc2b193d8697103bec3d4d4}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!setCubeID@{setCubeID}}
 \index{setCubeID@{setCubeID}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
-\subsubsection[{setCubeID}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeMondeDesCubes::setCubeID (const {\bf Cube} \& {\em currentCube}, \/  const {\bf EcoAgentID} \& {\em id})}}
-\label{classPlateformeMondeDesCubes_51b3dbb4c3e764231468f1ff19e35a06}
+\subsubsection[{setCubeID}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeMondeDesCubes::setCubeID ({\bf EcoAgent} \& {\em currentCube}, \/  const {\bf EcoAgentID} \& {\em id})}}
+\label{classPlateformeMondeDesCubes_c99c6db4dfc2b193d8697103bec3d4d4}
 
 
 Determination de l'identifiant d'un cube. 
@@ -188,14 +193,14 @@ Methode qui permet de fixer le nombre de cubes de la plateforme d'eco-resolution
 \label{classPlateformeMondeDesCubes_ecc518787fb8231be37e7b8eb3c5390e}
 
 
-Determination de la position courante d'un cube de la plateforme. 
+Determination de la position courante d'un \hyperlink{classEcoAgent}{EcoAgent} de la plateforme. 
 
 Methode qui permet de fixer la position courante d'un cube de la plateforme
 
 \begin{Desc}
 \item[Parameters:]
 \begin{description}
-\item[{\em c}]: identifiant du cube a positionner \item[{\em pos}]: position courante du cube, ie identifiant du cube destinataire \end{description}
+\item[{\em c}]: identifiant de l'EcoAgent a positionner \item[{\em pos}]: position courante de l'EcoAgent, ie identifiant du cube destinataire \end{description}
 \end{Desc}
 \hypertarget{classPlateformeMondeDesCubes_315f30b3c7c1e8bc9ec828a66a5813e5}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!setPositionFinale@{setPositionFinale}}
@@ -204,14 +209,14 @@ Methode qui permet de fixer la position courante d'un cube de la plateforme
 \label{classPlateformeMondeDesCubes_315f30b3c7c1e8bc9ec828a66a5813e5}
 
 
-Determination de la position finale d'un cube de la plateforme. 
+Determination de la position finale d'un \hyperlink{classEcoAgent}{EcoAgent} de la plateforme. 
 
 Methode qui permet de fixer la position finale d'un cube de la plateforme
 
 \begin{Desc}
 \item[Parameters:]
 \begin{description}
-\item[{\em c}]: identifiant du cube a positionner \item[{\em pos}]: position finale du cube, ie identifiant du cube destinataire \end{description}
+\item[{\em c}]: identifiant de l'EcoAgent a positionner \item[{\em pos}]: position finale de l'EcoAgent, ie identifiant du cube destinataire \end{description}
 \end{Desc}
 \hypertarget{classPlateformeMondeDesCubes_cf6eccc70251d89c4d12c921f44934af}{
 \index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!setTableIdentifiant@{setTableIdentifiant}}
@@ -229,21 +234,9 @@ Methode qui permet de fixer l'identifiant de la table de la plateforme d'eco-res
 \begin{description}
 \item[{\em id}]: identifiant de la table \end{description}
 \end{Desc}
-\hypertarget{classPlateformeMondeDesCubes_975dd26c6b3703a49498549392976d07}{
-\index{PlateformeMondeDesCubes@{PlateformeMondeDesCubes}!verifierNombreDeCubes@{verifierNombreDeCubes}}
-\index{verifierNombreDeCubes@{verifierNombreDeCubes}!PlateformeMondeDesCubes@{PlateformeMondeDesCubes}}
-\subsubsection[{verifierNombreDeCubes}]{\setlength{\rightskip}{0pt plus 5cm}bool PlateformeMondeDesCubes::verifierNombreDeCubes ()}}
-\label{classPlateformeMondeDesCubes_975dd26c6b3703a49498549392976d07}
 
 
-Verification de la coherence du nombre de cubes (s'il est bien positif). 
-
-Methode qui permet de verifier si le nombre des cubes est bien strictement positif
-
-\begin{Desc}
-\item[Returns:]true si le nombre des cubes est strictement positif, false sinon \end{Desc}
-
-
-The documentation for this class was generated from the following file:\begin{CompactItemize}
+The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
-trunk/include/\hyperlink{plateformeMondeDesCubes_8hpp}{plateformeMondeDesCubes.hpp}\end{CompactItemize}
+trunk/include/\hyperlink{plateformeMondeDesCubes_8hpp}{plateformeMondeDesCubes.hpp}\item 
+trunk/src/plateformeMondeDesCubes.cpp\end{CompactItemize}

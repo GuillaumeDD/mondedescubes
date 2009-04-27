@@ -55,7 +55,7 @@
       * \brief Ajout d'un eco-agent
       *
       * Methode qui permet d'ajouter un eco-agent dans la plateforme
-      *
+      * \throw ExceptionEcoAgentDejaEnregistre : lancee lorsqu'on enregistre un EcoAgent deja enregistre
       * \param ea : l'eco-agent a ajouter
       *
       */      

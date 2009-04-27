@@ -41,9 +41,9 @@ Collaboration diagram for Table:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#049f2e06391781ae255c6698869c4ad1">Table</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructeur.  <a href="#049f2e06391781ae255c6698869c4ad1"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#6fbbe063e4ee08c066a1095a7320acf4">Table</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#f82a6d490aa166537ac2e42e83ec8cd3">Table</a> (<a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructeur.  <a href="#6fbbe063e4ee08c066a1095a7320acf4"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructeur.  <a href="#f82a6d490aa166537ac2e42e83ec8cd3"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#9a559f2e7beb37b511ee9f88873164f8">~Table</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructeur.  <a href="#9a559f2e7beb37b511ee9f88873164f8"></a><br></td></tr>
@@ -55,9 +55,9 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#3fc58e0af8f075440c9184f674e1d02e">rechercherSatisfaction</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par la table lorsqu'elle cherche a se satisfaire. <br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#1aac4abcbb55e193e23a2e547c232273">agresser</a> (const <a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;a)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#e636451a26e8fd61aa9b4c09a92262f7">agresser</a> (<a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;a)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees lorsque la table agresse un autre eco-agent.  <a href="#1aac4abcbb55e193e23a2e547c232273"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees lorsque la table agresse un autre eco-agent.  <a href="#e636451a26e8fd61aa9b4c09a92262f7"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="763c07c018021751ac161382c8469af1"></a><!-- doxytag: member="Table::estAgresse" ref="763c07c018021751ac161382c8469af1" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#763c07c018021751ac161382c8469af1">estAgresse</a> ()</td></tr>
 
@@ -74,6 +74,10 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#314f12a86dbd1c133df83f33e2d92bec">agir</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par la table lorsqu'il agit. <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="964952b5f899c8abb64e9622a8457466"></a><!-- doxytag: member="Table::initialiser" ref="964952b5f899c8abb64e9622a8457466" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#964952b5f899c8abb64e9622a8457466">initialiser</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialisation de la table avant l'EcoResolution. <br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Classe derivee de la classe <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> designant le Support sur lequel vont etre poses les cubes. <hr><h2>Constructor &amp; Destructor Documentation</h2>
@@ -98,14 +102,14 @@ Constructeur.
 Constructeur de la classe <a class="el" href="classTable.html" title="Classe derivee de la classe EcoAgent designant le Support sur lequel vont etre poses...">Table</a> par defaut. Un <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> sera automatiquement genere pour la table. 
 </div>
 </div><p>
-<a class="anchor" name="6fbbe063e4ee08c066a1095a7320acf4"></a><!-- doxytag: member="Table::Table" ref="6fbbe063e4ee08c066a1095a7320acf4" args="(const EcoAgentID &amp;id)" -->
+<a class="anchor" name="f82a6d490aa166537ac2e42e83ec8cd3"></a><!-- doxytag: member="Table::Table" ref="f82a6d490aa166537ac2e42e83ec8cd3" args="(EcoAgentID &amp;id)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Table::Table           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>id</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
@@ -148,14 +152,14 @@ Destructeur de la classe <a class="el" href="classTable.html" title="Classe deri
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="1aac4abcbb55e193e23a2e547c232273"></a><!-- doxytag: member="Table::agresser" ref="1aac4abcbb55e193e23a2e547c232273" args="(const EcoAgent &amp;a)" -->
+<a class="anchor" name="e636451a26e8fd61aa9b4c09a92262f7"></a><!-- doxytag: member="Table::agresser" ref="e636451a26e8fd61aa9b4c09a92262f7" args="(EcoAgent &amp;a)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Table::agresser           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>a</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [virtual]</code></td>
@@ -173,14 +177,14 @@ Suite d'operations realisees lorsque la table agresse un autre eco-agent.
   </table>
 </dl>
 
-<p>Implements <a class="el" href="classEcoAgent.html#5d7e837b4a3a6b73fc1fb60c5fddefa5">EcoAgent</a>.</p>
+<p>Implements <a class="el" href="classEcoAgent.html#867f0c274eb3ed0b61cb1fe7baa67edd">EcoAgent</a>.</p>
 
 </div>
 </div><p>
-<hr>The documentation for this class was generated from the following file:<ul>
-<li>trunk/include/<a class="el" href="table_8hpp.html">table.hpp</a></ul>
+<hr>The documentation for this class was generated from the following files:<ul>
+<li>trunk/include/<a class="el" href="table_8hpp.html">table.hpp</a><li>trunk/src/table.cpp</ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Tue Apr 14 11:30:44 2009 for Monde des cubes by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Apr 27 20:16:17 2009 for Monde des cubes by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
 </body>
