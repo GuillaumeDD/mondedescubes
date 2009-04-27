@@ -124,13 +124,13 @@ void cubeTest::RSTest(void)
   c4->setPositionFinale(*(p->getTableID()));
   c4->setEtat(RECHERCHESATISFACTION);
 
-	/*//RS: c3 est gêné par c4
+	//RS: c3 est gêné par c4
 	c3->rechercherSatisfaction();
-	CPPUNIT_ASSERT(c4->getEtat()==RECHERCHEFUITE);
+	CPPUNIT_ASSERT(c4->getEtat() == RECHERCHEFUITE);
 
 	//RS: c4 peut se satisfaire
 	c4->rechercherSatisfaction();
-	CPPUNIT_ASSERT(c4->getEtat()==SATISFAIT);*/
+	CPPUNIT_ASSERT(c4->getEtat() == SATISFAIT);
 		
 }
 

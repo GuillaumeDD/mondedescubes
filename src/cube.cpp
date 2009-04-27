@@ -27,10 +27,11 @@ void Cube::rechercherSatisfaction(){
 	EcoAgent *c;
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	c = p->obtenirGeneur(*this);
-	if(c == NULL) 
-		this->faireSatisfaction();
-	else
-		this->agresser(*c);	
+	if(c == NULL){ 
+	  this->faireSatisfaction();
+	}else{
+	  agresser(*c);
+	}	
 }
 
 void Cube::agresser(EcoAgent& a){
