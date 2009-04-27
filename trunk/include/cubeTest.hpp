@@ -10,7 +10,13 @@
 	class cubeTest : public CPPUNIT_NS :: TestFixture
 	{
     CPPUNIT_TEST_SUITE (cubeTest);
-    CPPUNIT_TEST (doTest);
+    CPPUNIT_TEST (initEtatTest);
+	 CPPUNIT_TEST (agressionTest);
+	 CPPUNIT_TEST (RFTest);
+	 CPPUNIT_TEST (RSTest);
+	 CPPUNIT_TEST (fuiteTest);
+	 CPPUNIT_TEST (satisfactionTest);
+	 CPPUNIT_TEST (agirTest);
     CPPUNIT_TEST_SUITE_END ();
 
     public:
@@ -18,11 +24,24 @@
         void tearDown (void);
 
     protected:
-        void doTest (void);
+        void initEtatTest (void);
+		  void agressionTest (void);
+		  void RFTest (void);
+		  void RSTest (void);
+		  void satisfactionTest (void);
+		  void fuiteTest (void);
+		  void agirTest (void);
 
     private:
 		PlateformeMondeDesCubes *p;
-		// Mettre ici les variables dont vous avez besoin pendant les tests
+		Cube *c1,
+			  *c2,
+		     *c3,
+		     *c4,
+		     *c5,
+			  *c6,
+			  *c7;
+		Table *t;
 	};
 
 #endif

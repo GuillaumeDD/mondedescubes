@@ -22,7 +22,9 @@
 
     private:
 		PlateformeMondeDesCubes *p;
-		// Mettre ici les variables dont vous avez besoin pendant les tests
+		Table *t;
+		EcoAgent *ea1;
+	
 	};
 
 #endif
