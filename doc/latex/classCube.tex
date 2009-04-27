@@ -28,7 +28,7 @@ void \hyperlink{classCube_10f69d54f313f48ac0c8468628ac6902}{rechercherSatisfacti
 \label{classCube_10f69d54f313f48ac0c8468628ac6902}
 
 \begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il cherche a se satisfaire. \item\end{CompactList}\item 
-void \hyperlink{classCube_2b9c63b545c13c95b9a7f44c3c5147ad}{agresser} (const \hyperlink{classCube}{Cube} \&a)
+void \hyperlink{classCube_85556598281efcfa925dd4ef4c8acba5}{agresser} (\hyperlink{classEcoAgent}{EcoAgent} \&a)
 \begin{CompactList}\small\item\em Suite d'operations realisees lorsque le cube agresse un autre eco-agent. \item\end{CompactList}\item 
 \hypertarget{classCube_a9af44bff02fb06ac5be83f4c041fe57}{
 void \hyperlink{classCube_a9af44bff02fb06ac5be83f4c041fe57}{estAgresse} ()}
@@ -45,13 +45,21 @@ void \hyperlink{classCube_1fec2199edab8e6cfdb3685256d2cdec}{faireSatisfaction} (
 \label{classCube_1fec2199edab8e6cfdb3685256d2cdec}
 
 \begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il se satisfait. \item\end{CompactList}\item 
-void \hyperlink{classCube_51dbc3cc9578d3cf5f9e56cab24aff1f}{initialiserEtat} ()
+void \hyperlink{classCube_6687c2575f4ce927f6b3032fb46040eb}{initialiser} ()
 \begin{CompactList}\small\item\em Initialisation de l'etat du cube. \item\end{CompactList}\item 
 \hypertarget{classCube_9289a4d72b849b7f868b189f531daa62}{
 void \hyperlink{classCube_9289a4d72b849b7f868b189f531daa62}{agir} ()}
 \label{classCube_9289a4d72b849b7f868b189f531daa62}
 
 \begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il agit. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\hypertarget{classCube_73f4a43d36e6b84403eceeebfdf68c56}{
+ostream \& \hyperlink{classCube_73f4a43d36e6b84403eceeebfdf68c56}{operator$<$$<$} (ostream \&f, const \hyperlink{classCube}{Cube} \&c)}
+\label{classCube_73f4a43d36e6b84403eceeebfdf68c56}
+
+\begin{CompactList}\small\item\em Suite d'operations permettant d'afficher des informations sur le cube. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Detailed Description}
@@ -95,11 +103,11 @@ Destructeur.
 Destructeur de la classe \hyperlink{classCube}{Cube} 
 
 \subsection{Member Function Documentation}
-\hypertarget{classCube_2b9c63b545c13c95b9a7f44c3c5147ad}{
+\hypertarget{classCube_85556598281efcfa925dd4ef4c8acba5}{
 \index{Cube@{Cube}!agresser@{agresser}}
 \index{agresser@{agresser}!Cube@{Cube}}
-\subsubsection[{agresser}]{\setlength{\rightskip}{0pt plus 5cm}void Cube::agresser (const {\bf Cube} \& {\em a})}}
-\label{classCube_2b9c63b545c13c95b9a7f44c3c5147ad}
+\subsubsection[{agresser}]{\setlength{\rightskip}{0pt plus 5cm}void Cube::agresser ({\bf EcoAgent} \& {\em a})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classCube_85556598281efcfa925dd4ef4c8acba5}
 
 
 Suite d'operations realisees lorsque le cube agresse un autre eco-agent. 
@@ -109,17 +117,22 @@ Suite d'operations realisees lorsque le cube agresse un autre eco-agent.
 \begin{description}
 \item[{\em a}]: \hyperlink{classEcoAgent}{EcoAgent} a agresser \end{description}
 \end{Desc}
-\hypertarget{classCube_51dbc3cc9578d3cf5f9e56cab24aff1f}{
-\index{Cube@{Cube}!initialiserEtat@{initialiserEtat}}
-\index{initialiserEtat@{initialiserEtat}!Cube@{Cube}}
-\subsubsection[{initialiserEtat}]{\setlength{\rightskip}{0pt plus 5cm}void Cube::initialiserEtat ()}}
-\label{classCube_51dbc3cc9578d3cf5f9e56cab24aff1f}
+
+
+Implements \hyperlink{classEcoAgent_867f0c274eb3ed0b61cb1fe7baa67edd}{EcoAgent}.\hypertarget{classCube_6687c2575f4ce927f6b3032fb46040eb}{
+\index{Cube@{Cube}!initialiser@{initialiser}}
+\index{initialiser@{initialiser}!Cube@{Cube}}
+\subsubsection[{initialiser}]{\setlength{\rightskip}{0pt plus 5cm}void Cube::initialiser ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classCube_6687c2575f4ce927f6b3032fb46040eb}
 
 
 Initialisation de l'etat du cube. 
 
 Cette methode permet d'initialiser l'etat du cube en prenant en compte sa position courante et sa position finale. Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a \char`\"{}satisfait\char`\"{} 
 
-The documentation for this class was generated from the following file:\begin{CompactItemize}
+Implements \hyperlink{classEcoAgent_f779fd214bed010d0f6b7b137fde7116}{EcoAgent}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
-trunk/include/\hyperlink{cube_8hpp}{cube.hpp}\end{CompactItemize}
+trunk/include/\hyperlink{cube_8hpp}{cube.hpp}\item 
+trunk/src/cube.cpp\end{CompactItemize}

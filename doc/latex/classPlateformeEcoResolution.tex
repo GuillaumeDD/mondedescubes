@@ -16,18 +16,37 @@ Inherited by \hyperlink{classPlateformeMondeDesCubes}{PlateformeMondeDesCubes}.
 \begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
 \hyperlink{classPlateformeEcoResolution_356b4862f53c4be870304e5186601b5a}{$\sim$PlateformeEcoResolution} ()
 \begin{CompactList}\small\item\em Destructeur. \item\end{CompactList}\item 
-\hyperlink{classEcoAgent}{EcoAgent} $\ast$ \hyperlink{classPlateformeEcoResolution_ba320298b5b660cb2dff0558f8c5eb31}{getEcoAgent} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&id) const 
+\hyperlink{classEcoAgent}{EcoAgent} $\ast$ \hyperlink{classPlateformeEcoResolution_acd4e2899f178261ddd0fde086932e84}{getEcoAgent} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&id) const 
 \begin{CompactList}\small\item\em Obtention d'un eco-agent. \item\end{CompactList}\item 
-void \hyperlink{classPlateformeEcoResolution_45d2074749341698f24086b77f3f3edd}{addEcoAgent} (const \hyperlink{classEcoAgent}{EcoAgent} \&ea)
+void \hyperlink{classPlateformeEcoResolution_6fdb4c8ecc62252da4326d9763d4f28d}{addEcoAgent} (\hyperlink{classEcoAgent}{EcoAgent} \&ea)
 \begin{CompactList}\small\item\em Ajout d'un eco-agent. \item\end{CompactList}\item 
-void \hyperlink{classPlateformeEcoResolution_4b6382c212be5a06de556de5aa8f9e6a}{addRegle} (const \hyperlink{classRegle}{Regle} \&r)
+void \hyperlink{classPlateformeEcoResolution_c2978a0e31b186415ca156a19ac8a1dc}{addRegle} (\hyperlink{classRegle}{Regle} \&r)
 \begin{CompactList}\small\item\em Ajout d'une nouvelle regle. \item\end{CompactList}\item 
-bool \hyperlink{classPlateformeEcoResolution_2433694ea90bac8394675aaa3c9829d3}{verifierCoherence} ()
+list$<$ \hyperlink{classRegle}{Regle} $\ast$ $>$ \hyperlink{classPlateformeEcoResolution_81dad57670e80ac2d29d02918b610636}{getRegles} ()
+\begin{CompactList}\small\item\em Obtention de la liste des regles. \item\end{CompactList}\item 
+bool \hyperlink{classPlateformeEcoResolution_0d35ee702a0b255f0da91aa382089865}{verifierCoherence} () const 
 \begin{CompactList}\small\item\em Verification du respect des regles apres l'initialisation de la plateforme. \item\end{CompactList}\item 
+bool \hyperlink{classPlateformeEcoResolution_673b4d17360ab1ff1e7c7f28a1b2e35e}{sontSatisfaits} () const 
+\begin{CompactList}\small\item\em Methode qui verifie si tous les eco-agents sont satisfaits. \item\end{CompactList}\item 
+\hyperlink{classEcoAgentID}{EcoAgentID} $\ast$ \hyperlink{classPlateformeEcoResolution_a33074c437f57bf9f409502de82b2f58}{getEcoAgentAuDessus} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&id) const 
+\begin{CompactList}\small\item\em Methode qui retourne l'EcoAgentID de l'EcoAgent au dessus. \item\end{CompactList}\item 
+int \hyperlink{classPlateformeEcoResolution_bccb426d9f1113e66b652bb63e7fafcd}{nombreEcoAgentAuDessus} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&id) const 
+\begin{CompactList}\small\item\em Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id specifie. \item\end{CompactList}\item 
+list$<$ \hyperlink{classEcoAgentID}{EcoAgentID} $\ast$ $>$ \hyperlink{classPlateformeEcoResolution_eccbbf85153147e551b9b6fa65f554e2}{getEcoAgents} (const \hyperlink{etat_8hpp_767b7a63d7677f92d697621b4166af1b}{Etat} e) const 
+\begin{CompactList}\small\item\em Methode qui retourne les \hyperlink{classEcoAgentID}{EcoAgentID} des \hyperlink{classEcoAgent}{EcoAgent} possedant l'etat specifie. \item\end{CompactList}\item 
+map$<$ \hyperlink{classEcoAgentID}{EcoAgentID}, \hyperlink{classEcoAgent}{EcoAgent} \&, \hyperlink{structcompareEcoAgentID}{compareEcoAgentID} $>$ \hyperlink{classPlateformeEcoResolution_c3c3307a04fbe2d33c753c2b0eef79af}{getEcoAgents} () const 
+\begin{CompactList}\small\item\em Methode qui retourne tous les eco-agents. \item\end{CompactList}\item 
 virtual void \hyperlink{classPlateformeEcoResolution_57d87139f09ca51cd6a4fa7cd2e83351}{initialiser} ()=0
 \begin{CompactList}\small\item\em Initialisation de la resolution. \item\end{CompactList}\item 
 virtual void \hyperlink{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}{resoudre} ()=0
 \begin{CompactList}\small\item\em Resolution du probleme par eco-resolution. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+map$<$ \hyperlink{classEcoAgentID}{EcoAgentID}, \hyperlink{classEcoAgent}{EcoAgent} \&, \hyperlink{structcompareEcoAgentID}{compareEcoAgentID} $>$ \hyperlink{classPlateformeEcoResolution_02de97d0d9dac3719ceaadfb255492a3}{ecoagents}
+\item 
+list$<$ \hyperlink{classRegle}{Regle} $\ast$ $>$ \hyperlink{classPlateformeEcoResolution_4f7dc37edf042a189073f15771604e35}{regles}
+\end{CompactItemize}
 
 
 \subsection{Detailed Description}
@@ -57,27 +76,30 @@ Destructeur.
 Destructeur de la classe abstraite \hyperlink{classPlateformeEcoResolution}{PlateformeEcoResolution} 
 
 \subsection{Member Function Documentation}
-\hypertarget{classPlateformeEcoResolution_45d2074749341698f24086b77f3f3edd}{
+\hypertarget{classPlateformeEcoResolution_6fdb4c8ecc62252da4326d9763d4f28d}{
 \index{PlateformeEcoResolution@{PlateformeEcoResolution}!addEcoAgent@{addEcoAgent}}
 \index{addEcoAgent@{addEcoAgent}!PlateformeEcoResolution@{PlateformeEcoResolution}}
-\subsubsection[{addEcoAgent}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeEcoResolution::addEcoAgent (const {\bf EcoAgent} \& {\em ea})}}
-\label{classPlateformeEcoResolution_45d2074749341698f24086b77f3f3edd}
+\subsubsection[{addEcoAgent}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeEcoResolution::addEcoAgent ({\bf EcoAgent} \& {\em ea})}}
+\label{classPlateformeEcoResolution_6fdb4c8ecc62252da4326d9763d4f28d}
 
 
 Ajout d'un eco-agent. 
 
-Methode qui permet d'ajouter un eco-agent dans la plateforme
-
+Methode qui permet d'ajouter un eco-agent dans la plateforme \begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em \hyperlink{classExceptionEcoAgentDejaEnregistre}{ExceptionEcoAgentDejaEnregistre}}]: lancee lorsqu'on enregistre un \hyperlink{classEcoAgent}{EcoAgent} deja enregistre \end{description}
+\end{Desc}
 \begin{Desc}
 \item[Parameters:]
 \begin{description}
 \item[{\em ea}]: l'eco-agent a ajouter \end{description}
 \end{Desc}
-\hypertarget{classPlateformeEcoResolution_4b6382c212be5a06de556de5aa8f9e6a}{
+\hypertarget{classPlateformeEcoResolution_c2978a0e31b186415ca156a19ac8a1dc}{
 \index{PlateformeEcoResolution@{PlateformeEcoResolution}!addRegle@{addRegle}}
 \index{addRegle@{addRegle}!PlateformeEcoResolution@{PlateformeEcoResolution}}
-\subsubsection[{addRegle}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeEcoResolution::addRegle (const {\bf Regle} \& {\em r})}}
-\label{classPlateformeEcoResolution_4b6382c212be5a06de556de5aa8f9e6a}
+\subsubsection[{addRegle}]{\setlength{\rightskip}{0pt plus 5cm}void PlateformeEcoResolution::addRegle ({\bf Regle} \& {\em r})}}
+\label{classPlateformeEcoResolution_c2978a0e31b186415ca156a19ac8a1dc}
 
 
 Ajout d'une nouvelle regle. 
@@ -89,11 +111,11 @@ Methode qui permet d'ajouter une nouvelle regle dans la plateforme
 \begin{description}
 \item[{\em r}]: la regle a ajouter \end{description}
 \end{Desc}
-\hypertarget{classPlateformeEcoResolution_ba320298b5b660cb2dff0558f8c5eb31}{
+\hypertarget{classPlateformeEcoResolution_acd4e2899f178261ddd0fde086932e84}{
 \index{PlateformeEcoResolution@{PlateformeEcoResolution}!getEcoAgent@{getEcoAgent}}
 \index{getEcoAgent@{getEcoAgent}!PlateformeEcoResolution@{PlateformeEcoResolution}}
-\subsubsection[{getEcoAgent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgent}$\ast$ PlateformeEcoResolution::getEcoAgent (const {\bf EcoAgentID} \& {\em id}) const}}
-\label{classPlateformeEcoResolution_ba320298b5b660cb2dff0558f8c5eb31}
+\subsubsection[{getEcoAgent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgent} $\ast$ PlateformeEcoResolution::getEcoAgent (const {\bf EcoAgentID} \& {\em id}) const}}
+\label{classPlateformeEcoResolution_acd4e2899f178261ddd0fde086932e84}
 
 
 Obtention d'un eco-agent. 
@@ -107,6 +129,68 @@ Methode qui permet d'obtenir un eco-agent de la plateforme a partir de son ident
 \end{Desc}
 \begin{Desc}
 \item[Returns:]un pointeur sur l'eco-agent recherche s'il existe, NULL sinon \end{Desc}
+\hypertarget{classPlateformeEcoResolution_a33074c437f57bf9f409502de82b2f58}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!getEcoAgentAuDessus@{getEcoAgentAuDessus}}
+\index{getEcoAgentAuDessus@{getEcoAgentAuDessus}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{getEcoAgentAuDessus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EcoAgentID} $\ast$ PlateformeEcoResolution::getEcoAgentAuDessus (const {\bf EcoAgentID} \& {\em id}) const}}
+\label{classPlateformeEcoResolution_a33074c437f57bf9f409502de82b2f58}
+
+
+Methode qui retourne l'EcoAgentID de l'EcoAgent au dessus. 
+
+Methode qui retourne l'EcoAgentID de l'EcoAgent dont la position courante est l'EcoAgentID passe en parametre
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em id}]: \hyperlink{classEcoAgentID}{EcoAgentID} dont on cherche l'EcoAgent qui l'a en position courante \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]\hyperlink{classEcoAgentID}{EcoAgentID} de l'EcoAgent correspondant, NULL s'il n'y en a pas \end{Desc}
+\hypertarget{classPlateformeEcoResolution_c3c3307a04fbe2d33c753c2b0eef79af}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!getEcoAgents@{getEcoAgents}}
+\index{getEcoAgents@{getEcoAgents}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{getEcoAgents}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ {\bf EcoAgentID}, {\bf EcoAgent} \&, {\bf compareEcoAgentID} $>$ PlateformeEcoResolution::getEcoAgents () const}}
+\label{classPlateformeEcoResolution_c3c3307a04fbe2d33c753c2b0eef79af}
+
+
+Methode qui retourne tous les eco-agents. 
+
+Methode qui retourne tous les eco-agents. Cette methode est surtout utilisee pour les regles.
+
+\begin{Desc}
+\item[Returns:]un conteneur associatif map$<$EcoAgentID,EcoAgent\&$>$ \end{Desc}
+\hypertarget{classPlateformeEcoResolution_eccbbf85153147e551b9b6fa65f554e2}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!getEcoAgents@{getEcoAgents}}
+\index{getEcoAgents@{getEcoAgents}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{getEcoAgents}]{\setlength{\rightskip}{0pt plus 5cm}list$<$ {\bf EcoAgentID} $\ast$ $>$ PlateformeEcoResolution::getEcoAgents (const {\bf Etat} {\em e}) const}}
+\label{classPlateformeEcoResolution_eccbbf85153147e551b9b6fa65f554e2}
+
+
+Methode qui retourne les \hyperlink{classEcoAgentID}{EcoAgentID} des \hyperlink{classEcoAgent}{EcoAgent} possedant l'etat specifie. 
+
+Methode qui retourne les \hyperlink{classEcoAgentID}{EcoAgentID} des \hyperlink{classEcoAgent}{EcoAgent} possedant un etat specifie dans le parametre de la fonction
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em e}]: l'etat dans lequel tous les \hyperlink{classEcoAgent}{EcoAgent} listes doivent etre \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]la liste des \hyperlink{classEcoAgentID}{EcoAgentID} des \hyperlink{classEcoAgent}{EcoAgent} dans cet Etat \end{Desc}
+\hypertarget{classPlateformeEcoResolution_81dad57670e80ac2d29d02918b610636}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!getRegles@{getRegles}}
+\index{getRegles@{getRegles}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{getRegles}]{\setlength{\rightskip}{0pt plus 5cm}list$<$ {\bf Regle} $\ast$ $>$ PlateformeEcoResolution::getRegles ()}}
+\label{classPlateformeEcoResolution_81dad57670e80ac2d29d02918b610636}
+
+
+Obtention de la liste des regles. 
+
+Methode qui permet d'obtenir la liste des regles
+
+\begin{Desc}
+\item[Returns:]La liste des regles list$<$Regle$\ast$$>$ \end{Desc}
 \hypertarget{classPlateformeEcoResolution_57d87139f09ca51cd6a4fa7cd2e83351}{
 \index{PlateformeEcoResolution@{PlateformeEcoResolution}!initialiser@{initialiser}}
 \index{initialiser@{initialiser}!PlateformeEcoResolution@{PlateformeEcoResolution}}
@@ -118,7 +202,25 @@ Initialisation de la resolution.
 
 Methode qui permet d'initialiser le probleme avant d'attaquer la resolution 
 
-Implemented in \hyperlink{classPlateformeMondeDesCubes_67160be6f5ecd0b8f3fffeb1a7bd81ba}{PlateformeMondeDesCubes}.\hypertarget{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}{
+Implemented in \hyperlink{classPlateformeMondeDesCubes_67160be6f5ecd0b8f3fffeb1a7bd81ba}{PlateformeMondeDesCubes}.\hypertarget{classPlateformeEcoResolution_bccb426d9f1113e66b652bb63e7fafcd}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!nombreEcoAgentAuDessus@{nombreEcoAgentAuDessus}}
+\index{nombreEcoAgentAuDessus@{nombreEcoAgentAuDessus}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{nombreEcoAgentAuDessus}]{\setlength{\rightskip}{0pt plus 5cm}int PlateformeEcoResolution::nombreEcoAgentAuDessus (const {\bf EcoAgentID} \& {\em id}) const}}
+\label{classPlateformeEcoResolution_bccb426d9f1113e66b652bb63e7fafcd}
+
+
+Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id specifie. 
+
+Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id specifie
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em id}]: \hyperlink{classEcoAgentID}{EcoAgentID} dont on cherche le nombre d'EcoAgent superieur \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]un entier superieur ou egal a 0 \end{Desc}
+\hypertarget{classPlateformeEcoResolution_17f587580cd8aee537551bc0ddd82bef}{
 \index{PlateformeEcoResolution@{PlateformeEcoResolution}!resoudre@{resoudre}}
 \index{resoudre@{resoudre}!PlateformeEcoResolution@{PlateformeEcoResolution}}
 \subsubsection[{resoudre}]{\setlength{\rightskip}{0pt plus 5cm}virtual void PlateformeEcoResolution::resoudre ()\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
@@ -129,11 +231,24 @@ Resolution du probleme par eco-resolution.
 
 Methode qui permet de lancer la resolution du probleme par eco-resolution 
 
-Implemented in \hyperlink{classPlateformeMondeDesCubes_c7be18c8d02e2743e884545828cfabed}{PlateformeMondeDesCubes}.\hypertarget{classPlateformeEcoResolution_2433694ea90bac8394675aaa3c9829d3}{
+Implemented in \hyperlink{classPlateformeMondeDesCubes_c7be18c8d02e2743e884545828cfabed}{PlateformeMondeDesCubes}.\hypertarget{classPlateformeEcoResolution_673b4d17360ab1ff1e7c7f28a1b2e35e}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!sontSatisfaits@{sontSatisfaits}}
+\index{sontSatisfaits@{sontSatisfaits}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{sontSatisfaits}]{\setlength{\rightskip}{0pt plus 5cm}bool PlateformeEcoResolution::sontSatisfaits () const}}
+\label{classPlateformeEcoResolution_673b4d17360ab1ff1e7c7f28a1b2e35e}
+
+
+Methode qui verifie si tous les eco-agents sont satisfaits. 
+
+Methode qui verifie si tous les eco-agents sont satisfaits. Elle permet d'arreter la resolution.
+
+\begin{Desc}
+\item[Returns:]true si tous les eco-agents sont satisfaits, false sinon \end{Desc}
+\hypertarget{classPlateformeEcoResolution_0d35ee702a0b255f0da91aa382089865}{
 \index{PlateformeEcoResolution@{PlateformeEcoResolution}!verifierCoherence@{verifierCoherence}}
 \index{verifierCoherence@{verifierCoherence}!PlateformeEcoResolution@{PlateformeEcoResolution}}
-\subsubsection[{verifierCoherence}]{\setlength{\rightskip}{0pt plus 5cm}bool PlateformeEcoResolution::verifierCoherence ()}}
-\label{classPlateformeEcoResolution_2433694ea90bac8394675aaa3c9829d3}
+\subsubsection[{verifierCoherence}]{\setlength{\rightskip}{0pt plus 5cm}bool PlateformeEcoResolution::verifierCoherence () const}}
+\label{classPlateformeEcoResolution_0d35ee702a0b255f0da91aa382089865}
 
 
 Verification du respect des regles apres l'initialisation de la plateforme. 
@@ -144,6 +259,24 @@ Methode qui permet de verifier l'ensemble des regles apres l'initialisation de l
 \item[Returns:]true si toutes les regles sont verifiees, false sinon \end{Desc}
 
 
-The documentation for this class was generated from the following file:\begin{CompactItemize}
+\subsection{Member Data Documentation}
+\hypertarget{classPlateformeEcoResolution_02de97d0d9dac3719ceaadfb255492a3}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!ecoagents@{ecoagents}}
+\index{ecoagents@{ecoagents}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{ecoagents}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf EcoAgentID},{\bf EcoAgent}\&,{\bf compareEcoAgentID}$>$ {\bf PlateformeEcoResolution::ecoagents}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classPlateformeEcoResolution_02de97d0d9dac3719ceaadfb255492a3}
+
+
+Referencement des eco-agents a partir de leurs identifiants uniques \hypertarget{classPlateformeEcoResolution_4f7dc37edf042a189073f15771604e35}{
+\index{PlateformeEcoResolution@{PlateformeEcoResolution}!regles@{regles}}
+\index{regles@{regles}!PlateformeEcoResolution@{PlateformeEcoResolution}}
+\subsubsection[{regles}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf Regle}$\ast$$>$ {\bf PlateformeEcoResolution::regles}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classPlateformeEcoResolution_4f7dc37edf042a189073f15771604e35}
+
+
+Liste des regles a verifier avant de lancer la resolution 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
-trunk/include/\hyperlink{plateformeEcoResolution_8hpp}{plateformeEcoResolution.hpp}\end{CompactItemize}
+trunk/include/\hyperlink{plateformeEcoResolution_8hpp}{plateformeEcoResolution.hpp}\item 
+trunk/src/plateformeEcoResolution.cpp\end{CompactItemize}

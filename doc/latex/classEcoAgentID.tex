@@ -18,6 +18,8 @@ int \hyperlink{classEcoAgentID_30abc8a92bd07523b8e4f4baf312b56e}{getId} () const
 \begin{CompactList}\small\item\em Obtention de l'identifiant. \item\end{CompactList}\item 
 bool \hyperlink{classEcoAgentID_a6c183361e0ccdab9da2c6666d77c111}{operator==} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&) const 
 \begin{CompactList}\small\item\em Comparaison de \hyperlink{classEcoAgentID}{EcoAgentID}. \item\end{CompactList}\item 
+bool \hyperlink{classEcoAgentID_8ffde7f02500120884ef35ade65b3e6e}{operator!=} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&) const 
+\begin{CompactList}\small\item\em Comparaison de \hyperlink{classEcoAgentID}{EcoAgentID}. \item\end{CompactList}\item 
 bool \hyperlink{classEcoAgentID_24d44b31302cd2761ffce1df8f74f12c}{operator$<$} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&) const 
 \begin{CompactList}\small\item\em Comparaison de \hyperlink{classEcoAgentID}{EcoAgentID}. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Static Public Member Functions}
@@ -28,6 +30,14 @@ static int \hyperlink{classEcoAgentID_9b8f29915bff7e36bf53e695c148517e}{getNombr
 \label{classEcoAgentID_9b8f29915bff7e36bf53e695c148517e}
 
 \begin{CompactList}\small\item\em Obtention du nombre de generation Methode statique qui permet d'obtenir le nombre de generations d'EcoAgentID. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\hypertarget{classEcoAgentID_d5e8cda1cb99079142dfa371760795cb}{
+ostream \& \hyperlink{classEcoAgentID_d5e8cda1cb99079142dfa371760795cb}{operator$<$$<$} (ostream \&, const \hyperlink{classEcoAgentID}{EcoAgentID} \&)}
+\label{classEcoAgentID_d5e8cda1cb99079142dfa371760795cb}
+
+\begin{CompactList}\small\item\em Cette methode permet d'afficher des informations sur un \hyperlink{classEcoAgent}{EcoAgent}. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Detailed Description}
@@ -66,7 +76,16 @@ Destructeur de la classe \hyperlink{classEcoAgentID}{EcoAgentID}
 
 Obtention de l'identifiant. 
 
-Methode qui retourne l'identifiant de l'eco-agent \hypertarget{classEcoAgentID_24d44b31302cd2761ffce1df8f74f12c}{
+Methode qui retourne l'identifiant de l'eco-agent \hypertarget{classEcoAgentID_8ffde7f02500120884ef35ade65b3e6e}{
+\index{EcoAgentID@{EcoAgentID}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!EcoAgentID@{EcoAgentID}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool EcoAgentID::operator!= (const {\bf EcoAgentID} \& {\em eid}) const}}
+\label{classEcoAgentID_8ffde7f02500120884ef35ade65b3e6e}
+
+
+Comparaison de \hyperlink{classEcoAgentID}{EcoAgentID}. 
+
+Methode qui permet de comparer deux \hyperlink{classEcoAgentID}{EcoAgentID} \hypertarget{classEcoAgentID_24d44b31302cd2761ffce1df8f74f12c}{
 \index{EcoAgentID@{EcoAgentID}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!EcoAgentID@{EcoAgentID}}
 \subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool EcoAgentID::operator$<$ (const {\bf EcoAgentID} \& {\em eid}) const}}
@@ -89,4 +108,4 @@ Methode qui permet de comparer deux \hyperlink{classEcoAgentID}{EcoAgentID}
 The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
 trunk/include/\hyperlink{ecoAgentID_8hpp}{ecoAgentID.hpp}\item 
-trunk/src/ecoAgent.cpp\end{CompactItemize}
+trunk/src/ecoAgentID.cpp\end{CompactItemize}

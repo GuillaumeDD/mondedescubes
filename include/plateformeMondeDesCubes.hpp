@@ -56,7 +56,7 @@ public:
    *\return un pointeur sur l'EcoAgent prioritaire s'il existe, NULL sinon
    *
    */
-  EcoAgent* obtenirCubePrioritaire();
+  EcoAgent* obtenirCubePrioritaire() const;
 
   /*!
    *\brief Determination du nombre de cubes dans la plateforme d'eco-resolution
@@ -100,12 +100,14 @@ public:
   EcoAgentID* getTableID() const;
       
   /*!
-   *\brief Obtention du geneur du cube courant
+   *\brief Obtention du geneur de l'EcoAgent courant
    *
-   * Methode qui permet d'obtenir le geneur du cube courant
+   * Methode qui permet d'obtenir le geneur de l'EcoAgent courant
+   * Cette methode retourne NULL quand la position courante de l'EcoAgent est sa
+   * position finale (ou s'il n'y a aucun geneur)
    *
-   *\param currentCube : le cube courant
-   *\return un pointeur sur le cube geneur s'il existe, NULL sinon
+   *\param currentCube : l'EcoAgent courant
+   *\return un pointeur sur l'EcoAgent geneur s'il existe, NULL sinon
    *
    */
   EcoAgent* obtenirGeneur(const EcoAgent& currentCube);

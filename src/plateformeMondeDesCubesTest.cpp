@@ -86,12 +86,18 @@ void plateformeMondeDesCubesTest::setTest(void)
 
 void plateformeMondeDesCubesTest::getTest(void)
 {
+  PlateformeMondeDesCubes::kill();
+  p = PlateformeMondeDesCubes::getInstance();
+  p->addEcoAgent(*ea1);
+  p->addEcoAgent(*ea2);
+  p->addEcoAgent(*ea3);
+  p->addEcoAgent(*ea4);
   //test initialiser
   /*
    * ea1 : SATISFAIT
    * ea2 : RECHERCHESATISFACTION
    * ea3 : RECHERCHESATISFACTION
-   * ea4 : SATISFACTION
+   * ea4 : SATISFAIT
    * table : SATISFAIT
    *
    */
@@ -123,9 +129,7 @@ void plateformeMondeDesCubesTest::getTest(void)
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea3) == ea4);
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea4) == NULL);
 
-
-  //test resoudre
   //test obtenirCubePrioritaire
-
+  CPPUNIT_ASSERT(p->obtenirCubePrioritaire() == ea2);
 }
 

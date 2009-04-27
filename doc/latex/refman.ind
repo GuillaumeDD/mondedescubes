@@ -1,180 +1,229 @@
 \begin{theindex}
 
   \item {$\sim $Cube}
-    \subitem {Cube}, \hyperpage{8}
+    \subitem {Cube}, \hyperpage{11}
   \item {$\sim $EcoAgentID}
-    \subitem {EcoAgentID}, \hyperpage{13}
+    \subitem {EcoAgentID}, \hyperpage{18}
   \item {$\sim $PlateformeEcoResolution}
-    \subitem {PlateformeEcoResolution}, \hyperpage{15}
+    \subitem {PlateformeEcoResolution}, \hyperpage{21}
   \item {$\sim $Singleton}
-    \subitem {Singleton}, \hyperpage{23}
+    \subitem {Singleton}, \hyperpage{31}
   \item {$\sim $Table}
-    \subitem {Table}, \hyperpage{26}
+    \subitem {Table}, \hyperpage{34}
 
   \indexspace
 
   \item {addEcoAgent}
-    \subitem {PlateformeEcoResolution}, \hyperpage{16}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{19}
+    \subitem {PlateformeEcoResolution}, \hyperpage{21}
   \item {addRegle}
-    \subitem {PlateformeEcoResolution}, \hyperpage{16}
+    \subitem {PlateformeEcoResolution}, \hyperpage{21}
   \item {agresser}
-    \subitem {Cube}, \hyperpage{8}
-    \subitem {EcoAgent}, \hyperpage{11}
-    \subitem {Table}, \hyperpage{26}
+    \subitem {Cube}, \hyperpage{11}
+    \subitem {EcoAgent}, \hyperpage{13}
+    \subitem {Table}, \hyperpage{34}
+  \item {AucuneSurcharge}, \hyperpage{7}
+    \subitem {pasSurcharges}, \hyperpage{7}
+    \subitem {serontPasSurcharges}, \hyperpage{8}
+    \subitem {verifier}, \hyperpage{8}
 
   \indexspace
 
-  \item {Cube}, \hyperpage{7}
-    \subitem {$\sim $Cube}, \hyperpage{8}
-    \subitem {agresser}, \hyperpage{8}
-    \subitem {Cube}, \hyperpage{8}
-    \subitem {initialiserEtat}, \hyperpage{8}
-
-  \indexspace
-
-  \item {EcoAgent}, \hyperpage{10}
+  \item {compareEcoAgentID}, \hyperpage{9}
+  \item {Cube}, \hyperpage{10}
+    \subitem {$\sim $Cube}, \hyperpage{11}
     \subitem {agresser}, \hyperpage{11}
-    \subitem {getEtat}, \hyperpage{11}
-    \subitem {getId}, \hyperpage{11}
-    \subitem {getPositionCourante}, \hyperpage{11}
-    \subitem {getPositionFinale}, \hyperpage{11}
-    \subitem {setEtat}, \hyperpage{12}
-    \subitem {setId}, \hyperpage{12}
-    \subitem {setPositionCourante}, \hyperpage{12}
-    \subitem {setPositionFinale}, \hyperpage{12}
-  \item {EcoAgentID}, \hyperpage{13}
-    \subitem {$\sim $EcoAgentID}, \hyperpage{13}
-    \subitem {EcoAgentID}, \hyperpage{13}
+    \subitem {Cube}, \hyperpage{11}
+    \subitem {initialiser}, \hyperpage{11}
+
+  \indexspace
+
+  \item {distanceFinaleATable}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{26}
+
+  \indexspace
+
+  \item {EcoAgent}, \hyperpage{12}
+    \subitem {agresser}, \hyperpage{13}
+    \subitem {EcoAgent}, \hyperpage{13}
+    \subitem {getEtat}, \hyperpage{13}
     \subitem {getId}, \hyperpage{14}
-    \subitem {operator$<$}, \hyperpage{14}
-    \subitem {operator==}, \hyperpage{14}
+    \subitem {getPositionCourante}, \hyperpage{14}
+    \subitem {getPositionFinale}, \hyperpage{14}
+    \subitem {getVisite}, \hyperpage{14}
+    \subitem {initialiser}, \hyperpage{14}
+    \subitem {setEtat}, \hyperpage{15}
+    \subitem {setId}, \hyperpage{15}
+    \subitem {setPositionCourante}, \hyperpage{15}
+    \subitem {setPositionFinale}, \hyperpage{15}
+    \subitem {setVisite}, \hyperpage{15}
+  \item {EcoAgentID}, \hyperpage{17}
+    \subitem {$\sim $EcoAgentID}, \hyperpage{18}
+    \subitem {EcoAgentID}, \hyperpage{18}
+    \subitem {getId}, \hyperpage{18}
+    \subitem {operator$<$}, \hyperpage{18}
+    \subitem {operator==}, \hyperpage{18}
+  \item {ecoagents}
+    \subitem {PlateformeEcoResolution}, \hyperpage{24}
+  \item {ExceptionEcoAgentDejaEnregistre}, \hyperpage{19}
 
   \indexspace
 
   \item {getEcoAgent}
-    \subitem {PlateformeEcoResolution}, \hyperpage{16}
+    \subitem {PlateformeEcoResolution}, \hyperpage{21}
+  \item {getEcoAgentAuDessus}
+    \subitem {PlateformeEcoResolution}, \hyperpage{22}
+  \item {getEcoAgents}
+    \subitem {PlateformeEcoResolution}, \hyperpage{22}
   \item {getEtat}
-    \subitem {EcoAgent}, \hyperpage{11}
+    \subitem {EcoAgent}, \hyperpage{13}
   \item {getId}
-    \subitem {EcoAgent}, \hyperpage{11}
-    \subitem {EcoAgentID}, \hyperpage{14}
+    \subitem {EcoAgent}, \hyperpage{14}
+    \subitem {EcoAgentID}, \hyperpage{18}
   \item {getInstance}
-    \subitem {Singleton}, \hyperpage{24}
+    \subitem {Singleton}, \hyperpage{32}
   \item {getNombreDeCubes}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{19}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{26}
   \item {getPositionCourante}
-    \subitem {EcoAgent}, \hyperpage{11}
+    \subitem {EcoAgent}, \hyperpage{14}
   \item {getPositionFinale}
-    \subitem {EcoAgent}, \hyperpage{11}
+    \subitem {EcoAgent}, \hyperpage{14}
+  \item {getRegles}
+    \subitem {PlateformeEcoResolution}, \hyperpage{22}
   \item {getTableID}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{19}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{26}
+  \item {getVisite}
+    \subitem {EcoAgent}, \hyperpage{14}
 
   \indexspace
 
   \item {initialiser}
-    \subitem {PlateformeEcoResolution}, \hyperpage{16}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{19}
-  \item {initialiserEtat}
-    \subitem {Cube}, \hyperpage{8}
+    \subitem {Cube}, \hyperpage{11}
+    \subitem {EcoAgent}, \hyperpage{14}
+    \subitem {PlateformeEcoResolution}, \hyperpage{23}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{26}
 
   \indexspace
 
   \item {kill}
-    \subitem {Singleton}, \hyperpage{24}
+    \subitem {Singleton}, \hyperpage{32}
+
+  \indexspace
+
+  \item {nombreEcoAgentAuDessus}
+    \subitem {PlateformeEcoResolution}, \hyperpage{23}
 
   \indexspace
 
   \item {obtenirCubePrioritaire}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{19}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{27}
   \item {obtenirGeneur}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{20}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{27}
   \item {operator$<$}
-    \subitem {EcoAgentID}, \hyperpage{14}
+    \subitem {EcoAgentID}, \hyperpage{18}
   \item {operator==}
-    \subitem {EcoAgentID}, \hyperpage{14}
+    \subitem {EcoAgentID}, \hyperpage{18}
 
   \indexspace
 
-  \item {PlateformeEcoResolution}, \hyperpage{15}
-    \subitem {$\sim $PlateformeEcoResolution}, \hyperpage{15}
-    \subitem {addEcoAgent}, \hyperpage{16}
-    \subitem {addRegle}, \hyperpage{16}
-    \subitem {getEcoAgent}, \hyperpage{16}
-    \subitem {initialiser}, \hyperpage{16}
-    \subitem {PlateformeEcoResolution}, \hyperpage{15}
-    \subitem {resoudre}, \hyperpage{16}
-    \subitem {verifierCoherence}, \hyperpage{17}
-  \item {PlateformeMondeDesCubes}, \hyperpage{18}
-    \subitem {addEcoAgent}, \hyperpage{19}
-    \subitem {getNombreDeCubes}, \hyperpage{19}
-    \subitem {getTableID}, \hyperpage{19}
-    \subitem {initialiser}, \hyperpage{19}
-    \subitem {obtenirCubePrioritaire}, \hyperpage{19}
-    \subitem {obtenirGeneur}, \hyperpage{20}
-    \subitem {resoudre}, \hyperpage{20}
-    \subitem {setCubeID}, \hyperpage{20}
-    \subitem {setNombreDeCubes}, \hyperpage{20}
-    \subitem {setPositionCourante}, \hyperpage{20}
-    \subitem {setPositionFinale}, \hyperpage{21}
-    \subitem {setTableIdentifiant}, \hyperpage{21}
-    \subitem {verifierNombreDeCubes}, \hyperpage{21}
+  \item {pasSurcharges}
+    \subitem {AucuneSurcharge}, \hyperpage{7}
+  \item {PlateformeEcoResolution}, \hyperpage{20}
+    \subitem {$\sim $PlateformeEcoResolution}, \hyperpage{21}
+    \subitem {addEcoAgent}, \hyperpage{21}
+    \subitem {addRegle}, \hyperpage{21}
+    \subitem {ecoagents}, \hyperpage{24}
+    \subitem {getEcoAgent}, \hyperpage{21}
+    \subitem {getEcoAgentAuDessus}, \hyperpage{22}
+    \subitem {getEcoAgents}, \hyperpage{22}
+    \subitem {getRegles}, \hyperpage{22}
+    \subitem {initialiser}, \hyperpage{23}
+    \subitem {nombreEcoAgentAuDessus}, \hyperpage{23}
+    \subitem {PlateformeEcoResolution}, \hyperpage{21}
+    \subitem {regles}, \hyperpage{24}
+    \subitem {resoudre}, \hyperpage{23}
+    \subitem {sontSatisfaits}, \hyperpage{23}
+    \subitem {verifierCoherence}, \hyperpage{23}
+  \item {PlateformeMondeDesCubes}, \hyperpage{25}
+    \subitem {distanceFinaleATable}, \hyperpage{26}
+    \subitem {getNombreDeCubes}, \hyperpage{26}
+    \subitem {getTableID}, \hyperpage{26}
+    \subitem {initialiser}, \hyperpage{26}
+    \subitem {obtenirCubePrioritaire}, \hyperpage{27}
+    \subitem {obtenirGeneur}, \hyperpage{27}
+    \subitem {resoudre}, \hyperpage{27}
+    \subitem {setCubeID}, \hyperpage{27}
+    \subitem {setNombreDeCubes}, \hyperpage{27}
+    \subitem {setPositionCourante}, \hyperpage{28}
+    \subitem {setPositionFinale}, \hyperpage{28}
+    \subitem {setTableIdentifiant}, \hyperpage{28}
 
   \indexspace
 
-  \item {Regle}, \hyperpage{22}
-    \subitem {verifier}, \hyperpage{22}
+  \item {Regle}, \hyperpage{29}
+    \subitem {verifier}, \hyperpage{29}
+  \item {regles}
+    \subitem {PlateformeEcoResolution}, \hyperpage{24}
+  \item {reliesATable}, \hyperpage{30}
   \item {resoudre}
-    \subitem {PlateformeEcoResolution}, \hyperpage{16}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{20}
+    \subitem {PlateformeEcoResolution}, \hyperpage{23}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{27}
 
   \indexspace
 
+  \item {serontPasSurcharges}
+    \subitem {AucuneSurcharge}, \hyperpage{8}
   \item {setCubeID}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{20}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{27}
   \item {setEtat}
-    \subitem {EcoAgent}, \hyperpage{12}
+    \subitem {EcoAgent}, \hyperpage{15}
   \item {setId}
-    \subitem {EcoAgent}, \hyperpage{12}
+    \subitem {EcoAgent}, \hyperpage{15}
   \item {setNombreDeCubes}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{20}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{27}
   \item {setPositionCourante}
-    \subitem {EcoAgent}, \hyperpage{12}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{20}
+    \subitem {EcoAgent}, \hyperpage{15}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{28}
   \item {setPositionFinale}
-    \subitem {EcoAgent}, \hyperpage{12}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{21}
+    \subitem {EcoAgent}, \hyperpage{15}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{28}
   \item {setTableIdentifiant}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{21}
-  \item {Singleton}, \hyperpage{23}
-    \subitem {$\sim $Singleton}, \hyperpage{23}
-    \subitem {getInstance}, \hyperpage{24}
-    \subitem {kill}, \hyperpage{24}
-    \subitem {Singleton}, \hyperpage{23}
+    \subitem {PlateformeMondeDesCubes}, \hyperpage{28}
+  \item {setVisite}
+    \subitem {EcoAgent}, \hyperpage{15}
+  \item {Singleton}, \hyperpage{31}
+    \subitem {$\sim $Singleton}, \hyperpage{31}
+    \subitem {getInstance}, \hyperpage{32}
+    \subitem {kill}, \hyperpage{32}
+    \subitem {Singleton}, \hyperpage{31}
+  \item {sontSatisfaits}
+    \subitem {PlateformeEcoResolution}, \hyperpage{23}
 
   \indexspace
 
-  \item {Table}, \hyperpage{25}
-    \subitem {$\sim $Table}, \hyperpage{26}
-    \subitem {agresser}, \hyperpage{26}
-    \subitem {Table}, \hyperpage{26}
-  \item {trunk/include/cube.hpp}, \hyperpage{27}
-  \item {trunk/include/ecoAgent.hpp}, \hyperpage{28}
-  \item {trunk/include/ecoAgentID.hpp}, \hyperpage{29}
-  \item {trunk/include/etat.hpp}, \hyperpage{30}
-  \item {trunk/include/plateformeEcoResolution.hpp}, \hyperpage{31}
-  \item {trunk/include/plateformeMondeDesCubes.hpp}, \hyperpage{32}
-  \item {trunk/include/regle.hpp}, \hyperpage{33}
-  \item {trunk/include/singleton.hpp}, \hyperpage{34}
-  \item {trunk/include/table.hpp}, \hyperpage{35}
+  \item {Table}, \hyperpage{33}
+    \subitem {$\sim $Table}, \hyperpage{34}
+    \subitem {agresser}, \hyperpage{34}
+    \subitem {Table}, \hyperpage{34}
+  \item {trunk/include/aucuneSurcharge.hpp}, \hyperpage{35}
+  \item {trunk/include/compareEcoAgentID.hpp}, \hyperpage{36}
+  \item {trunk/include/cube.hpp}, \hyperpage{37}
+  \item {trunk/include/ecoAgent.hpp}, \hyperpage{38}
+  \item {trunk/include/ecoAgentID.hpp}, \hyperpage{39}
+  \item {trunk/include/etat.hpp}, \hyperpage{40}
+  \item {trunk/include/ExceptionEcoAgentDejaEnregistre.hpp}, \hyperpage{41}
+  \item {trunk/include/plateformeEcoResolution.hpp}, \hyperpage{42}
+  \item {trunk/include/plateformeMondeDesCubes.hpp}, \hyperpage{43}
+  \item {trunk/include/regle.hpp}, \hyperpage{44}
+  \item {trunk/include/reliesATable.hpp}, \hyperpage{45}
+  \item {trunk/include/singleton.hpp}, \hyperpage{46}
+  \item {trunk/include/table.hpp}, \hyperpage{47}
 
   \indexspace
 
   \item {verifier}
-    \subitem {Regle}, \hyperpage{22}
+    \subitem {AucuneSurcharge}, \hyperpage{8}
+    \subitem {Regle}, \hyperpage{29}
   \item {verifierCoherence}
-    \subitem {PlateformeEcoResolution}, \hyperpage{17}
-  \item {verifierNombreDeCubes}
-    \subitem {PlateformeMondeDesCubes}, \hyperpage{21}
+    \subitem {PlateformeEcoResolution}, \hyperpage{23}
 
 \end{theindex}

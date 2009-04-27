@@ -18,23 +18,24 @@ void PlateformeMondeDesCubes::resoudre(){
   }
 }
 
-EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire(){
+EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire() const{
   EcoAgent* result = NULL;
   list<EcoAgentID*> candidats;
   list<EcoAgentID*>::const_iterator it;
-  int nbCubeSup, nbCubeInfFinal, temp;
+  unsigned int nbCubeSup, nbCubeInfFinal, temp;
+    nbCubeInfFinal = nbCubeSup = ecoagents.size()+1;
   // on cherche les cubes en recherche de fuite
   candidats = getEcoAgents(RECHERCHEFUITE);
   if(candidats.size() > 0){
     // on recherche le cube en recherche de fuite le plus haut place
     it = candidats.begin();
-    nbCubeInfFinal = nbCubeSup = ecoagents.size()+1;
     while(it != candidats.end()){
       temp = nombreEcoAgentAuDessus(**it);
       if( temp < nbCubeSup){
 	nbCubeSup = temp;
 	result = getEcoAgent(**it);
       }
+      ++it;
     }
   }else{
     //il n'y a pas de cube en recherche de fuite, on cherche les cubes en 
@@ -44,7 +45,7 @@ EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire(){
     // place le plus bas
     // i.e. le cube dont la distance de la position finale a la table est
     // la plus petite
-	 
+
     it = candidats.begin();
     while(it != candidats.end()){
       temp = distanceFinaleATable(**it);
@@ -52,6 +53,7 @@ EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire(){
 	nbCubeInfFinal = temp;
 	result = getEcoAgent(**it);
       }
+      ++it;
     }
   }
   return result;

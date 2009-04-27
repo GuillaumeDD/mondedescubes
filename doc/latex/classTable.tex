@@ -14,7 +14,7 @@ Collaboration diagram for Table:\subsection*{Public Member Functions}
 \item 
 \hyperlink{classTable_049f2e06391781ae255c6698869c4ad1}{Table} ()
 \begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
-\hyperlink{classTable_6fbbe063e4ee08c066a1095a7320acf4}{Table} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&id)
+\hyperlink{classTable_f82a6d490aa166537ac2e42e83ec8cd3}{Table} (\hyperlink{classEcoAgentID}{EcoAgentID} \&id)
 \begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
 \hyperlink{classTable_9a559f2e7beb37b511ee9f88873164f8}{$\sim$Table} ()
 \begin{CompactList}\small\item\em Destructeur. \item\end{CompactList}\item 
@@ -28,7 +28,7 @@ void \hyperlink{classTable_3fc58e0af8f075440c9184f674e1d02e}{rechercherSatisfact
 \label{classTable_3fc58e0af8f075440c9184f674e1d02e}
 
 \begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'elle cherche a se satisfaire. \item\end{CompactList}\item 
-void \hyperlink{classTable_1aac4abcbb55e193e23a2e547c232273}{agresser} (const \hyperlink{classEcoAgent}{EcoAgent} \&a)
+void \hyperlink{classTable_e636451a26e8fd61aa9b4c09a92262f7}{agresser} (\hyperlink{classEcoAgent}{EcoAgent} \&a)
 \begin{CompactList}\small\item\em Suite d'operations realisees lorsque la table agresse un autre eco-agent. \item\end{CompactList}\item 
 \hypertarget{classTable_763c07c018021751ac161382c8469af1}{
 void \hyperlink{classTable_763c07c018021751ac161382c8469af1}{estAgresse} ()}
@@ -49,7 +49,12 @@ void \hyperlink{classTable_b442e96905d4a14e2eb1151eb6de5481}{faireSatisfaction} 
 void \hyperlink{classTable_314f12a86dbd1c133df83f33e2d92bec}{agir} ()}
 \label{classTable_314f12a86dbd1c133df83f33e2d92bec}
 
-\begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'il agit. \item\end{CompactList}\end{CompactItemize}
+\begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'il agit. \item\end{CompactList}\item 
+\hypertarget{classTable_964952b5f899c8abb64e9622a8457466}{
+void \hyperlink{classTable_964952b5f899c8abb64e9622a8457466}{initialiser} ()}
+\label{classTable_964952b5f899c8abb64e9622a8457466}
+
+\begin{CompactList}\small\item\em Initialisation de la table avant l'EcoResolution. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Detailed Description}
@@ -65,11 +70,11 @@ Classe derivee de la classe \hyperlink{classEcoAgent}{EcoAgent} designant le Sup
 
 Constructeur. 
 
-Constructeur de la classe \hyperlink{classTable}{Table} par defaut. Un \hyperlink{classEcoAgentID}{EcoAgentID} sera automatiquement genere pour la table. \hypertarget{classTable_6fbbe063e4ee08c066a1095a7320acf4}{
+Constructeur de la classe \hyperlink{classTable}{Table} par defaut. Un \hyperlink{classEcoAgentID}{EcoAgentID} sera automatiquement genere pour la table. \hypertarget{classTable_f82a6d490aa166537ac2e42e83ec8cd3}{
 \index{Table@{Table}!Table@{Table}}
 \index{Table@{Table}!Table@{Table}}
-\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}Table::Table (const {\bf EcoAgentID} \& {\em id})}}
-\label{classTable_6fbbe063e4ee08c066a1095a7320acf4}
+\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}Table::Table ({\bf EcoAgentID} \& {\em id})}}
+\label{classTable_f82a6d490aa166537ac2e42e83ec8cd3}
 
 
 Constructeur. 
@@ -93,11 +98,11 @@ Destructeur.
 Destructeur de la classe \hyperlink{classTable}{Table} 
 
 \subsection{Member Function Documentation}
-\hypertarget{classTable_1aac4abcbb55e193e23a2e547c232273}{
+\hypertarget{classTable_e636451a26e8fd61aa9b4c09a92262f7}{
 \index{Table@{Table}!agresser@{agresser}}
 \index{agresser@{agresser}!Table@{Table}}
-\subsubsection[{agresser}]{\setlength{\rightskip}{0pt plus 5cm}void Table::agresser (const {\bf EcoAgent} \& {\em a})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
-\label{classTable_1aac4abcbb55e193e23a2e547c232273}
+\subsubsection[{agresser}]{\setlength{\rightskip}{0pt plus 5cm}void Table::agresser ({\bf EcoAgent} \& {\em a})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classTable_e636451a26e8fd61aa9b4c09a92262f7}
 
 
 Suite d'operations realisees lorsque la table agresse un autre eco-agent. 
@@ -109,8 +114,9 @@ Suite d'operations realisees lorsque la table agresse un autre eco-agent.
 \end{Desc}
 
 
-Implements \hyperlink{classEcoAgent_5d7e837b4a3a6b73fc1fb60c5fddefa5}{EcoAgent}.
+Implements \hyperlink{classEcoAgent_867f0c274eb3ed0b61cb1fe7baa67edd}{EcoAgent}.
 
-The documentation for this class was generated from the following file:\begin{CompactItemize}
+The documentation for this class was generated from the following files:\begin{CompactItemize}
 \item 
-trunk/include/\hyperlink{table_8hpp}{table.hpp}\end{CompactItemize}
+trunk/include/\hyperlink{table_8hpp}{table.hpp}\item 
+trunk/src/table.cpp\end{CompactItemize}
