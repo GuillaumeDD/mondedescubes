@@ -137,6 +137,8 @@ void plateformeMondeDesCubesTest::getTest(void)
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea5) == NULL);
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea6) == NULL);
 
+
+
   //test obtenirCubePrioritaire
   CPPUNIT_ASSERT(p->obtenirCubePrioritaire() == ea2);
 }

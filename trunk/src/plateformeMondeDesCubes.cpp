@@ -90,28 +90,45 @@ bool PlateformeMondeDesCubes::verifierNombreDeCubes(int nb){
 EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
   EcoAgent* result = NULL;
   EcoAgentID* id = NULL;
-  if(currentCube.getPositionFinale() != currentCube.getPositionCourante()){
-    id = getEcoAgentAuDessus(*(currentCube.getId()));
-    if(id == NULL){
-      //il n'y a aucun EcoAgent dont la position courante est currentCube
-      // on regarde s'il y a un EcoAgent dont la position courante est la
-      // position finale de currentCube sauf si la position finale est la table
-      if(currentCube.getPositionFinale() != getTableID()){
-	id = getEcoAgentAuDessus(*(currentCube.getPositionFinale()));
-	if(id != NULL){
-	  // il y a un EcoAgent dont la position courante est la position finale
-	  result = getEcoAgent(*id);
+  if(currentCube.getPositionFinale() != currentCube.getPositionCourante())
+	{
 
-	  // on cherche l'EcoAgent en haut de la "pile"
-	  while(getEcoAgentAuDessus(*id) != NULL){
-	    id = getEcoAgentAuDessus(*id);
-	    result = getEcoAgent(*id);
-	  }
-	}
-      }
-    }else{
-      result = getEcoAgent(*id);
-    }
+	 if(currentCube.getEtat()== RECHERCHEFUITE)
+		{
+		// si le Cube est en RF : soit il a un cube posé sur lui et il l'agresse
+		// soit il n'a aucun gêneur et il peut fuir
+    	id = getEcoAgentAuDessus(*(currentCube.getId()));
+		if(id != NULL) result = getEcoAgent(*id);
+		}
+
+	if(currentCube.getEtat()== RECHERCHESATISFACTION)
+		{
+		id = getEcoAgentAuDessus(*(currentCube.getId()));
+    	if(id == NULL)
+			{
+      	//il n'y a aucun EcoAgent dont la position courante est currentCube
+			// on regarde s'il y a un EcoAgent dont la position courante est la
+      	// position finale de currentCube sauf si la position finale est la table
+      	if(currentCube.getPositionFinale() != getTableID())
+				{
+				id = getEcoAgentAuDessus(*(currentCube.getPositionFinale()));
+				if(id != NULL)
+					{
+					// il y a un EcoAgent dont la position courante est la position finale
+	  				result = getEcoAgent(*id);
+					}
+				}
+			}
+		else result = getEcoAgent(*id);
+		}
+
+	  	// FAUX: on attaque celui du bas qui va agresser les cubes posés sur lui s'il y en a 
+				//on cherche l'EcoAgent en haut de la "pile"
+	  			//while(getEcoAgentAuDessus(*id) != NULL)
+				//	{
+	    		//	id = getEcoAgentAuDessus(*id);
+	    		//	result = getEcoAgent(*id);
+	  			//	}
   }
   return result;
 }
