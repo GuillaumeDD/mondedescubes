@@ -92,6 +92,8 @@ void plateformeMondeDesCubesTest::getTest(void)
   p->addEcoAgent(*ea2);
   p->addEcoAgent(*ea3);
   p->addEcoAgent(*ea4);
+  p->addEcoAgent(*ea5);
+  p->addEcoAgent(*ea6);
   //test initialiser
   /*
    * ea1 : SATISFAIT
@@ -137,7 +139,30 @@ void plateformeMondeDesCubesTest::getTest(void)
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea5) == NULL);
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea6) == NULL);
 
+  ea1->setPositionCourante(*(p->getTableID()));
+  ea1->setPositionFinale(*(p->getTableID()));
+  
+  ea2->setPositionCourante(*(ea1->getId()));
+  ea2->setPositionFinale(*(p->getTableID()));
 
+  ea3->setPositionCourante(*(ea6->getId()));
+  ea3->setPositionFinale(*(ea1->getId()));
+
+  ea4->setPositionCourante(*(ea2->getId()));
+  ea4->setPositionFinale(*(ea3->getId()));
+
+  ea5->setPositionCourante(*(ea4->getId()));
+  ea5->setPositionFinale(*(p->getTableID()));
+  
+  ea6->setPositionCourante(*(ea5->getId()));
+  ea6->setPositionFinale(*(p->getTableID()));
+  p->initialiser();
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea1) == NULL);
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea2) == ea4);
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea3) == ea2);
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea4) == ea5);
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea5) == ea6);
+  CPPUNIT_ASSERT(p->obtenirGeneur(*ea6) == ea3);
 
   //test obtenirCubePrioritaire
   CPPUNIT_ASSERT(p->obtenirCubePrioritaire() == ea2);
