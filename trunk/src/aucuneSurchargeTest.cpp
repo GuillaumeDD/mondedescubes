@@ -4,20 +4,68 @@ CPPUNIT_TEST_SUITE_REGISTRATION(aucuneSurchargeTest);
 
 void aucuneSurchargeTest::setUp(void)
 {
-	//initialisation des variables dont vous aurez besoin
-	p = PlateformeMondeDesCubes::getInstance();
+	//initialisation
+	AucuneSurcharge *nosurcharge = new AucuneSurcharge();
+	p = PlateformeMondeDesCubes::getInstance();	
+	EcoAgentID *id1 = new EcoAgentID();
+	EcoAgentID *id2 = new EcoAgentID();
+	EcoAgentID *id3 = new EcoAgentID();
+	EcoAgentID *id4 = new EcoAgentID();
+	c1= new Cube(*id1);
+	c2= new Cube(*id2);
+	c3= new Cube(*id3);
+	c4= new Cube(*id4);
+
+	c1->setPositionCourante(*(p->getTableID()));
+	c2->setPositionCourante(*id1);
+	c3->setPositionCourante(*id2);
+	c4->setPositionCourante(*id3);
+	
+	p->addEcoAgent(*c1);
+  	p->addEcoAgent(*c2);
+  	p->addEcoAgent(*c3);
+  	p->addEcoAgent(*c4);
+	
+	cout << endl;
+	cout << "ecoagentID " << *(p->getTableID()) << endl;
+	cout << "ecoagentID " << *id1 << endl;
+	cout << "ecoagentID " << *id2 << endl;
+	cout << "ecoagentID " << *id3 << endl;
+	cout << "ecoagentID " << *id4 << endl;
 }
 
 
 void aucuneSurchargeTest::tearDown(void)
 {
 	//destructeur
+	delete c1;
+	delete c2;
+	delete c3;
+	delete c4;
+
 	PlateformeMondeDesCubes::kill();
 }
 
 
-void aucuneSurchargeTest::doTest(void)
+void aucuneSurchargeTest::verifierTest(void)
+{
+	
+
+
+}
+
+void aucuneSurchargeTest::pasSurchargesTest(void)
+{
+	
+	//les cubes ne sont pas surcharges
+	CPPUNIT_ASSERT(nosurcharge->pasSurcharges()== true );
+	//un cube est surcharges
+	c3->setPositionCourante(*id1);
+	CPPUNIT_ASSERT(nosurcharge->pasSurcharges()== false );
+
+}
+
+void aucuneSurchargeTest::serontPasSurchargesTest(void)
 {
 	// Tests
 }
-
