@@ -96,7 +96,6 @@ EcoAgentID* PlateformeEcoResolution::getEcoAgentAuDessus(const EcoAgentID& id) c
   return result;
 }
 
-
 int PlateformeEcoResolution::nombreEcoAgentAuDessus(const EcoAgentID& id) const{
  EcoAgentID* result = NULL;
  result = getEcoAgentAuDessus(id);

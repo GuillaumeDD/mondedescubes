@@ -4,28 +4,46 @@
 
 using namespace std;
 int main(int argc, char** argv){
-  cout << SATISFAIT << endl;
-  EcoAgentID *id,*id2,*id3;
-  id = new EcoAgentID();
-  id2 = new EcoAgentID();
-  id3 = new EcoAgentID();
-  cout << *id << endl;
-  cout << *id2 << endl;
-  cout << *id3 << endl;	
-  Cube *c;
-  c = new Cube(*id);
-  c->setPositionCourante(*id2);
-  c->setPositionFinale(*id3);
-  c->initialiser();
-  cout << *c << endl;
- 	
-  PlateformeMondeDesCubes* p = PlateformeMondeDesCubes::getInstance();
-  cout << *p << endl;
-	
-  p->addEcoAgent(*c);
-  p->addEcoAgent(*c);
-  p->addEcoAgent(*c);
+  PlateformeMondeDesCubes *p = NULL;
+  EcoAgent *ea1 = NULL, *ea2 = NULL, *ea3 = NULL;
 
+  p = PlateformeMondeDesCubes::getInstance();
+  cout << p->toString()<< endl;
+
+  ea1 = new Cube();
+  ea2 = new Cube();
+  ea3 = new Cube();
+
+  p->addEcoAgent(*ea1);
+  p->addEcoAgent(*ea2);
+  p->addEcoAgent(*ea3);
+  ea1->setPositionCourante(*(p->getTableID()));
+  ea1->setPositionFinale(*(p->getTableID()));
+  
+  ea2->setPositionCourante(*(ea3->getId()));
+  ea2->setPositionFinale(*(ea1->getId()));
+
+  ea3->setPositionCourante(*(ea1->getId()));
+  ea3->setPositionFinale(*(ea2->getId()));
+
+  // lancement de la resolution
+  p->initialiser();
+  if(p->verifierCoherence()){
+    while(!p->sontSatisfaits()){
+      cout << p->toString()<<endl;
+      cout << "------------------------"<< endl;
+      cout << *p << endl;
+      cout << "------------------------"<< endl;
+      p->resoudre();
+    }
+  }
+  
+  cout << "SOLUTION FINALE :" << endl;
+  cout << p->toString()<<endl;
+  cout << "------------------------"<< endl;
   cout << *p << endl;
+  cout << "------------------------"<< endl;
+  p->resoudre();
+
   return EXIT_SUCCESS;
 }

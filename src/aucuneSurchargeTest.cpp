@@ -27,6 +27,15 @@ void aucuneSurchargeTest::setUp(void)
 	c4->setPositionCourante(*id3);
 	
 	
+
+	map<EcoAgentID,EcoAgent&,compareEcoAgentID> m = p->getEcoAgents();	
+	map<EcoAgentID,EcoAgent&,compareEcoAgentID>::iterator it;
+	it = m.begin();
+	while(it != m.end()){
+	  //cout <<endl<< it->second << endl;
+	  ++it;
+	}
+	
 	/*
 	cout << endl;
 	cout << "ecoagentID " << *(p->getTableID()) << endl;

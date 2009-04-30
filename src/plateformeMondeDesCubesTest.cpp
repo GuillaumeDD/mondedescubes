@@ -276,6 +276,7 @@ void plateformeMondeDesCubesTest::obtenirCubePrioritaireTest(void){
   p->addEcoAgent(*ea1);
   p->addEcoAgent(*ea2);
   p->addEcoAgent(*ea3);
+
   
   // Test des Etat des EcoAgent avant initialisation
   CPPUNIT_ASSERT(ea1->getEtat() == UNDEFINED && ea2->getEtat() == UNDEFINED && ea3->getEtat() == UNDEFINED);
@@ -306,6 +307,7 @@ void plateformeMondeDesCubesTest::obtenirCubePrioritaireTest(void){
   temp = p->obtenirCubePrioritaire();
   temp->agir();
   // Changement de position correct
+  CPPUNIT_ASSERT(ea3->getPositionCourante() == ea1->getId());
   CPPUNIT_ASSERT(ea2->getPositionCourante() == p->getTableID());
   
   // Changement d'Etat correct

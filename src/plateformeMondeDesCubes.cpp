@@ -1,4 +1,6 @@
 #include "plateformeMondeDesCubes.hpp"
+#include <sstream>
+#include<iomanip>
 
 void PlateformeMondeDesCubes::initialiser(){
   map<EcoAgentID,EcoAgent&>::const_iterator it = ecoagents.begin();
@@ -11,8 +13,7 @@ void PlateformeMondeDesCubes::initialiser(){
 
 void PlateformeMondeDesCubes::resoudre(){
   EcoAgent* c;
-  initialiser();
-  while(!sontSatisfaits()){
+  if(!sontSatisfaits()){
     c = obtenirCubePrioritaire();
     c->agir();
   }
@@ -170,6 +171,18 @@ int PlateformeMondeDesCubes::distanceFinaleATable(const EcoAgentID& c) const{
   return result;
 }
 
+int PlateformeMondeDesCubes::distanceATable(const EcoAgentID& c) const{
+  int result = 0;
+  EcoAgent* ecoA = NULL;
+  if(c != *getTableID()){
+    ecoA = getEcoAgent(c);
+    if(ecoA != NULL && ecoA->getPositionCourante() != getTableID()){
+      result = 1 + distanceATable(*(ecoA->getPositionCourante()));
+    }
+  }
+  return result;
+}
+
 ostream& operator<<(ostream& f, const PlateformeMondeDesCubes& p){
   f << "---------------------------" << endl;
   f << "Plateforme monde des cubes :" << endl;
@@ -186,4 +199,101 @@ ostream& operator<<(ostream& f, const PlateformeMondeDesCubes& p){
   }
   f << "---------------------------" << endl;
   return f;
+}
+
+string PlateformeMondeDesCubes::toString() const{
+  string result, separateur = "      ";
+  list< list<EcoAgent*> > piles;
+  list<EcoAgent*> *l = NULL;
+  EcoAgent *temp = NULL;
+  EcoAgentID *tempID = NULL;
+  ostringstream *os;
+  unsigned int maxHauteurPile = 0;
+
+  map<EcoAgentID,EcoAgent&,compareEcoAgentID> mapCopy;
+  mapCopy = getEcoAgents();
+  map<EcoAgentID,EcoAgent&,compareEcoAgentID>::const_iterator it;
+  it = mapCopy.begin();
+
+  // construction des listes de piles
+ while(it != mapCopy.end()){
+   if((it->second).getPositionCourante() == getTableID()){
+     l = new list<EcoAgent*>();
+     l->push_back(&it->second);
+     // on ajoute alors tous les EcoAgent au dessus
+     tempID = getEcoAgentAuDessus(*(it->second.getId()));
+     if(tempID != NULL){
+       temp = getEcoAgent(*(tempID));
+       while(temp != NULL){
+	 l->push_back(temp);
+	 tempID = getEcoAgentAuDessus(*(temp->getId()));
+	 if(tempID == NULL){
+	   temp = NULL;
+	 }else{
+	   temp = getEcoAgent(*(tempID));
+	 }
+       }
+     }
+     //on ajoute la liste a la liste de piles
+     piles.push_back(*l);
+      
+   }
+   ++it;
+ }
+  
+  list< list<EcoAgent*> >::iterator itPiles;
+  list<EcoAgent*>::iterator itL;
+  
+  // on calcule la taille de la plus grande pile
+  itPiles = piles.begin();
+  while(itPiles != piles.end()){
+    if(itPiles->size() > maxHauteurPile){
+      maxHauteurPile = itPiles->size();
+    }
+    ++itPiles;
+  }
+
+  for(int i=maxHauteurPile ; i>0 ; i--){
+
+    // on parcourt chaque cube de chaque pile 4 fois pour l'affichage
+    for(int k=0 ; k<4 ; k++){
+    itPiles = piles.begin();
+
+      // on parcourt chacune des piles
+      while(itPiles != piles.end()){
+	itL = itPiles->begin();
+
+	// on positionne la pile sur le bon cube
+	for(int j = i-1; j > 0 ; j--){
+	  if(itL != itPiles->end()){
+	    ++itL;
+	  }
+	}
+
+	if(itL != itPiles->end() && itPiles->size() <= maxHauteurPile){
+	  switch(k){
+	    case 0 : 
+	      result += "______";break;
+	    case 1 : 
+	      result += "|    |";break;
+	    case 2 : 
+	      os = new ostringstream();
+	      *os << setw(4)<< (*itL)->getId()->getId();
+	      result += "|"+os->str()+"|";
+	      delete os;
+	      //result += "|    |";
+	      break;
+	    case 3 : result += "|____|";break;
+	    }     
+	}else{
+	  result += separateur;
+	}
+
+	++itPiles;
+      }
+      result += "\n";
+    }
+  }
+
+  return result;
 }

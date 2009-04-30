@@ -19,6 +19,8 @@
 #include "ecoAgentID.hpp"
 #include "table.hpp"
 #include "cube.hpp"
+#include <string>
+#include<algorithm>
   
 using namespace std;
 
@@ -43,7 +45,7 @@ public:
   /*!
    *\brief Resolution du probleme du monde des cubes par eco-resolution
    *
-   * Methode qui permet de lancer la resolution du probleme du monde des cubes par eco-resolution
+   * Methode qui permet de realiser une etape et une seule de la resolution du probleme du monde des cubes par eco-resolution
    *
    */
   void resoudre();
@@ -149,6 +151,18 @@ public:
    * \brief Determination du nombre d'EcoAgent separant de la table
    *
    * Cette methode permet de determiner le nombre d'EcoAgent separant un EcoAgent de la table
+   * en position courante.
+   *
+   * \param c : identifiant de l'EcoAgent
+   * \return La distance a la table
+   */
+  int distanceATable(const EcoAgentID& c) const;
+
+
+  /*!
+   * \brief Determination du nombre d'EcoAgent separant de la table en position finale
+   *
+   * Cette methode permet de determiner le nombre d'EcoAgent separant un EcoAgent de la table
    * en position finale.
    *
    * \param c : identifiant de l'EcoAgent
@@ -162,8 +176,21 @@ public:
    * Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme
    * monde des cubes
    *
+   *Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme
+   * Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme
+   * monde des cubes
+   *
    */
   friend ostream& operator<<(ostream &,const PlateformeMondeDesCubes&);
+
+  /*!
+   * \brief Methode qui permet d'obtenir un affichage minimal de l'agencement des cubes
+   *
+   * Methode qui permet d'obtenir un affichage minimal de l'agencement des cubes
+   *
+   * \return La chaine de caractere de type string a afficher
+   */
+  string toString() const;
 
 private:
 
