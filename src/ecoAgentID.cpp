@@ -12,6 +12,10 @@ int EcoAgentID::getId() const{
  return identifiant; 
 }
 
+void EcoAgentID::setId(const int id) {
+  identifiant=id; 
+}
+
 bool EcoAgentID::operator ==(const EcoAgentID& eid) const{
  return eid.getId() == getId();
 }
