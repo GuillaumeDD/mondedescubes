@@ -124,3 +124,5 @@ list<EcoAgentID*> PlateformeEcoResolution::getEcoAgents(const Etat e) const{
 map<EcoAgentID,EcoAgent&,compareEcoAgentID> PlateformeEcoResolution::getEcoAgents() const {
  return ecoagents; 
 }
+
+

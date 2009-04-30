@@ -49,6 +49,7 @@
       *
       */
       int getId() const;
+
       
       /*!
       *  \brief Comparaison de EcoAgentID
