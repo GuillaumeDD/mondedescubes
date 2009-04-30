@@ -22,7 +22,7 @@ bool AucuneSurcharge::verifier() {
 bool AucuneSurcharge::pasSurcharges() {
 	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
 	/* Mise en place d'un iterateur sur la map des cubes de la plate forme */
-	map<EcoAgentID, EcoAgent&>::iterator it = p->getEcoAgents().begin();
+	map<EcoAgentID, EcoAgent&, compareEcoAgentID>::const_iterator it = p->getEcoAgents().begin();
 
 	/* Creation d'un compteur des successeurs de chaque cube et d'un iterateur*/
 	map<EcoAgentID, int> compteur;
@@ -32,7 +32,6 @@ bool AucuneSurcharge::pasSurcharges() {
 	cout << endl;
 	while(it != p->getEcoAgents().end()) 
 				{
-				
 				cout << "creation ds le compteur" << endl;
 				compteur.insert(pair<EcoAgentID, int>(it->first,0));
 				it++;
