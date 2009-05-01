@@ -24,7 +24,8 @@ using namespace std;
 
 class AucuneSurcharge: public Regle{
 public:
-  /*!
+
+   /*!
    * \brief Suite d'operations realisees pour initialiser la regle 
    *
    */

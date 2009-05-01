@@ -9,10 +9,11 @@ void AucuneSurcharge::initialiser() {
       
 
 bool AucuneSurcharge::verifier() {
-	if(pasSurcharges() == false) {
+	cout << "coucou" << endl;
+	if(this->pasSurcharges() == false) {
 		return false;
 	}
-	if(serontPasSurcharges() == false) {
+	if(this->serontPasSurcharges() == false) {
 		return false;
 	}
 	return true;
@@ -20,9 +21,10 @@ bool AucuneSurcharge::verifier() {
 	
 	
 bool AucuneSurcharge::pasSurcharges() {
-	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
+	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();	
+	map<EcoAgentID,EcoAgent&,compareEcoAgentID> m = p->getEcoAgents();
 	/* Mise en place d'un iterateur sur la map des cubes de la plate forme */
-	map<EcoAgentID, EcoAgent&, compareEcoAgentID>::const_iterator it = p->getEcoAgents().begin();
+	map<EcoAgentID, EcoAgent&, compareEcoAgentID>::const_iterator it = m.begin();
 
 	/* Creation d'un compteur des successeurs de chaque cube et d'un iterateur*/
 	map<EcoAgentID, int> compteur;
@@ -30,61 +32,59 @@ bool AucuneSurcharge::pasSurcharges() {
 
 	// On intialise le compteur à 0 pour chaque eco-agent
 	cout << endl;
-	while(it != p->getEcoAgents().end()) 
-				{
-				cout << "creation ds le compteur" << endl;
+	while(it != m.end()) {
 				compteur.insert(pair<EcoAgentID, int>(it->first,0));
 				it++;
-				}
+	}
 
-	cout << p->getEcoAgents().size() << endl;
-	it=p->getEcoAgents().begin();
-	while(it != p->getEcoAgents().end())
-		{
-		cout << "it actuel? " << it->first << endl;
-		cout << "diff? " << *(it->second.getPositionCourante()) << endl;
+	cout << m.size() << endl;
+	it=m.begin();
+	for(it = m.begin() ; it != m.end() ; ++it) {
 		/* si la position est bien un cube on applique l'algorithme*/ 
-		if(*(it->second.getPositionCourante()) != *(p->getTableID()))
-		{
-			cout << "recherche ds le compteur" << endl;
+		if(*(it->second.getPositionCourante()) != *(p->getTableID())) {
 			itcompteur=compteur.find(*(it->second.getPositionCourante()));
 			itcompteur->second=itcompteur->second+1;
-			if(itcompteur->second > 1) 
-				{
-				cout << "faux" << endl;
+			if(itcompteur->second > 1) {
+				cout << "pasSurcharges = faux" << endl;
 				return false;
-				}	
+			}	
 		}
-	it++;
 	}
-	cout << "vrai" << endl;
+	cout << "pasSurcharges = vrai" << endl;
 	return true;
 }
 
 
 bool AucuneSurcharge::serontPasSurcharges() {
-	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
+	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();	
+	map<EcoAgentID,EcoAgent&,compareEcoAgentID> m = p->getEcoAgents();
 	/* Mise en place d'un iterateur sur la map des cubes de la plate forme */
-	map<EcoAgentID, EcoAgent&>::const_iterator it;
-	
-	/* Creation d'un compteur du nombre de successeurs de chaque cube et creation d'un iterateur*/
+	map<EcoAgentID, EcoAgent&, compareEcoAgentID>::const_iterator it = m.begin();
+
+	/* Creation d'un compteur des successeurs de chaque cube et d'un iterateur*/
 	map<EcoAgentID, int> compteur;
 	map<EcoAgentID, int>::iterator itcompteur;
 
-	for(it = p->getEcoAgents().begin(); it != p->getEcoAgents().end(); ++it) {
+	// On intialise le compteur à 0 pour chaque eco-agent
+	cout << endl;
+	while(it != m.end()) {
+				compteur.insert(pair<EcoAgentID, int>(it->first,0));
+				it++;
+	}
 
+	cout << m.size() << endl;
+	it=m.begin();
+	for(it = m.begin() ; it != m.end() ; ++it) {
 		/* si la position est bien un cube on applique l'algorithme*/ 
-		if(it->second.getPositionFinale() != p->getTableID()) {
-			/*si ce cube n'est pas encore dans le compteur on le cree*/
-			if(compteur.find(*(it->second.getPositionFinale())) == compteur.end()) {
-				compteur.insert(pair<EcoAgentID, int>(*(it->second.getPositionFinale()),0));
-			}
+		if(*(it->second.getPositionFinale()) != *(p->getTableID())) {
 			itcompteur=compteur.find(*(it->second.getPositionFinale()));
-			itcompteur->second++;
+			itcompteur->second=itcompteur->second+1;
 			if(itcompteur->second > 1) {
+				cout << "serontPasSurcharges = faux" << endl;
 				return false;
-			}
+			}	
 		}
 	}
+	cout << "serontPasSurcharges = vrai" << endl;
 	return true;
 }

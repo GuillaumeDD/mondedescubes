@@ -2,8 +2,7 @@
 
 CPPUNIT_TEST_SUITE_REGISTRATION(aucuneSurchargeTest);
 
-void aucuneSurchargeTest::setUp(void)
-{
+void aucuneSurchargeTest::setUp(void) {
 	//initialisation
 	AucuneSurcharge *nosurcharge = new AucuneSurcharge();
 	p = PlateformeMondeDesCubes::getInstance();	
@@ -26,29 +25,17 @@ void aucuneSurchargeTest::setUp(void)
 	c3->setPositionCourante(*id2);
 	c4->setPositionCourante(*id3);
 	
+	c1->setPositionFinale(*(p->getTableID()));
+	c2->setPositionFinale(*id1);
+	c3->setPositionFinale(*id2);
+	c4->setPositionFinale(*id3);
 	
-
-	map<EcoAgentID,EcoAgent&,compareEcoAgentID> m = p->getEcoAgents();	
-	map<EcoAgentID,EcoAgent&,compareEcoAgentID>::iterator it;
-	it = m.begin();
-	while(it != m.end()){
-	  //cout <<endl<< it->second << endl;
-	  ++it;
-	}
-	
-	/*
 	cout << endl;
-	cout << "ecoagentID " << *(p->getTableID()) << endl;
-	cout << "ecoagentID " << *id1 << endl;
-	cout << "ecoagentID " << *id2 << endl;
-	cout << "ecoagentID " << *id3 << endl;
-	cout << "ecoagentID " << *id4 << endl;
-	*/
+
 }
 
 
-void aucuneSurchargeTest::tearDown(void)
-{
+void aucuneSurchargeTest::tearDown(void) {
 	//destructeur
 	delete c1;
 	delete c2;
@@ -59,25 +46,41 @@ void aucuneSurchargeTest::tearDown(void)
 }
 
 
-void aucuneSurchargeTest::verifierTest(void)
-{
-	
+void aucuneSurchargeTest::verifierTest(void) {
 
+		cout << "coucou" << endl;
 
+		//les cubes ne sont pas surcharges et ne seront pas surcharges
+		CPPUNIT_ASSERT(nosurcharge->verifier() == true);
+		
+		//les cubes sont surcharges mais ne seront pas surcharges
+		c3->setPositionCourante(*id1);
+		CPPUNIT_ASSERT(nosurcharge->verifier() == false);
+
+		//les cubes ne sont pas surcharges mais seront surcharges		
+		c3->setPositionCourante(*id2);
+		c4->setPositionFinale(*id1);		
+		CPPUNIT_ASSERT(nosurcharge->verifier() == false);
+		
+		//les cubes sont surcharges et seront surcharges
+		c4->setPositionCourante(*id1);	
+		CPPUNIT_ASSERT(nosurcharge->verifier() == false);
 }
 
-void aucuneSurchargeTest::pasSurchargesTest(void)
-{
+void aucuneSurchargeTest::pasSurchargesTest(void) {
   	
 	//les cubes ne sont pas surcharges
-	CPPUNIT_ASSERT(nosurcharge->pasSurcharges()== true );
+	CPPUNIT_ASSERT(nosurcharge->pasSurcharges() == true);
 	//un cube est surcharges
 	c3->setPositionCourante(*id1);
-	CPPUNIT_ASSERT(nosurcharge->pasSurcharges()== false );
+	CPPUNIT_ASSERT(nosurcharge->pasSurcharges() == false);
   
 }
 
-void aucuneSurchargeTest::serontPasSurchargesTest(void)
-{
-	// Tests
+void aucuneSurchargeTest::serontPasSurchargesTest(void) {
+	//les cubes ne seront pas surcharges
+	CPPUNIT_ASSERT(nosurcharge->serontPasSurcharges() == true);
+	//un cube sera surcharge
+	c4->setPositionFinale(*id1);
+	CPPUNIT_ASSERT(nosurcharge->serontPasSurcharges() == false);
 }
