@@ -29,13 +29,13 @@ public:
    * \brief Suite d'operations realisees pour initialiser la regle 
    *
    */
-  void initialiser();
+  virtual void initialiser();
       
   /*!
    * \brief Verification de la regle generale : pour chaque cube, est-il et sera-t-il lie a la table
    * \return true si la regle est verifiee, false sinon
    */
-  bool verifier();
+  virtual bool verifier();
 	
   /*!
    * \brief Verification d'un element de la regle generale: le cube est-il lie a la table
