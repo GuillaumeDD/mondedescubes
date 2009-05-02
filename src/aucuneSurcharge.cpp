@@ -9,7 +9,6 @@ void AucuneSurcharge::initialiser() {
       
 
 bool AucuneSurcharge::verifier() {
-	cout << "coucou" << endl;
 	if(this->pasSurcharges() == false) {
 		return false;
 	}
@@ -31,13 +30,10 @@ bool AucuneSurcharge::pasSurcharges() {
 	map<EcoAgentID, int>::iterator itcompteur;
 
 	// On intialise le compteur à 0 pour chaque eco-agent
-	cout << endl;
 	while(it != m.end()) {
 				compteur.insert(pair<EcoAgentID, int>(it->first,0));
 				it++;
 	}
-
-	cout << m.size() << endl;
 	it=m.begin();
 	for(it = m.begin() ; it != m.end() ; ++it) {
 		/* si la position est bien un cube on applique l'algorithme*/ 
@@ -45,12 +41,10 @@ bool AucuneSurcharge::pasSurcharges() {
 			itcompteur=compteur.find(*(it->second.getPositionCourante()));
 			itcompteur->second=itcompteur->second+1;
 			if(itcompteur->second > 1) {
-				cout << "pasSurcharges = faux" << endl;
 				return false;
 			}	
 		}
 	}
-	cout << "pasSurcharges = vrai" << endl;
 	return true;
 }
 
@@ -66,13 +60,10 @@ bool AucuneSurcharge::serontPasSurcharges() {
 	map<EcoAgentID, int>::iterator itcompteur;
 
 	// On intialise le compteur à 0 pour chaque eco-agent
-	cout << endl;
 	while(it != m.end()) {
 				compteur.insert(pair<EcoAgentID, int>(it->first,0));
 				it++;
 	}
-
-	cout << m.size() << endl;
 	it=m.begin();
 	for(it = m.begin() ; it != m.end() ; ++it) {
 		/* si la position est bien un cube on applique l'algorithme*/ 
@@ -80,11 +71,9 @@ bool AucuneSurcharge::serontPasSurcharges() {
 			itcompteur=compteur.find(*(it->second.getPositionFinale()));
 			itcompteur->second=itcompteur->second+1;
 			if(itcompteur->second > 1) {
-				cout << "serontPasSurcharges = faux" << endl;
 				return false;
 			}	
 		}
 	}
-	cout << "serontPasSurcharges = vrai" << endl;
 	return true;
 }
