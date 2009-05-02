@@ -4,7 +4,7 @@ CPPUNIT_TEST_SUITE_REGISTRATION(aucuneSurchargeTest);
 
 void aucuneSurchargeTest::setUp(void) {
 	//initialisation
-	AucuneSurcharge *nosurcharge = new AucuneSurcharge();
+	nosurcharge = new AucuneSurcharge();
 	p = PlateformeMondeDesCubes::getInstance();	
 	id1 = new EcoAgentID();
 	id2 = new EcoAgentID();
@@ -29,8 +29,6 @@ void aucuneSurchargeTest::setUp(void) {
 	c2->setPositionFinale(*id1);
 	c3->setPositionFinale(*id2);
 	c4->setPositionFinale(*id3);
-	
-	cout << endl;
 
 }
 
@@ -41,14 +39,17 @@ void aucuneSurchargeTest::tearDown(void) {
 	delete c2;
 	delete c3;
 	delete c4;
-
+	delete id1;
+	delete id2;
+	delete id3;
+	delete id4;
+	delete nosurcharge;
 	PlateformeMondeDesCubes::kill();
 }
 
 
 void aucuneSurchargeTest::verifierTest(void) {
 
-		cout << "coucou" << endl;
 
 		//les cubes ne sont pas surcharges et ne seront pas surcharges
 		CPPUNIT_ASSERT(nosurcharge->verifier() == true);
