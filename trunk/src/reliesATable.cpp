@@ -55,7 +55,7 @@ bool ReliesATable::estRelieATable(EcoAgent &c) {
       return false;
     }
     else {
-      if(c.getPositionCourante() == p->getTableID()) {
+      if(*(c.getPositionCourante()) == *(p->getTableID())) {
 	return true;
       }
       else {
@@ -83,7 +83,7 @@ bool ReliesATable::seraRelieATable(EcoAgent &c) {
       return false;
     }
     else {
-      if(c.getPositionFinale() == p->getTableID()) {
+      if(*(c.getPositionFinale()) == *(p->getTableID())) {
 	return true;
       }
       else {
