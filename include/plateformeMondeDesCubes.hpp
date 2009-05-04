@@ -34,6 +34,7 @@ using namespace std;
 class PlateformeMondeDesCubes : public PlateformeEcoResolution, public Singleton<PlateformeMondeDesCubes>{
   friend class Singleton<PlateformeMondeDesCubes>; //ligne necessaire pour que le template Singleton ait acces au constructeur de cette classe
 public:
+
   /*!
    * \brief Initialisation de la resolution du monde des cubes
    *
@@ -170,6 +171,15 @@ public:
    */
   int distanceFinaleATable(const EcoAgentID& c) const;
 
+  /*!
+   * \brief Ajout d'un eco-agent
+   *
+   * Methode qui permet d'ajouter un eco-agent dans la plateforme tout en verifiant que l'identifiant de celui-ci est different de l'identifiant de la table
+   * \throw ExceptionEcoAgentDejaEnregistre : lancee lorsqu'on enregistre un EcoAgent deja enregistre, autrement dit lorsqu'un EcoAgent avec le meme EcoAgentID a deja ete ajoute.
+   * \param ea : l'eco-agent a ajouter
+   *
+   */
+  void addEcoAgent(EcoAgent& ea);
 
   /*!
    * \brief Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme
@@ -221,7 +231,7 @@ private:
    */
   bool verifierNombreDeCubes(int nb);
       
-  Table table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
+  Table* table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
   int nombreDeCubes;
 };
 

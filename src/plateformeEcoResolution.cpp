@@ -36,9 +36,7 @@ void PlateformeEcoResolution::addEcoAgent(EcoAgent& ea){
  pair<map<EcoAgentID,EcoAgent&>::iterator, bool> ret;
  ret = ecoagents.insert(pair<EcoAgentID,EcoAgent&>(*(ea.getId()), ea));
  if(ret.second == false){
-   // cout << "Attention : cet ecoAgent a deja ete enregistre" << ea << endl;
- 	ExceptionEcoAgentDejaEnregistre e;
-	throw(e);
+    throw(*(new ExceptionEcoAgentDejaEnregistre()));
  }
 }
 
@@ -57,7 +55,7 @@ bool PlateformeEcoResolution::verifierCoherence() const{
     while(it != regles.end() && result){
       // verification des regles une par une
       if(!((*it)->verifier())){
-			result = false;
+	 result = false;
       }
       ++it; 
     }
