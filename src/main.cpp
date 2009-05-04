@@ -22,6 +22,9 @@ int main(int argc, char** argv){
       cout << p->toString()<<endl;
       cout << "------------------------"<< endl;
       cout << *p << endl;
+      cout << "------------------------"<< endl;
+      cout << "CUBE PRIORITAIRE"<< endl;
+      cout << *p->obtenirCubePrioritaire()<< endl;
       cout << "------------------------"<< endl << endl;
       p->resoudre();
       cin >> temp;

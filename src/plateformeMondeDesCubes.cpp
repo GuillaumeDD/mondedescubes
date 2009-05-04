@@ -93,9 +93,6 @@ bool PlateformeMondeDesCubes::verifierNombreDeCubes(int nb){
 EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
   EcoAgent* result = NULL;
   EcoAgentID* id = NULL;
-  if(*(currentCube.getPositionFinale()) != *(currentCube.getPositionCourante()))
-    {
-
       if(currentCube.getEtat()== RECHERCHEFUITE)
 	{
 	  // si le Cube est en RF : soit il a un cube posé sur lui et il l'agresse
@@ -107,6 +104,7 @@ EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
       if(currentCube.getEtat()== RECHERCHESATISFACTION)
 	{
 	  id = getEcoAgentAuDessus(*(currentCube.getId()));
+
 	  if(id == NULL)
 	    {
 	      //il n'y a aucun EcoAgent dont la position courante est currentCube
@@ -124,7 +122,6 @@ EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
 	    }
 	  else result = getEcoAgent(*id);
 	}
-    }
   return result;
 }
 
@@ -159,7 +156,7 @@ PlateformeMondeDesCubes::PlateformeMondeDesCubes(){
 
   // Ajout des regles
   addRegle(*(new AucuneSurcharge()));
-  //  addRegle(*(new ReliesATable()));
+  addRegle(*(new ReliesATable()));
 }
 
 //A FAIRE
@@ -171,7 +168,7 @@ int PlateformeMondeDesCubes::distanceFinaleATable(const EcoAgentID& c) const{
   EcoAgent* ecoA = NULL;
   if(c != *getTableID()){
     ecoA = getEcoAgent(c);
-    if(ecoA != NULL && ecoA->getPositionFinale() != getTableID()){
+    if(ecoA != NULL && *(ecoA->getPositionFinale()) != *getTableID()){
       result = 1 + distanceFinaleATable(*(ecoA->getPositionFinale()));
     }
   }
@@ -183,7 +180,7 @@ int PlateformeMondeDesCubes::distanceATable(const EcoAgentID& c) const{
   EcoAgent* ecoA = NULL;
   if(c != *getTableID()){
     ecoA = getEcoAgent(c);
-    if(ecoA != NULL && ecoA->getPositionCourante() != getTableID()){
+    if(ecoA != NULL && *(ecoA->getPositionCourante()) != *getTableID()){
       result = 1 + distanceATable(*(ecoA->getPositionCourante()));
     }
   }
