@@ -1,4 +1,6 @@
 #include "plateformeMondeDesCubes.hpp"
+#include "aucuneSurcharge.hpp"
+#include "reliesATable.hpp"
 #include <sstream>
 #include<iomanip>
 
@@ -73,11 +75,11 @@ int PlateformeMondeDesCubes::getNombreDeCubes() const{
 }
 
 void PlateformeMondeDesCubes::setTableIdentifiant(const EcoAgentID& id){
-  table.setId(id);
+  table->setId(id);
 }
 
 EcoAgentID* PlateformeMondeDesCubes::getTableID() const{
-  return table.getId();
+  return table->getId();
 }
 
 bool PlateformeMondeDesCubes::verifierNombreDeCubes(int nb){
@@ -91,7 +93,7 @@ bool PlateformeMondeDesCubes::verifierNombreDeCubes(int nb){
 EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
   EcoAgent* result = NULL;
   EcoAgentID* id = NULL;
-  if(currentCube.getPositionFinale() != currentCube.getPositionCourante())
+  if(*(currentCube.getPositionFinale()) != *(currentCube.getPositionCourante()))
     {
 
       if(currentCube.getEtat()== RECHERCHEFUITE)
@@ -110,7 +112,7 @@ EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
 	      //il n'y a aucun EcoAgent dont la position courante est currentCube
 	      // on regarde s'il y a un EcoAgent dont la position courante est la
 	      // position finale de currentCube sauf si la position finale est la table
-	      if(currentCube.getPositionFinale() != getTableID())
+	      if(*(currentCube.getPositionFinale()) != *getTableID())
 		{
 		  id = getEcoAgentAuDessus(*(currentCube.getPositionFinale()));
 		  if(id != NULL)
@@ -152,7 +154,12 @@ void PlateformeMondeDesCubes::setCubeID(EcoAgent& currentCube, const EcoAgentID&
 }
 
 PlateformeMondeDesCubes::PlateformeMondeDesCubes(){
+  table = new Table();
   nombreDeCubes = 0;
+
+  // Ajout des regles
+  addRegle(*(new AucuneSurcharge()));
+  //  addRegle(*(new ReliesATable()));
 }
 
 //A FAIRE
@@ -183,10 +190,18 @@ int PlateformeMondeDesCubes::distanceATable(const EcoAgentID& c) const{
   return result;
 }
 
+void PlateformeMondeDesCubes::addEcoAgent(EcoAgent& ea){
+  if(*(ea.getId()) != *(table->getId())){
+    PlateformeEcoResolution::addEcoAgent(ea);
+  }else{
+    throw(*(new ExceptionEcoAgentDejaEnregistre()));
+  }
+}
+
 ostream& operator<<(ostream& f, const PlateformeMondeDesCubes& p){
   f << "---------------------------" << endl;
   f << "Plateforme monde des cubes :" << endl;
-  f << "Table : " << p.table << endl;
+  f << "Table : " << *(p.table) << endl;
   f << "Cube ou assimilé : " << endl;
   if(p.ecoagents.size() > 0){
     map<EcoAgentID,EcoAgent&>::const_iterator it = p.ecoagents.begin();
@@ -217,7 +232,7 @@ string PlateformeMondeDesCubes::toString() const{
 
   // construction des listes de piles
  while(it != mapCopy.end()){
-   if((it->second).getPositionCourante() == getTableID()){
+   if(*((it->second).getPositionCourante()) == *getTableID()){
      l = new list<EcoAgent*>();
      l->push_back(&it->second);
      // on ajoute alors tous les EcoAgent au dessus
@@ -240,7 +255,7 @@ string PlateformeMondeDesCubes::toString() const{
    }
    ++it;
  }
-  
+
   list< list<EcoAgent*> >::iterator itPiles;
   list<EcoAgent*>::iterator itL;
   

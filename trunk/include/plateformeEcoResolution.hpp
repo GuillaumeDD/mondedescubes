@@ -55,11 +55,11 @@ public:
    * \brief Ajout d'un eco-agent
    *
    * Methode qui permet d'ajouter un eco-agent dans la plateforme
-   * \throw ExceptionEcoAgentDejaEnregistre : lancee lorsqu'on enregistre un EcoAgent deja enregistre
+   * \throw ExceptionEcoAgentDejaEnregistre : lancee lorsqu'on enregistre un EcoAgent deja enregistre, autrement dit lorsqu'un EcoAgent avec le meme EcoAgentID a deja ete ajoute.
    * \param ea : l'eco-agent a ajouter
    *
    */      
-  void addEcoAgent(EcoAgent& ea);
+  virtual void addEcoAgent(EcoAgent& ea);
       
   /*!
    * \brief Ajout d'une nouvelle regle

@@ -6,6 +6,10 @@ EcoAgentID::EcoAgentID(){
  identifiant = genereID();
 }
 
+EcoAgentID::EcoAgentID(int id){
+  identifiant = id;
+}
+
 EcoAgentID::~EcoAgentID(){}
 
 int EcoAgentID::getId() const{
