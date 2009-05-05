@@ -1,0 +1,276 @@
+Attribution de l'EcoAgentID suivant a la table : (EcoAgentID) 1 
+Ajout du cube suivant dans la plateforme :EcoAgentID :(EcoAgentID) 2 
+Etat :UNDEFINED
+Position courante : sur l'EcoAgent d'identifiant(EcoAgentID) 1 
+Position finale : sur l'EcoAgent d'identifiant(EcoAgentID) 5 
+
+Ajout du cube suivant dans la plateforme :EcoAgentID :(EcoAgentID) 3 
+Etat :UNDEFINED
+Position courante : sur l'EcoAgent d'identifiant(EcoAgentID) 2 
+Position finale : sur l'EcoAgent d'identifiant(EcoAgentID) 1 
+
+Ajout du cube suivant dans la plateforme :EcoAgentID :(EcoAgentID) 4 
+Etat :UNDEFINED
+Position courante : sur l'EcoAgent d'identifiant(EcoAgentID) 1 
+Position finale : sur l'EcoAgent d'identifiant(EcoAgentID) 3 
+
+Ajout du cube suivant dans la plateforme :EcoAgentID :(EcoAgentID) 5 
+Etat :UNDEFINED
+Position courante : sur l'EcoAgent d'identifiant(EcoAgentID) 4 
+Position finale : sur l'EcoAgent d'identifiant(EcoAgentID) 1 
+
+INITIALISATION
+---------------------------
+Plateforme monde des cubes :
+Table : EcoAgentID :(EcoAgentID) 1 
+Etat : SATISFAIT
+
+Cube ou assimilé : 
+EcoAgentID :(EcoAgentID) 2 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 5 
+
+EcoAgentID :(EcoAgentID) 3 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 2 
+Position finale : (EcoAgentID) 1 
+
+EcoAgentID :(EcoAgentID) 4 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 3 
+
+EcoAgentID :(EcoAgentID) 5 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 4 
+Position finale : (EcoAgentID) 1 
+
+---------------------------
+
+------------------------
+
+____________
+|    ||    |
+|   3||   5|
+|____||____|
+____________
+|    ||    |
+|   2||   4|
+|____||____|
+
+------------------------
+---------------------------
+Plateforme monde des cubes :
+Table : EcoAgentID :(EcoAgentID) 1 
+Etat : SATISFAIT
+
+Cube ou assimilé : 
+EcoAgentID :(EcoAgentID) 2 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 5 
+
+EcoAgentID :(EcoAgentID) 3 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 2 
+Position finale : (EcoAgentID) 1 
+
+EcoAgentID :(EcoAgentID) 4 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 3 
+
+EcoAgentID :(EcoAgentID) 5 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 4 
+Position finale : (EcoAgentID) 1 
+
+---------------------------
+
+------------------------
+CUBE PRIORITAIRE
+EcoAgentID :(EcoAgentID) 3 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 2 
+Position finale : (EcoAgentID) 1 
+
+------------------------
+
+            ______
+            |    |
+            |   5|
+            |____|
+__________________
+|    ||    ||    |
+|   2||   3||   4|
+|____||____||____|
+
+------------------------
+---------------------------
+Plateforme monde des cubes :
+Table : EcoAgentID :(EcoAgentID) 1 
+Etat : SATISFAIT
+
+Cube ou assimilé : 
+EcoAgentID :(EcoAgentID) 2 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 5 
+
+EcoAgentID :(EcoAgentID) 3 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 1 
+
+EcoAgentID :(EcoAgentID) 4 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 3 
+
+EcoAgentID :(EcoAgentID) 5 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 4 
+Position finale : (EcoAgentID) 1 
+
+---------------------------
+
+------------------------
+CUBE PRIORITAIRE
+EcoAgentID :(EcoAgentID) 5 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 4 
+Position finale : (EcoAgentID) 1 
+
+------------------------
+
+________________________
+|    ||    ||    ||    |
+|   2||   3||   4||   5|
+|____||____||____||____|
+
+------------------------
+---------------------------
+Plateforme monde des cubes :
+Table : EcoAgentID :(EcoAgentID) 1 
+Etat : SATISFAIT
+
+Cube ou assimilé : 
+EcoAgentID :(EcoAgentID) 2 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 5 
+
+EcoAgentID :(EcoAgentID) 3 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 1 
+
+EcoAgentID :(EcoAgentID) 4 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 3 
+
+EcoAgentID :(EcoAgentID) 5 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 1 
+
+---------------------------
+
+------------------------
+CUBE PRIORITAIRE
+EcoAgentID :(EcoAgentID) 2 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 5 
+
+------------------------
+
+            ______
+            |    |
+            |   2|
+            |____|
+__________________
+|    ||    ||    |
+|   3||   4||   5|
+|____||____||____|
+
+------------------------
+---------------------------
+Plateforme monde des cubes :
+Table : EcoAgentID :(EcoAgentID) 1 
+Etat : SATISFAIT
+
+Cube ou assimilé : 
+EcoAgentID :(EcoAgentID) 2 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 5 
+Position finale : (EcoAgentID) 5 
+
+EcoAgentID :(EcoAgentID) 3 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 1 
+
+EcoAgentID :(EcoAgentID) 4 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 3 
+
+EcoAgentID :(EcoAgentID) 5 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 1 
+
+---------------------------
+
+------------------------
+CUBE PRIORITAIRE
+EcoAgentID :(EcoAgentID) 4 
+Etat : RECHERCHESATISFACTION
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 3 
+
+------------------------
+
+SOLUTION FINALE :
+____________
+|    ||    |
+|   4||   2|
+|____||____|
+____________
+|    ||    |
+|   3||   5|
+|____||____|
+
+------------------------
+---------------------------
+Plateforme monde des cubes :
+Table : EcoAgentID :(EcoAgentID) 1 
+Etat : SATISFAIT
+
+Cube ou assimilé : 
+EcoAgentID :(EcoAgentID) 2 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 5 
+Position finale : (EcoAgentID) 5 
+
+EcoAgentID :(EcoAgentID) 3 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 1 
+
+EcoAgentID :(EcoAgentID) 4 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 3 
+Position finale : (EcoAgentID) 3 
+
+EcoAgentID :(EcoAgentID) 5 
+Etat : SATISFAIT
+Position courante : (EcoAgentID) 1 
+Position finale : (EcoAgentID) 1 
+
+---------------------------
+
+------------------------

@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<MondeDesCubes>
+	<Table id="1" />
+	<CubeList>
+		<Cube id="2" positionCourante="1" positionFinale="20" />
+		<Cube id="3" positionCourante="1" positionFinale="19" />
+		<Cube id="4" positionCourante="1" positionFinale="24" />
+		<Cube id="5" positionCourante="1" positionFinale="25" />
+		<Cube id="6" positionCourante="1" positionFinale="1" />
+		<Cube id="7" positionCourante="1" positionFinale="18" />
+		<Cube id="8" positionCourante="1" positionFinale="11" />
+		<Cube id="9" positionCourante="1" positionFinale="28" />
+		<Cube id="10" positionCourante="2" positionFinale="38" />
+		<Cube id="11" positionCourante="3" positionFinale="37" />
+		<Cube id="12" positionCourante="4" positionFinale="21" />
+		<Cube id="13" positionCourante="5" positionFinale="14" />
+		<Cube id="14" positionCourante="6" positionFinale="22" />
+		<Cube id="15" positionCourante="7" positionFinale="31" />
+		<Cube id="16" positionCourante="8" positionFinale="9" />
+		<Cube id="17" positionCourante="9" positionFinale="8" />
+		<Cube id="18" positionCourante="1" positionFinale="7" />
+		<Cube id="19" positionCourante="1" positionFinale="6" />
+		<Cube id="20" positionCourante="1" positionFinale="5" />
+		<Cube id="21" positionCourante="1" positionFinale="4" />
+		<Cube id="22" positionCourante="1" positionFinale="3" />
+		<Cube id="23" positionCourante="1" positionFinale="2" />
+		<Cube id="24" positionCourante="1" positionFinale="1" />
+		<Cube id="25" positionCourante="1" positionFinale="1" />
+		<Cube id="26" positionCourante="1" positionFinale="23" />
+		<Cube id="27" positionCourante="1" positionFinale="26" />
+		<Cube id="28" positionCourante="1" positionFinale="27" />
+		<Cube id="29" positionCourante="1" positionFinale="1" />
+		<Cube id="30" positionCourante="1" positionFinale="29" />
+		<Cube id="31" positionCourante="1" positionFinale="1" />
+		<Cube id="32" positionCourante="1" positionFinale="32" />
+		<Cube id="33" positionCourante="1" positionFinale="1" />
+		<Cube id="34" positionCourante="1" positionFinale="33" />
+		<Cube id="35" positionCourante="1" positionFinale="33" />
+		<Cube id="36" positionCourante="1" positionFinale="35" />
+		<Cube id="37" positionCourante="1" positionFinale="12" />
+		<Cube id="38" positionCourante="1" positionFinale="13" />
+		<Cube id="39" positionCourante="1" positionFinale="15" />
+		<Cube id="40" positionCourante="1" positionFinale="1" />
+		<Cube id="41" positionCourante="1" positionFinale="17" />
+		<Cube id="42" positionCourante="1" positionFinale="36" />
+		<Cube id="43" positionCourante="1" positionFinale="1" />
+		<Cube id="44" positionCourante="1" positionFinale="18" />
+		<Cube id="45" positionCourante="1" positionFinale="1" />
+		<Cube id="46" positionCourante="1" positionFinale="47" />
+		<Cube id="47" positionCourante="1" positionFinale="43" />
+		<Cube id="48" positionCourante="1" positionFinale="49" />
+		<Cube id="49" positionCourante="1" positionFinale="48" />
+	</CubeList>
+</MondeDesCubes>
