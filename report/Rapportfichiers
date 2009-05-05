@@ -1,0 +1,12 @@
+Rapport fichiers xml et comportement :
+
+pilesimple.xml : bon desempilement, fonctionnement normal
+pileboucle.xml : bonne réaction de la regle "relies a table"
+pilefinale.xml : bon empilement, fonctionnement normal
+erreursurcharge.xml : bonne reaction de la regle "aucune surcharge", fonctionnement normal
+erreurlientable.xml : bonne reaction de la regle "reles a table", fonctionnement normal
+grosempilage.xml : bon enchaînement des cubes, fonctionnement normal
+doublepile.xml : bon échange des piles, fonctionnement normal
+49cubes.xml : pb affichage initial. bon resultat final
+49cubeserreurs.xml : meme fichier avec ajout de pb de cubes surcharges, cubes posés sur eux memes, cubes formant des boucles : bonne reaction des regles, fonctionnement normal
+
