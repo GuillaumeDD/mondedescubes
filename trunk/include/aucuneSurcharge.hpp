@@ -22,7 +22,7 @@ using namespace std;
  *
  */
 
-class AucuneSurcharge: public Regle{
+class AucuneSurcharge : public Regle{
 public:
 
    /*!
