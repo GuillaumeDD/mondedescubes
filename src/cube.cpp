@@ -6,32 +6,32 @@ Cube::Cube(){
 }
 
 Cube::Cube(const EcoAgentID& id){
-	setId((EcoAgentID&)id);
+  setId((EcoAgentID&)id);
 }
 
 Cube::~Cube(){}
 
 
 void Cube::rechercherFuite(){
-	EcoAgent *c;
-	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
-	c = p->obtenirGeneur(*this);
-	if(c == NULL) 
-		this->faireFuite();
-	else
-		this->agresser(*c);		
+  EcoAgent *c;
+  PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
+  c = p->obtenirGeneur(*this);
+  if(c == NULL) 
+    this->faireFuite();
+  else
+    this->agresser(*c);		
 }
 
 
 void Cube::rechercherSatisfaction(){
-	EcoAgent *c;
-	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
-	c = p->obtenirGeneur(*this);
-	if(c == NULL){ 
-	  this->faireSatisfaction();
-	}else{
-	  agresser(*c);
-	}	
+  EcoAgent *c;
+  PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
+  c = p->obtenirGeneur(*this);
+  if(c == NULL){ 
+    this->faireSatisfaction();
+  }else{
+    agresser(*c);
+  }	
 }
 
 void Cube::agresser(EcoAgent& a){
@@ -39,38 +39,58 @@ void Cube::agresser(EcoAgent& a){
 }
 
 void Cube::estAgresse(){
-	setEtat(RECHERCHEFUITE);
+  setEtat(RECHERCHEFUITE);
 }
 
 void Cube::faireFuite(){
-	PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
-	EcoAgentID *tableID;
-	tableID = p->getTableID();
-	setPositionCourante(*tableID);
-	setEtat(RECHERCHESATISFACTION);
+  PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
+  EcoAgentID *tableID = NULL, *eaid = NULL;
+  /* Fuite intelligente */
+  if( *getPositionCourante() == *getPositionFinale()){
+    /* 
+     * Le cube a ete agresse par sa position finale
+     * Il fuit donc sur la table pour degager la voie
+    */
+    tableID = p->getTableID();
+    setPositionCourante(*tableID);
+    setEtat(RECHERCHESATISFACTION);    
+  }else{
+    /* On regarde si on peut se poser sur la position finale */
+    eaid = p->getEcoAgentAuDessus( *getPositionFinale());
+    if(eaid == NULL){
+      /* On peut se poser sur la position finale */
+      setPositionCourante(*getPositionFinale());
+      setEtat(SATISFAIT);
+    }else{
+      /* On fuit sur la table */
+      tableID = p->getTableID();
+      setPositionCourante(*tableID);
+      setEtat(RECHERCHESATISFACTION);
+    }
+  }
 }
 
 
 void Cube::faireSatisfaction(){
-	setPositionCourante(*(getPositionFinale()));
-	setEtat(SATISFAIT);
+  setPositionCourante(*(getPositionFinale()));
+  setEtat(SATISFAIT);
 }
 
 void Cube::initialiser(){
-	if(getPositionFinale() != NULL && getPositionCourante() != NULL)
-		{
-		if(*getPositionFinale() == *getPositionCourante())
-			setEtat(SATISFAIT);
-		else
-			setEtat(RECHERCHESATISFACTION);
-		}
+  if(getPositionFinale() != NULL && getPositionCourante() != NULL)
+    {
+      if(*getPositionFinale() == *getPositionCourante())
+	setEtat(SATISFAIT);
+      else
+	setEtat(RECHERCHESATISFACTION);
+    }
 }
 
 void Cube::agir(){
-	if(getEtat() == RECHERCHESATISFACTION)
-		rechercherSatisfaction();
-	else if(getEtat() == RECHERCHEFUITE)
-		rechercherFuite();
+  if(getEtat() == RECHERCHESATISFACTION)
+    rechercherSatisfaction();
+  else if(getEtat() == RECHERCHEFUITE)
+    rechercherFuite();
 }
 
 ostream & operator<< (ostream &f, const Cube& ea){
