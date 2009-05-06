@@ -25,7 +25,7 @@ void plateformeEcoResolutionTest::tearDown(void)
 }
 
 
-void plateformeEcoResolutionTest::addTest(void)
+void plateformeEcoResolutionTest::addEcoAgentTest(void)
 {
   // Ajout d'un EcoAgent deja enregistre dans la plateforme
   CPPUNIT_ASSERT_THROW (p->addEcoAgent(*ea2), ExceptionEcoAgentDejaEnregistre);
@@ -36,30 +36,27 @@ void plateformeEcoResolutionTest::addTest(void)
   p->addEcoAgent(*ea3);
   CPPUNIT_ASSERT(temp1+1 == (p->getEcoAgents()).size());
   CPPUNIT_ASSERT_THROW (p->addEcoAgent(*ea3), ExceptionEcoAgentDejaEnregistre);
-	
+}
+
+void plateformeEcoResolutionTest::addRegleTest(void){
   // Ajout d'une regle
+  unsigned int temp1=0;
   temp1 = (p->getRegles()).size();
   p->addRegle(*r);
   CPPUNIT_ASSERT(temp1+1 == (p->getRegles()).size());
-
 }
 
-
-void plateformeEcoResolutionTest::getTest(void)
+void plateformeEcoResolutionTest::getEcoAgentTest(void)
 {
   // Recherche d'un EcoAgent inexistant dans la plateforme
   CPPUNIT_ASSERT(p->getEcoAgent(*(ea1->getId())) == NULL);
 	
   //Recherche d'un EcoAgent existant dans la plateforme
   CPPUNIT_ASSERT(p->getEcoAgent(*(ea2->getId())) == ea2);
-
-  //CPPUNIT_ASSERT_EQUAL(1,1);
-  //CPPUNIT_ASSERT_THROW (Fraction (1, 0), DivisionByZeroException);
-	
 }
 
 
-void plateformeEcoResolutionTest::informationTest(void)
+void plateformeEcoResolutionTest::sontSatisfaitsTest(void)
 {
   //Test de satisfaction globale
   p->addEcoAgent(*ea1);
@@ -78,6 +75,12 @@ void plateformeEcoResolutionTest::informationTest(void)
    * 1 EcoAgent est RECHERCHESATISFACTION
    */
   CPPUNIT_ASSERT(p->sontSatisfaits() == false);
+}
+
+void plateformeEcoResolutionTest::getEcoAgentAuDessusTest(void){
+  p->addEcoAgent(*ea1);
+  // ea2 fait deja parti de la plateforme dans l'initialisation
+  p->addEcoAgent(*ea3);
 
   // Test d'obtention de l'EcoAgent au dessus
   ea1->setPositionCourante(*(((PlateformeMondeDesCubes*)p)->getTableID()));
@@ -88,6 +91,15 @@ void plateformeEcoResolutionTest::informationTest(void)
 
   CPPUNIT_ASSERT(p->getEcoAgentAuDessus(*(ea2->getId())) == NULL);
   CPPUNIT_ASSERT(p->getEcoAgentAuDessus(*(ea3->getId())) == NULL);
+}
+
+void plateformeEcoResolutionTest::nombreEcoAgentAuDessusTest(void){
+  p->addEcoAgent(*ea1);
+  // ea2 fait deja parti de la plateforme dans l'initialisation
+  p->addEcoAgent(*ea3);
+  ea1->setPositionCourante(*(((PlateformeMondeDesCubes*)p)->getTableID()));
+  ea2->setPositionCourante(*(((PlateformeMondeDesCubes*)p)->getTableID()));
+  ea3->setPositionCourante(*(ea1->getId()));
 
   // Test d'obtention du nombre d'EcoAgent au dessus
   CPPUNIT_ASSERT(p->nombreEcoAgentAuDessus(*(ea3->getId())) == 0);
@@ -98,6 +110,21 @@ void plateformeEcoResolutionTest::informationTest(void)
   p->addEcoAgent(*ea4);
   ea4->setPositionCourante(*(ea3->getId()));
   CPPUNIT_ASSERT(p->nombreEcoAgentAuDessus(*(ea1->getId())) == 2);
+}
+
+void plateformeEcoResolutionTest::getEcoAgentsEtatTest(void){
+  p->addEcoAgent(*ea1);
+  // ea2 fait deja parti de la plateforme dans l'initialisation
+  p->addEcoAgent(*ea3);
+
+  ea2->setEtat(SATISFAIT);
+  ea3->setEtat(SATISFAIT);
+  ea1->setEtat(RECHERCHESATISFACTION);
+
+  EcoAgent* ea4 = new Cube();
+  ea4->setEtat(SATISFAIT);
+  p->addEcoAgent(*ea4);
+  ea4->setPositionCourante(*(ea3->getId()));
 
   // Test d'obtention des agents ayant un Etat determine
   /*
@@ -115,7 +142,7 @@ void plateformeEcoResolutionTest::informationTest(void)
 }
 
 
-void plateformeEcoResolutionTest::regleTest(void)
+void plateformeEcoResolutionTest::verificationRegleTest(void)
 {
   unsigned int temp;	
   PlateformeMondeDesCubes::kill();
