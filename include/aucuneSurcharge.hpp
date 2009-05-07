@@ -12,6 +12,7 @@
 #include "plateformeMondeDesCubes.hpp"
 #include "regle.hpp"
 #include "cube.hpp"
+#include "Exceptions.hpp"
 #include <map>
 #include<iostream>
 using namespace std;
@@ -36,7 +37,7 @@ public:
    * \return true si la regle est verifiee, false sinon
    */
   bool verifier();
-	
+
   /*!
    * \brief Verification d'un element de la regle generale: les cubes sont-ils surcharges?
    * \return true si le cas est verifiee, false sinon

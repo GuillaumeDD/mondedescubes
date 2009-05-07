@@ -56,16 +56,17 @@ void aucuneSurchargeTest::verifierTest(void) {
 		
 		//les cubes sont surcharges mais ne seront pas surcharges
 		c3->setPositionCourante(*id1);
-		CPPUNIT_ASSERT(nosurcharge->verifier() == false);
-
+		CPPUNIT_ASSERT_THROW (nosurcharge->verifier(), ExceptionUnCubeEstSurcharge);
+ 
 		//les cubes ne sont pas surcharges mais seront surcharges		
 		c3->setPositionCourante(*id2);
 		c4->setPositionFinale(*id1);		
-		CPPUNIT_ASSERT(nosurcharge->verifier() == false);
+		CPPUNIT_ASSERT_THROW (nosurcharge->verifier(), ExceptionUnCubeSeraSurcharge);
 		
 		//les cubes sont surcharges et seront surcharges
 		c4->setPositionCourante(*id1);	
-		CPPUNIT_ASSERT(nosurcharge->verifier() == false);
+		CPPUNIT_ASSERT_THROW (nosurcharge->verifier(), ExceptionUnCubeEstSurcharge);
+
 }
 
 void aucuneSurchargeTest::pasSurchargesTest(void) {
@@ -74,7 +75,7 @@ void aucuneSurchargeTest::pasSurchargesTest(void) {
 	CPPUNIT_ASSERT(nosurcharge->pasSurcharges() == true);
 	//un cube est surcharges
 	c3->setPositionCourante(*id1);
-	CPPUNIT_ASSERT(nosurcharge->pasSurcharges() == false);
+	CPPUNIT_ASSERT_THROW (nosurcharge->pasSurcharges(), ExceptionUnCubeEstSurcharge);
   
 }
 
@@ -83,5 +84,6 @@ void aucuneSurchargeTest::serontPasSurchargesTest(void) {
 	CPPUNIT_ASSERT(nosurcharge->serontPasSurcharges() == true);
 	//un cube sera surcharge
 	c4->setPositionFinale(*id1);
-	CPPUNIT_ASSERT(nosurcharge->serontPasSurcharges() == false);
+	CPPUNIT_ASSERT_THROW (nosurcharge->serontPasSurcharges(), ExceptionUnCubeSeraSurcharge);
+
 }

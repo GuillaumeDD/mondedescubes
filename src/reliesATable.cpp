@@ -24,21 +24,16 @@ bool ReliesATable::verifier(){
     }
 		
     /*on fait appel a la fonction pour savoir si le cube est lie a la table*/
-    if(this->estRelieATable(it1->second) == false) {
-      return false;
-    }
+    this->estRelieATable(it1->second);
 
     /*on initialise toutes les visites a false avant de tester si le cube "courant" est bien relie a la table*/
     for(it2 = m.begin(); it2 != m.end(); ++it2) {
-      it2->second.setVisite(false);;
+      it2->second.setVisite(false);
     }
 
     /*on fait appel a la fonction pour savoir si le cube sera lie a la table*/
-    if(this->seraRelieATable(it1->second) == false) {
-      return false;
-    }
+    this->seraRelieATable(it1->second);
   }
-	
   return true;
 }
 
@@ -47,12 +42,12 @@ bool ReliesATable::estRelieATable(EcoAgent &c) {
   PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
   /*on teste si on a deja visite ce cube*/
   if(c.getVisite() == true){
-    return false;
+    throw(*(new ExceptionIlExisteUneBoucle));
   }
   else {
     c.setVisite(true);
     if(c.getPositionCourante() == NULL) {
-      return false;
+      throw(*(new ExceptionCubeNonRelie));
     }
     else {
       if(*(c.getPositionCourante()) == *(p->getTableID())) {
@@ -61,7 +56,7 @@ bool ReliesATable::estRelieATable(EcoAgent &c) {
       else {
 	/* On teste si l'eco agent sur lequel est positionne le cube existe*/
 	if(p->getEcoAgent(*(c.getPositionCourante())) == NULL) {
-	  return false;
+          throw(*(new ExceptionCubeNonRelie));
 	}
 	else {
 	  return estRelieATable(*(p->getEcoAgent(*(c.getPositionCourante()))));
@@ -75,12 +70,12 @@ bool ReliesATable::seraRelieATable(EcoAgent &c) {
   PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
   /*on teste si on a deja visite ce cube*/
   if(c.getVisite() == true){
-    return false;
+    throw(*(new ExceptionIlExisteraUneBoucle));
   }
   else {
     c.setVisite(true);
     if(c.getPositionFinale() == NULL) {
-      return false;
+      throw(*(new ExceptionCubeSeraNonRelie));
     }
     else {
       if(*(c.getPositionFinale()) == *(p->getTableID())) {
@@ -89,7 +84,7 @@ bool ReliesATable::seraRelieATable(EcoAgent &c) {
       else {
 	/* On teste si l'eco agent sur lequel est positionne le cube existe*/
 	if(p->getEcoAgent(*(c.getPositionFinale())) == NULL) {
-	  return false;
+          throw(*(new ExceptionCubeSeraNonRelie));
 	}
 	else {
 	  return seraRelieATable(*(p->getEcoAgent(*(c.getPositionFinale()))));

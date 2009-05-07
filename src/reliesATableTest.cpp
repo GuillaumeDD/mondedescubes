@@ -69,18 +69,18 @@ void reliesATableTest::verifierTest(void)
 		
   //les cubes sont relies mais un cube ne sera pas relies a la table
   c3->setPositionFinale(*id5);
-  CPPUNIT_ASSERT(relies->verifier() == false);
-
-  //un des cubes n'est pas relies mais les cubes seront relies a la table	
+  CPPUNIT_ASSERT_THROW (relies->verifier(), ExceptionCubeSeraNonRelie);
+		
+  //un des cubes n'est pas relie mais les cubes seront relies a la table	
   c3->setPositionCourante(*id5);
   c3->setPositionFinale(*id2);	
-  CPPUNIT_ASSERT(relies->verifier() == false);
-		
+  CPPUNIT_ASSERT_THROW (relies->verifier(), ExceptionCubeNonRelie);
+  		
   //un des cubes n'est pas et ne sera pas relie a la table
   c3->setPositionCourante(*id2);
   c1->setPositionCourante(*id4);	
   c1->setPositionFinale(*id5);
-  CPPUNIT_ASSERT(relies->verifier() == false);
+  CPPUNIT_ASSERT_THROW (relies->verifier(), ExceptionIlExisteUneBoucle);
 }
 
 void reliesATableTest::estRelieATableTest(void)
@@ -95,19 +95,15 @@ void reliesATableTest::estRelieATableTest(void)
   c3->setVisite(false);
   c4->setVisite(false);
   c2->setPositionCourante(*id4);
-  CPPUNIT_ASSERT(relies->estRelieATable(*c4) == false);
+  CPPUNIT_ASSERT_THROW (relies->estRelieATable(*c4), ExceptionIlExisteUneBoucle);
 
-  
   //le cube c5 n'est pas relie
-
-  CPPUNIT_ASSERT(relies->estRelieATable(*c5) == false);
-
+  CPPUNIT_ASSERT_THROW (relies->estRelieATable(*c5), ExceptionCubeNonRelie);
+  
   //le cube c5 est relie a un cube non existant
   c5->setVisite(false);
-
   c5->setPositionCourante(*id5);
-  CPPUNIT_ASSERT(relies->estRelieATable(*c5) == false);
-  
+  CPPUNIT_ASSERT_THROW (relies->estRelieATable(*c5), ExceptionCubeNonRelie);
 }
 
 void reliesATableTest::seraRelieATableTest(void)
@@ -122,18 +118,14 @@ void reliesATableTest::seraRelieATableTest(void)
   c3->setVisite(false);
   c4->setVisite(false);
   c2->setPositionFinale(*id4);
-  CPPUNIT_ASSERT(relies->seraRelieATable(*c4) == false);
-
-  
+  CPPUNIT_ASSERT_THROW (relies->seraRelieATable(*c4), ExceptionIlExisteraUneBoucle);
+ 
   //le cube c5 ne sera pas relie
-
-  CPPUNIT_ASSERT(relies->seraRelieATable(*c5) == false);
-
+  CPPUNIT_ASSERT_THROW (relies->seraRelieATable(*c5), ExceptionCubeSeraNonRelie);
+		
   //le cube c5 sera relie a un cube non existant
   c5->setVisite(false);
-
   c5->setPositionFinale(*id5);
-  CPPUNIT_ASSERT(relies->seraRelieATable(*c5) == false);
-  
+  CPPUNIT_ASSERT_THROW (relies->seraRelieATable(*c5), ExceptionCubeSeraNonRelie);
 }
 

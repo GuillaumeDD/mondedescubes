@@ -8,6 +8,7 @@
 
 	class aucuneSurchargeTest : public CPPUNIT_NS :: TestFixture
 	{
+	
     CPPUNIT_TEST_SUITE (aucuneSurchargeTest);
     CPPUNIT_TEST (verifierTest);
     CPPUNIT_TEST (pasSurchargesTest);

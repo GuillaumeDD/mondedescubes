@@ -12,9 +12,11 @@
 
 #include "plateformeMondeDesCubes.hpp"
 #include "regle.hpp"
+#include "cube.hpp"
+#include "Exceptions.hpp"
 #include<iostream>
 #include <map>
-#include "cube.hpp"
+
 
 using namespace std;
   
@@ -29,14 +31,14 @@ public:
    * \brief Suite d'operations realisees pour initialiser la regle 
    *
    */
-  virtual void initialiser();
+  void initialiser();
       
   /*!
    * \brief Verification de la regle generale : pour chaque cube, est-il et sera-t-il lie a la table
    * \return true si la regle est verifiee, false sinon
    */
-  virtual bool verifier();
-	
+  bool verifier();
+
   /*!
    * \brief Verification d'un element de la regle generale: le cube est-il lie a la table
    * \return true si le cas est verifiee, false sinon

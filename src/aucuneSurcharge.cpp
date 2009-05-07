@@ -9,13 +9,12 @@ void AucuneSurcharge::initialiser() {
       
 
 bool AucuneSurcharge::verifier() {
-  if(this->pasSurcharges() == false) {
+  if(this->pasSurcharges() == true && this->serontPasSurcharges() == true) {
+    return true;
+  }
+  else {
     return false;
   }
-  if(this->serontPasSurcharges() == false) {
-    return false;
-  }
-  return true;
 }
 	
 	
@@ -41,7 +40,8 @@ bool AucuneSurcharge::pasSurcharges() {
       itcompteur=compteur.find(*(it->second.getPositionCourante()));
       itcompteur->second=itcompteur->second+1;
       if(itcompteur->second > 1) {
-	return false;
+	throw(*(new ExceptionUnCubeEstSurcharge()));
+
       }	
     }
   }
@@ -71,7 +71,7 @@ bool AucuneSurcharge::serontPasSurcharges() {
       itcompteur=compteur.find(*(it->second.getPositionFinale()));
       itcompteur->second=itcompteur->second+1;
       if(itcompteur->second > 1) {
-	return false;
+	throw(*(new ExceptionUnCubeSeraSurcharge()));	
       }	
     }
   }
