@@ -9,8 +9,13 @@ using namespace std;
 class plateformeMondeDesCubesTest : public CPPUNIT_NS :: TestFixture
 {
   CPPUNIT_TEST_SUITE (plateformeMondeDesCubesTest);
-  CPPUNIT_TEST (setTest);
-  CPPUNIT_TEST (getTest);
+  CPPUNIT_TEST (getNombreDeCubesTest);
+  CPPUNIT_TEST (setTableIDTest);
+  CPPUNIT_TEST (setPositionTest);
+  CPPUNIT_TEST (setCubeIDTest);
+  CPPUNIT_TEST (initialiserTest);
+  CPPUNIT_TEST (distanceFinaleATableTest);
+  CPPUNIT_TEST (obtenirGeneurTest);
   CPPUNIT_TEST (obtenirCubePrioritaireTest);
   CPPUNIT_TEST_SUITE_END ();
 
@@ -19,8 +24,13 @@ public:
   void tearDown (void);
 
 protected:
-  void setTest (void);
-  void getTest (void);
+  void getNombreDeCubesTest (void);
+  void setTableIDTest (void);
+  void setPositionTest (void);
+  void setCubeIDTest (void);
+  void initialiserTest (void);
+  void distanceFinaleATableTest (void);
+  void obtenirGeneurTest (void);
   void obtenirCubePrioritaireTest (void);
 
 private:

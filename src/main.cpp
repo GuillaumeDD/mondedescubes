@@ -10,19 +10,22 @@ void init(string);
 int main(int argc, char** argv){
   PlateformeMondeDesCubes *p = NULL;
   string data = "data.xml";
-  int temp;
+  //  int temp;
 
   if(argc > 1){
     data = argv[1];
   }
   init(data);
   p = PlateformeMondeDesCubes::getInstance();
+
+  try{
+  p->verifierCoherence();
+
   p->initialiser();
   cout << "INITIALISATION" << endl;
   cout << *p << endl;
   cout << "------------------------"<< endl << endl;
 
-  if(p->verifierCoherence()){
     while(!p->sontSatisfaits()){
       cout << p->toString()<<endl;
       cout << "------------------------"<< endl;
@@ -39,8 +42,18 @@ int main(int argc, char** argv){
     cout << "------------------------"<< endl;
     cout << *p << endl;
     cout << "------------------------"<< endl;
-  }else{
-    cout << "Regle non verifie !"<< endl;
+  }catch(ExceptionUnCubeEstSurcharge ex){
+    cout << "Un des cubes soutient plusieurs autres cubes."<< endl;
+  }catch(ExceptionUnCubeSeraSurcharge ex){
+    cout << "Un des cubes soutient plusieurs autres cubes en position finale."<< endl;
+  }catch(ExceptionIlExisteUneBoucle ex){
+    cout << "L'agencement des cubes est cyclique."<< endl;
+  }catch(ExceptionCubeNonRelie ex){
+    cout << "Un des cubes n'est pas relie directement ou indirectement a la table."<< endl;
+  }catch(ExceptionIlExisteraUneBoucle ex){
+    cout << "L'agencement final des cubes est cyclique."<< endl;
+  }catch(ExceptionCubeSeraNonRelie ex){
+    cout << "Un des cubes n'est pas relie directement ou indirectement a la table en position final."<< endl;
   }
 
   return EXIT_SUCCESS;

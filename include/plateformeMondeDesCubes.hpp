@@ -62,19 +62,9 @@ public:
   EcoAgent* obtenirCubePrioritaire() const;
 
   /*!
-   *\brief Determination du nombre de cubes dans la plateforme d'eco-resolution
+   *\brief Obtention du nombre de cubes present dans la plateforme d'eco-resolution
    *
-   * Methode qui permet de fixer le nombre de cubes de la plateforme d'eco-resolution
-   *
-   *\param nb : le nombre de cubes
-   *
-   */
-  void setNombreDeCubes(int nb);
-
-  /*!
-   *\brief Obtention du nombre de cubes dans la plateforme d'eco-resolution
-   *
-   * Methode qui permet d'obtenir le nombre de cubes de la plateforme d'eco-resolution
+   * Methode qui permet d'obtenir le nombre de cubes present dans la plateforme d'eco-resolution
    *
    *\return le nombre de cubes
    *
@@ -232,7 +222,6 @@ private:
   bool verifierNombreDeCubes(int nb);
       
   Table* table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
-  int nombreDeCubes;
 };
 
 
