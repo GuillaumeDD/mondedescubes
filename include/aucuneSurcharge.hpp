@@ -34,21 +34,28 @@ public:
       
   /*!
    * \brief Verification de la regle generale : pour l'ensemble des cubes, sont-ils et seront-ils surcharges?
-   * \return true si la regle est verifiee, false sinon
+   *
+   * \return true si la regle est verifiee, une exception sinon
+   *
+   * \throw ExceptionUnCubeEstSurcharge : lancee si au moins un cube est surcharge a l'etat initial de la resolution
+   * \throw ExceptionUnCubeSeraSurcharge : lancee si au moins un cube est surcharge a l'etat final de la resolution
    */
   bool verifier();
 
   /*!
    * \brief Verification d'un element de la regle generale: les cubes sont-ils surcharges?
-   * \return true si le cas est verifiee, false sinon
+   *  
+   * \return true si le cas est verifiee, une exception sinon
+   * \throw ExceptionUnCubeEstSurcharge : lancee si au moins un cube est surcharge a l'etat initial de la resolution
    */
   bool pasSurcharges();
 
   /*!
    * \brief Verification d'un element de la regle generale: les cubes seront-ils surcharges?
-   * \return true si le cas est verifiee, false sinon
+   *
+   * \return true si le cas est verifiee, une exception sinon
+   * \throw ExceptionUnCubeSeraSurcharge : lancee si au moins un cube est surcharge a l'etat final de la resolution
    */
-
   bool serontPasSurcharges();
 };
   

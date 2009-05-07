@@ -9,7 +9,7 @@
  * \version 0.1
  * \date 04 avril 2009
  *
- * Implementation de la classe EcoAgentID qui est un identifiant unique d'un eco-agent
+ * Implementation de la classe EcoAgentID qui est un identifiant unique d'un EcoAgent
  *
  */
 
@@ -18,7 +18,7 @@ using namespace std;
   
 /*!
  * \class EcoAgentID
- * \brief Identifiant unique d'un eco-agent 
+ * \brief Identifiant unique d'un EcoAgent 
  *
  * La classe EcoAgentID represente un identifiant unique d'un eco-agent. Il permet la generation automatique
  * des identifiants

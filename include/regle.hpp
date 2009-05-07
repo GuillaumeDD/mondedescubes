@@ -15,8 +15,8 @@ using namespace std;
   /*! \class Regle
   * \brief Cette classe abstraite est une squelette pour une regle
   *
-  *  Cette classe abstraite est une squelette pour une regle qui sera ajoutee dans une PlateformeEcoResolution
-  *
+  *  Cette classe abstraite est une squelette pour une regle qui sera ajoutee dans une PlateformeEcoResolution.
+  * Une regle est une condition ou un ensemble de conditions qui doivent etre verifiee pour que la resolution puisse se faire.
   */
   class Regle{
     public:
@@ -28,7 +28,7 @@ using namespace std;
       
       /*!
       * \brief Verification de la regle 
-      * \return true si la regle est verifiee, false sinon
+      * \return true si la regle est verifiee, false sinon (ou bien une exception en fonction des cas)
       */
       virtual bool verifier()=0;
   };

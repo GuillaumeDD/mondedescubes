@@ -32,6 +32,7 @@ Inherits <a class="el" href="classRegle.html">Regle</a>.
 <div class="dynheader">
 Collaboration diagram for AucuneSurcharge:</div>
 <div class="dynsection">
+<p><center><img src="classAucuneSurcharge__coll__graph.png" border="0" usemap="#AucuneSurcharge__coll__map" alt="Collaboration graph"></center>
 <center><font size="2">[<a href="graph_legend.html">legend</a>]</font></center></div>
 
 <p>
@@ -72,7 +73,12 @@ Cette classe contient les fonctions testant si les cubes ne portent pas plus de 
 <p>
 Verification d'un element de la regle generale: les cubes sont-ils surcharges? 
 <p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si le cas est verifiee, false sinon </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si le cas est verifiee, une exception sinon </dd></dl>
+<dl compact><dt><b>Exceptions:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classExceptionUnCubeEstSurcharge.html" title="Exception lancee dans le cadre de la verification de la regle &quot;est-ce que les...">ExceptionUnCubeEstSurcharge</a></em>&nbsp;</td><td>: lancee si au moins un cube est surcharge a l'etat initial de la resolution </td></tr>
+  </table>
+</dl>
 
 </div>
 </div><p>
@@ -94,7 +100,12 @@ Verification d'un element de la regle generale: les cubes sont-ils surcharges?
 <p>
 Verification d'un element de la regle generale: les cubes seront-ils surcharges? 
 <p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si le cas est verifiee, false sinon </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si le cas est verifiee, une exception sinon </dd></dl>
+<dl compact><dt><b>Exceptions:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classExceptionUnCubeSeraSurcharge.html" title="Exception lancee dans le cadre de la verification de la regle &quot;est-ce que les...">ExceptionUnCubeSeraSurcharge</a></em>&nbsp;</td><td>: lancee si au moins un cube est surcharge a l'etat final de la resolution </td></tr>
+  </table>
+</dl>
 
 </div>
 </div><p>
@@ -116,7 +127,13 @@ Verification d'un element de la regle generale: les cubes seront-ils surcharges?
 <p>
 Verification de la regle generale : pour l'ensemble des cubes, sont-ils et seront-ils surcharges? 
 <p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si la regle est verifiee, false sinon </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si la regle est verifiee, une exception sinon</dd></dl>
+<dl compact><dt><b>Exceptions:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classExceptionUnCubeEstSurcharge.html" title="Exception lancee dans le cadre de la verification de la regle &quot;est-ce que les...">ExceptionUnCubeEstSurcharge</a></em>&nbsp;</td><td>: lancee si au moins un cube est surcharge a l'etat initial de la resolution </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classExceptionUnCubeSeraSurcharge.html" title="Exception lancee dans le cadre de la verification de la regle &quot;est-ce que les...">ExceptionUnCubeSeraSurcharge</a></em>&nbsp;</td><td>: lancee si au moins un cube est surcharge a l'etat final de la resolution </td></tr>
+  </table>
+</dl>
 
 <p>Implements <a class="el" href="classRegle.html#4b3de9a64ec0e948e9177026afcc073d">Regle</a>.</p>
 
@@ -125,7 +142,7 @@ Verification de la regle generale : pour l'ensemble des cubes, sont-ils et seron
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>trunk/include/<a class="el" href="aucuneSurcharge_8hpp.html">aucuneSurcharge.hpp</a><li>trunk/src/aucuneSurcharge.cpp</ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Apr 27 20:16:17 2009 for Monde des cubes by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu May 7 22:38:33 2009 for Monde des cubes by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
 </body>

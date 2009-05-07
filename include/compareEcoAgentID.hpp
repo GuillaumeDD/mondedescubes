@@ -13,8 +13,7 @@
   
   /*!
   * \class compareEcoAgentID
-  * \brief Structure contenant la redefinition de l'operateur de comparaison d'EcoAgentID
-  * Structure contenant la redefinition de l'operateur de comparaison d'EcoAgentID pour le transformer en cle unique d'une map
+  * \brief Structure contenant la redefinition de l'operateur de comparaison d'EcoAgentID pour le transformer en cle unique d'une map
   */
   struct compareEcoAgentID{
     bool operator() (const EcoAgentID& id1,const EcoAgentID& id2) const

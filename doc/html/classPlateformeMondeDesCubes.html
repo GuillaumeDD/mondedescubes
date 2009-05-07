@@ -47,12 +47,9 @@ Collaboration diagram for PlateformeMondeDesCubes:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgent.html">EcoAgent</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#5f3ebe8acdfdbb447c13de8d3cbac438">obtenirCubePrioritaire</a> () const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention de l'EcoAgent qui a la priorite pour agir dans la plateforme d'eco-resolution du monde des cubes.  <a href="#5f3ebe8acdfdbb447c13de8d3cbac438"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#e519331088db520a76d1ead67a382c48">setNombreDeCubes</a> (int nb)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determination du nombre de cubes dans la plateforme d'eco-resolution.  <a href="#e519331088db520a76d1ead67a382c48"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#a341731830c30c695d5ef80c90377165">getNombreDeCubes</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention du nombre de cubes dans la plateforme d'eco-resolution.  <a href="#a341731830c30c695d5ef80c90377165"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention du nombre de cubes present dans la plateforme d'eco-resolution.  <a href="#a341731830c30c695d5ef80c90377165"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#cf6eccc70251d89c4d12c921f44934af">setTableIdentifiant</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determination de l'identifiant de la table dans la plateforme.  <a href="#cf6eccc70251d89c4d12c921f44934af"></a><br></td></tr>
@@ -71,22 +68,93 @@ Collaboration diagram for PlateformeMondeDesCubes:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#c99c6db4dfc2b193d8697103bec3d4d4">setCubeID</a> (<a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;currentCube, const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determination de l'identifiant d'un cube.  <a href="#c99c6db4dfc2b193d8697103bec3d4d4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#4a5d7a96766cf9a3e1acae5b3d8263fa">distanceATable</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;c) const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determination du nombre d'EcoAgent separant de la table.  <a href="#4a5d7a96766cf9a3e1acae5b3d8263fa"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#7f694f86cf4a9502cf6bba2d6eb5a371">distanceFinaleATable</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;c) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determination du nombre d'EcoAgent separant de la table.  <a href="#7f694f86cf4a9502cf6bba2d6eb5a371"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determination du nombre d'EcoAgent separant de la table en position finale.  <a href="#7f694f86cf4a9502cf6bba2d6eb5a371"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#6fb5b9ececb0e7893b2c7ff5531cb3b1">addEcoAgent</a> (<a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;ea)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'un eco-agent.  <a href="#6fb5b9ececb0e7893b2c7ff5531cb3b1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#a834747e527529fd8c4bfc61bee6c20f">toString</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Methode qui permet d'obtenir un affichage minimal de l'agencement des cubes.  <a href="#a834747e527529fd8c4bfc61bee6c20f"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="95609583990e9782a41cc432bdd2578d"></a><!-- doxytag: member="PlateformeMondeDesCubes::Singleton&lt; PlateformeMondeDesCubes &gt;" ref="95609583990e9782a41cc432bdd2578d" args="" -->
 class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#95609583990e9782a41cc432bdd2578d">Singleton&lt; PlateformeMondeDesCubes &gt;</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="98d6997efa9a51e23997364f1f09c7bd"></a><!-- doxytag: member="PlateformeMondeDesCubes::operator&lt;&lt;" ref="98d6997efa9a51e23997364f1f09c7bd" args="(ostream &amp;, const PlateformeMondeDesCubes &amp;)" -->
-ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#98d6997efa9a51e23997364f1f09c7bd">operator&lt;&lt;</a> (ostream &amp;, const <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMondeDesCubes</a> &amp;)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeMondeDesCubes.html#98d6997efa9a51e23997364f1f09c7bd">operator&lt;&lt;</a> (ostream &amp;, const <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMondeDesCubes</a> &amp;)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme monde des cubes. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme monde des cubes.  <a href="#98d6997efa9a51e23997364f1f09c7bd"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Classe representant une plateforme d'eco-resolution appliquee au monde des cubes. 
 <p>
 La classe gere les fonctionnalites de la plateforme d'eco-resolution du monde des cubes. <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="6fb5b9ececb0e7893b2c7ff5531cb3b1"></a><!-- doxytag: member="PlateformeMondeDesCubes::addEcoAgent" ref="6fb5b9ececb0e7893b2c7ff5531cb3b1" args="(EcoAgent &amp;ea)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlateformeMondeDesCubes::addEcoAgent           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>ea</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ajout d'un eco-agent. 
+<p>
+Methode qui permet d'ajouter un eco-agent dans la plateforme tout en verifiant que l'identifiant de celui-ci est different de l'identifiant de la table <dl compact><dt><b>Exceptions:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classExceptionEcoAgentDejaEnregistre.html" title="Exception lancee dans le cadre de l&#39;ajout d&#39;un EcoAgent deja enregistre dans...">ExceptionEcoAgentDejaEnregistre</a></em>&nbsp;</td><td>: lancee lorsqu'on enregistre un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> deja enregistre, autrement dit lorsqu'un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> avec le meme <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> a deja ete ajoute. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ea</em>&nbsp;</td><td>: l'eco-agent a ajouter </td></tr>
+  </table>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classPlateformeEcoResolution.html#6fdb4c8ecc62252da4326d9763d4f28d">PlateformeEcoResolution</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="4a5d7a96766cf9a3e1acae5b3d8263fa"></a><!-- doxytag: member="PlateformeMondeDesCubes::distanceATable" ref="4a5d7a96766cf9a3e1acae5b3d8263fa" args="(const EcoAgentID &amp;c) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlateformeMondeDesCubes::distanceATable           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>c</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Determination du nombre d'EcoAgent separant de la table. 
+<p>
+Cette methode permet de determiner le nombre d'EcoAgent separant un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> de la table en position courante.<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>: identifiant de l'EcoAgent </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>La distance a la table </dd></dl>
+
+</div>
+</div><p>
 <a class="anchor" name="7f694f86cf4a9502cf6bba2d6eb5a371"></a><!-- doxytag: member="PlateformeMondeDesCubes::distanceFinaleATable" ref="7f694f86cf4a9502cf6bba2d6eb5a371" args="(const EcoAgentID &amp;c) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -104,7 +172,7 @@ La classe gere les fonctionnalites de la plateforme d'eco-resolution du monde de
 <div class="memdoc">
 
 <p>
-Determination du nombre d'EcoAgent separant de la table. 
+Determination du nombre d'EcoAgent separant de la table en position finale. 
 <p>
 Cette methode permet de determiner le nombre d'EcoAgent separant un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> de la table en position finale.<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
@@ -132,9 +200,9 @@ Cette methode permet de determiner le nombre d'EcoAgent separant un <a class="el
 <div class="memdoc">
 
 <p>
-Obtention du nombre de cubes dans la plateforme d'eco-resolution. 
+Obtention du nombre de cubes present dans la plateforme d'eco-resolution. 
 <p>
-Methode qui permet d'obtenir le nombre de cubes de la plateforme d'eco-resolution<p>
+Methode qui permet d'obtenir le nombre de cubes present dans la plateforme d'eco-resolution<p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>le nombre de cubes </dd></dl>
 
 </div>
@@ -158,7 +226,7 @@ Methode qui permet d'obtenir le nombre de cubes de la plateforme d'eco-resolutio
 Obtention de l'identifiant de la table. 
 <p>
 Methode qui permet d'obtenir l'identifiant de la table<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>(l'identifiant de la table (de type <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a>)) ==&gt; un pointeur sur l'identifiant de la table de type EcoAgentID* </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>(l'identifiant de la table (de type <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a>)) ==&gt; un pointeur sur l'identifiant de la table de type EcoAgentID* </dd></dl>
 
 </div>
 </div><p>
@@ -255,7 +323,7 @@ Methode qui permet d'obtenir le geneur de l'EcoAgent courant Cette methode retou
 <p>
 Resolution du probleme du monde des cubes par eco-resolution. 
 <p>
-Methode qui permet de lancer la resolution du probleme du monde des cubes par eco-resolution 
+Methode qui permet de realiser une etape et une seule de la resolution du probleme du monde des cubes par eco-resolution 
 <p>Implements <a class="el" href="classPlateformeEcoResolution.html#17f587580cd8aee537551bc0ddd82bef">PlateformeEcoResolution</a>.</p>
 
 </div>
@@ -293,34 +361,6 @@ Methode qui permet de fixer l'identifiant d'un cube de la plateforme lorsqu'on l
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>currentCube</em>&nbsp;</td><td>: cube a identifier </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: identifiant du cube </td></tr>
-  </table>
-</dl>
-
-</div>
-</div><p>
-<a class="anchor" name="e519331088db520a76d1ead67a382c48"></a><!-- doxytag: member="PlateformeMondeDesCubes::setNombreDeCubes" ref="e519331088db520a76d1ead67a382c48" args="(int nb)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlateformeMondeDesCubes::setNombreDeCubes           </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>nb</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Determination du nombre de cubes dans la plateforme d'eco-resolution. 
-<p>
-Methode qui permet de fixer le nombre de cubes de la plateforme d'eco-resolution<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>nb</em>&nbsp;</td><td>: le nombre de cubes </td></tr>
   </table>
 </dl>
 
@@ -430,10 +470,65 @@ Methode qui permet de fixer l'identifiant de la table de la plateforme d'eco-res
 
 </div>
 </div><p>
+<a class="anchor" name="a834747e527529fd8c4bfc61bee6c20f"></a><!-- doxytag: member="PlateformeMondeDesCubes::toString" ref="a834747e527529fd8c4bfc61bee6c20f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string PlateformeMondeDesCubes::toString           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Methode qui permet d'obtenir un affichage minimal de l'agencement des cubes. 
+<p>
+Methode qui permet d'obtenir un affichage minimal de l'agencement des cubes<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>La chaine de caractere de type string a afficher </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" name="98d6997efa9a51e23997364f1f09c7bd"></a><!-- doxytag: member="PlateformeMondeDesCubes::operator&lt;&lt;" ref="98d6997efa9a51e23997364f1f09c7bd" args="(ostream &amp;, const PlateformeMondeDesCubes &amp;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt;           </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMondeDesCubes</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>p</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme monde des cubes. 
+<p>
+Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme Redefinition d'operateur qui permet d'obtenir des informations sur la plateforme monde des cubes 
+</div>
+</div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>trunk/include/<a class="el" href="plateformeMondeDesCubes_8hpp.html">plateformeMondeDesCubes.hpp</a><li>trunk/src/plateformeMondeDesCubes.cpp</ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Apr 27 20:16:17 2009 for Monde des cubes by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu May 7 22:38:33 2009 for Monde des cubes by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
 </body>

@@ -29,7 +29,7 @@ digraph G
   Node10 [label="compareEcoAgentID.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$compareEcoAgentID_8hpp.html",tooltip="Comparaison d&#39;EcoAgentID."];
   Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
   Node3 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
-  Node11 [label="ExceptionEcoAgentDejaEnregistre.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ExceptionEcoAgentDejaEnregistre_8hpp.html",tooltip="Exception lancee lorsqu&#39;on enregistre dans la plateforme un agent qui a deja..."];
+  Node11 [label="Exceptions.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Exceptions_8hpp.html",tooltip="Liste des Exceptions possibles."];
   Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
   Node12 [label="singleton.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$singleton_8hpp.html",tooltip="Implementation du design pattern singleton."];
   Node12 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
@@ -47,4 +47,8 @@ digraph G
   Node14 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
   Node14 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
   Node14 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="algorithm",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }
