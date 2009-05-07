@@ -52,11 +52,6 @@ void reliesATableTest::tearDown(void)
   delete c3;
   delete c4;
   delete c5;
-  delete id1;
-  delete id2;
-  delete id3;
-  delete id4;
-  delete id5;
   delete relies;
   PlateformeMondeDesCubes::kill();
 }

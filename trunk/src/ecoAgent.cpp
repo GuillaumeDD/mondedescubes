@@ -2,38 +2,44 @@
 #include "plateformeEcoResolution.hpp"
 
 EcoAgent::EcoAgent(){
-	id = new EcoAgentID();
-	positionCourante = NULL;
-	positionFinale = NULL;
-	etat = UNDEFINED;
+  id = new EcoAgentID();
+  positionCourante = NULL;
+  positionFinale = NULL;
+  etat = UNDEFINED;
+}
+
+EcoAgent::~EcoAgent(){
+  if( id != NULL){
+    delete id;
+  }
 }
 
 Etat EcoAgent::getEtat() const{
- return etat; 
+  return etat; 
 }
 
 void EcoAgent::setEtat(const Etat e){
-	etat=e;
+  etat=e;
 }
 
 EcoAgentID* EcoAgent::getId() const{
- return id;
+  return id;
 }
 
 void EcoAgent::setId(const EcoAgentID& identifiant){
-	id = &((EcoAgentID&)identifiant);
+  id = &((EcoAgentID&)identifiant);
 }
 
 bool EcoAgent::getVisite() const{
- return visite;
+  return visite;
 }
 
 void EcoAgent::setVisite(const bool b){
-	visite = b;
+  visite = b;
 }
 
 EcoAgentID* EcoAgent::getPositionCourante() const{
-	return positionCourante;
+  return positionCourante;
 }
 
 void EcoAgent::setPositionCourante(const EcoAgentID& pos){
@@ -41,21 +47,21 @@ void EcoAgent::setPositionCourante(const EcoAgentID& pos){
 }
 
 EcoAgentID* EcoAgent::getPositionFinale() const{
-	return positionFinale;
+  return positionFinale;
 }
 
 void EcoAgent::setPositionFinale(const EcoAgentID& pos){
-	positionFinale = &((EcoAgentID&)pos);
+  positionFinale = &((EcoAgentID&)pos);
 }
 
 ostream & operator<< (ostream &f, const EcoAgent& ea){
   f << "EcoAgentID :" << *(ea.getId()) << endl; 
   f << "Etat : " << ea.etat << endl;
   if(ea.getPositionCourante() != NULL){
-  	f << "Position courante : " << *(ea.getPositionCourante()) << endl;
+    f << "Position courante : " << *(ea.getPositionCourante()) << endl;
   }
   if(ea.getPositionFinale() != NULL){
-  	f << "Position finale : " << *(ea.getPositionFinale()) << endl;
+    f << "Position finale : " << *(ea.getPositionFinale()) << endl;
   }
   return f;
 }

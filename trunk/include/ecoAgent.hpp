@@ -34,6 +34,12 @@ public:
    *
    */
   EcoAgent();
+
+  /*!
+   * \brief Destructeur de la classe EcoAgent
+   *
+   */
+  ~EcoAgent();
 	
   /*!
    * \brief Obtention de l'Etat

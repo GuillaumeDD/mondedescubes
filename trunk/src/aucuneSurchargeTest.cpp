@@ -39,10 +39,6 @@ void aucuneSurchargeTest::tearDown(void) {
 	delete c2;
 	delete c3;
 	delete c4;
-	delete id1;
-	delete id2;
-	delete id3;
-	delete id4;
 	delete nosurcharge;
 	PlateformeMondeDesCubes::kill();
 }

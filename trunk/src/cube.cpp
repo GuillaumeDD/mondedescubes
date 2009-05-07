@@ -55,9 +55,11 @@ void Cube::faireFuite(){
     setPositionCourante(*tableID);
     setEtat(RECHERCHESATISFACTION);    
   }else{
-    /* On regarde si on peut se poser sur la position finale */
+    /* On regarde si on peut se poser sur la position finale
+     * et si elle est satisfaite
+     */
     eaid = p->getEcoAgentAuDessus( *getPositionFinale());
-    if(eaid == NULL){
+    if(eaid == NULL && p->getEcoAgent(*getPositionFinale())->getEtat() == SATISFAIT){
       /* On peut se poser sur la position finale */
       setPositionCourante(*getPositionFinale());
       setEtat(SATISFAIT);

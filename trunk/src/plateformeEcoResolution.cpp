@@ -4,22 +4,6 @@ PlateformeEcoResolution::PlateformeEcoResolution(){
 }
 
 PlateformeEcoResolution::~PlateformeEcoResolution(){
-	/*
-	//destruction des eco-agents
-	map<EcoAgentID,EcoAgent&>::iterator itEcoAgent;
-	itEcoAgent = ecoagents.begin();
-	while(itEcoAgent != ecoagents.end()){
-	 delete &((*itEcoAgent).second); 
-	}
-
-	//destruction des regles
-	list<Regle*>::iterator itRegle;
-	itRegle = regles.begin();
-	while(itRegle != regles.end())
-	{
-	  delete &((*itRegle));
-	}
-	*/
 }
 
 EcoAgent* PlateformeEcoResolution::getEcoAgent(const EcoAgentID& id) const{

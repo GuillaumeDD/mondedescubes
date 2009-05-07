@@ -46,22 +46,30 @@ void plateformeMondeDesCubesTest::tearDown(void)
 }
 
 
-void plateformeMondeDesCubesTest::setTest(void)
+void plateformeMondeDesCubesTest::getNombreDeCubesTest(void)
 {
   // Test des set et get nombre de cubes
-  p->setNombreDeCubes(10);
   CPPUNIT_ASSERT_EQUAL(p->getNombreDeCubes(), 10);
 
   // Test des set et get nombre de cubes
-  p->setNombreDeCubes(-10);
+  PlateformeMondeDesCubes::kill();
+  p = PlateformeMondeDesCubes::getInstance();
   CPPUNIT_ASSERT_EQUAL(p->getNombreDeCubes(), 0);
+}
 
+void plateformeMondeDesCubesTest::setTableIDTest(void)
+{
   // Test setTableIdentifiant et getTableID
   EcoAgentID *tid1 = new EcoAgentID(),
     *tid2 = p->getTableID();
   p->setTableIdentifiant(*tid1);
   CPPUNIT_ASSERT( tid1 == p->getTableID() && p->getTableID() != tid2);
-	
+}
+
+void plateformeMondeDesCubesTest::setPositionTest(void)
+{
+  EcoAgentID *tid1 = new EcoAgentID(),
+    *tid2 = p->getTableID();
   // Test setPositionFinale
   tid1 = ea1->getPositionFinale();
   tid2 = new EcoAgentID();
@@ -73,18 +81,20 @@ void plateformeMondeDesCubesTest::setTest(void)
   tid2 = new EcoAgentID();
   p->setPositionCourante(*(ea1->getId()),*tid2);
   CPPUNIT_ASSERT(tid1 != tid2 && ea1->getPositionCourante() != tid1 && ea1->getPositionCourante() == tid2);
+}
 
+void plateformeMondeDesCubesTest::setCubeIDTest(void)
+{
+  EcoAgentID *tid1 = new EcoAgentID(),
+    *tid2 = p->getTableID();
   // Test setCubeID
   tid1 = ea1->getId();
   tid2 = new EcoAgentID();
   p->setCubeID(*ea1,*tid2);
   CPPUNIT_ASSERT(tid1 != tid2 && ea1->getId() != tid1 && ea1->getId() == tid2);
-	
-	
 }
 
-
-void plateformeMondeDesCubesTest::getTest(void)
+void plateformeMondeDesCubesTest::initialiserTest(void)
 {
   PlateformeMondeDesCubes::kill();
   p = PlateformeMondeDesCubes::getInstance();
@@ -124,12 +134,92 @@ void plateformeMondeDesCubesTest::getTest(void)
   CPPUNIT_ASSERT(ea1->getEtat() == UNDEFINED && ea2->getEtat() == UNDEFINED && ea3->getEtat() == UNDEFINED && ea4->getEtat() == UNDEFINED && ea5->getEtat() == UNDEFINED && ea6->getEtat() == UNDEFINED);
   p->initialiser();
   CPPUNIT_ASSERT(ea1->getEtat() == SATISFAIT && ea2->getEtat() == RECHERCHESATISFACTION && ea3->getEtat() == RECHERCHESATISFACTION && ea4->getEtat() == SATISFAIT&& ea5->getEtat() == SATISFAIT && ea6->getEtat() == RECHERCHESATISFACTION);
+}
+
+void plateformeMondeDesCubesTest::distanceFinaleATableTest(void)
+{
+ PlateformeMondeDesCubes::kill();
+  p = PlateformeMondeDesCubes::getInstance();
+  p->addEcoAgent(*ea1);
+  p->addEcoAgent(*ea2);
+  p->addEcoAgent(*ea3);
+  p->addEcoAgent(*ea4);
+  p->addEcoAgent(*ea5);
+  p->addEcoAgent(*ea6);
+  //test initialiser
+  /*
+   * ea1 : SATISFAIT
+   * ea2 : RECHERCHESATISFACTION
+   * ea3 : RECHERCHESATISFACTION
+   * ea4 : SATISFAIT
+   * table : SATISFAIT
+   *
+   */
+  ea1->setPositionCourante(*(p->getTableID()));
+  ea1->setPositionFinale(*(p->getTableID()));
+  
+  ea2->setPositionCourante(*(ea1->getId()));
+  ea2->setPositionFinale(*(p->getTableID()));
+
+  ea3->setPositionCourante(*(ea2->getId()));
+  ea3->setPositionFinale(*(ea1->getId()));
+
+  ea4->setPositionCourante(*(ea3->getId()));
+  ea4->setPositionFinale(*(ea3->getId()));
+
+  ea5->setPositionCourante(*(p->getTableID()));
+  ea5->setPositionFinale(*(p->getTableID()));
+  
+  ea6->setPositionCourante(*(ea5->getId()));
+  ea6->setPositionFinale(*(p->getTableID()));
 
   //test distanceFinaleATable
   CPPUNIT_ASSERT(p->distanceFinaleATable(*(ea1->getId())) == 0);
   CPPUNIT_ASSERT(p->distanceFinaleATable(*(ea2->getId())) == 0); 
   CPPUNIT_ASSERT(p->distanceFinaleATable(*(ea3->getId())) == 1);
   CPPUNIT_ASSERT(p->distanceFinaleATable(*(ea4->getId())) == 2);
+
+}
+
+
+void plateformeMondeDesCubesTest::obtenirGeneurTest(void)
+{
+ PlateformeMondeDesCubes::kill();
+  p = PlateformeMondeDesCubes::getInstance();
+  p->addEcoAgent(*ea1);
+  p->addEcoAgent(*ea2);
+  p->addEcoAgent(*ea3);
+  p->addEcoAgent(*ea4);
+  p->addEcoAgent(*ea5);
+  p->addEcoAgent(*ea6);
+  //test initialiser
+  /*
+   * ea1 : SATISFAIT
+   * ea2 : RECHERCHESATISFACTION
+   * ea3 : RECHERCHESATISFACTION
+   * ea4 : SATISFAIT
+   * table : SATISFAIT
+   *
+   */
+  ea1->setPositionCourante(*(p->getTableID()));
+  ea1->setPositionFinale(*(p->getTableID()));
+  
+  ea2->setPositionCourante(*(ea1->getId()));
+  ea2->setPositionFinale(*(p->getTableID()));
+
+  ea3->setPositionCourante(*(ea2->getId()));
+  ea3->setPositionFinale(*(ea1->getId()));
+
+  ea4->setPositionCourante(*(ea3->getId()));
+  ea4->setPositionFinale(*(ea3->getId()));
+
+  ea5->setPositionCourante(*(p->getTableID()));
+  ea5->setPositionFinale(*(p->getTableID()));
+  
+  ea6->setPositionCourante(*(ea5->getId()));
+  ea6->setPositionFinale(*(p->getTableID()));
+
+  p->initialiser();
 
   //test obtenirGeneur
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea1) == NULL);
@@ -165,6 +255,38 @@ void plateformeMondeDesCubesTest::getTest(void)
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea5) == ea6);
   CPPUNIT_ASSERT(p->obtenirGeneur(*ea6) == ea3);
 
+}
+
+
+void plateformeMondeDesCubesTest::obtenirCubePrioritaireTest(void){
+
+ PlateformeMondeDesCubes::kill();
+  p = PlateformeMondeDesCubes::getInstance();
+  p->addEcoAgent(*ea1);
+  p->addEcoAgent(*ea2);
+  p->addEcoAgent(*ea3);
+  p->addEcoAgent(*ea4);
+  p->addEcoAgent(*ea5);
+  p->addEcoAgent(*ea6);
+
+  ea1->setPositionCourante(*(p->getTableID()));
+  ea1->setPositionFinale(*(p->getTableID()));
+  
+  ea2->setPositionCourante(*(ea1->getId()));
+  ea2->setPositionFinale(*(p->getTableID()));
+
+  ea3->setPositionCourante(*(ea6->getId()));
+  ea3->setPositionFinale(*(ea1->getId()));
+
+  ea4->setPositionCourante(*(ea2->getId()));
+  ea4->setPositionFinale(*(ea3->getId()));
+
+  ea5->setPositionCourante(*(ea4->getId()));
+  ea5->setPositionFinale(*(p->getTableID()));
+  
+  ea6->setPositionCourante(*(ea5->getId()));
+  ea6->setPositionFinale(*(p->getTableID()));
+  p->initialiser();
   //test obtenirCubePrioritaire
   CPPUNIT_ASSERT(p->obtenirCubePrioritaire() == ea2);
 
@@ -245,24 +367,26 @@ void plateformeMondeDesCubesTest::getTest(void)
   temp = p->obtenirCubePrioritaire();
   temp->agir();
   CPPUNIT_ASSERT(ea1->getEtat() == SATISFAIT && ea2->getEtat() == SATISFAIT && ea3->getEtat() == SATISFAIT && ea4->getEtat() == RECHERCHESATISFACTION && ea5->getEtat() == SATISFAIT && ea6->getEtat() == SATISFAIT);
-  CPPUNIT_ASSERT(ea3->getPositionCourante() == ea3->getPositionFinale());
+  CPPUNIT_ASSERT(ea3->getPositionCourante() == ea1->getId());
   CPPUNIT_ASSERT(p->obtenirCubePrioritaire() == ea4);
 
 //test d'une etape de resoudre
   temp = p->obtenirCubePrioritaire();
   temp->agir();
   CPPUNIT_ASSERT(ea1->getEtat() == SATISFAIT && ea2->getEtat() == SATISFAIT && ea3->getEtat() == SATISFAIT && ea4->getEtat() == SATISFAIT && ea5->getEtat() == SATISFAIT && ea6->getEtat() == SATISFAIT);
-  CPPUNIT_ASSERT(ea4->getPositionCourante() == ea4->getPositionFinale());
+  CPPUNIT_ASSERT(ea4->getPositionCourante() == ea3->getId());
   CPPUNIT_ASSERT(p->obtenirCubePrioritaire() == NULL);
 
-}
 
-void plateformeMondeDesCubesTest::obtenirCubePrioritaireTest(void){
-  EcoAgent *temp = NULL;
+  temp = NULL;
   // on remet a zero la plateforme
   PlateformeMondeDesCubes::kill();
   p = PlateformeMondeDesCubes::getInstance();
   // on reprend l'exemple du rapport
+  ea1 = new Cube();
+  ea2 = new Cube();
+  ea3 = new Cube();
+
 
   ea1->setPositionCourante(*(p->getTableID()));
   ea1->setPositionFinale(*(p->getTableID()));

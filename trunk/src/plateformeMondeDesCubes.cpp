@@ -62,16 +62,8 @@ EcoAgent* PlateformeMondeDesCubes::obtenirCubePrioritaire() const{
   return result;
 }
 
-void PlateformeMondeDesCubes::setNombreDeCubes(int nb){
-  if(verifierNombreDeCubes(nb)){
-    nombreDeCubes = nb;
-  }else{
-    nombreDeCubes = 0; 
-  }
-}
-
 int PlateformeMondeDesCubes::getNombreDeCubes() const{
-  return nombreDeCubes;  
+  return ecoagents.size();  
 }
 
 void PlateformeMondeDesCubes::setTableIdentifiant(const EcoAgentID& id){
@@ -152,15 +144,14 @@ void PlateformeMondeDesCubes::setCubeID(EcoAgent& currentCube, const EcoAgentID&
 
 PlateformeMondeDesCubes::PlateformeMondeDesCubes(){
   table = new Table();
-  nombreDeCubes = 0;
 
   // Ajout des regles
   addRegle(*(new AucuneSurcharge()));
   addRegle(*(new ReliesATable()));
 }
 
-//A FAIRE
 PlateformeMondeDesCubes::~PlateformeMondeDesCubes(){
+  delete table;
 }
 
 int PlateformeMondeDesCubes::distanceFinaleATable(const EcoAgentID& c) const{
