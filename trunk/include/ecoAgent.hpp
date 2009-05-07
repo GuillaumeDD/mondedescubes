@@ -9,7 +9,7 @@
  * \version 0.1
  * \date 31 mars 2009
  *
- * Implementation de la classe abstraite EcoAgent qui regroupe les fonctionnalites communes a tout eco-agent
+ * Implementation de la classe abstraite EcoAgent qui regroupe les fonctionnalites communes a tout EcoAgent
  *
  */
 #include<iostream>

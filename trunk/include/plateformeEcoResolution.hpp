@@ -21,7 +21,10 @@ using namespace std;
 /*! \class PlateformeEcoResolution
  * \brief classe representant une plateforme d'eco-resolution abstraite
  *
- *  La classe gere les fonctionnalites basiques d'une plateforme d'eco-resolution.
+ * La classe gere les fonctionnalites basiques d'une plateforme d'eco-resolution.
+ * Elle permet l'ajout d'EcoAgent et les references grace a leur identifiant EcoAgentID.
+ * Elle integre un ensemble de fonctionnalites "basiques" qui permettent par exemple d'obtenir un EcoAgent reference a partir de son ID, d'ajouter des regles et de les verifier.
+ * Bien evidemment, la plateforme permet de lancer la resolution en elle-meme.
  */
 class PlateformeEcoResolution{
 public:
@@ -42,21 +45,21 @@ public:
   ~PlateformeEcoResolution();
       
   /*!
-   * \brief Obtention d'un eco-agent
+   * \brief Obtention d'un EcoAgent
    *
-   * Methode qui permet d'obtenir un eco-agent de la plateforme a partir de son identifiant
+   * Methode qui permet d'obtenir un EcoAgent de la plateforme a partir de son identifiant
    *
-   * \param id : id de l'eco-agent voulu
-   * \return un pointeur sur l'eco-agent recherche s'il existe, NULL sinon
+   * \param id : id de l'EcoAgent voulu
+   * \return un pointeur sur l'EcoAgent recherche s'il existe, NULL sinon
    */
   EcoAgent* getEcoAgent(const EcoAgentID& id) const;
       
   /*!
-   * \brief Ajout d'un eco-agent
+   * \brief Ajout d'un EcoAgent
    *
-   * Methode qui permet d'ajouter un eco-agent dans la plateforme
+   * Methode qui permet d'ajouter un EcoAgent dans la plateforme. Il est alors reference par son EcoAgentID.
    * \throw ExceptionEcoAgentDejaEnregistre : lancee lorsqu'on enregistre un EcoAgent deja enregistre, autrement dit lorsqu'un EcoAgent avec le meme EcoAgentID a deja ete ajoute.
-   * \param ea : l'eco-agent a ajouter
+   * \param ea : l'EcoAgent a ajouter
    *
    */      
   virtual void addEcoAgent(EcoAgent& ea);
@@ -64,9 +67,9 @@ public:
   /*!
    * \brief Ajout d'une nouvelle regle
    *
-   * Methode qui permet d'ajouter une nouvelle regle dans la plateforme
+   * Methode qui permet d'ajouter une nouvelle Regle dans la plateforme
    *
-   * \param r : la regle a ajouter
+   * \param r : la Regle a ajouter
    *
    */      
   void addRegle(Regle& r);
@@ -84,7 +87,7 @@ public:
   /*!
    *\brief Verification du respect des regles apres l'initialisation de la plateforme
    *
-   * Methode qui permet de verifier l'ensemble des regles apres l'initialisation de la plateforme
+   * Methode qui permet de verifier l'ensemble des regles de la plateforme.
    *
    *\return true si toutes les regles sont verifiees, false sinon
    *
@@ -92,11 +95,11 @@ public:
   bool verifierCoherence() const;
       
   /*!
-   *\brief Methode qui verifie si tous les eco-agents sont satisfaits
+   *\brief Methode qui verifie si tous les EcoAgents sont satisfaits i.e. si la resolution est terminee.
    *
-   * Methode qui verifie si tous les eco-agents sont satisfaits. Elle permet d'arreter la resolution.
+   * Methode qui verifie si tous les eco-agents sont satisfaits. Elle permet de determiner quand la resolution est terminee.
    *
-   *\return true si tous les eco-agents sont satisfaits, false sinon
+   *\return true si tous les EcoAgents sont satisfaits, false sinon
    *
    */
   bool sontSatisfaits() const;

@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.11.11)  27 APR 2009 20:16
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.11.11)  7 MAY 2009 22:38
 entering extended mode
  %&-line parsing enabled.
 **refman.tex
@@ -597,13 +597,16 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 
 Writing index file refman.idx
 (./refman.aux (./structcompareEcoAgentID.aux) (./classCube.aux)
-(./classEcoAgent.aux) (./classEcoAgentID.aux)
+(./classEcoAgent.aux) (./classEcoAgentID.aux) (./classExceptionCubeNonRelie.aux
+) (./classExceptionCubeSeraNonRelie.aux)
 (./classExceptionEcoAgentDejaEnregistre.aux)
-(./classPlateformeEcoResolution.aux) (./classPlateformeMondeDesCubes.aux)
-(./classRegle.aux) (./classreliesATable.aux) (./classSingleton.aux)
-(./classTable.aux) (./compareEcoAgentID_8hpp.aux) (./cube_8hpp.aux)
-(./ecoAgent_8hpp.aux) (./ecoAgentID_8hpp.aux) (./etat_8hpp.aux)
-(./ExceptionEcoAgentDejaEnregistre_8hpp.aux)
+(./classExceptionIlExisteraUneBoucle.aux)
+(./classExceptionIlExisteUneBoucle.aux) (./classExceptionUnCubeEstSurcharge.aux
+) (./classExceptionUnCubeSeraSurcharge.aux) (./classPlateformeEcoResolution.aux
+) (./classPlateformeMondeDesCubes.aux) (./classRegle.aux)
+(./classreliesATable.aux) (./classSingleton.aux) (./classTable.aux)
+(./compareEcoAgentID_8hpp.aux) (./cube_8hpp.aux) (./ecoAgent_8hpp.aux)
+(./ecoAgentID_8hpp.aux) (./etat_8hpp.aux) (./Exceptions_8hpp.aux)
 (./plateformeEcoResolution_8hpp.aux) (./plateformeMondeDesCubes_8hpp.aux)
 (./regle_8hpp.aux) (./reliesATable_8hpp.aux) (./singleton_8hpp.aux)
 (./table_8hpp.aux))
@@ -727,13 +730,7 @@ e-def-i-ni-tion de l'operateur de com-para-i-son
 
 ]
 Chapter 3.
-(./files.tex
-Underfull \hbox (badness 1226) in paragraph at lines 9--9
- [][] \T1/ptm/m/n/10 trunk/include/[][]ExceptionEcoAgentDejaEnregistre.hpp[][] 
-(Ex-cep-tion lancee lorsqu'on en-reg-istre 
- []
-
-) [5] [6
+(./files.tex) [5] [6
 
 ]
 Chapter 4.
@@ -748,7 +745,10 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 15.
 
 (/usr/share/texmf/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [7]) [8]
+) [7]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 46.
+) [8]
 \openout2 = `structcompareEcoAgentID.aux'.
 
 
@@ -761,66 +761,105 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 
 ]
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 81.
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 99.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 97.
+(hyperref)                removing `\sim' on input line 99.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `\sim' on input line 97.
+(hyperref)                removing `math shift' on input line 99.
 
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 97.
-
-) [11]
+[11]) [12]
 \openout2 = `classEcoAgent.aux'.
 
- (./classEcoAgent.tex [12
+ (./classEcoAgent.tex [13
 
 
-] [13] [14] [15]) [16]
+] [14] [15] [16]) [17]
 \openout2 = `classEcoAgentID.aux'.
 
- (./classEcoAgentID.tex
-[17
+
+(./classEcoAgentID.tex [18
 
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 61.
+(hyperref)                removing `math shift' on input line 77.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `\sim' on input line 61.
+(hyperref)                removing `\sim' on input line 77.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 61.
+(hyperref)                removing `math shift' on input line 77.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 91.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 91.
+(hyperref)                removing `math shift' on input line 107.
 
-) [18]
+) [19]
+\openout2 = `classExceptionCubeNonRelie.aux'.
+
+ (./classExceptionCubeNonRelie.tex) [20
+
+
+]
+\openout2 = `classExceptionCubeSeraNonRelie.aux'.
+
+
+(./classExceptionCubeSeraNonRelie.tex) [21
+
+
+]
 \openout2 = `classExceptionEcoAgentDejaEnregistre.aux'.
 
- (./classExceptionEcoAgentDejaEnregistre.tex) [19
+
+(./classExceptionEcoAgentDejaEnregistre.tex) [22
+
+
+]
+\openout2 = `classExceptionIlExisteraUneBoucle.aux'.
+
+
+(./classExceptionIlExisteraUneBoucle.tex) [23
+
+
+]
+\openout2 = `classExceptionIlExisteUneBoucle.aux'.
+
+
+(./classExceptionIlExisteUneBoucle.tex) [24
+
+
+]
+\openout2 = `classExceptionUnCubeEstSurcharge.aux'.
+
+
+(./classExceptionUnCubeEstSurcharge.tex) [25
+
+
+]
+\openout2 = `classExceptionUnCubeSeraSurcharge.aux'.
+
+
+(./classExceptionUnCubeSeraSurcharge.tex) [26
 
 
 ]
 \openout2 = `classPlateformeEcoResolution.aux'.
 
 
-(./classPlateformeEcoResolution.tex [20
+(./classPlateformeEcoResolution.tex [27
 
 
 ]
@@ -836,23 +875,40 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 70.
 
-[21] [22] [23]) [24]
+[28] [29] [30]) [31]
 \openout2 = `classPlateformeMondeDesCubes.aux'.
 
- (./classPlateformeMondeDesCubes.tex [25
+ (./classPlateformeMondeDesCubes.tex [32
 
 
-] [26] [27])
-[28]
+] [33] [34]
+[35]
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 280.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 280.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 280.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 280.
+
+) [36]
 \openout2 = `classRegle.aux'.
 
- (./classRegle.tex) [29
+ (./classRegle.tex) [37
 
 
 ]
 \openout2 = `classreliesATable.aux'.
 
- (./classreliesATable.tex) [30
+ (./classreliesATable.tex) [38
 
 
 ]
@@ -891,137 +947,137 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 46.
 
-[31
+[39
 
 
-]) [32]
+]) [40]
 \openout2 = `classTable.aux'.
 
- (./classTable.tex [33
+ (./classTable.tex [41
 
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 92.
+(hyperref)                removing `math shift' on input line 94.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `\sim' on input line 92.
+(hyperref)                removing `\sim' on input line 94.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 92.
+(hyperref)                removing `math shift' on input line 94.
 
-) [34]
+) [42]
 Chapter 5.
-(./aucuneSurcharge_8hpp.tex) [35
+(./aucuneSurcharge_8hpp.tex) [43
 
 
 ]
 \openout2 = `compareEcoAgentID_8hpp.aux'.
 
- (./compareEcoAgentID_8hpp.tex) [36
+ (./compareEcoAgentID_8hpp.tex) [44
 
 ]
 \openout2 = `cube_8hpp.aux'.
 
 
-(./cube_8hpp.tex) [37
+(./cube_8hpp.tex) [45
 
 
 ]
 \openout2 = `ecoAgent_8hpp.aux'.
 
- (./ecoAgent_8hpp.tex) [38
+ (./ecoAgent_8hpp.tex) [46
 
 
 ]
 \openout2 = `ecoAgentID_8hpp.aux'.
 
  (./ecoAgentID_8hpp.tex)
-[39
+[47
 
 
 ]
 \openout2 = `etat_8hpp.aux'.
 
- (./etat_8hpp.tex) [40
+ (./etat_8hpp.tex) [48
 
 
 ]
-\openout2 = `ExceptionEcoAgentDejaEnregistre_8hpp.aux'.
+\openout2 = `Exceptions_8hpp.aux'.
 
- (./ExceptionEcoAgentDejaEnregistre_8hpp.tex)
-[41
+ (./Exceptions_8hpp.tex) [49
 
 
 ]
 \openout2 = `plateformeEcoResolution_8hpp.aux'.
 
- (./plateformeEcoResolution_8hpp.tex) [42
+
+(./plateformeEcoResolution_8hpp.tex) [50
 
 
 ]
 \openout2 = `plateformeMondeDesCubes_8hpp.aux'.
 
-
-(./plateformeMondeDesCubes_8hpp.tex) [43
+ (./plateformeMondeDesCubes_8hpp.tex)
+[51
 
 
 ]
 \openout2 = `regle_8hpp.aux'.
 
- (./regle_8hpp.tex) [44
+ (./regle_8hpp.tex) [52
 
 
 ]
 \openout2 = `reliesATable_8hpp.aux'.
 
-
-(./reliesATable_8hpp.tex) [45
+ (./reliesATable_8hpp.tex) [53
 
 
 ]
 \openout2 = `singleton_8hpp.aux'.
 
- (./singleton_8hpp.tex) [46
+
+(./singleton_8hpp.tex) [54
 
 
 ]
 \openout2 = `table_8hpp.aux'.
 
- (./table_8hpp.tex)
-[47
+ (./table_8hpp.tex) [55
 
 
-] (./refman.ind [48
+] (./refman.ind [56
 
 
-]
-Overfull \hbox (9.18486pt too wide) in paragraph at lines 213--214
-[]\T1/ptm/m/n/10 trunk/include/ExceptionEcoAgentDejaEnregistre.hpp,
- []
+] [57]
+[58
 
-[49]) (./refman.aux (./structcompareEcoAgentID.aux) (./classCube.aux)
-(./classEcoAgent.aux) (./classEcoAgentID.aux)
+]) (./refman.aux (./structcompareEcoAgentID.aux) (./classCube.aux)
+(./classEcoAgent.aux) (./classEcoAgentID.aux) (./classExceptionCubeNonRelie.aux
+) (./classExceptionCubeSeraNonRelie.aux)
 (./classExceptionEcoAgentDejaEnregistre.aux)
-(./classPlateformeEcoResolution.aux) (./classPlateformeMondeDesCubes.aux)
-(./classRegle.aux) (./classreliesATable.aux) (./classSingleton.aux)
-(./classTable.aux) (./compareEcoAgentID_8hpp.aux) (./cube_8hpp.aux)
-(./ecoAgent_8hpp.aux) (./ecoAgentID_8hpp.aux) (./etat_8hpp.aux)
-(./ExceptionEcoAgentDejaEnregistre_8hpp.aux)
+(./classExceptionIlExisteraUneBoucle.aux)
+(./classExceptionIlExisteUneBoucle.aux) (./classExceptionUnCubeEstSurcharge.aux
+) (./classExceptionUnCubeSeraSurcharge.aux) (./classPlateformeEcoResolution.aux
+) (./classPlateformeMondeDesCubes.aux) (./classRegle.aux)
+(./classreliesATable.aux) (./classSingleton.aux) (./classTable.aux)
+(./compareEcoAgentID_8hpp.aux) (./cube_8hpp.aux) (./ecoAgent_8hpp.aux)
+(./ecoAgentID_8hpp.aux) (./etat_8hpp.aux) (./Exceptions_8hpp.aux)
 (./plateformeEcoResolution_8hpp.aux) (./plateformeMondeDesCubes_8hpp.aux)
 (./regle_8hpp.aux) (./reliesATable_8hpp.aux) (./singleton_8hpp.aux)
 (./table_8hpp.aux)) ) 
 Here is how much of TeX's memory you used:
- 5576 strings out of 256216
- 81013 string characters out of 1917071
- 131284 words of memory out of 1500000
- 8261 multiletter control sequences out of 10000+200000
+ 5687 strings out of 256216
+ 84028 string characters out of 1917071
+ 133885 words of memory out of 1500000
+ 8294 multiletter control sequences out of 10000+200000
  42861 words of font info for 47 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 38i,12n,43p,420b,513s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 38i,12n,43p,603b,519s stack positions out of 5000i,500n,6000p,200000b,15000s
 pdfTeX warning (dest): name{etat_8hpp_767b7a63d7677f92d697
 621b4166af1b} has been referenced but does not exist, replaced by a fixed one
 
@@ -1031,9 +1087,9 @@ are/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/urw/c
 ourier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texmf/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on refman.pdf (57 pages, 369139 bytes).
+Output written on refman.pdf (66 pages, 419384 bytes).
 PDF statistics:
- 1683 PDF objects out of 1728 (max. 8388607)
- 341 named destinations out of 1000 (max. 131072)
- 1121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1920 PDF objects out of 2073 (max. 8388607)
+ 377 named destinations out of 1000 (max. 131072)
+ 1257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

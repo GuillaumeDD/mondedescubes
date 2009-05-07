@@ -42,10 +42,10 @@ Inherited by <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMo
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructeur.  <a href="#356b4862f53c4be870304e5186601b5a"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgent.html">EcoAgent</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#acd4e2899f178261ddd0fde086932e84">getEcoAgent</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention d'un eco-agent.  <a href="#acd4e2899f178261ddd0fde086932e84"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#6fdb4c8ecc62252da4326d9763d4f28d">addEcoAgent</a> (<a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;ea)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtention d'un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a>.  <a href="#acd4e2899f178261ddd0fde086932e84"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#6fdb4c8ecc62252da4326d9763d4f28d">addEcoAgent</a> (<a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;ea)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'un eco-agent.  <a href="#6fdb4c8ecc62252da4326d9763d4f28d"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a>.  <a href="#6fdb4c8ecc62252da4326d9763d4f28d"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#c2978a0e31b186415ca156a19ac8a1dc">addRegle</a> (<a class="el" href="classRegle.html">Regle</a> &amp;r)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ajout d'une nouvelle regle.  <a href="#c2978a0e31b186415ca156a19ac8a1dc"></a><br></td></tr>
@@ -57,7 +57,7 @@ Inherited by <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMo
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verification du respect des regles apres l'initialisation de la plateforme.  <a href="#0d35ee702a0b255f0da91aa382089865"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#673b4d17360ab1ff1e7c7f28a1b2e35e">sontSatisfaits</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Methode qui verifie si tous les eco-agents sont satisfaits.  <a href="#673b4d17360ab1ff1e7c7f28a1b2e35e"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Methode qui verifie si tous les EcoAgents sont satisfaits i.e. si la resolution est terminee.  <a href="#673b4d17360ab1ff1e7c7f28a1b2e35e"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classEcoAgentID.html">EcoAgentID</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#a33074c437f57bf9f409502de82b2f58">getEcoAgentAuDessus</a> (const <a class="el" href="classEcoAgentID.html">EcoAgentID</a> &amp;id) const </td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Methode qui retourne l'EcoAgentID de l'EcoAgent au dessus.  <a href="#a33074c437f57bf9f409502de82b2f58"></a><br></td></tr>
@@ -66,7 +66,7 @@ Inherited by <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMo
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id specifie.  <a href="#bccb426d9f1113e66b652bb63e7fafcd"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">list&lt; <a class="el" href="classEcoAgentID.html">EcoAgentID</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#eccbbf85153147e551b9b6fa65f554e2">getEcoAgents</a> (const <a class="el" href="etat_8hpp.html#767b7a63d7677f92d697621b4166af1b">Etat</a> e) const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Methode qui retourne les <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> possedant l'etat specifie.  <a href="#eccbbf85153147e551b9b6fa65f554e2"></a><br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Methode qui retourne les <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> possedant l'etat specifie.  <a href="#eccbbf85153147e551b9b6fa65f554e2"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">map&lt; <a class="el" href="classEcoAgentID.html">EcoAgentID</a>, <a class="el" href="classEcoAgent.html">EcoAgent</a> <br class="typebreak">
 &amp;, <a class="el" href="structcompareEcoAgentID.html">compareEcoAgentID</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlateformeEcoResolution.html#c3c3307a04fbe2d33c753c2b0eef79af">getEcoAgents</a> () const </td></tr>
 
@@ -87,7 +87,7 @@ Inherited by <a class="el" href="classPlateformeMondeDesCubes.html">PlateformeMo
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 classe representant une plateforme d'eco-resolution abstraite 
 <p>
-La classe gere les fonctionnalites basiques d'une plateforme d'eco-resolution. <hr><h2>Constructor &amp; Destructor Documentation</h2>
+La classe gere les fonctionnalites basiques d'une plateforme d'eco-resolution. Elle permet l'ajout d'EcoAgent et les references grace a leur identifiant <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a>. Elle integre un ensemble de fonctionnalites "basiques" qui permettent par exemple d'obtenir un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> reference a partir de son ID, d'ajouter des regles et de les verifier. Bien evidemment, la plateforme permet de lancer la resolution en elle-meme. <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="6e03cc2c6a51bc4a47d2d226e41d13e9"></a><!-- doxytag: member="PlateformeEcoResolution::PlateformeEcoResolution" ref="6e03cc2c6a51bc4a47d2d226e41d13e9" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -141,25 +141,27 @@ Destructeur de la classe abstraite <a class="el" href="classPlateformeEcoResolut
           <td class="paramtype"><a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>ea</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Ajout d'un eco-agent. 
+Ajout d'un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a>. 
 <p>
-Methode qui permet d'ajouter un eco-agent dans la plateforme <dl compact><dt><b>Exceptions:</b></dt><dd>
+Methode qui permet d'ajouter un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> dans la plateforme. Il est alors reference par son <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a>. <dl compact><dt><b>Exceptions:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classExceptionEcoAgentDejaEnregistre.html" title="Exception lancee dans le cadre de l&#39;ajout d&#39;un EcoAgent deja enregistre dans...">ExceptionEcoAgentDejaEnregistre</a></em>&nbsp;</td><td>: lancee lorsqu'on enregistre un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> deja enregistre </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="classExceptionEcoAgentDejaEnregistre.html" title="Exception lancee dans le cadre de l&#39;ajout d&#39;un EcoAgent deja enregistre dans...">ExceptionEcoAgentDejaEnregistre</a></em>&nbsp;</td><td>: lancee lorsqu'on enregistre un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> deja enregistre, autrement dit lorsqu'un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> avec le meme <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> a deja ete ajoute. </td></tr>
   </table>
 </dl>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>ea</em>&nbsp;</td><td>: l'eco-agent a ajouter </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ea</em>&nbsp;</td><td>: l'EcoAgent a ajouter </td></tr>
   </table>
 </dl>
+
+<p>Reimplemented in <a class="el" href="classPlateformeMondeDesCubes.html#6fb5b9ececb0e7893b2c7ff5531cb3b1">PlateformeMondeDesCubes</a>.</p>
 
 </div>
 </div><p>
@@ -182,10 +184,10 @@ Methode qui permet d'ajouter un eco-agent dans la plateforme <dl compact><dt><b>
 <p>
 Ajout d'une nouvelle regle. 
 <p>
-Methode qui permet d'ajouter une nouvelle regle dans la plateforme<p>
+Methode qui permet d'ajouter une nouvelle <a class="el" href="classRegle.html" title="Cette classe abstraite est une squelette pour une regle.">Regle</a> dans la plateforme<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>r</em>&nbsp;</td><td>: la regle a ajouter </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>r</em>&nbsp;</td><td>: la <a class="el" href="classRegle.html" title="Cette classe abstraite est une squelette pour une regle.">Regle</a> a ajouter </td></tr>
   </table>
 </dl>
 
@@ -208,15 +210,15 @@ Methode qui permet d'ajouter une nouvelle regle dans la plateforme<p>
 <div class="memdoc">
 
 <p>
-Obtention d'un eco-agent. 
+Obtention d'un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a>. 
 <p>
-Methode qui permet d'obtenir un eco-agent de la plateforme a partir de son identifiant<p>
+Methode qui permet d'obtenir un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> de la plateforme a partir de son identifiant<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: id de l'eco-agent voulu </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: id de l'EcoAgent voulu </td></tr>
   </table>
 </dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>un pointeur sur l'eco-agent recherche s'il existe, NULL sinon </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>un pointeur sur l'EcoAgent recherche s'il existe, NULL sinon </dd></dl>
 
 </div>
 </div><p>
@@ -242,10 +244,10 @@ Methode qui retourne l'EcoAgentID de l'EcoAgent au dessus.
 Methode qui retourne l'EcoAgentID de l'EcoAgent dont la position courante est l'EcoAgentID passe en parametre<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> dont on cherche l'EcoAgent qui l'a en position courante </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> dont on cherche l'EcoAgent qui l'a en position courante </td></tr>
   </table>
 </dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> de l'EcoAgent correspondant, NULL s'il n'y en a pas </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> de l'EcoAgent correspondant, NULL s'il n'y en a pas </dd></dl>
 
 </div>
 </div><p>
@@ -289,15 +291,15 @@ Methode qui retourne tous les eco-agents. Cette methode est surtout utilisee pou
 <div class="memdoc">
 
 <p>
-Methode qui retourne les <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> possedant l'etat specifie. 
+Methode qui retourne les <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> possedant l'etat specifie. 
 <p>
-Methode qui retourne les <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> possedant un etat specifie dans le parametre de la fonction<p>
+Methode qui retourne les <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> possedant un etat specifie dans le parametre de la fonction<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>e</em>&nbsp;</td><td>: l'etat dans lequel tous les <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> listes doivent etre </td></tr>
   </table>
 </dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>la liste des <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> dans cet Etat </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>la liste des <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> des <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> dans cet Etat </dd></dl>
 
 </div>
 </div><p>
@@ -369,7 +371,7 @@ Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id spec
 Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id specifie<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> dont on cherche le nombre d'EcoAgent superieur </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> dont on cherche le nombre d'EcoAgent superieur </td></tr>
   </table>
 </dl>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>un entier superieur ou egal a 0 </dd></dl>
@@ -394,7 +396,7 @@ Methode qui retourne le nombre d'EcoAgent au dessus de l'EcoAgent avec l'id spec
 <p>
 Resolution du probleme par eco-resolution. 
 <p>
-Methode qui permet de lancer la resolution du probleme par eco-resolution 
+Methode qui permet de realiser une etape de la resolution du probleme par eco-resolution 
 <p>Implemented in <a class="el" href="classPlateformeMondeDesCubes.html#c7be18c8d02e2743e884545828cfabed">PlateformeMondeDesCubes</a>.</p>
 
 </div>
@@ -415,10 +417,10 @@ Methode qui permet de lancer la resolution du probleme par eco-resolution
 <div class="memdoc">
 
 <p>
-Methode qui verifie si tous les eco-agents sont satisfaits. 
+Methode qui verifie si tous les EcoAgents sont satisfaits i.e. si la resolution est terminee. 
 <p>
-Methode qui verifie si tous les eco-agents sont satisfaits. Elle permet d'arreter la resolution.<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si tous les eco-agents sont satisfaits, false sinon </dd></dl>
+Methode qui verifie si tous les eco-agents sont satisfaits. Elle permet de determiner quand la resolution est terminee.<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>true si tous les EcoAgents sont satisfaits, false sinon </dd></dl>
 
 </div>
 </div><p>
@@ -440,7 +442,7 @@ Methode qui verifie si tous les eco-agents sont satisfaits. Elle permet d'arrete
 <p>
 Verification du respect des regles apres l'initialisation de la plateforme. 
 <p>
-Methode qui permet de verifier l'ensemble des regles apres l'initialisation de la plateforme<p>
+Methode qui permet de verifier l'ensemble des regles de la plateforme.<p>
 <dl class="return" compact><dt><b>Returns:</b></dt><dd>true si toutes les regles sont verifiees, false sinon </dd></dl>
 
 </div>
@@ -479,7 +481,7 @@ Liste des regles a verifier avant de lancer la resolution
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>trunk/include/<a class="el" href="plateformeEcoResolution_8hpp.html">plateformeEcoResolution.hpp</a><li>trunk/src/plateformeEcoResolution.cpp</ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Apr 27 20:16:17 2009 for Monde des cubes by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu May 7 22:38:33 2009 for Monde des cubes by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
 </body>

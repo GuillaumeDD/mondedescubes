@@ -50,41 +50,43 @@ Collaboration diagram for Cube:</div>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c81ac3b8da58ba8463d72e3a0433bafa"></a><!-- doxytag: member="Cube::rechercherFuite" ref="c81ac3b8da58ba8463d72e3a0433bafa" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#c81ac3b8da58ba8463d72e3a0433bafa">rechercherFuite</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il cherche a fuir. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il cherche a fuir Le comportement de recherche de fuite est le suivant : le cube determine s'il a un geneur (un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> au dessus de lui ou au dessus de sa position finale). S'il possede un geneur, il l'agresse, sinon il fuit. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="10f69d54f313f48ac0c8468628ac6902"></a><!-- doxytag: member="Cube::rechercherSatisfaction" ref="10f69d54f313f48ac0c8468628ac6902" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#10f69d54f313f48ac0c8468628ac6902">rechercherSatisfaction</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il cherche a se satisfaire. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il cherche a se satisfaire Le comportement de recherche de satisfaction est le suivant : le cube determine s'il a un geneur (un <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> au dessus de lui ou au dessus de sa position finale). S'il possede un geneur, il l'agresse, sinon il se satisfait. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#85556598281efcfa925dd4ef4c8acba5">agresser</a> (<a class="el" href="classEcoAgent.html">EcoAgent</a> &amp;a)</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees lorsque le cube agresse un autre eco-agent.  <a href="#85556598281efcfa925dd4ef4c8acba5"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="a9af44bff02fb06ac5be83f4c041fe57"></a><!-- doxytag: member="Cube::estAgresse" ref="a9af44bff02fb06ac5be83f4c041fe57" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#a9af44bff02fb06ac5be83f4c041fe57">estAgresse</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il est agressee. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il est agressee Lorsque le cube est agresse, il passe son Etat en RECHERCHEFUITE. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="ce1011f5a33ce211d5ca44e029f59224"></a><!-- doxytag: member="Cube::faireFuite" ref="ce1011f5a33ce211d5ca44e029f59224" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#ce1011f5a33ce211d5ca44e029f59224">faireFuite</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il fuit. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il fuit Si le cube est agresse par le cube qui est sa position finale ou alors que sa position finale n'est pas satisfaite alors le cube fuit sur la table. Sinon le cube fuit en allant directement sur le cube qui est sa position finale. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1fec2199edab8e6cfdb3685256d2cdec"></a><!-- doxytag: member="Cube::faireSatisfaction" ref="1fec2199edab8e6cfdb3685256d2cdec" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#1fec2199edab8e6cfdb3685256d2cdec">faireSatisfaction</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il se satisfait. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il se satisfait Le cube se deplace sur sa position finale et passe sont Etat a SATISFAIT. <br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#6687c2575f4ce927f6b3032fb46040eb">initialiser</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialisation de l'etat du cube.  <a href="#6687c2575f4ce927f6b3032fb46040eb"></a><br></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9289a4d72b849b7f868b189f531daa62"></a><!-- doxytag: member="Cube::agir" ref="9289a4d72b849b7f868b189f531daa62" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#9289a4d72b849b7f868b189f531daa62">agir</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il agit. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations realisees par le cube lorsqu'il agit Le cube determine comment il doit agir en fonction de son Etat. S'il est en RECHERCHESATISFACTION il execute <a class="el" href="classCube.html#10f69d54f313f48ac0c8468628ac6902" title="Suite d&#39;operations realisees par le cube lorsqu&#39;il cherche a se satisfaire...">rechercherSatisfaction()</a>, s'il est en RECHERCHEFUITE il execute <a class="el" href="classCube.html#c81ac3b8da58ba8463d72e3a0433bafa" title="Suite d&#39;operations realisees par le cube lorsqu&#39;il cherche a fuir Le comportement...">rechercherFuite()</a>. <br></td></tr>
 <tr><td colspan="2"><br><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="73f4a43d36e6b84403eceeebfdf68c56"></a><!-- doxytag: member="Cube::operator&lt;&lt;" ref="73f4a43d36e6b84403eceeebfdf68c56" args="(ostream &amp;f, const Cube &amp;c)" -->
 ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCube.html#73f4a43d36e6b84403eceeebfdf68c56">operator&lt;&lt;</a> (ostream &amp;f, const <a class="el" href="classCube.html">Cube</a> &amp;c)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations permettant d'afficher des informations sur le cube. <br></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suite d'operations permettant d'afficher des informations sur le cube Affichage d'information sur le cube comme son <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a>, sont Etat et ses positions initiale et finale. <br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-Classe derivee de la classe <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> designant un <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a>. <hr><h2>Constructor &amp; Destructor Documentation</h2>
+Classe derivee de la classe <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> designant un <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a>. 
+<p>
+Un <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a> s'execute generalement dans une <a class="el" href="classPlateformeMondeDesCubes.html" title="Classe representant une plateforme d&#39;eco-resolution appliquee au monde des cubes...">PlateformeMondeDesCubes</a> afin de resoudre le probleme du monde des cubes. Un cube peut etre pose sur une <a class="el" href="classTable.html" title="Classe derivee de la classe EcoAgent designant le support sur lequel vont etre poses...">Table</a>, un autre <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a> et plus generalement un autre <a class="el" href="classEcoAgent.html" title="Classe abstraite qui permet de creer un eco-agent.">EcoAgent</a> en rapport avec le probleme du monde des cubes. Cette classe determine les comportements d'un <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a> quand il doit agir dans le cadre d'une eco-resolution (fuite, satisfaction, agression). <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="06f3d86fb63e3aad08623610aa3c17b4"></a><!-- doxytag: member="Cube::Cube" ref="06f3d86fb63e3aad08623610aa3c17b4" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -103,7 +105,7 @@ Classe derivee de la classe <a class="el" href="classEcoAgent.html" title="Class
 <p>
 Constructeur. 
 <p>
-Constructeur de la classe <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a> par defaut. Le cube recevra un <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> automatiquement genere. 
+Constructeur de la classe <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a> par defaut. Le cube recevra un <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> automatiquement genere. 
 </div>
 </div><p>
 <a class="anchor" name="4793068a114fd49b51233e8f81884189"></a><!-- doxytag: member="Cube::Cube" ref="4793068a114fd49b51233e8f81884189" args="(const EcoAgentID &amp;id)" -->
@@ -125,7 +127,7 @@ Constructeur de la classe <a class="el" href="classCube.html" title="Classe deri
 <p>
 Constructeur. 
 <p>
-Constructeur de la classe <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a> avec un <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un eco-agent.">EcoAgentID</a> specifique<p>
+Constructeur de la classe <a class="el" href="classCube.html" title="Classe derivee de la classe EcoAgent designant un Cube.">Cube</a> avec un <a class="el" href="classEcoAgentID.html" title="Identifiant unique d&#39;un EcoAgent.">EcoAgentID</a> specifique<p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>id</em>&nbsp;</td><td>: identifiant unique que l'agent se verra attribuer </td></tr>
@@ -203,7 +205,7 @@ Suite d'operations realisees lorsque le cube agresse un autre eco-agent.
 <p>
 Initialisation de l'etat du cube. 
 <p>
-Cette methode permet d'initialiser l'etat du cube en prenant en compte sa position courante et sa position finale. Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a "satisfait" 
+Cette methode permet d'initialiser l'etat du cube en prenant en compte sa position courante et sa position finale. Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a SATISFAIT. 
 <p>Implements <a class="el" href="classEcoAgent.html#f779fd214bed010d0f6b7b137fde7116">EcoAgent</a>.</p>
 
 </div>
@@ -211,7 +213,7 @@ Cette methode permet d'initialiser l'etat du cube en prenant en compte sa positi
 <hr>The documentation for this class was generated from the following files:<ul>
 <li>trunk/include/<a class="el" href="cube_8hpp.html">cube.hpp</a><li>trunk/src/cube.cpp</ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Apr 27 20:16:17 2009 for Monde des cubes by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu May 7 22:38:33 2009 for Monde des cubes by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
 </body>

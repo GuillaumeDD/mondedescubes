@@ -8,7 +8,7 @@ digraph G
   Node2 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid"];
   Node3 [label="trunk/include/aucuneSurcharge.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$aucuneSurcharge_8hpp.html",tooltip="verification de la regle : est-ce que chaque cube porte au plus un cube?"];
   Node2 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
-  Node4 [label="trunk/include/reliesATable.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reliesATable_8hpp.html",tooltip="verification de la regle : est-ce que tous les cubes sont et seront relies directement..."];
+  Node4 [label="trunk/include/reliesATable.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reliesATable_8hpp.html",tooltip="Cette regle verifie que tous les cubes sont relies a la table a l&#39;initialisation..."];
   Node1 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
   Node5 [label="trunk/include/cube.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cube_8hpp.html",tooltip="Implementation du module cube qui est un derive d&#39;un EcoAgent."];
   Node5 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid"];

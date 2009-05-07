@@ -22,36 +22,36 @@ Collaboration diagram for Cube:\subsection*{Public Member Functions}
 void \hyperlink{classCube_c81ac3b8da58ba8463d72e3a0433bafa}{rechercherFuite} ()}
 \label{classCube_c81ac3b8da58ba8463d72e3a0433bafa}
 
-\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il cherche a fuir. \item\end{CompactList}\item 
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il cherche a fuir Le comportement de recherche de fuite est le suivant : le cube determine s'il a un geneur (un \hyperlink{classEcoAgent}{EcoAgent} au dessus de lui ou au dessus de sa position finale). S'il possede un geneur, il l'agresse, sinon il fuit. \item\end{CompactList}\item 
 \hypertarget{classCube_10f69d54f313f48ac0c8468628ac6902}{
 void \hyperlink{classCube_10f69d54f313f48ac0c8468628ac6902}{rechercherSatisfaction} ()}
 \label{classCube_10f69d54f313f48ac0c8468628ac6902}
 
-\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il cherche a se satisfaire. \item\end{CompactList}\item 
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il cherche a se satisfaire Le comportement de recherche de satisfaction est le suivant : le cube determine s'il a un geneur (un \hyperlink{classEcoAgent}{EcoAgent} au dessus de lui ou au dessus de sa position finale). S'il possede un geneur, il l'agresse, sinon il se satisfait. \item\end{CompactList}\item 
 void \hyperlink{classCube_85556598281efcfa925dd4ef4c8acba5}{agresser} (\hyperlink{classEcoAgent}{EcoAgent} \&a)
 \begin{CompactList}\small\item\em Suite d'operations realisees lorsque le cube agresse un autre eco-agent. \item\end{CompactList}\item 
 \hypertarget{classCube_a9af44bff02fb06ac5be83f4c041fe57}{
 void \hyperlink{classCube_a9af44bff02fb06ac5be83f4c041fe57}{estAgresse} ()}
 \label{classCube_a9af44bff02fb06ac5be83f4c041fe57}
 
-\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il est agressee. \item\end{CompactList}\item 
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il est agressee Lorsque le cube est agresse, il passe son Etat en RECHERCHEFUITE. \item\end{CompactList}\item 
 \hypertarget{classCube_ce1011f5a33ce211d5ca44e029f59224}{
 void \hyperlink{classCube_ce1011f5a33ce211d5ca44e029f59224}{faireFuite} ()}
 \label{classCube_ce1011f5a33ce211d5ca44e029f59224}
 
-\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il fuit. \item\end{CompactList}\item 
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il fuit Si le cube est agresse par le cube qui est sa position finale ou alors que sa position finale n'est pas satisfaite alors le cube fuit sur la table. Sinon le cube fuit en allant directement sur le cube qui est sa position finale. \item\end{CompactList}\item 
 \hypertarget{classCube_1fec2199edab8e6cfdb3685256d2cdec}{
 void \hyperlink{classCube_1fec2199edab8e6cfdb3685256d2cdec}{faireSatisfaction} ()}
 \label{classCube_1fec2199edab8e6cfdb3685256d2cdec}
 
-\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il se satisfait. \item\end{CompactList}\item 
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il se satisfait Le cube se deplace sur sa position finale et passe sont Etat a SATISFAIT. \item\end{CompactList}\item 
 void \hyperlink{classCube_6687c2575f4ce927f6b3032fb46040eb}{initialiser} ()
 \begin{CompactList}\small\item\em Initialisation de l'etat du cube. \item\end{CompactList}\item 
 \hypertarget{classCube_9289a4d72b849b7f868b189f531daa62}{
 void \hyperlink{classCube_9289a4d72b849b7f868b189f531daa62}{agir} ()}
 \label{classCube_9289a4d72b849b7f868b189f531daa62}
 
-\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il agit. \item\end{CompactList}\end{CompactItemize}
+\begin{CompactList}\small\item\em Suite d'operations realisees par le cube lorsqu'il agit Le cube determine comment il doit agir en fonction de son Etat. S'il est en RECHERCHESATISFACTION il execute \hyperlink{classCube_10f69d54f313f48ac0c8468628ac6902}{rechercherSatisfaction()}, s'il est en RECHERCHEFUITE il execute \hyperlink{classCube_c81ac3b8da58ba8463d72e3a0433bafa}{rechercherFuite()}. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Friends}
 \begin{CompactItemize}
 \item 
@@ -59,11 +59,13 @@ void \hyperlink{classCube_9289a4d72b849b7f868b189f531daa62}{agir} ()}
 ostream \& \hyperlink{classCube_73f4a43d36e6b84403eceeebfdf68c56}{operator$<$$<$} (ostream \&f, const \hyperlink{classCube}{Cube} \&c)}
 \label{classCube_73f4a43d36e6b84403eceeebfdf68c56}
 
-\begin{CompactList}\small\item\em Suite d'operations permettant d'afficher des informations sur le cube. \item\end{CompactList}\end{CompactItemize}
+\begin{CompactList}\small\item\em Suite d'operations permettant d'afficher des informations sur le cube Affichage d'information sur le cube comme son \hyperlink{classEcoAgentID}{EcoAgentID}, sont Etat et ses positions initiale et finale. \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Detailed Description}
 Classe derivee de la classe \hyperlink{classEcoAgent}{EcoAgent} designant un \hyperlink{classCube}{Cube}. 
+
+Un \hyperlink{classCube}{Cube} s'execute generalement dans une \hyperlink{classPlateformeMondeDesCubes}{PlateformeMondeDesCubes} afin de resoudre le probleme du monde des cubes. Un cube peut etre pose sur une \hyperlink{classTable}{Table}, un autre \hyperlink{classCube}{Cube} et plus generalement un autre \hyperlink{classEcoAgent}{EcoAgent} en rapport avec le probleme du monde des cubes. Cette classe determine les comportements d'un \hyperlink{classCube}{Cube} quand il doit agir dans le cadre d'une eco-resolution (fuite, satisfaction, agression). 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classCube_06f3d86fb63e3aad08623610aa3c17b4}{
@@ -128,7 +130,7 @@ Implements \hyperlink{classEcoAgent_867f0c274eb3ed0b61cb1fe7baa67edd}{EcoAgent}.
 
 Initialisation de l'etat du cube. 
 
-Cette methode permet d'initialiser l'etat du cube en prenant en compte sa position courante et sa position finale. Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a \char`\"{}satisfait\char`\"{} 
+Cette methode permet d'initialiser l'etat du cube en prenant en compte sa position courante et sa position finale. Par exemple, si la position courante correspond a la position finale, cette methode initialisera l'Etat a SATISFAIT. 
 
 Implements \hyperlink{classEcoAgent_f779fd214bed010d0f6b7b137fde7116}{EcoAgent}.
 
