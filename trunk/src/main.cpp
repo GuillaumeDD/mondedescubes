@@ -32,7 +32,7 @@ int main(int argc, char** argv){
       cout << *p->obtenirCubePrioritaire()<< endl;
       cout << "------------------------"<< endl << endl;
       p->resoudre();
-      cin >> temp;
+//      cin >> temp;
     }
     cout << "SOLUTION FINALE :" << endl;
     cout << p->toString()<<endl;

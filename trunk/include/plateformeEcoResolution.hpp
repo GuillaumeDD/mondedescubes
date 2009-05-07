@@ -16,7 +16,7 @@
 #include"ecoAgent.hpp"
 #include"regle.hpp"
 #include"compareEcoAgentID.hpp"
-#include "ExceptionEcoAgentDejaEnregistre.hpp"
+#include "Exceptions.hpp"
 using namespace std;
 /*! \class PlateformeEcoResolution
  * \brief classe representant une plateforme d'eco-resolution abstraite
