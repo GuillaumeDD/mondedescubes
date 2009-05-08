@@ -162,11 +162,11 @@ public:
   int distanceFinaleATable(const EcoAgentID& c) const;
 
   /*!
-   * \brief Ajout d'un eco-agent
+   * \brief Ajout d'un EcoAgent en verifiant que l'EcoAgentID est different de celui de la Table
    *
    * Methode qui permet d'ajouter un eco-agent dans la plateforme tout en verifiant que l'identifiant de celui-ci est different de l'identifiant de la table
    * \throw ExceptionEcoAgentDejaEnregistre : lancee lorsqu'on enregistre un EcoAgent deja enregistre, autrement dit lorsqu'un EcoAgent avec le meme EcoAgentID a deja ete ajoute.
-   * \param ea : l'eco-agent a ajouter
+   * \param ea : l'EcoAgent a ajouter
    *
    */
   void addEcoAgent(EcoAgent& ea);
@@ -209,17 +209,6 @@ private:
    *
    */
   ~PlateformeMondeDesCubes();
-      
-  /*!
-   *\brief Verification de la coherence du nombre de cubes (s'il est bien positif)
-   *
-   * Methode qui permet de verifier si le nombre des cubes est bien strictement positif
-   *
-   * \param nb : le nombre de cubes a verifier
-   *\return true si le nombre des cubes est strictement positif, false sinon
-   *
-   */
-  bool verifierNombreDeCubes(int nb);
       
   Table* table; /*!< Table : Support de tous les cubes dans la plateforme d'eco-resolution du monde des cubes */
 };

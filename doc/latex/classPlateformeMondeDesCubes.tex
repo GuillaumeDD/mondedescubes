@@ -37,7 +37,7 @@ int \hyperlink{classPlateformeMondeDesCubes_4a5d7a96766cf9a3e1acae5b3d8263fa}{di
 int \hyperlink{classPlateformeMondeDesCubes_7f694f86cf4a9502cf6bba2d6eb5a371}{distanceFinaleATable} (const \hyperlink{classEcoAgentID}{EcoAgentID} \&c) const 
 \begin{CompactList}\small\item\em Determination du nombre d'EcoAgent separant de la table en position finale. \item\end{CompactList}\item 
 void \hyperlink{classPlateformeMondeDesCubes_6fb5b9ececb0e7893b2c7ff5531cb3b1}{addEcoAgent} (\hyperlink{classEcoAgent}{EcoAgent} \&ea)
-\begin{CompactList}\small\item\em Ajout d'un eco-agent. \item\end{CompactList}\item 
+\begin{CompactList}\small\item\em Ajout d'un \hyperlink{classEcoAgent}{EcoAgent} en verifiant que l'EcoAgentID est different de celui de la \hyperlink{classTable}{Table}. \item\end{CompactList}\item 
 string \hyperlink{classPlateformeMondeDesCubes_a834747e527529fd8c4bfc61bee6c20f}{toString} () const 
 \begin{CompactList}\small\item\em Methode qui permet d'obtenir un affichage minimal de l'agencement des cubes. \item\end{CompactList}\end{CompactItemize}
 \subsection*{Friends}
@@ -65,7 +65,7 @@ La classe gere les fonctionnalites de la plateforme d'eco-resolution du monde de
 \label{classPlateformeMondeDesCubes_6fb5b9ececb0e7893b2c7ff5531cb3b1}
 
 
-Ajout d'un eco-agent. 
+Ajout d'un \hyperlink{classEcoAgent}{EcoAgent} en verifiant que l'EcoAgentID est different de celui de la \hyperlink{classTable}{Table}. 
 
 Methode qui permet d'ajouter un eco-agent dans la plateforme tout en verifiant que l'identifiant de celui-ci est different de l'identifiant de la table \begin{Desc}
 \item[Exceptions:]
@@ -75,7 +75,7 @@ Methode qui permet d'ajouter un eco-agent dans la plateforme tout en verifiant q
 \begin{Desc}
 \item[Parameters:]
 \begin{description}
-\item[{\em ea}]: l'eco-agent a ajouter \end{description}
+\item[{\em ea}]: l'EcoAgent a ajouter \end{description}
 \end{Desc}
 
 
