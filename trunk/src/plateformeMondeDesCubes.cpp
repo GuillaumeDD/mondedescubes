@@ -74,14 +74,6 @@ EcoAgentID* PlateformeMondeDesCubes::getTableID() const{
   return table->getId();
 }
 
-bool PlateformeMondeDesCubes::verifierNombreDeCubes(int nb){
-  bool result = true;
-  if(nb<=0){
-    result = false;
-  }
-  return result;
-}
-
 EcoAgent* PlateformeMondeDesCubes::obtenirGeneur(const EcoAgent& currentCube){
   EcoAgent* result = NULL;
   EcoAgentID* id = NULL;
