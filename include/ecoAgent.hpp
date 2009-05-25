@@ -39,7 +39,7 @@ public:
    * \brief Destructeur de la classe EcoAgent
    *
    */
-  ~EcoAgent();
+  virtual ~EcoAgent();
 	
   /*!
    * \brief Obtention de l'Etat
