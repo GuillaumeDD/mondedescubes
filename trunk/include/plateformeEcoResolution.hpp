@@ -42,7 +42,7 @@ public:
    * Destructeur de la classe abstraite PlateformeEcoResolution
    *
    */
-  ~PlateformeEcoResolution();
+  virtual ~PlateformeEcoResolution();
       
   /*!
    * \brief Obtention d'un EcoAgent
