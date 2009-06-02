@@ -20,6 +20,12 @@ using namespace std;
   */
   class Regle{
     public:
+    /*!
+     * \brief Destructeur de la classe abstraite Regle
+     *
+     */
+    virtual ~Regle();
+
       /*!
       * \brief Suite d'operations realisees pour initialiser la regle 
       *

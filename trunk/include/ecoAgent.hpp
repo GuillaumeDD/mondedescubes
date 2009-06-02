@@ -40,6 +40,17 @@ public:
    *
    */
   virtual ~EcoAgent();
+
+  /*!
+   * \brief Constructeur par recopie
+   *
+   */
+  EcoAgent(const EcoAgent&);
+
+  /*!
+   * \brief Surcharge de l'affectation
+   */
+  EcoAgent& operator=(const EcoAgent&);
 	
   /*!
    * \brief Obtention de l'Etat

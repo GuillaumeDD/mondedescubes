@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.11.11)  8 MAY 2009 13:17
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2008.11.11)  2 JUN 2009 14:02
 entering extended mode
  %&-line parsing enabled.
 **refman.tex
@@ -1071,10 +1071,10 @@ Chapter 5.
 (./regle_8hpp.aux) (./reliesATable_8hpp.aux) (./singleton_8hpp.aux)
 (./table_8hpp.aux)) ) 
 Here is how much of TeX's memory you used:
- 5687 strings out of 256216
- 84028 string characters out of 1917071
- 133885 words of memory out of 1500000
- 8294 multiletter control sequences out of 10000+200000
+ 5693 strings out of 256216
+ 84304 string characters out of 1917071
+ 135040 words of memory out of 1500000
+ 8297 multiletter control sequences out of 10000+200000
  42861 words of font info for 47 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  38i,12n,43p,603b,519s stack positions out of 5000i,500n,6000p,200000b,15000s
@@ -1087,9 +1087,9 @@ are/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/urw/c
 ourier/ucrr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texmf/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on refman.pdf (66 pages, 420216 bytes).
+Output written on refman.pdf (66 pages, 423026 bytes).
 PDF statistics:
- 1924 PDF objects out of 2073 (max. 8388607)
- 377 named destinations out of 1000 (max. 131072)
+ 1935 PDF objects out of 2073 (max. 8388607)
+ 380 named destinations out of 1000 (max. 131072)
  1257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -47,7 +47,7 @@ public:
    * Destructeur de la classe EcoAgentID
    *
    */
-  ~EcoAgentID();
+  virtual ~EcoAgentID();
       
   /*!
    *  \brief Obtention de l'identifiant
