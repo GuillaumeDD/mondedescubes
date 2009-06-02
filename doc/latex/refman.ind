@@ -20,7 +20,7 @@
     \subitem {PlateformeEcoResolution}, \hyperpage{28}
   \item {agresser}
     \subitem {Cube}, \hyperpage{11}
-    \subitem {EcoAgent}, \hyperpage{14}
+    \subitem {EcoAgent}, \hyperpage{15}
     \subitem {Table}, \hyperpage{42}
   \item {AucuneSurcharge}, \hyperpage{7}
     \subitem {pasSurcharges}, \hyperpage{7}
@@ -46,19 +46,19 @@
   \indexspace
 
   \item {EcoAgent}, \hyperpage{13}
-    \subitem {agresser}, \hyperpage{14}
+    \subitem {agresser}, \hyperpage{15}
     \subitem {EcoAgent}, \hyperpage{14}
     \subitem {getEtat}, \hyperpage{15}
     \subitem {getId}, \hyperpage{15}
     \subitem {getPositionCourante}, \hyperpage{15}
     \subitem {getPositionFinale}, \hyperpage{15}
     \subitem {getVisite}, \hyperpage{15}
-    \subitem {initialiser}, \hyperpage{15}
+    \subitem {initialiser}, \hyperpage{16}
     \subitem {setEtat}, \hyperpage{16}
     \subitem {setId}, \hyperpage{16}
     \subitem {setPositionCourante}, \hyperpage{16}
     \subitem {setPositionFinale}, \hyperpage{16}
-    \subitem {setVisite}, \hyperpage{16}
+    \subitem {setVisite}, \hyperpage{17}
   \item {EcoAgentID}, \hyperpage{18}
     \subitem {$\sim $EcoAgentID}, \hyperpage{19}
     \subitem {EcoAgentID}, \hyperpage{19}
@@ -107,7 +107,7 @@
 
   \item {initialiser}
     \subitem {Cube}, \hyperpage{12}
-    \subitem {EcoAgent}, \hyperpage{15}
+    \subitem {EcoAgent}, \hyperpage{16}
     \subitem {PlateformeEcoResolution}, \hyperpage{30}
     \subitem {PlateformeMondeDesCubes}, \hyperpage{34}
 
@@ -201,7 +201,7 @@
   \item {setTableIdentifiant}
     \subitem {PlateformeMondeDesCubes}, \hyperpage{36}
   \item {setVisite}
-    \subitem {EcoAgent}, \hyperpage{16}
+    \subitem {EcoAgent}, \hyperpage{17}
   \item {Singleton}, \hyperpage{39}
     \subitem {$\sim $Singleton}, \hyperpage{39}
     \subitem {getInstance}, \hyperpage{40}

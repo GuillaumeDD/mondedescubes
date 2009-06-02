@@ -20,8 +20,8 @@
 \indexentry{EcoAgent@{EcoAgent}|hyperpage}{13}
 \indexentry{EcoAgent@{EcoAgent}!EcoAgent@{EcoAgent}|hyperpage}{14}
 \indexentry{EcoAgent@{EcoAgent}!EcoAgent@{EcoAgent}|hyperpage}{14}
-\indexentry{EcoAgent@{EcoAgent}!agresser@{agresser}|hyperpage}{14}
-\indexentry{agresser@{agresser}!EcoAgent@{EcoAgent}|hyperpage}{14}
+\indexentry{EcoAgent@{EcoAgent}!agresser@{agresser}|hyperpage}{15}
+\indexentry{agresser@{agresser}!EcoAgent@{EcoAgent}|hyperpage}{15}
 \indexentry{EcoAgent@{EcoAgent}!getEtat@{getEtat}|hyperpage}{15}
 \indexentry{getEtat@{getEtat}!EcoAgent@{EcoAgent}|hyperpage}{15}
 \indexentry{EcoAgent@{EcoAgent}!getId@{getId}|hyperpage}{15}
@@ -32,8 +32,8 @@
 \indexentry{getPositionFinale@{getPositionFinale}!EcoAgent@{EcoAgent}|hyperpage}{15}
 \indexentry{EcoAgent@{EcoAgent}!getVisite@{getVisite}|hyperpage}{15}
 \indexentry{getVisite@{getVisite}!EcoAgent@{EcoAgent}|hyperpage}{15}
-\indexentry{EcoAgent@{EcoAgent}!initialiser@{initialiser}|hyperpage}{15}
-\indexentry{initialiser@{initialiser}!EcoAgent@{EcoAgent}|hyperpage}{15}
+\indexentry{EcoAgent@{EcoAgent}!initialiser@{initialiser}|hyperpage}{16}
+\indexentry{initialiser@{initialiser}!EcoAgent@{EcoAgent}|hyperpage}{16}
 \indexentry{EcoAgent@{EcoAgent}!setEtat@{setEtat}|hyperpage}{16}
 \indexentry{setEtat@{setEtat}!EcoAgent@{EcoAgent}|hyperpage}{16}
 \indexentry{EcoAgent@{EcoAgent}!setId@{setId}|hyperpage}{16}
@@ -42,8 +42,8 @@
 \indexentry{setPositionCourante@{setPositionCourante}!EcoAgent@{EcoAgent}|hyperpage}{16}
 \indexentry{EcoAgent@{EcoAgent}!setPositionFinale@{setPositionFinale}|hyperpage}{16}
 \indexentry{setPositionFinale@{setPositionFinale}!EcoAgent@{EcoAgent}|hyperpage}{16}
-\indexentry{EcoAgent@{EcoAgent}!setVisite@{setVisite}|hyperpage}{16}
-\indexentry{setVisite@{setVisite}!EcoAgent@{EcoAgent}|hyperpage}{16}
+\indexentry{EcoAgent@{EcoAgent}!setVisite@{setVisite}|hyperpage}{17}
+\indexentry{setVisite@{setVisite}!EcoAgent@{EcoAgent}|hyperpage}{17}
 \indexentry{EcoAgentID@{EcoAgentID}|hyperpage}{18}
 \indexentry{EcoAgentID@{EcoAgentID}!EcoAgentID@{EcoAgentID}|hyperpage}{19}
 \indexentry{EcoAgentID@{EcoAgentID}!EcoAgentID@{EcoAgentID}|hyperpage}{19}

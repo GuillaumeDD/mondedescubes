@@ -59,9 +59,22 @@ void ecoAgentTest::doTest(void)
   ea5->setPositionFinale(*id5);
   CPPUNIT_ASSERT(ea5->getPositionFinale()==id5 && ea5->getPositionFinale()!=id6 && id6==NULL);
 
-
-	
-	
-
+  //test de recopie et d'affectation
+  Cube a,b;
+  EcoAgentID i;
+  CPPUNIT_ASSERT(*(a.getId()) != *(b.getId()));
+  i = *(a.getId());
+  a = a;
+  CPPUNIT_ASSERT(*(a.getId()) == i);
+  a = b;
+  CPPUNIT_ASSERT(*(a.getId()) == *(b.getId()));
+  CPPUNIT_ASSERT(a.getId() != b.getId());
+  CPPUNIT_ASSERT(a.getPositionCourante() == b.getPositionCourante());
+  CPPUNIT_ASSERT(a.getPositionFinale() == b.getPositionFinale());
+  const Cube c = a;
+  CPPUNIT_ASSERT(*(a.getId()) == *(c.getId()));
+  CPPUNIT_ASSERT(a.getId() != c.getId());
+  CPPUNIT_ASSERT(a.getPositionCourante() == c.getPositionCourante());
+  CPPUNIT_ASSERT(a.getPositionFinale() == c.getPositionFinale());
 }
 

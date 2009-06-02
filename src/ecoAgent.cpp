@@ -9,9 +9,27 @@ EcoAgent::EcoAgent(){
 }
 
 EcoAgent::~EcoAgent(){
-  if( id != NULL){
+  if(id != NULL){
     delete id;
   }
+}
+
+EcoAgent::EcoAgent(const EcoAgent& e){
+  id = new EcoAgentID(*(e.getId()));
+  positionCourante =  e.getPositionCourante();
+  positionFinale =  e.getPositionFinale();
+  etat = e.getEtat();
+}
+
+EcoAgent& EcoAgent::operator=(const EcoAgent& e){
+  if(this != &e){
+    delete id;
+    id = new EcoAgentID(*(e.getId()));
+    positionCourante = e.getPositionCourante();
+    positionFinale = e.getPositionFinale();
+    etat = e.getEtat();
+  }
+  return *this;
 }
 
 Etat EcoAgent::getEtat() const{
