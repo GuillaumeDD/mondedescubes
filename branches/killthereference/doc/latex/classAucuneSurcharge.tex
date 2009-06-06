@@ -1,0 +1,87 @@
+\hypertarget{classAucuneSurcharge}{
+\section{AucuneSurcharge Class Reference}
+\label{classAucuneSurcharge}\index{AucuneSurcharge@{AucuneSurcharge}}
+}
+Cette classe contient les fonctions testant si les cubes ne portent pas plus de un cube.  
+
+
+{\tt \#include $<$aucuneSurcharge.hpp$>$}
+
+Inherits \hyperlink{classRegle}{Regle}.
+
+Collaboration diagram for AucuneSurcharge:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classAucuneSurcharge_691d3e7997769c020f40d708309f0f1d}{
+void \hyperlink{classAucuneSurcharge_691d3e7997769c020f40d708309f0f1d}{initialiser} ()}
+\label{classAucuneSurcharge_691d3e7997769c020f40d708309f0f1d}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees pour initialiser la regle. \item\end{CompactList}\item 
+bool \hyperlink{classAucuneSurcharge_d96084db10b49f9c48f6cb005248f7c4}{verifier} ()
+\begin{CompactList}\small\item\em Verification de la regle generale : pour l'ensemble des cubes, sont-ils et seront-ils surcharges? \item\end{CompactList}\item 
+bool \hyperlink{classAucuneSurcharge_985f14cd31785475866dc1081a41e2e1}{pasSurcharges} ()
+\begin{CompactList}\small\item\em Verification d'un element de la regle generale: les cubes sont-ils surcharges? \item\end{CompactList}\item 
+bool \hyperlink{classAucuneSurcharge_a866df9a186c7b922890cf00af2b58e2}{serontPasSurcharges} ()
+\begin{CompactList}\small\item\em Verification d'un element de la regle generale: les cubes seront-ils surcharges? \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Cette classe contient les fonctions testant si les cubes ne portent pas plus de un cube. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAucuneSurcharge_985f14cd31785475866dc1081a41e2e1}{
+\index{AucuneSurcharge@{AucuneSurcharge}!pasSurcharges@{pasSurcharges}}
+\index{pasSurcharges@{pasSurcharges}!AucuneSurcharge@{AucuneSurcharge}}
+\subsubsection[{pasSurcharges}]{\setlength{\rightskip}{0pt plus 5cm}bool AucuneSurcharge::pasSurcharges ()}}
+\label{classAucuneSurcharge_985f14cd31785475866dc1081a41e2e1}
+
+
+Verification d'un element de la regle generale: les cubes sont-ils surcharges? 
+
+\begin{Desc}
+\item[Returns:]true si le cas est verifiee, une exception sinon \end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em \hyperlink{classExceptionUnCubeEstSurcharge}{ExceptionUnCubeEstSurcharge}}]: lancee si au moins un cube est surcharge a l'etat initial de la resolution \end{description}
+\end{Desc}
+\hypertarget{classAucuneSurcharge_a866df9a186c7b922890cf00af2b58e2}{
+\index{AucuneSurcharge@{AucuneSurcharge}!serontPasSurcharges@{serontPasSurcharges}}
+\index{serontPasSurcharges@{serontPasSurcharges}!AucuneSurcharge@{AucuneSurcharge}}
+\subsubsection[{serontPasSurcharges}]{\setlength{\rightskip}{0pt plus 5cm}bool AucuneSurcharge::serontPasSurcharges ()}}
+\label{classAucuneSurcharge_a866df9a186c7b922890cf00af2b58e2}
+
+
+Verification d'un element de la regle generale: les cubes seront-ils surcharges? 
+
+\begin{Desc}
+\item[Returns:]true si le cas est verifiee, une exception sinon \end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em \hyperlink{classExceptionUnCubeSeraSurcharge}{ExceptionUnCubeSeraSurcharge}}]: lancee si au moins un cube est surcharge a l'etat final de la resolution \end{description}
+\end{Desc}
+\hypertarget{classAucuneSurcharge_d96084db10b49f9c48f6cb005248f7c4}{
+\index{AucuneSurcharge@{AucuneSurcharge}!verifier@{verifier}}
+\index{verifier@{verifier}!AucuneSurcharge@{AucuneSurcharge}}
+\subsubsection[{verifier}]{\setlength{\rightskip}{0pt plus 5cm}bool AucuneSurcharge::verifier ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classAucuneSurcharge_d96084db10b49f9c48f6cb005248f7c4}
+
+
+Verification de la regle generale : pour l'ensemble des cubes, sont-ils et seront-ils surcharges? 
+
+\begin{Desc}
+\item[Returns:]true si la regle est verifiee, une exception sinon\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em \hyperlink{classExceptionUnCubeEstSurcharge}{ExceptionUnCubeEstSurcharge}}]: lancee si au moins un cube est surcharge a l'etat initial de la resolution \item[{\em \hyperlink{classExceptionUnCubeSeraSurcharge}{ExceptionUnCubeSeraSurcharge}}]: lancee si au moins un cube est surcharge a l'etat final de la resolution \end{description}
+\end{Desc}
+
+
+Implements \hyperlink{classRegle_4b3de9a64ec0e948e9177026afcc073d}{Regle}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+trunk/include/\hyperlink{aucuneSurcharge_8hpp}{aucuneSurcharge.hpp}\item 
+trunk/src/aucuneSurcharge.cpp\end{CompactItemize}

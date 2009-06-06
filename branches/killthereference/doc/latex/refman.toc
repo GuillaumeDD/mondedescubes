@@ -1,0 +1,155 @@
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}AucuneSurcharge Class Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Member Function Documentation}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}pasSurcharges}{7}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}serontPasSurcharges}{8}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}verifier}{8}{subsubsection.4.1.2.3}
+\contentsline {section}{\numberline {4.2}compareEcoAgentID Class Reference}{9}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{9}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Cube Class Reference}{10}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{11}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Cube}{11}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Cube}{11}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}$\sim $Cube}{11}{subsubsection.4.3.2.3}
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{11}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}agresser}{11}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.2}initialiser}{12}{subsubsection.4.3.3.2}
+\contentsline {section}{\numberline {4.4}EcoAgent Class Reference}{13}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{14}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{14}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}EcoAgent}{14}{subsubsection.4.4.2.1}
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{14}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}agresser}{14}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}getEtat}{15}{subsubsection.4.4.3.2}
+\contentsline {subsubsection}{\numberline {4.4.3.3}getId}{15}{subsubsection.4.4.3.3}
+\contentsline {subsubsection}{\numberline {4.4.3.4}getPositionCourante}{15}{subsubsection.4.4.3.4}
+\contentsline {subsubsection}{\numberline {4.4.3.5}getPositionFinale}{15}{subsubsection.4.4.3.5}
+\contentsline {subsubsection}{\numberline {4.4.3.6}getVisite}{15}{subsubsection.4.4.3.6}
+\contentsline {subsubsection}{\numberline {4.4.3.7}initialiser}{16}{subsubsection.4.4.3.7}
+\contentsline {subsubsection}{\numberline {4.4.3.8}setEtat}{16}{subsubsection.4.4.3.8}
+\contentsline {subsubsection}{\numberline {4.4.3.9}setId}{16}{subsubsection.4.4.3.9}
+\contentsline {subsubsection}{\numberline {4.4.3.10}setPositionCourante}{16}{subsubsection.4.4.3.10}
+\contentsline {subsubsection}{\numberline {4.4.3.11}setPositionFinale}{16}{subsubsection.4.4.3.11}
+\contentsline {subsubsection}{\numberline {4.4.3.12}setVisite}{17}{subsubsection.4.4.3.12}
+\contentsline {section}{\numberline {4.5}EcoAgentID Class Reference}{18}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{18}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{19}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}EcoAgentID}{19}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}EcoAgentID}{19}{subsubsection.4.5.2.2}
+\contentsline {subsubsection}{\numberline {4.5.2.3}$\sim $EcoAgentID}{19}{subsubsection.4.5.2.3}
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{19}{subsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.3.1}getId}{19}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}operator!=}{19}{subsubsection.4.5.3.2}
+\contentsline {subsubsection}{\numberline {4.5.3.3}operator$<$}{19}{subsubsection.4.5.3.3}
+\contentsline {subsubsection}{\numberline {4.5.3.4}operator==}{19}{subsubsection.4.5.3.4}
+\contentsline {section}{\numberline {4.6}ExceptionCubeNonRelie Class Reference}{20}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{20}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}ExceptionCubeSeraNonRelie Class Reference}{21}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{21}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.8}ExceptionEcoAgentDejaEnregistre Class Reference}{22}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{22}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}ExceptionIlExisteraUneBoucle Class Reference}{23}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{23}{subsection.4.9.1}
+\contentsline {section}{\numberline {4.10}ExceptionIlExisteUneBoucle Class Reference}{24}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{24}{subsection.4.10.1}
+\contentsline {section}{\numberline {4.11}ExceptionUnCubeEstSurcharge Class Reference}{25}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{25}{subsection.4.11.1}
+\contentsline {section}{\numberline {4.12}ExceptionUnCubeSeraSurcharge Class Reference}{26}{section.4.12}
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{26}{subsection.4.12.1}
+\contentsline {section}{\numberline {4.13}PlateformeEcoResolution Class Reference}{27}{section.4.13}
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{28}{subsection.4.13.1}
+\contentsline {subsection}{\numberline {4.13.2}Constructor \& Destructor Documentation}{28}{subsection.4.13.2}
+\contentsline {subsubsection}{\numberline {4.13.2.1}PlateformeEcoResolution}{28}{subsubsection.4.13.2.1}
+\contentsline {subsubsection}{\numberline {4.13.2.2}$\sim $PlateformeEcoResolution}{28}{subsubsection.4.13.2.2}
+\contentsline {subsection}{\numberline {4.13.3}Member Function Documentation}{28}{subsection.4.13.3}
+\contentsline {subsubsection}{\numberline {4.13.3.1}addEcoAgent}{28}{subsubsection.4.13.3.1}
+\contentsline {subsubsection}{\numberline {4.13.3.2}addRegle}{28}{subsubsection.4.13.3.2}
+\contentsline {subsubsection}{\numberline {4.13.3.3}getEcoAgent}{29}{subsubsection.4.13.3.3}
+\contentsline {subsubsection}{\numberline {4.13.3.4}getEcoAgentAuDessus}{29}{subsubsection.4.13.3.4}
+\contentsline {subsubsection}{\numberline {4.13.3.5}getEcoAgents}{29}{subsubsection.4.13.3.5}
+\contentsline {subsubsection}{\numberline {4.13.3.6}getEcoAgents}{29}{subsubsection.4.13.3.6}
+\contentsline {subsubsection}{\numberline {4.13.3.7}getRegles}{30}{subsubsection.4.13.3.7}
+\contentsline {subsubsection}{\numberline {4.13.3.8}initialiser}{30}{subsubsection.4.13.3.8}
+\contentsline {subsubsection}{\numberline {4.13.3.9}nombreEcoAgentAuDessus}{30}{subsubsection.4.13.3.9}
+\contentsline {subsubsection}{\numberline {4.13.3.10}resoudre}{30}{subsubsection.4.13.3.10}
+\contentsline {subsubsection}{\numberline {4.13.3.11}sontSatisfaits}{30}{subsubsection.4.13.3.11}
+\contentsline {subsubsection}{\numberline {4.13.3.12}verifierCoherence}{31}{subsubsection.4.13.3.12}
+\contentsline {subsection}{\numberline {4.13.4}Member Data Documentation}{31}{subsection.4.13.4}
+\contentsline {subsubsection}{\numberline {4.13.4.1}ecoagents}{31}{subsubsection.4.13.4.1}
+\contentsline {subsubsection}{\numberline {4.13.4.2}regles}{31}{subsubsection.4.13.4.2}
+\contentsline {section}{\numberline {4.14}PlateformeMondeDesCubes Class Reference}{32}{section.4.14}
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{33}{subsection.4.14.1}
+\contentsline {subsection}{\numberline {4.14.2}Member Function Documentation}{33}{subsection.4.14.2}
+\contentsline {subsubsection}{\numberline {4.14.2.1}addEcoAgent}{33}{subsubsection.4.14.2.1}
+\contentsline {subsubsection}{\numberline {4.14.2.2}distanceATable}{33}{subsubsection.4.14.2.2}
+\contentsline {subsubsection}{\numberline {4.14.2.3}distanceFinaleATable}{34}{subsubsection.4.14.2.3}
+\contentsline {subsubsection}{\numberline {4.14.2.4}getNombreDeCubes}{34}{subsubsection.4.14.2.4}
+\contentsline {subsubsection}{\numberline {4.14.2.5}getTableID}{34}{subsubsection.4.14.2.5}
+\contentsline {subsubsection}{\numberline {4.14.2.6}initialiser}{34}{subsubsection.4.14.2.6}
+\contentsline {subsubsection}{\numberline {4.14.2.7}obtenirCubePrioritaire}{34}{subsubsection.4.14.2.7}
+\contentsline {subsubsection}{\numberline {4.14.2.8}obtenirGeneur}{35}{subsubsection.4.14.2.8}
+\contentsline {subsubsection}{\numberline {4.14.2.9}resoudre}{35}{subsubsection.4.14.2.9}
+\contentsline {subsubsection}{\numberline {4.14.2.10}setCubeID}{35}{subsubsection.4.14.2.10}
+\contentsline {subsubsection}{\numberline {4.14.2.11}setPositionCourante}{35}{subsubsection.4.14.2.11}
+\contentsline {subsubsection}{\numberline {4.14.2.12}setPositionFinale}{35}{subsubsection.4.14.2.12}
+\contentsline {subsubsection}{\numberline {4.14.2.13}setTableIdentifiant}{36}{subsubsection.4.14.2.13}
+\contentsline {subsubsection}{\numberline {4.14.2.14}toString}{36}{subsubsection.4.14.2.14}
+\contentsline {subsection}{\numberline {4.14.3}Friends And Related Function Documentation}{36}{subsection.4.14.3}
+\contentsline {subsubsection}{\numberline {4.14.3.1}operator$<$$<$}{36}{subsubsection.4.14.3.1}
+\contentsline {section}{\numberline {4.15}Regle Class Reference}{37}{section.4.15}
+\contentsline {subsection}{\numberline {4.15.1}Detailed Description}{37}{subsection.4.15.1}
+\contentsline {subsection}{\numberline {4.15.2}Member Function Documentation}{37}{subsection.4.15.2}
+\contentsline {subsubsection}{\numberline {4.15.2.1}verifier}{37}{subsubsection.4.15.2.1}
+\contentsline {section}{\numberline {4.16}reliesATable Class Reference}{38}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{38}{subsection.4.16.1}
+\contentsline {section}{\numberline {4.17}Singleton$<$ T $>$ Class Template Reference}{39}{section.4.17}
+\contentsline {subsection}{\numberline {4.17.1}Detailed Description}{39}{subsection.4.17.1}
+\contentsline {subsection}{\numberline {4.17.2}Constructor \& Destructor Documentation}{39}{subsection.4.17.2}
+\contentsline {subsubsection}{\numberline {4.17.2.1}Singleton}{39}{subsubsection.4.17.2.1}
+\contentsline {subsubsection}{\numberline {4.17.2.2}$\sim $Singleton}{39}{subsubsection.4.17.2.2}
+\contentsline {subsection}{\numberline {4.17.3}Member Function Documentation}{40}{subsection.4.17.3}
+\contentsline {subsubsection}{\numberline {4.17.3.1}getInstance}{40}{subsubsection.4.17.3.1}
+\contentsline {subsubsection}{\numberline {4.17.3.2}kill}{40}{subsubsection.4.17.3.2}
+\contentsline {section}{\numberline {4.18}Table Class Reference}{41}{section.4.18}
+\contentsline {subsection}{\numberline {4.18.1}Detailed Description}{42}{subsection.4.18.1}
+\contentsline {subsection}{\numberline {4.18.2}Constructor \& Destructor Documentation}{42}{subsection.4.18.2}
+\contentsline {subsubsection}{\numberline {4.18.2.1}Table}{42}{subsubsection.4.18.2.1}
+\contentsline {subsubsection}{\numberline {4.18.2.2}Table}{42}{subsubsection.4.18.2.2}
+\contentsline {subsubsection}{\numberline {4.18.2.3}$\sim $Table}{42}{subsubsection.4.18.2.3}
+\contentsline {subsection}{\numberline {4.18.3}Member Function Documentation}{42}{subsection.4.18.3}
+\contentsline {subsubsection}{\numberline {4.18.3.1}agresser}{42}{subsubsection.4.18.3.1}
+\contentsline {chapter}{\numberline {5}File Documentation}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}trunk/include/aucuneSurcharge.hpp File Reference}{43}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{43}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}trunk/include/compareEcoAgentID.hpp File Reference}{44}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{44}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}trunk/include/cube.hpp File Reference}{45}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{45}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}trunk/include/ecoAgent.hpp File Reference}{46}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{46}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}trunk/include/ecoAgentID.hpp File Reference}{47}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{47}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.6}trunk/include/etat.hpp File Reference}{48}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{48}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}trunk/include/Exceptions.hpp File Reference}{49}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{49}{subsection.5.7.1}
+\contentsline {section}{\numberline {5.8}trunk/include/plateformeEcoResolution.hpp File Reference}{50}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{50}{subsection.5.8.1}
+\contentsline {section}{\numberline {5.9}trunk/include/plateformeMondeDesCubes.hpp File Reference}{51}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{51}{subsection.5.9.1}
+\contentsline {section}{\numberline {5.10}trunk/include/regle.hpp File Reference}{52}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{52}{subsection.5.10.1}
+\contentsline {section}{\numberline {5.11}trunk/include/reliesATable.hpp File Reference}{53}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{53}{subsection.5.11.1}
+\contentsline {section}{\numberline {5.12}trunk/include/singleton.hpp File Reference}{54}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{54}{subsection.5.12.1}
+\contentsline {section}{\numberline {5.13}trunk/include/table.hpp File Reference}{55}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{55}{subsection.5.13.1}

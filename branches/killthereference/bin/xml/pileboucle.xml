@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<MondeDesCubes>
+	<Table id="1" />
+	<CubeList>
+		<Cube id="2" positionCourante="1" positionFinale="5" />
+		<Cube id="3" positionCourante="2" positionFinale="1" />
+		<Cube id="4" positionCourante="1" positionFinale="3" />
+		<Cube id="5" positionCourante="4" positionFinale="2" />
+	</CubeList>
+</MondeDesCubes>

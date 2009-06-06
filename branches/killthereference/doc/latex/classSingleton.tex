@@ -1,0 +1,81 @@
+\hypertarget{classSingleton}{
+\section{Singleton$<$ T $>$ Class Template Reference}
+\label{classSingleton}\index{Singleton@{Singleton}}
+}
+Template de classe permettant de rendre une classe instanciable une seule fois.  
+
+
+{\tt \#include $<$singleton.hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static T $\ast$ \hyperlink{classSingleton_c7b8bd773889a70952cd00654e43bbe8}{getInstance} ()
+\begin{CompactList}\small\item\em Obtention de l'instance. \item\end{CompactList}\item 
+static void \hyperlink{classSingleton_a0372324492d74974b014b8d576737f3}{kill} ()
+\begin{CompactList}\small\item\em Destruction de l'instance. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSingleton_923b995920da9c06590adb170ab2f890}{Singleton} ()
+\begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
+\hyperlink{classSingleton_c6e7af82cba33f561bd64e5e0243e7f8}{$\sim$Singleton} ()
+\begin{CompactList}\small\item\em Destructeur. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class Singleton$<$ T $>$}
+
+Template de classe permettant de rendre une classe instanciable une seule fois. 
+
+Une classe qui herite de ce template devient un singleton. Elle sera alors instanciable une unique fois. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSingleton_923b995920da9c06590adb170ab2f890}{
+\index{Singleton@{Singleton}!Singleton@{Singleton}}
+\index{Singleton@{Singleton}!Singleton@{Singleton}}
+\subsubsection[{Singleton}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Singleton}$<$ T $>$::{\bf Singleton} ()\hspace{0.3cm}{\tt  \mbox{[}inline, protected\mbox{]}}}}
+\label{classSingleton_923b995920da9c06590adb170ab2f890}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{classSingleton}{Singleton}. \hypertarget{classSingleton_c6e7af82cba33f561bd64e5e0243e7f8}{
+\index{Singleton@{Singleton}!$\sim$Singleton@{$\sim$Singleton}}
+\index{$\sim$Singleton@{$\sim$Singleton}!Singleton@{Singleton}}
+\subsubsection[{$\sim$Singleton}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Singleton}$<$ T $>$::$\sim${\bf Singleton} ()\hspace{0.3cm}{\tt  \mbox{[}inline, protected\mbox{]}}}}
+\label{classSingleton_c6e7af82cba33f561bd64e5e0243e7f8}
+
+
+Destructeur. 
+
+Destructeur de la classe \hyperlink{classSingleton}{Singleton}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSingleton_c7b8bd773889a70952cd00654e43bbe8}{
+\index{Singleton@{Singleton}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Singleton@{Singleton}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf Singleton}$<$ T $>$::getInstance ()\hspace{0.3cm}{\tt  \mbox{[}inline, static\mbox{]}}}}
+\label{classSingleton_c7b8bd773889a70952cd00654e43bbe8}
+
+
+Obtention de l'instance. 
+
+Methode qui permet d'obtenir l'unique instance en fonctionnement
+
+\begin{Desc}
+\item[Returns:]Un pointeur sur l'instance de type T \end{Desc}
+\hypertarget{classSingleton_a0372324492d74974b014b8d576737f3}{
+\index{Singleton@{Singleton}!kill@{kill}}
+\index{kill@{kill}!Singleton@{Singleton}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Singleton}$<$ T $>$::kill ()\hspace{0.3cm}{\tt  \mbox{[}inline, static\mbox{]}}}}
+\label{classSingleton_a0372324492d74974b014b8d576737f3}
+
+
+Destruction de l'instance. 
+
+Methode qui permet d'obtenir de détruire l'instance 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+trunk/include/\hyperlink{singleton_8hpp}{singleton.hpp}\end{CompactItemize}

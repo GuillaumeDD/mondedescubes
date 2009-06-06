@@ -1,0 +1,124 @@
+\hypertarget{classTable}{
+\section{Table Class Reference}
+\label{classTable}\index{Table@{Table}}
+}
+Classe derivee de la classe \hyperlink{classEcoAgent}{EcoAgent} designant le support sur lequel vont etre poses les cubes.  
+
+
+{\tt \#include $<$table.hpp$>$}
+
+Inherits \hyperlink{classEcoAgent}{EcoAgent}.
+
+Collaboration diagram for Table:\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTable_049f2e06391781ae255c6698869c4ad1}{Table} ()
+\begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
+\hyperlink{classTable_f82a6d490aa166537ac2e42e83ec8cd3}{Table} (\hyperlink{classEcoAgentID}{EcoAgentID} \&id)
+\begin{CompactList}\small\item\em Constructeur. \item\end{CompactList}\item 
+\hyperlink{classTable_9a559f2e7beb37b511ee9f88873164f8}{$\sim$Table} ()
+\begin{CompactList}\small\item\em Destructeur. \item\end{CompactList}\item 
+\hypertarget{classTable_e5da6b33fc4bfa706559b50668b3e5b4}{
+void \hyperlink{classTable_e5da6b33fc4bfa706559b50668b3e5b4}{rechercherFuite} ()}
+\label{classTable_e5da6b33fc4bfa706559b50668b3e5b4}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'elle cherche a fuir Cette procedure ne fait rien car la table ne fuit jamais. \item\end{CompactList}\item 
+\hypertarget{classTable_3fc58e0af8f075440c9184f674e1d02e}{
+void \hyperlink{classTable_3fc58e0af8f075440c9184f674e1d02e}{rechercherSatisfaction} ()}
+\label{classTable_3fc58e0af8f075440c9184f674e1d02e}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'elle cherche a se satisfaire Cette procedure ne fait rien car la table est toujours satisfaite. \item\end{CompactList}\item 
+void \hyperlink{classTable_e636451a26e8fd61aa9b4c09a92262f7}{agresser} (\hyperlink{classEcoAgent}{EcoAgent} \&a)
+\begin{CompactList}\small\item\em Suite d'operations realisees lorsque la table agresse un autre eco-agent Cette procedure ne fait rien car la table n'agresse aucun autre \hyperlink{classEcoAgent}{EcoAgent}. \item\end{CompactList}\item 
+\hypertarget{classTable_763c07c018021751ac161382c8469af1}{
+void \hyperlink{classTable_763c07c018021751ac161382c8469af1}{estAgresse} ()}
+\label{classTable_763c07c018021751ac161382c8469af1}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'elle est agressee Cette procedure ne fait rien car la table ne reagit pas lorsqu'elle est agresse. \item\end{CompactList}\item 
+\hypertarget{classTable_cefc0a468fbffa2273c0fbaf73589177}{
+void \hyperlink{classTable_cefc0a468fbffa2273c0fbaf73589177}{faireFuite} ()}
+\label{classTable_cefc0a468fbffa2273c0fbaf73589177}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par la fuite lorsqu'elle fuit Cette procedure ne fait rien car la table ne peut pas fuire. \item\end{CompactList}\item 
+\hypertarget{classTable_b442e96905d4a14e2eb1151eb6de5481}{
+void \hyperlink{classTable_b442e96905d4a14e2eb1151eb6de5481}{faireSatisfaction} ()}
+\label{classTable_b442e96905d4a14e2eb1151eb6de5481}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'elle se satisfait Cette procedure ne fait rien car la table est toujours satisfaite. \item\end{CompactList}\item 
+\hypertarget{classTable_314f12a86dbd1c133df83f33e2d92bec}{
+void \hyperlink{classTable_314f12a86dbd1c133df83f33e2d92bec}{agir} ()}
+\label{classTable_314f12a86dbd1c133df83f33e2d92bec}
+
+\begin{CompactList}\small\item\em Suite d'operations realisees par la table lorsqu'il agit Cette procedure ne fait rien car la table n'agit jamais. C'est juste un support. \item\end{CompactList}\item 
+\hypertarget{classTable_964952b5f899c8abb64e9622a8457466}{
+void \hyperlink{classTable_964952b5f899c8abb64e9622a8457466}{initialiser} ()}
+\label{classTable_964952b5f899c8abb64e9622a8457466}
+
+\begin{CompactList}\small\item\em Initialisation de la table avant l'EcoResolution Cette procedure ne fait rien, la table etant toujours satisfaite. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Classe derivee de la classe \hyperlink{classEcoAgent}{EcoAgent} designant le support sur lequel vont etre poses les cubes. 
+
+Classe derivee de la classe \hyperlink{classEcoAgent}{EcoAgent} designant le support sur lequel vont etre poses les cubes. La table est suppose de capacite infinie. C'est a dire qu'il est possible de poser autant de cubes qu'on veut dessus. La \hyperlink{classTable}{Table} est toujours satisfaite. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTable_049f2e06391781ae255c6698869c4ad1}{
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}Table::Table ()}}
+\label{classTable_049f2e06391781ae255c6698869c4ad1}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{classTable}{Table} par defaut. Un \hyperlink{classEcoAgentID}{EcoAgentID} sera automatiquement genere pour la table. L'Etat de la table est fixe a SATISFAIT. \hypertarget{classTable_f82a6d490aa166537ac2e42e83ec8cd3}{
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}Table::Table ({\bf EcoAgentID} \& {\em id})}}
+\label{classTable_f82a6d490aa166537ac2e42e83ec8cd3}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{classTable}{Table}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em id}]: identifiant unique que la table se verra attribuer \end{description}
+\end{Desc}
+\hypertarget{classTable_9a559f2e7beb37b511ee9f88873164f8}{
+\index{Table@{Table}!$\sim$Table@{$\sim$Table}}
+\index{$\sim$Table@{$\sim$Table}!Table@{Table}}
+\subsubsection[{$\sim$Table}]{\setlength{\rightskip}{0pt plus 5cm}Table::$\sim$Table ()}}
+\label{classTable_9a559f2e7beb37b511ee9f88873164f8}
+
+
+Destructeur. 
+
+Destructeur de la classe \hyperlink{classTable}{Table} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTable_e636451a26e8fd61aa9b4c09a92262f7}{
+\index{Table@{Table}!agresser@{agresser}}
+\index{agresser@{agresser}!Table@{Table}}
+\subsubsection[{agresser}]{\setlength{\rightskip}{0pt plus 5cm}void Table::agresser ({\bf EcoAgent} \& {\em a})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classTable_e636451a26e8fd61aa9b4c09a92262f7}
+
+
+Suite d'operations realisees lorsque la table agresse un autre eco-agent Cette procedure ne fait rien car la table n'agresse aucun autre \hyperlink{classEcoAgent}{EcoAgent}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em a}]: \hyperlink{classEcoAgent}{EcoAgent} a agresser \end{description}
+\end{Desc}
+
+
+Implements \hyperlink{classEcoAgent_867f0c274eb3ed0b61cb1fe7baa67edd}{EcoAgent}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+trunk/include/\hyperlink{table_8hpp}{table.hpp}\item 
+trunk/src/table.cpp\end{CompactItemize}
