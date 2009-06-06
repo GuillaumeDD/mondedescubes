@@ -8,17 +8,17 @@ PlateformeEcoResolution::~PlateformeEcoResolution(){
 
 EcoAgent* PlateformeEcoResolution::getEcoAgent(const EcoAgentID& id) const{
   EcoAgent* result = NULL;
-  map<EcoAgentID, EcoAgent&>::const_iterator it;
+  map<EcoAgentID, EcoAgent*>::const_iterator it;
   it = ecoagents.find(id);
   if(it != ecoagents.end()){
-      result=&(it->second);
+      result=it->second;
   }
   return result;
 }
 
 void PlateformeEcoResolution::addEcoAgent(EcoAgent& ea){
- pair<map<EcoAgentID,EcoAgent&>::iterator, bool> ret;
- ret = ecoagents.insert(pair<EcoAgentID,EcoAgent&>(*(ea.getId()), ea));
+ pair<map<EcoAgentID,EcoAgent*>::iterator, bool> ret;
+ ret = ecoagents.insert(pair<EcoAgentID,EcoAgent*>(*(ea.getId()), &ea));
  if(ret.second == false){
     throw(*(new ExceptionEcoAgentDejaEnregistre()));
  }
@@ -48,10 +48,10 @@ bool PlateformeEcoResolution::verifierCoherence() const{
 
 bool PlateformeEcoResolution::sontSatisfaits() const{
   bool result = true;
-  map<EcoAgentID,EcoAgent&>::const_iterator it;
+  map<EcoAgentID,EcoAgent*>::const_iterator it;
   it = ecoagents.begin();
   while(it != ecoagents.end() && result){
-    if( (it->second).getEtat() != SATISFAIT ){
+    if( (it->second)->getEtat() != SATISFAIT ){
       result = false;
     }
     ++it;
@@ -63,10 +63,10 @@ EcoAgentID* PlateformeEcoResolution::getEcoAgentAuDessus(const EcoAgentID& id) c
   EcoAgentID* result = NULL, *posCourante = NULL;
   EcoAgent *ecoA;
   bool trouve = false;
-  map<EcoAgentID,EcoAgent&>::const_iterator it;
+  map<EcoAgentID,EcoAgent*>::const_iterator it;
   it = ecoagents.begin();
   while(it != ecoagents.end() && !trouve){
-      ecoA = &(it->second); 
+      ecoA = it->second; 
       posCourante = ecoA->getPositionCourante();
       if(posCourante != NULL && *posCourante == id){
 	result = ecoA->getId();
@@ -91,9 +91,9 @@ int PlateformeEcoResolution::nombreEcoAgentAuDessus(const EcoAgentID& id) const{
 list<EcoAgentID*> PlateformeEcoResolution::getEcoAgents(const Etat e) const{
   list<EcoAgentID*>* listResult = new list<EcoAgentID*>();
   EcoAgent* ea = NULL;
-  map<EcoAgentID,EcoAgent&>::const_iterator it = ecoagents.begin();
+  map<EcoAgentID,EcoAgent*>::const_iterator it = ecoagents.begin();
   while(it != ecoagents.end()){
-    ea = &(it->second);
+    ea = it->second;
     if(ea->getEtat() == e){
       listResult->push_back(ea->getId());
     }
@@ -102,7 +102,7 @@ list<EcoAgentID*> PlateformeEcoResolution::getEcoAgents(const Etat e) const{
   return *listResult;
 }
 
-map<EcoAgentID,EcoAgent&,compareEcoAgentID> PlateformeEcoResolution::getEcoAgents() const {
+map<EcoAgentID,EcoAgent*,compareEcoAgentID> PlateformeEcoResolution::getEcoAgents() const {
  return ecoagents; 
 }
 

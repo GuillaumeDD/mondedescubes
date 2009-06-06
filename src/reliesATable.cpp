@@ -10,29 +10,29 @@ void ReliesATable::initialiser() {
 
 bool ReliesATable::verifier(){
   PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();
-  map<EcoAgentID,EcoAgent&,compareEcoAgentID> m = p->getEcoAgents();
+  map<EcoAgentID,EcoAgent*,compareEcoAgentID> m = p->getEcoAgents();
   /* creation de 2 iterateurs de la map de cubes : 1 pour les parcourir et 2 pour initialiser leur "visite" a faux*/ 
-  map<EcoAgentID, EcoAgent&, compareEcoAgentID>::iterator it1=m.begin();
-  map<EcoAgentID, EcoAgent&, compareEcoAgentID>::iterator it2=m.begin();
+  map<EcoAgentID, EcoAgent*, compareEcoAgentID>::iterator it1=m.begin();
+  map<EcoAgentID, EcoAgent*, compareEcoAgentID>::iterator it2=m.begin();
 
   /*On parcourt toute la map de cube avec it1*/
   for(it1 = m.begin(); it1 != m.end(); ++it1) {
 		
     /*on initialise toutes les visites a false avant de tester si le cube "courant" est bien relie a la table*/
     for(it2 = m.begin(); it2 != m.end(); ++it2) {
-      it2->second.setVisite(false);
+      it2->second->setVisite(false);
     }
 		
     /*on fait appel a la fonction pour savoir si le cube est lie a la table*/
-    this->estRelieATable(it1->second);
+    this->estRelieATable(*(it1->second));
 
     /*on initialise toutes les visites a false avant de tester si le cube "courant" est bien relie a la table*/
     for(it2 = m.begin(); it2 != m.end(); ++it2) {
-      it2->second.setVisite(false);
+      it2->second->setVisite(false);
     }
 
     /*on fait appel a la fonction pour savoir si le cube sera lie a la table*/
-    this->seraRelieATable(it1->second);
+    this->seraRelieATable(*(it1->second));
   }
   return true;
 }

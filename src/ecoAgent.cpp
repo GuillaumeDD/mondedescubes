@@ -9,7 +9,7 @@ EcoAgent::EcoAgent(){
 }
 
 EcoAgent::~EcoAgent(){
-  if(id != NULL){
+  if( id != NULL){
     delete id;
   }
 }

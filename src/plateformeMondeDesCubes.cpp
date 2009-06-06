@@ -5,10 +5,10 @@
 #include<iomanip>
 
 void PlateformeMondeDesCubes::initialiser(){
-  map<EcoAgentID,EcoAgent&>::const_iterator it = ecoagents.begin();
+  map<EcoAgentID,EcoAgent*>::const_iterator it = ecoagents.begin();
   //initialisation de chaque EcoAgent
   while(it != ecoagents.end()){
-    (it->second).initialiser();
+    (it->second)->initialiser();
     ++it;
   }
 }
@@ -184,9 +184,9 @@ ostream& operator<<(ostream& f, const PlateformeMondeDesCubes& p){
   f << "Table : " << *(p.table) << endl;
   f << "Cube ou assimilé : " << endl;
   if(p.ecoagents.size() > 0){
-    map<EcoAgentID,EcoAgent&>::const_iterator it = p.ecoagents.begin();
+    map<EcoAgentID,EcoAgent*>::const_iterator it = p.ecoagents.begin();
     while(it != p.ecoagents.end()){
-      f << it->second << endl;
+      f << *(it->second) << endl;
       ++it;
     }
   }else{
@@ -205,18 +205,18 @@ string PlateformeMondeDesCubes::toString() const{
   ostringstream *os;
   unsigned int maxHauteurPile = 0;
 
-  map<EcoAgentID,EcoAgent&,compareEcoAgentID> mapCopy;
+  map<EcoAgentID,EcoAgent*,compareEcoAgentID> mapCopy;
   mapCopy = getEcoAgents();
-  map<EcoAgentID,EcoAgent&,compareEcoAgentID>::const_iterator it;
+  map<EcoAgentID,EcoAgent*,compareEcoAgentID>::const_iterator it;
   it = mapCopy.begin();
 
   // construction des listes de piles
  while(it != mapCopy.end()){
-   if(*((it->second).getPositionCourante()) == *getTableID()){
+   if(*((it->second)->getPositionCourante()) == *getTableID()){
      l = new list<EcoAgent*>();
-     l->push_back(&it->second);
+     l->push_back(it->second);
      // on ajoute alors tous les EcoAgent au dessus
-     tempID = getEcoAgentAuDessus(*(it->second.getId()));
+     tempID = getEcoAgentAuDessus(*(it->second->getId()));
      if(tempID != NULL){
        temp = getEcoAgent(*(tempID));
        while(temp != NULL){

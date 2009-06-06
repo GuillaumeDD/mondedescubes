@@ -144,7 +144,7 @@ public:
    *\return un conteneur associatif map<EcoAgentID,EcoAgent&>
    *
    */
-  map<EcoAgentID,EcoAgent&,compareEcoAgentID> getEcoAgents() const;
+  map<EcoAgentID,EcoAgent*,compareEcoAgentID> getEcoAgents() const;
 
   /*!
    * \brief Initialisation de la resolution
@@ -164,7 +164,7 @@ public:
       
       
 protected:
-  map<EcoAgentID,EcoAgent&,compareEcoAgentID> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
+  map<EcoAgentID,EcoAgent*,compareEcoAgentID> ecoagents; /*!< Referencement des eco-agents a partir de leurs identifiants uniques*/
   list<Regle*> regles; /*!< Liste des regles a verifier avant de lancer la resolution */
 };
   

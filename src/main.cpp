@@ -85,7 +85,6 @@ void init(string file){
   
   if(!elem){
     cout << "Impossible de charger la table" << endl;
-  	exit(0);
   }else{
     if(elem->QueryIntAttribute("id", &idTemp) == TIXML_SUCCESS){
       eaid = new EcoAgentID(idTemp);

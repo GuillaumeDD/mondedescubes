@@ -20,9 +20,9 @@ bool AucuneSurcharge::verifier() {
 	
 bool AucuneSurcharge::pasSurcharges() {
   PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();	
-  map<EcoAgentID,EcoAgent&,compareEcoAgentID> m = p->getEcoAgents();
+  map<EcoAgentID,EcoAgent*,compareEcoAgentID> m = p->getEcoAgents();
   /* Mise en place d'un iterateur sur la map des cubes de la plate forme */
-  map<EcoAgentID, EcoAgent&, compareEcoAgentID>::const_iterator it = m.begin();
+  map<EcoAgentID, EcoAgent*, compareEcoAgentID>::const_iterator it = m.begin();
 
   /* Creation d'un compteur des successeurs de chaque cube et d'un iterateur*/
   map<EcoAgentID, int> compteur;
@@ -36,8 +36,8 @@ bool AucuneSurcharge::pasSurcharges() {
   it=m.begin();
   for(it = m.begin() ; it != m.end() ; ++it) {
     /* si la position est bien un cube on applique l'algorithme*/ 
-    if(*(it->second.getPositionCourante()) != *(p->getTableID())) {
-      itcompteur=compteur.find(*(it->second.getPositionCourante()));
+    if(*(it->second->getPositionCourante()) != *(p->getTableID())) {
+      itcompteur=compteur.find(*(it->second->getPositionCourante()));
       itcompteur->second=itcompteur->second+1;
       if(itcompteur->second > 1) {
 	throw(*(new ExceptionUnCubeEstSurcharge()));
@@ -51,9 +51,9 @@ bool AucuneSurcharge::pasSurcharges() {
 
 bool AucuneSurcharge::serontPasSurcharges() {
   PlateformeMondeDesCubes *p = PlateformeMondeDesCubes::getInstance();	
-  map<EcoAgentID,EcoAgent&,compareEcoAgentID> m = p->getEcoAgents();
+  map<EcoAgentID,EcoAgent*,compareEcoAgentID> m = p->getEcoAgents();
   /* Mise en place d'un iterateur sur la map des cubes de la plate forme */
-  map<EcoAgentID, EcoAgent&, compareEcoAgentID>::const_iterator it = m.begin();
+  map<EcoAgentID, EcoAgent*, compareEcoAgentID>::const_iterator it = m.begin();
 
   /* Creation d'un compteur des successeurs de chaque cube et d'un iterateur*/
   map<EcoAgentID, int> compteur;
@@ -67,8 +67,8 @@ bool AucuneSurcharge::serontPasSurcharges() {
   it=m.begin();
   for(it = m.begin() ; it != m.end() ; ++it) {
     /* si la position est bien un cube on applique l'algorithme*/ 
-    if(*(it->second.getPositionFinale()) != *(p->getTableID())) {
-      itcompteur=compteur.find(*(it->second.getPositionFinale()));
+    if(*(it->second->getPositionFinale()) != *(p->getTableID())) {
+      itcompteur=compteur.find(*(it->second->getPositionFinale()));
       itcompteur->second=itcompteur->second+1;
       if(itcompteur->second > 1) {
 	throw(*(new ExceptionUnCubeSeraSurcharge()));	
